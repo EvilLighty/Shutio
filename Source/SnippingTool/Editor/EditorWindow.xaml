@@ -1,0 +1,266 @@
+<Window x:Class="SnippingTool.Editor.EditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:editor="clr-namespace:SnippingTool.Editor"
+        xmlns:ui="clr-namespace:SnippingTool.UI"
+        Title="Shutio"
+        Style="{StaticResource ModernWindow}"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        Width="1180"
+        Height="790"
+        MinWidth="900"
+        MinHeight="580"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource AppBackgroundBrush}">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0" ResizeBorderThickness="7" GlassFrameThickness="0" CornerRadius="0" UseAeroCaptionButtons="False" />
+    </WindowChrome.WindowChrome>
+
+    <Grid x:Name="RootGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="64" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+
+        <!-- Title bar -->
+        <Grid Grid.Row="0" Background="Transparent" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+            <StackPanel Orientation="Horizontal" Margin="16,0,0,0" VerticalAlignment="Center">
+                <Image Source="Assets/logo.png" Width="20" Height="20" RenderOptions.BitmapScalingMode="HighQuality" />
+                <TextBlock Text="Shutio" FontSize="12" FontWeight="SemiBold" Margin="9,0,0,0" VerticalAlignment="Center" />
+                <Border Style="{StaticResource ThinSeparator}" Height="14" Margin="12,0" />
+                <TextBlock x:Name="FileNameText" Text="Untitled" FontSize="12" Foreground="{DynamicResource TextSecondaryBrush}"
+                           VerticalAlignment="Center" MaxWidth="420" TextTrimming="CharacterEllipsis" />
+                <Border x:Name="DirtyDot" Width="6" Height="6" CornerRadius="3" Background="{DynamicResource AccentBrush}"
+                        Margin="8,0,0,0" VerticalAlignment="Center" Visibility="Collapsed" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,6,0">
+                <Button x:Name="OcrButton" Style="{StaticResource IconButton}" ToolTip="Extract text (OCR)" Margin="0,0,2,0" Click="OcrButton_Click">
+                    <TextBlock Text="&#xE8D2;" Style="{StaticResource IconGlyph}" FontSize="16" />
+                </Button>
+                <Button x:Name="CopyButton" Style="{StaticResource IconButton}" ToolTip="Copy image (Ctrl+C)" Margin="0,0,2,0" Click="Copy_Click">
+                    <TextBlock Text="&#xE8C8;" Style="{StaticResource IconGlyph}" FontSize="16" />
+                </Button>
+                <Button x:Name="SaveButton" Style="{StaticResource PrimaryButton}" Padding="12,5" Margin="4,0,2,0" ToolTip="Save (Ctrl+S)" Click="SaveButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE74E;" Style="{StaticResource IconGlyph}" FontSize="13"
+                                   Foreground="{DynamicResource AccentForegroundBrush}" />
+                        <TextBlock Text="Save" FontSize="12" FontWeight="SemiBold" Margin="6,0,0,0"
+                                   Foreground="{DynamicResource AccentForegroundBrush}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                <Button x:Name="SaveAsButton" Style="{StaticResource IconButton}" ToolTip="Save as PNG, JPG or BMP" Width="28" Margin="0,0,4,0" Click="SaveAsButton_Click">
+                    <TextBlock Text="&#xE70D;" Style="{StaticResource IconGlyph}" FontSize="10" />
+                </Button>
+                <Button Style="{StaticResource TitleBarMinButton}" Click="Minimize_Click" ToolTip="Minimize" />
+                <Button Style="{StaticResource TitleBarMaxButton}" Click="Maximize_Click" x:Name="MaximizeButton" ToolTip="Maximize" />
+                <Button Style="{StaticResource TitleBarCloseButton}" Click="Close_Click" ToolTip="Close" Margin="0,0,2,0" />
+            </StackPanel>
+        </Grid>
+
+        <!-- Tool strip -->
+        <Border Grid.Row="1" Margin="16,0,16,8" Background="{DynamicResource CardBrush}" BorderBrush="{DynamicResource BorderBrush}"
+                BorderThickness="1" CornerRadius="12" Padding="7,5">
+            <Grid>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <ToggleButton x:Name="PenTool" Style="{StaticResource ToolButton}" ToolTip="Pen" Click="PenTool_Click">
+                        <Path Data="M4,20 L4,16 L15,5 L19,9 L8,20 Z M13,7 L17,11" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ToggleButton}}" StrokeThickness="1.5" Fill="Transparent" />
+                    </ToggleButton>
+                    <ToggleButton x:Name="HighlighterTool" Style="{StaticResource ToolButton}" ToolTip="Highlighter" Click="HighlighterTool_Click">
+                        <Path Data="M4,16 L11,9 L16,14 L9,21 H4 Z M15,4 L20,9 M17,2 L22,7" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ToggleButton}}" StrokeThickness="1.5" Fill="Transparent" />
+                    </ToggleButton>
+                    <ToggleButton x:Name="EraserTool" Style="{StaticResource ToolButton}" ToolTip="Eraser" Click="EraserTool_Click">
+                        <Path Data="M4,16 L12,8 L20,16 L14,22 H8 Z M11,21 H21" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ToggleButton}}" StrokeThickness="1.5" Fill="Transparent" />
+                    </ToggleButton>
+                    <ToggleButton x:Name="LineTool" Style="{StaticResource ToolButton}" ToolTip="Straight line / ruler" Click="LineTool_Click">
+                        <Path Data="M4,20 L20,4 M14,4 H20 V10 M4,14 V20 H10" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ToggleButton}}" StrokeThickness="1.5" Fill="Transparent" />
+                    </ToggleButton>
+                    <ToggleButton x:Name="CropTool" Style="{StaticResource ToolButton}" ToolTip="Crop" Click="CropTool_Click">
+                        <Path Data="M7,3 V17 H21 M3,7 H17 V21" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ToggleButton}}" StrokeThickness="1.5" Fill="Transparent" />
+                    </ToggleButton>
+
+                    <Border Style="{StaticResource ThinSeparator}" />
+
+                    <Button x:Name="ColorButton" Style="{StaticResource IconButton}" ToolTip="Pen color and thickness" Click="ColorButton_Click">
+                        <Grid Width="22" Height="22">
+                            <Ellipse x:Name="ColorSwatch" Width="16" Height="16" Fill="#FF3B30" Stroke="#80FFFFFF" StrokeThickness="1" />
+                            <Ellipse x:Name="ThicknessDot" Width="6" Height="6" Fill="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                        </Grid>
+                    </Button>
+                    <Button x:Name="ThicknessButton" Style="{StaticResource IconButton}" ToolTip="Brush thickness" Click="ThicknessButton_Click" Width="30">
+                        <TextBlock Text="&#xE7C3;" FontFamily="{StaticResource IconFont}" FontSize="15" />
+                    </Button>
+
+                    <Border Style="{StaticResource ThinSeparator}" />
+
+                    <Button x:Name="RotateLeftButton" Style="{StaticResource IconButton}" ToolTip="Rotate left" Click="RotateLeft_Click">
+                        <Path Data="M5,12 A7,7 0 1 1 12,19 M5,12 V6 M5,12 H11" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1.6" Fill="Transparent" />
+                    </Button>
+                    <Button x:Name="RotateRightButton" Style="{StaticResource IconButton}" ToolTip="Rotate right" Click="RotateRight_Click">
+                        <Path Data="M19,12 A7,7 0 1 0 12,19 M19,12 V6 M19,12 H13" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1.6" Fill="Transparent" />
+                    </Button>
+                    <Button x:Name="ResizeButton" Style="{StaticResource IconButton}" ToolTip="Resize image" Click="Resize_Click">
+                        <Path Data="M4,20 L20,4 M13,4 H20 V11 M4,13 V20 H11" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1.6" Fill="Transparent" />
+                    </Button>
+
+                    <Border Style="{StaticResource ThinSeparator}" />
+
+                    <Button x:Name="UndoButton" Style="{StaticResource IconButton}" ToolTip="Undo (Ctrl+Z)" Click="Undo_Click" IsEnabled="False">
+                        <Path Data="M8,6 L4,10 L8,14 M4,10 H13 A6,6 0 0 1 13,22 H9" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1.6" Fill="Transparent" />
+                    </Button>
+                    <Button x:Name="RedoButton" Style="{StaticResource IconButton}" ToolTip="Redo (Ctrl+Y)" Click="Redo_Click" IsEnabled="False">
+                        <Path Data="M16,6 L20,10 L16,14 M20,10 H11 A6,6 0 0 0 11,22 H15" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1.6" Fill="Transparent" />
+                    </Button>
+
+                    <Border Style="{StaticResource ThinSeparator}" />
+
+                    <Button x:Name="ZoomOutButton" Style="{StaticResource IconButton}" ToolTip="Zoom out" Click="ZoomOut_Click" FontSize="18" Content="−" />
+                    <Button x:Name="ZoomButton" Style="{StaticResource GhostButton}" Padding="6,5" MinWidth="56" Click="ZoomButton_Click" ToolTip="Zoom level">
+                        <TextBlock x:Name="ZoomText" Text="100%" FontSize="12" HorizontalAlignment="Center" />
+                    </Button>
+                    <Button x:Name="ZoomInButton" Style="{StaticResource IconButton}" ToolTip="Zoom in" Click="ZoomIn_Click" FontSize="18" Content="+" />
+                    <Button x:Name="FitButton" Style="{StaticResource IconButton}" ToolTip="Fit to window (Ctrl+0)" Click="Fit_Click">
+                        <Path Data="M4,9 V4 H9 M15,4 H20 V9 M20,15 V20 H15 M9,20 H4 V15" Width="19" Height="19" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1.6" Fill="Transparent" />
+                    </Button>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Border x:Name="ToolStatusChip" Style="{StaticResource Chip}" Margin="0,0,4,0">
+                        <TextBlock x:Name="ToolStatusText" Text="Pen" FontSize="11" Foreground="{DynamicResource TextSecondaryBrush}" />
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Canvas -->
+        <Grid Grid.Row="2" Margin="16,0,16,8">
+            <Border CornerRadius="12" Background="{DynamicResource EditorCanvasBrush}" BorderBrush="{DynamicResource BorderBrush}"
+                    BorderThickness="1" ClipToBounds="True">
+                <Grid>
+                    <editor:ImageCanvas x:Name="Canvas" />
+                    <Border x:Name="CropHint" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,16,0,0"
+                            Background="#E61B1C1F" BorderBrush="#33FFFFFF" BorderThickness="1" CornerRadius="999" Padding="14,7">
+                        <TextBlock Text="Drag over the image to crop" Foreground="White" FontSize="12" FontWeight="SemiBold" />
+                    </Border>
+                </Grid>
+            </Border>
+
+            <Border x:Name="OcrPanel" Visibility="Collapsed" Width="340" HorizontalAlignment="Right" VerticalAlignment="Stretch"
+                    Margin="0,12,12,12" Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource BorderBrush}"
+                    BorderThickness="1" CornerRadius="12" Padding="16">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="28" ShadowDepth="6" Opacity="0.35" />
+                </Border.Effect>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <StackPanel>
+                            <TextBlock Text="Extracted text" Style="{StaticResource H2}" />
+                            <TextBlock x:Name="OcrLanguageText" Text="" Style="{StaticResource Caption}" Margin="0,3,0,0" />
+                        </StackPanel>
+                        <Button x:Name="OcrCloseButton" Style="{StaticResource IconButton}" HorizontalAlignment="Right" VerticalAlignment="Top"
+                                Content="&#xE8BB;" FontFamily="{StaticResource IconFont}" FontSize="10" ToolTip="Close OCR panel" Click="OcrClose_Click" />
+                    </Grid>
+                    <Button x:Name="OcrLanguageButton" Grid.Row="1" Style="{StaticResource SecondaryButton}" HorizontalAlignment="Left"
+                            Padding="10,5" Margin="0,12,0,10" Content="Language" FontSize="11" Click="OcrLanguage_Click" />
+                    <Border Grid.Row="2" CornerRadius="8" Background="{DynamicResource SurfaceAltBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1">
+                        <TextBox x:Name="OcrTextBox" Style="{StaticResource ModernTextBox}" Background="Transparent" BorderThickness="0"
+                                 IsReadOnly="True" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
+                                 VerticalContentAlignment="Top" FontSize="12.5" Padding="10" />
+                    </Border>
+                    <Grid Grid.Row="3" Margin="0,10,0,0">
+                        <TextBlock x:Name="OcrCountText" Text="" Style="{StaticResource Tiny}" VerticalAlignment="Center" />
+                        <Button x:Name="OcrCopyButton" Content="Copy text" Style="{StaticResource SecondaryButton}" Padding="12,6"
+                                HorizontalAlignment="Right" Click="OcrCopy_Click" />
+                    </Grid>
+
+                    <Grid x:Name="OcrProgress" Grid.RowSpan="4" Background="{DynamicResource SurfaceBrush}" Visibility="Collapsed">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <ui:ProgressRing Width="34" Height="34" HorizontalAlignment="Center" />
+                            <TextBlock Text="Reading text…" Margin="0,14,0,0" Style="{StaticResource Caption}" HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!-- Status bar -->
+        <Grid Grid.Row="3" Margin="22,0,22,0">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock x:Name="DimensionsText" Text="" Style="{StaticResource Tiny}" />
+                <Border Style="{StaticResource ThinSeparator}" Height="12" Margin="10,0" />
+                <TextBlock x:Name="ZoomStatusText" Text="100%" Style="{StaticResource Tiny}" />
+                <Border Style="{StaticResource ThinSeparator}" Height="12" Margin="10,0" />
+                <TextBlock x:Name="StatusText" Text="Ready" Style="{StaticResource Tiny}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <TextBlock Text="Ctrl+Z Undo" Style="{StaticResource Tiny}" Margin="0,0,14,0" />
+                <TextBlock Text="Ctrl+C Copy" Style="{StaticResource Tiny}" Margin="0,0,14,0" />
+                <TextBlock Text="Ctrl+S Save" Style="{StaticResource Tiny}" />
+            </StackPanel>
+        </Grid>
+
+        <!-- Flyouts -->
+        <Popup x:Name="ColorPopup" PlacementTarget="{Binding ElementName=ColorButton}" Placement="Bottom" StaysOpen="False"
+               AllowsTransparency="True" PopupAnimation="Fade" HorizontalOffset="-38" VerticalOffset="6">
+            <Border Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource BorderStrongBrush}" BorderThickness="1"
+                    CornerRadius="10" Padding="12">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="24" ShadowDepth="5" Opacity="0.35" />
+                </Border.Effect>
+                <StackPanel>
+                    <TextBlock Text="Pen color" Style="{StaticResource Tiny}" Margin="1,0,0,8" />
+                    <WrapPanel x:Name="ColorSwatches" Width="188" />
+                    <Border Height="1" Background="{DynamicResource BorderBrush}" Margin="0,10" />
+                    <TextBlock Text="Thickness" Style="{StaticResource Tiny}" Margin="1,0,0,8" />
+                    <WrapPanel x:Name="ThicknessOptions" Width="188" />
+                </StackPanel>
+            </Border>
+        </Popup>
+
+        <Popup x:Name="ZoomPopup" PlacementTarget="{Binding ElementName=ZoomButton}" Placement="Bottom" StaysOpen="False"
+               AllowsTransparency="True" PopupAnimation="Fade" VerticalOffset="6">
+            <Border Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource BorderStrongBrush}" BorderThickness="1"
+                    CornerRadius="9" Padding="5">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="22" ShadowDepth="4" Opacity="0.3" />
+                </Border.Effect>
+                <StackPanel x:Name="ZoomOptions" />
+            </Border>
+        </Popup>
+
+        <Popup x:Name="SaveMenu" PlacementTarget="{Binding ElementName=SaveAsButton}" Placement="Bottom" StaysOpen="False"
+               AllowsTransparency="True" PopupAnimation="Fade" VerticalOffset="6">
+            <Border Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource BorderStrongBrush}" BorderThickness="1"
+                    CornerRadius="9" Padding="5">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="22" ShadowDepth="4" Opacity="0.3" />
+                </Border.Effect>
+                <StackPanel>
+                    <Button Content="Save as…" Style="{StaticResource GhostButton}" Padding="12,7" MinWidth="170" Click="SaveAs_Click" />
+                    <Button Content="Open containing folder" Style="{StaticResource GhostButton}" Padding="12,7" MinWidth="170" Click="OpenFolder_Click" />
+                </StackPanel>
+            </Border>
+        </Popup>
+    </Grid>
+</Window>
+

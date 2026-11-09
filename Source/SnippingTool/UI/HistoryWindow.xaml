@@ -1,0 +1,99 @@
+<Window x:Class="SnippingTool.UI.HistoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Snip history"
+        Style="{StaticResource ModernWindow}"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        Width="1080"
+        Height="780"
+        MinWidth="760"
+        MinHeight="540"
+        WindowStartupLocation="CenterOwner"
+        ShowInTaskbar="False"
+        Background="{DynamicResource AppBackgroundBrush}">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0" ResizeBorderThickness="7" GlassFrameThickness="0" CornerRadius="0" UseAeroCaptionButtons="False" />
+    </WindowChrome.WindowChrome>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="46" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="58" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="Transparent" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+            <StackPanel Orientation="Horizontal" Margin="16,0,0,0" VerticalAlignment="Center">
+                <Image Source="Assets/logo.png" Width="18" Height="18" RenderOptions.BitmapScalingMode="HighQuality" />
+                <TextBlock Text="Snip history" FontSize="12" FontWeight="SemiBold" Margin="8,0,0,0" VerticalAlignment="Center" />
+            </StackPanel>
+            <Button Style="{StaticResource TitleBarCloseButton}" HorizontalAlignment="Right" Margin="0,0,5,0"
+                    Click="Close_Click" Content="&#xE8BB;" ToolTip="Close" />
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="26,6,26,12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Everything you capture" Style="{StaticResource H1}" />
+                    <TextBlock x:Name="CountText" Text="0 snips" Style="{StaticResource Tiny}" Margin="11,7,0,0" VerticalAlignment="Center" />
+                </StackPanel>
+                <TextBlock Text="Double-click a snip to open it in the editor. Files remain in your chosen save folder."
+                           Style="{StaticResource Caption}" Margin="0,4,0,0" />
+            </StackPanel>
+            <StackPanel Grid.Column="1" VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBox x:Name="SearchBox" Style="{StaticResource ModernTextBox}" Width="230" Height="34"
+                         ToolTip="Search file names, dates, or capture modes" />
+                <Button x:Name="OpenFolderButton" Style="{StaticResource SecondaryButton}" Content="Open folder" Margin="8,0,0,0" Padding="14,7" />
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="2" Margin="26,0,26,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Border Background="{DynamicResource SurfaceAltBrush}" BorderBrush="{DynamicResource BorderBrush}"
+                    BorderThickness="1" CornerRadius="8" Padding="3" HorizontalAlignment="Left" Margin="0,0,0,12">
+                <StackPanel Orientation="Horizontal">
+                    <ToggleButton x:Name="FilterAll" Style="{StaticResource SegmentToggle}" Content="All" />
+                    <ToggleButton x:Name="FilterRectangle" Style="{StaticResource SegmentToggle}" Content="Rectangle" />
+                    <ToggleButton x:Name="FilterFreeform" Style="{StaticResource SegmentToggle}" Content="Freeform" />
+                    <ToggleButton x:Name="FilterWindow" Style="{StaticResource SegmentToggle}" Content="Window" />
+                    <ToggleButton x:Name="FilterFullscreen" Style="{StaticResource SegmentToggle}" Content="Full desktop" />
+                    <ToggleButton x:Name="FilterMonitor" Style="{StaticResource SegmentToggle}" Content="Display" />
+                </StackPanel>
+            </Border>
+
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <Grid>
+                    <WrapPanel x:Name="CardsHost" />
+                    <StackPanel x:Name="EmptyState" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,60,0,0">
+                        <Border Width="64" Height="64" CornerRadius="16" Background="{DynamicResource AccentSoftBrush}" HorizontalAlignment="Center">
+                            <TextBlock Text="&#xE7C8;" FontFamily="{StaticResource IconFont}" FontSize="26"
+                                       Foreground="{DynamicResource AccentBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <TextBlock x:Name="EmptyTitle" Text="No snips yet" Style="{StaticResource H2}" HorizontalAlignment="Center" Margin="0,14,0,0" />
+                        <TextBlock x:Name="EmptyBody" Text="Take a snip and it will appear here." Style="{StaticResource Caption}"
+                                   HorizontalAlignment="Center" Margin="0,5,0,0" TextAlignment="Center" MaxWidth="330" TextWrapping="Wrap" />
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+
+        <Border Grid.Row="3" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,1,0,0">
+            <Grid Margin="24,0">
+                <TextBlock x:Name="StatusText" Style="{StaticResource Tiny}" VerticalAlignment="Center" />
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button x:Name="ClearButton" Style="{StaticResource GhostButton}" Content="Clear history" MinWidth="100" />
+                    <Button x:Name="DoneButton" Style="{StaticResource PrimaryButton}" Content="Done" MinWidth="88" Margin="8,0,0,0" />
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

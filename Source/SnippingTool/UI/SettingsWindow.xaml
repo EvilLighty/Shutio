@@ -1,0 +1,244 @@
+<Window x:Class="SnippingTool.UI.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Settings"
+        Style="{StaticResource ModernWindow}"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        Width="780"
+        Height="820"
+        MinWidth="680"
+        MinHeight="560"
+        WindowStartupLocation="CenterOwner"
+        ShowInTaskbar="False"
+        Background="{DynamicResource AppBackgroundBrush}">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0" ResizeBorderThickness="7" GlassFrameThickness="0" CornerRadius="0" UseAeroCaptionButtons="False" />
+    </WindowChrome.WindowChrome>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="46" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="64" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="Transparent" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+            <StackPanel Orientation="Horizontal" Margin="16,0,0,0" VerticalAlignment="Center">
+                <Image Source="Assets/logo.png" Width="18" Height="18" RenderOptions.BitmapScalingMode="HighQuality" />
+                <TextBlock Text="Settings" FontSize="12" FontWeight="SemiBold" Margin="8,0,0,0" VerticalAlignment="Center" />
+            </StackPanel>
+            <Button Style="{StaticResource TitleBarCloseButton}" HorizontalAlignment="Right" Margin="0,0,5,0"
+                    Click="Cancel_Click" Content="&#xE8BB;" ToolTip="Close" />
+        </Grid>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel Margin="26,6,26,18">
+                <TextBlock Text="Settings" Style="{StaticResource H1}" />
+                <TextBlock Text="Everything is stored locally in the app's Data folder." Style="{StaticResource Caption}" Margin="0,4,0,16" />
+
+                <!-- Appearance -->
+                <Border Style="{StaticResource SectionCard}" Margin="0,0,0,12" Padding="18,15">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock Text="Appearance" Style="{StaticResource H3}" />
+                            <TextBlock Text="Follow Windows or choose a fixed light or dark look." Style="{StaticResource Caption}" Margin="0,3,0,0" />
+                        </StackPanel>
+                        <Border Grid.Column="1" Background="{DynamicResource SurfaceAltBrush}" BorderBrush="{DynamicResource BorderBrush}"
+                                BorderThickness="1" CornerRadius="8" Padding="3">
+                            <StackPanel Orientation="Horizontal">
+                                <ToggleButton x:Name="ThemeSystem" Style="{StaticResource SegmentToggle}" Content="System" />
+                                <ToggleButton x:Name="ThemeLight" Style="{StaticResource SegmentToggle}" Content="Light" />
+                                <ToggleButton x:Name="ThemeDark" Style="{StaticResource SegmentToggle}" Content="Dark" />
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <!-- Capture -->
+                <Border Style="{StaticResource SectionCard}" Margin="0,0,0,12" Padding="18,15">
+                    <StackPanel>
+                        <TextBlock Text="Capture" Style="{StaticResource H3}" />
+                        <TextBlock Text="Choose what the New snip button and shortcuts do by default." Style="{StaticResource Caption}" Margin="0,3,0,0" />
+
+                        <TextBlock Text="Default capture mode" Style="{StaticResource Tiny}" Margin="0,14,0,6" />
+                        <Border Background="{DynamicResource SurfaceAltBrush}" BorderBrush="{DynamicResource BorderBrush}"
+                                BorderThickness="1" CornerRadius="8" Padding="3" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Horizontal">
+                                <ToggleButton x:Name="ModeRectangle" Style="{StaticResource SegmentToggle}" Content="Rectangle" />
+                                <ToggleButton x:Name="ModeFreeform" Style="{StaticResource SegmentToggle}" Content="Freeform" />
+                                <ToggleButton x:Name="ModeWindow" Style="{StaticResource SegmentToggle}" Content="Window" />
+                                <ToggleButton x:Name="ModeFullscreen" Style="{StaticResource SegmentToggle}" Content="Full desktop" />
+                                <ToggleButton x:Name="ModeMonitor" Style="{StaticResource SegmentToggle}" Content="Display" />
+                            </StackPanel>
+                        </Border>
+
+                        <TextBlock Text="Capture delay" Style="{StaticResource Tiny}" Margin="0,14,0,6" />
+                        <Border Background="{DynamicResource SurfaceAltBrush}" BorderBrush="{DynamicResource BorderBrush}"
+                                BorderThickness="1" CornerRadius="8" Padding="3" HorizontalAlignment="Left">
+                            <StackPanel Orientation="Horizontal">
+                                <ToggleButton x:Name="Delay0" Style="{StaticResource SegmentToggle}" Content="No delay" />
+                                <ToggleButton x:Name="Delay3" Style="{StaticResource SegmentToggle}" Content="3 seconds" />
+                                <ToggleButton x:Name="Delay5" Style="{StaticResource SegmentToggle}" Content="5 seconds" />
+                                <ToggleButton x:Name="Delay10" Style="{StaticResource SegmentToggle}" Content="10 seconds" />
+                            </StackPanel>
+                        </Border>
+
+                        <TextBlock Text="After capture" Style="{StaticResource Tiny}" Margin="0,16,0,7" />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                                <CheckBox x:Name="AutoCopyToggle" Style="{StaticResource ToggleSwitch}" VerticalAlignment="Center" />
+                                <TextBlock Text="Copy to clipboard" FontSize="12.5" Margin="9,0,0,0" VerticalAlignment="Center" />
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0,0,0,8">
+                                <CheckBox x:Name="AutoSaveToggle" Style="{StaticResource ToggleSwitch}" VerticalAlignment="Center" />
+                                <TextBlock Text="Save automatically" FontSize="12.5" Margin="9,0,0,0" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Grid>
+                        <StackPanel Orientation="Horizontal" Margin="0,4,0,8">
+                            <CheckBox x:Name="OpenEditorToggle" Style="{StaticResource ToggleSwitch}" VerticalAlignment="Center" />
+                            <TextBlock Text="Open the editor after capture" FontSize="12.5" Margin="9,0,0,0" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,4">
+                            <CheckBox x:Name="NotificationsToggle" Style="{StaticResource ToggleSwitch}" VerticalAlignment="Center" />
+                            <TextBlock Text="Show notifications" FontSize="12.5" Margin="9,0,0,0" VerticalAlignment="Center" />
+                        </StackPanel>
+
+                        <Border Height="1" Background="{DynamicResource BorderBrush}" Margin="0,14,0,14" />
+
+                        <TextBlock Text="Save folder" Style="{StaticResource Tiny}" Margin="0,0,0,6" />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBox x:Name="SaveDirectoryBox" Style="{StaticResource ModernTextBox}" />
+                            <Button Grid.Column="1" x:Name="BrowseButton" Style="{StaticResource SecondaryButton}"
+                                    Content="Browse…" Margin="8,0,0,0" Padding="14,7" />
+                        </Grid>
+
+                        <TextBlock Text="File name pattern" Style="{StaticResource Tiny}" Margin="0,13,0,6" />
+                        <TextBox x:Name="PatternBox" Style="{StaticResource ModernTextBox}" />
+                        <TextBlock x:Name="PatternPreview" Text="Preview: Snip_2026-01-01_12-00-00.png" Style="{StaticResource Tiny}" Margin="1,5,0,0" />
+                    </StackPanel>
+                </Border>
+
+                <!-- Shortcuts -->
+                <Border Style="{StaticResource SectionCard}" Margin="0,0,0,12" Padding="18,15">
+                    <StackPanel>
+                        <Grid>
+                            <StackPanel>
+                                <TextBlock Text="Keyboard shortcuts" Style="{StaticResource H3}" />
+                                <TextBlock Text="Click a shortcut, then press the new key combination. Windows-key shortcuts are not supported."
+                                           Style="{StaticResource Caption}" Margin="0,3,0,0" TextWrapping="Wrap" MaxWidth="540" />
+                            </StackPanel>
+                            <Button x:Name="ResetHotkeysButton" Style="{StaticResource LinkButton}" Content="Reset all"
+                                    HorizontalAlignment="Right" VerticalAlignment="Top" />
+                        </Grid>
+                        <StackPanel x:Name="HotkeyHost" Margin="0,12,0,0" />
+                        <TextBlock x:Name="HotkeyConflictText" Style="{StaticResource Tiny}" Margin="0,8,0,0"
+                                   Foreground="{DynamicResource DangerBrush}" Visibility="Collapsed" TextWrapping="Wrap" />
+                        <Border Background="{DynamicResource SurfaceAltBrush}" CornerRadius="7" Padding="10,8" Margin="0,10,0,0">
+                            <TextBlock x:Name="ShortcutStatusText" Style="{StaticResource Tiny}" TextWrapping="Wrap"
+                                       Text="Shortcuts are registered when you save." />
+                        </Border>
+                    </StackPanel>
+                </Border>
+
+                <!-- Running behaviour -->
+                <Border Style="{StaticResource SectionCard}" Margin="0,0,0,12" Padding="18,15">
+                    <StackPanel>
+                        <TextBlock Text="Running in the background" Style="{StaticResource H3}" />
+                        <TextBlock Text="Shortcuts work while the window is hidden, provided Windows allows them." Style="{StaticResource Caption}" Margin="0,3,0,0" />
+                        <StackPanel Orientation="Horizontal" Margin="0,12,0,8">
+                            <CheckBox x:Name="FloatingToolbarToggle" Style="{StaticResource ToggleSwitch}" VerticalAlignment="Center" />
+                            <TextBlock Text="Show the floating capture toolbar" FontSize="12.5" Margin="9,0,0,0" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                            <CheckBox x:Name="CloseToTrayToggle" Style="{StaticResource ToggleSwitch}" VerticalAlignment="Center" />
+                            <TextBlock Text="Closing the window keeps the app in the notification area" FontSize="12.5" Margin="9,0,0,0" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                            <CheckBox x:Name="StartTrayToggle" Style="{StaticResource ToggleSwitch}" VerticalAlignment="Center" />
+                            <TextBlock Text="Start minimized in the notification area" FontSize="12.5" Margin="9,0,0,0" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox x:Name="MinimizeTrayToggle" Style="{StaticResource ToggleSwitch}" VerticalAlignment="Center" />
+                            <TextBlock Text="Minimizing hides the window to the notification area" FontSize="12.5" Margin="9,0,0,0" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- Recording -->
+                <Border Style="{StaticResource SectionCard}" Margin="0,0,0,12" Padding="18,15">
+                    <StackPanel>
+                        <TextBlock Text="Screen recording" Style="{StaticResource H3}" />
+                        <TextBlock x:Name="RecordingEngineText" Style="{StaticResource Caption}" Margin="0,3,0,0" TextWrapping="Wrap" />
+                        <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                            <TextBlock Text="Frame rate" FontSize="12.5" VerticalAlignment="Center" Margin="0,0,12,0" />
+                            <Border Background="{DynamicResource SurfaceAltBrush}" BorderBrush="{DynamicResource BorderBrush}"
+                                    BorderThickness="1" CornerRadius="8" Padding="3" HorizontalAlignment="Left">
+                                <StackPanel Orientation="Horizontal">
+                                    <ToggleButton x:Name="Fps10" Style="{StaticResource SegmentToggle}" Content="10" />
+                                    <ToggleButton x:Name="Fps15" Style="{StaticResource SegmentToggle}" Content="15" />
+                                    <ToggleButton x:Name="Fps24" Style="{StaticResource SegmentToggle}" Content="24" />
+                                    <ToggleButton x:Name="Fps30" Style="{StaticResource SegmentToggle}" Content="30" />
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                            <CheckBox x:Name="CursorToggle" Style="{StaticResource ToggleSwitch}" VerticalAlignment="Center" />
+                            <TextBlock Text="Include the mouse cursor in recordings" FontSize="12.5" Margin="9,0,0,0" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                            <CheckBox x:Name="AudioToggle" Style="{StaticResource ToggleSwitch}" VerticalAlignment="Center" />
+                            <TextBlock Text="Record microphone audio" FontSize="12.5" Margin="9,0,0,0" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel x:Name="MicPickerRow" Margin="0,12,0,0" Visibility="Collapsed">
+                            <TextBlock Text="Microphone" Style="{StaticResource Tiny}" Margin="0,0,0,6" />
+                            <ComboBox x:Name="MicBox" Style="{StaticResource ModernComboBox}" MinHeight="34"
+                                     HorizontalAlignment="Left" MinWidth="320" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- Data -->
+                <Border Style="{StaticResource SectionCard}" Padding="18,15">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <TextBlock Text="Portable data" Style="{StaticResource H3}" />
+                            <TextBlock x:Name="DataPathText" Style="{StaticResource Tiny}" Margin="0,5,0,0" TextWrapping="Wrap" />
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="12,0,0,0">
+                            <Button x:Name="OpenDataButton" Style="{StaticResource SecondaryButton}" Content="Open data folder" Padding="12,6" />
+                            <Button x:Name="ResetAllButton" Style="{StaticResource GhostButton}" Content="Reset all settings" Padding="12,6" Margin="6,0,0,0" />
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+
+        <Border Grid.Row="2" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,1,0,0">
+            <Grid Margin="22,0">
+                <TextBlock x:Name="SaveHintText" Text="Changes apply to new captures." Style="{StaticResource Tiny}"
+                           VerticalAlignment="Center" />
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button x:Name="CancelButton" Style="{StaticResource GhostButton}" Content="Cancel" MinWidth="88" Margin="0,0,8,0" />
+                    <Button x:Name="SaveButton" Style="{StaticResource PrimaryButton}" Content="Save changes" MinWidth="118" />
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

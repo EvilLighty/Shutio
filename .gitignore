@@ -1,0 +1,42 @@
+# ============================================================
+#  Shutio — .gitignore
+#
+#  The GitHub repo holds SOURCE + DOCS + build tooling only.
+#  It deliberately EXCLUDES personal data, large bundled
+#  binaries, and all .NET build output (all of which are
+#  regenerable on the machine or provided separately).
+# ============================================================
+
+# --- personal / user data (snips, recordings, settings, logs) — NEVER commit
+Data/
+
+# --- bundled recording engine (large binary; distributed separately) ---
+ffmpeg.exe
+
+# --- published single-file app (build output) ---
+#     regenerate with:  Tools\RebuildAppSingleFile.ps1
+Shutio.exe
+Shutio.deps.json
+Shutio.runtimeconfig.json
+createdump.exe
+
+# --- .NET build output (at any level) ---
+bin/
+obj/
+_build/
+_backup/
+*.user
+*.suo
+.vs/
+
+# --- ad-hoc test / verification artifacts (debug screenshots land at repo root) ---
+test-*.mp4
+test-*.m4a
+/preview-*.png
+/verify-*.png
+/fonttest.png
+/test-*.png
+/screenshot*.png
+/hotkey-screenshot.png
+/full*.png
+/caption-*.png

@@ -1,0 +1,80 @@
+<Window x:Class="SnippingTool.Editor.ResizeDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:SnippingTool.UI"
+        Title="Resize image"
+        Style="{StaticResource ModernWindow}"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Width="430"
+        SizeToContent="Height"
+        WindowStartupLocation="CenterOwner"
+        ShowInTaskbar="False"
+        Background="{DynamicResource AppBackgroundBrush}">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0" ResizeBorderThickness="0" GlassFrameThickness="0" CornerRadius="0" />
+    </WindowChrome.WindowChrome>
+    <Border Background="{DynamicResource AppBackgroundBrush}" BorderBrush="{DynamicResource WindowBorderBrush}"
+            BorderThickness="1" CornerRadius="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="44" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Background="Transparent" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+                <TextBlock Text="Resize image" Margin="18,0,0,0" VerticalAlignment="Center" FontSize="12" FontWeight="SemiBold"
+                           Foreground="{DynamicResource TextSecondaryBrush}" />
+                <Button Style="{StaticResource TitleBarCloseButton}" HorizontalAlignment="Right" Width="42" Height="32"
+                        Margin="0,0,5,0" Click="Cancel_Click" Content="&#xE8BB;" FontFamily="{StaticResource IconFont}" FontSize="10" />
+            </Grid>
+
+            <StackPanel Grid.Row="1" Margin="24,4,24,20">
+                <TextBlock Text="Resize image" Style="{StaticResource H2}" />
+                <TextBlock x:Name="OriginalText" Text="Original: 0 × 0 px" Style="{StaticResource Caption}" Margin="0,4,0,18" />
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="18" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel>
+                        <TextBlock Text="Width (px)" Style="{StaticResource Tiny}" Margin="2,0,0,5" />
+                        <TextBox x:Name="WidthBox" Style="{StaticResource ModernTextBox}" TextChanged="Dimension_TextChanged" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="2">
+                        <TextBlock Text="Height (px)" Style="{StaticResource Tiny}" Margin="2,0,0,5" />
+                        <TextBox x:Name="HeightBox" Style="{StaticResource ModernTextBox}" TextChanged="Dimension_TextChanged" />
+                    </StackPanel>
+                </Grid>
+
+                <Grid Margin="0,14,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox x:Name="AspectCheck" Style="{StaticResource ToggleSwitch}" IsChecked="True"
+                                  VerticalAlignment="Center" />
+                        <TextBlock Text="Keep aspect ratio" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="12" />
+                    </StackPanel>
+                    <TextBlock x:Name="EstimateText" HorizontalAlignment="Right" VerticalAlignment="Center"
+                               Style="{StaticResource Tiny}" Text="" />
+                </Grid>
+
+                <TextBlock Text="Presets" Style="{StaticResource Tiny}" Margin="2,20,0,7" />
+                <WrapPanel>
+                    <ToggleButton x:Name="Preset25" Content="25%" Style="{StaticResource SegmentToggle}" Margin="0,0,4,4" />
+                    <ToggleButton x:Name="Preset50" Content="50%" Style="{StaticResource SegmentToggle}" Margin="0,0,4,4" />
+                    <ToggleButton x:Name="Preset75" Content="75%" Style="{StaticResource SegmentToggle}" Margin="0,0,4,4" />
+                    <ToggleButton x:Name="Preset100" Content="100%" Style="{StaticResource SegmentToggle}" Margin="0,0,4,4" />
+                    <ToggleButton x:Name="Preset150" Content="150%" Style="{StaticResource SegmentToggle}" Margin="0,0,4,4" />
+                    <ToggleButton x:Name="Preset200" Content="200%" Style="{StaticResource SegmentToggle}" Margin="0,0,0,4" />
+                </WrapPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="24,0,24,20">
+                <Button Content="Cancel" Style="{StaticResource GhostButton}" MinWidth="88" Click="Cancel_Click" IsCancel="True" />
+                <Button Content="Resize" Style="{StaticResource PrimaryButton}" MinWidth="96" Margin="8,0,0,0" Click="Resize_Click" IsDefault="True" />
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
