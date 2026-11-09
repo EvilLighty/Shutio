@@ -1,1 +1,211 @@
-dXNpbmcgU3lzdGVtOwp1c2luZyBTeXN0ZW0uRGlhZ25vc3RpY3M7CnVzaW5nIFN5c3RlbS5JTzsKdXNpbmcgU3lzdGVtLldpbmRvd3MuRm9ybXM7CnVzaW5nIE1pY3Jvc29mdC5XaW4zMjsKCm5hbWVzcGFjZSBTaHV0aW9Vbmluc3RhbGxlcjsKCi8vLyA8c3VtbWFyeT4KLy8vIFN0YW5kYWxvbmUsIHBlci11c2VyLCBuby1hZG1pbiB1bmluc3RhbGxlciBmb3IgdGhlIHBvcnRhYmxlIFNodXRpby4KLy8vCi8vLyBGaW5kcyB0aGUgaW5zdGFsbGVkIGFwcCAodmlhIHRoZSAiQXBwcyAmYW1wOyBmZWF0dXJlcyIgcmVnaXN0cnkgZW50cnksIG9yIG5leHQgdG8KLy8vIGl0c2VsZiwgb3IgYSBwYXRoIHlvdSBwYXNzKSBhbmQgcmVtb3ZlcyB0aGUgYXBwIGZpbGVzLCB0aGUgU3RhcnQgTWVudSArIERlc2t0b3AKLy8vIHNob3J0Y3V0cywgYW5kIHRoZSByZWdpc3RyeSBlbnRyeS4gWW91ciBzbmlwcy9yZWNvcmRpbmdzIGluIERhdGFcIGFyZSBrZXB0IHVubGVzcwovLy8geW91IHBhc3MgLS1yZW1vdmUtZGF0YS4KLy8vCi8vLyBVc2FnZToKLy8vICAgVW5pbnN0YWxsU2h1dGlvLmV4ZSAgICAgICAgICAgICAgICAgIC0+IHByb21wdCB0byBjb25maXJtLCB0aGVuIHJlbW92ZSAoa2VlcHMgRGF0YSkKLy8vICAgVW5pbnN0YWxsU2h1dGlvLmV4ZSAiQzpcV2hlcmV2ZXIiICAgIC0+IHVuaW5zdGFsbCB0aGUgY29weSBhdCB0aGF0IHBhdGgKLy8vICAgVW5pbnN0YWxsU2h1dGlvLmV4ZSAtLXllcyAgICAgICAgICAgIC0+IG5vIGNvbmZpcm1hdGlvbiBwcm9tcHQKLy8vICAgVW5pbnN0YWxsU2h1dGlvLmV4ZSAtLXJlbW92ZS1kYXRhICAgIC0+IGFsc28gZGVsZXRlIERhdGFcIChzbmlwcyAvIHJlY29yZGluZ3MpCi8vLyAgIFVuaW5zdGFsbFNodXRpby5leGUgLS1oZWxwCi8vLyA8L3N1bW1hcnk+CmludGVybmFsIHN0YXRpYyBjbGFzcyBQcm9ncmFtCnsKICAgIHByaXZhdGUgY29uc3Qgc3RyaW5nIEFwcE5hbWUgPSAiU2h1dGlvIjsKICAgIHByaXZhdGUgY29uc3Qgc3RyaW5nIEV4ZU5hbWUgPSAiU2h1dGlvLmV4ZSI7CiAgICBwcml2YXRlIGNvbnN0IHN0cmluZyBSZWdQYXRoID0gQCJTb2Z0d2FyZVxNaWNyb3NvZnRcV2luZG93c1xDdXJyZW50VmVyc2lvblxVbmluc3RhbGxcU2h1dGlvIjsKCiAgICBbU1RBVGhyZWFkXQogICAgcHJpdmF0ZSBzdGF0aWMgaW50IE1haW4oc3RyaW5nW10gYXJncykKICAgIHsKICAgICAgICBib29sICAgICAgc2tpcENvbmZpcm0gPSBmYWxzZTsKICAgICAgICBib29sICAgICAgcmVtb3ZlRGF0YSAgPSBmYWxzZTsKICAgICAgICBib29sICAgICAgc2lsZW50ICAgICAgPSBmYWxzZTsKICAgICAgICBzdHJpbmc/ICAgZGVzdEFyZyAgICAgPSBudWxsOwoKICAgICAgICBmb3JlYWNoIChzdHJpbmcgYSBpbiBhcmdzKQogICAgICAgIHsKICAgICAgICAgICAgc3RyaW5nIHMgPSBhLlRyaW0oKTsKICAgICAgICAgICAgaWYgKHMuTGVuZ3RoID4gMSAmJiAoc1swXSA9PSAnLScgfHwgc1swXSA9PSAnLycpKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBzd2l0Y2ggKHMuVHJpbVN0YXJ0KCctJywgJy8nKS5Ub0xvd2VySW52YXJpYW50KCkpCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgY2FzZSAieWVzIjoKICAgICAgICAgICAgICAgICAgICBjYXNlICJ5IjoKICAgICAgICAgICAgICAgICAgICBjYXNlICJmb3JjZSI6CiAgICAgICAgICAgICAgICAgICAgY2FzZSAic2tpcC1jb25maXJtIjoKICAgICAgICAgICAgICAgICAgICAgICAgc2tpcENvbmZpcm0gPSB0cnVlOwogICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKICAgICAgICAgICAgICAgICAgICBjYXNlICJyZW1vdmUtZGF0YSI6CiAgICAgICAgICAgICAgICAgICAgY2FzZSAicmVtb3ZlZGF0YSI6CiAgICAgICAgICAgICAgICAgICAgICAgIHJlbW92ZURhdGEgPSB0cnVlOwogICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKICAgICAgICAgICAgICAgICAgICBjYXNlICJzaWxlbnQiOgogICAgICAgICAgICAgICAgICAgIGNhc2UgInF1aWV0IjoKICAgICAgICAgICAgICAgICAgICAgICAgc2lsZW50ID0gdHJ1ZTsKICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgICAgICAgICAgICAgY2FzZSAiaGVscCI6CiAgICAgICAgICAgICAgICAgICAgY2FzZSAiaCI6CiAgICAgICAgICAgICAgICAgICAgY2FzZSAiPyI6CiAgICAgICAgICAgICAgICAgICAgICAgIFByaW50SGVscCgpOwogICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gMDsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgICBlbHNlIGlmIChkZXN0QXJnID09IG51bGwpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGRlc3RBcmcgPSBzOwogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICBzdHJpbmc/IGRlc3QgPSBkZXN0QXJnOwogICAgICAgIGlmIChzdHJpbmcuSXNOdWxsT3JXaGl0ZVNwYWNlKGRlc3QpKQogICAgICAgICAgICBkZXN0ID0gRmluZEluc3RhbGxMb2NhdGlvbigpOwoKICAgICAgICBpZiAoc3RyaW5nLklzTnVsbE9yV2hpdGVTcGFjZShkZXN0KSB8fCAhRmlsZS5FeGlzdHMoUGF0aC5Db21iaW5lKGRlc3QsIEV4ZU5hbWUpKSkKICAgICAgICB7CiAgICAgICAgICAgIGlmICghc2lsZW50KQogICAgICAgICAgICAgICAgTWVzc2FnZUJveC5TaG93KAogICAgICAgICAgICAgICAgICAgICQiQ291bGQgbm90IGZpbmQgYW4gaW5zdGFsbGVkIHtBcHBOYW1lfS5cblxuIiArCiAgICAgICAgICAgICAgICAgICAgJCJMb29rZWQgaGVyZToge2Rlc3QgPz8gIih1bmtub3duKSJ9XG5cbiIgKwogICAgICAgICAgICAgICAgICAgICQiSWYgeW91IGtub3cgdGhlIGZvbGRlciwgcnVuOlxuVW5pbnN0YWxsU2h1dGlvLmV4ZSBcIjxmb2xkZXI+XCIiLAogICAgICAgICAgICAgICAgICAgIEFwcE5hbWUsIE1lc3NhZ2VCb3hCdXR0b25zLk9LLCBNZXNzYWdlQm94SWNvbi5XYXJuaW5nKTsKICAgICAgICAgICAgcmV0dXJuIDE7CiAgICAgICAgfQoKICAgICAgICBpZiAoIXNraXBDb25maXJtICYmICFzaWxlbnQpCiAgICAgICAgewogICAgICAgICAgICBEaWFsb2dSZXN1bHQgciA9IE1lc3NhZ2VCb3guU2hvdygKICAgICAgICAgICAgICAgICQiVW5pbnN0YWxsIHRoZSB7QXBwTmFtZX0gaW5zdGFsbGVkIGF0OlxuXG57ZGVzdH1cblxuIiArCiAgICAgICAgICAgICAgICAocmVtb3ZlRGF0YQogICAgICAgICAgICAgICAgICAgID8gIllvdXIgc25pcHMgYW5kIHJlY29yZGluZ3MgaW4gRGF0YVxcIHdpbGwgYWxzbyBiZSBkZWxldGVkLiIKICAgICAgICAgICAgICAgICAgICA6ICJZb3VyIHNuaXBzIGFuZCByZWNvcmRpbmdzIGluIERhdGFcXCB3aWxsIGJlIEtFUFQgKGRlbGV0ZSB0aGVtIHNlcGFyYXRlbHkgaWYgeW91IHdhbnQpLiIpICsKICAgICAgICAgICAgICAgICJcblxuQ2xpY2sgWWVzIHRvIHVuaW5zdGFsbCwgb3IgTm8gdG8gY2FuY2VsLiIsCiAgICAgICAgICAgICAgICBBcHBOYW1lLCBNZXNzYWdlQm94QnV0dG9ucy5ZZXNObywgTWVzc2FnZUJveEljb24uUXVlc3Rpb24pOwogICAgICAgICAgICBpZiAociAhPSBEaWFsb2dSZXN1bHQuWWVzKSByZXR1cm4gMDsKICAgICAgICB9CgogICAgICAgIENsb3NlUnVubmluZ0FwcCgpOwoKICAgICAgICAvLyBTaG9ydGN1dHMuCiAgICAgICAgUmVtb3ZlU2hvcnRjdXQoUGF0aC5Db21iaW5lKAogICAgICAgICAgICBFbnZpcm9ubWVudC5HZXRGb2xkZXJQYXRoKEVudmlyb25tZW50LlNwZWNpYWxGb2xkZXIuQXBwbGljYXRpb25EYXRhKSwKICAgICAgICAgICAgQCJNaWNyb3NvZnRcV2luZG93c1xTdGFydCBNZW51XFByb2dyYW1zXFNodXRpby5sbmsiKSk7CiAgICAgICAgUmVtb3ZlU2hvcnRjdXQoUGF0aC5Db21iaW5lKAogICAgICAgICAgICBFbnZpcm9ubWVudC5HZXRGb2xkZXJQYXRoKEVudmlyb25tZW50LlNwZWNpYWxGb2xkZXIuRGVza3RvcCksICJTaHV0aW8ubG5rIikpOwoKICAgICAgICAvLyBSZWdpc3RyeSAoQXBwcyAmIGZlYXR1cmVzIGVudHJ5KS4KICAgICAgICB0cnkgeyBSZWdpc3RyeS5DdXJyZW50VXNlci5EZWxldGVTdWJLZXlUcmVlKFJlZ1BhdGgsIHRocm93T25NaXNzaW5nU3ViS2V5OiBmYWxzZSk7IH0KICAgICAgICBjYXRjaCB7IC8qIGlnbm9yZSAqLyB9CgogICAgICAgIC8vIEZpbGVzLgogICAgICAgIGlmIChyZW1vdmVEYXRhKQogICAgICAgIHsKICAgICAgICAgICAgRGVsZXRlQWxsKGRlc3QpOwogICAgICAgIH0KICAgICAgICBlbHNlCiAgICAgICAgewogICAgICAgICAgICBmb3JlYWNoIChzdHJpbmcgaXRlbSBpbiBEaXJlY3RvcnkuRW51bWVyYXRlRmlsZVN5c3RlbUVudHJpZXMoZGVzdCkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGlmIChQYXRoLkdldEZpbGVOYW1lKGl0ZW0pLkVxdWFscygiRGF0YSIsIFN0cmluZ0NvbXBhcmlzb24uT3JkaW5hbElnbm9yZUNhc2UpKSBjb250aW51ZTsKICAgICAgICAgICAgICAgIERlbGV0ZUFsbChpdGVtKTsKICAgICAgICAgICAgfQogICAgICAgICAgICB0cnkgeyBpZiAoIURpcmVjdG9yeS5FbnVtZXJhdGVGaWxlU3lzdGVtRW50cmllcyhkZXN0KS5BbnkoKSkgRGlyZWN0b3J5LkRlbGV0ZShkZXN0KTsgfSBjYXRjaCB7IH0KICAgICAgICB9CgogICAgICAgIGlmICghc2lsZW50KQogICAgICAgICAgICBNZXNzYWdlQm94LlNob3coJCJUaGUge0FwcE5hbWV9IHdhcyByZW1vdmVkLlxuIiwgQXBwTmFtZSwgTWVzc2FnZUJveEJ1dHRvbnMuT0ssIE1lc3NhZ2VCb3hJY29uLkluZm9ybWF0aW9uKTsKICAgICAgICByZXR1cm4gMDsKICAgIH0KCiAgICBwcml2YXRlIHN0YXRpYyB2b2lkIFByaW50SGVscCgpCiAgICB7CiAgICAgICAgTWVzc2FnZUJveC5TaG93KAogICAgICAgICAgICAiVXNhZ2U6XG4iICsKICAgICAgICAgICAgIiAgVW5pbnN0YWxsU2h1dGlvLmV4ZSAgICAgICAgICAgICAgICAgIHByb21wdCB0byBjb25maXJtLCB0aGVuIHJlbW92ZSAoa2VlcHMgRGF0YSlcbiIgKwogICAgICAgICAgICAiICBVbmluc3RhbGxTaHV0aW8uZXhlIFwiQzpcXFdoZXJldmVyXCIgdW5pbnN0YWxsIHRoYXQgZm9sZGVyXG4iICsKICAgICAgICAgICAgIiAgVW5pbnN0YWxsU2h1dGlvLmV4ZSAtLXllcyAgICAgICAgICAgIG5vIGNvbmZpcm1hdGlvbiBwcm9tcHRcbiIgKwogICAgICAgICAgICAiICBVbmluc3RhbGxTaHV0aW8uZXhlIC0tcmVtb3ZlLWRhdGEgICAgYWxzbyBkZWxldGUgRGF0YVxcIChzbmlwcyAvIHJlY29yZGluZ3MpXG4iICsKICAgICAgICAgICAgIiAgVW5pbnN0YWxsU2h1dGlvLmV4ZSAtLXNpbGVudCAgICAgICAgIG5vIGRpYWxvZ3MgYXQgYWxsIChmb3IgYXV0b21hdGlvbilcbiIsCiAgICAgICAgICAgIEFwcE5hbWUsIE1lc3NhZ2VCb3hCdXR0b25zLk9LLCBNZXNzYWdlQm94SWNvbi5JbmZvcm1hdGlvbik7CiAgICB9CgogICAgcHJpdmF0ZSBzdGF0aWMgc3RyaW5nPyBGaW5kSW5zdGFsbExvY2F0aW9uKCkKICAgIHsKICAgICAgICAvLyAxKSBUaGUgIkFwcHMgJiBmZWF0dXJlcyIgZW50cnkgd2Ugd3JvdGUgYXQgaW5zdGFsbCB0aW1lLgogICAgICAgIHRyeQogICAgICAgIHsKICAgICAgICAgICAgdXNpbmcgUmVnaXN0cnlLZXk/IGtleSA9IFJlZ2lzdHJ5LkN1cnJlbnRVc2VyLk9wZW5TdWJLZXkoUmVnUGF0aCk7CiAgICAgICAgICAgIHN0cmluZz8gbG9jID0ga2V5Py5HZXRWYWx1ZSgiSW5zdGFsbExvY2F0aW9uIikgYXMgc3RyaW5nOwogICAgICAgICAgICBpZiAoIXN0cmluZy5Jc051bGxPcldoaXRlU3BhY2UobG9jKSAmJiBGaWxlLkV4aXN0cyhQYXRoLkNvbWJpbmUobG9jLCBFeGVOYW1lKSkpIHJldHVybiBsb2M7CiAgICAgICAgfQogICAgICAgIGNhdGNoIHsgfQoKICAgICAgICAvLyAyKSBOZXh0IHRvIHRoaXMgZXhlY3V0YWJsZSAoaW4gY2FzZSBpdCB3YXMgZHJvcHBlZCBpbnRvIHRoZSBpbnN0YWxsIGZvbGRlcikuCiAgICAgICAgc3RyaW5nIGJlc2lkZSA9IG5ldyBEaXJlY3RvcnlJbmZvKEFwcENvbnRleHQuQmFzZURpcmVjdG9yeSkuRnVsbE5hbWUuVHJpbUVuZCgnXFwnLCAnLycpOwogICAgICAgIGlmIChGaWxlLkV4aXN0cyhQYXRoLkNvbWJpbmUoYmVzaWRlLCBFeGVOYW1lKSkpIHJldHVybiBiZXNpZGU7CgogICAgICAgIC8vIDMpIENvbW1vbiBkZWZhdWx0IGxvY2F0aW9ucy4KICAgICAgICBmb3JlYWNoIChzdHJpbmcgYyBpbiBuZXdbXQogICAgICAgIHsKICAgICAgICAgICAgUGF0aC5Db21iaW5lKEVudmlyb25tZW50LkdldEZvbGRlclBhdGgoRW52aXJvbm1lbnQuU3BlY2lhbEZvbGRlci5Mb2NhbEFwcGxpY2F0aW9uRGF0YSksICJQcm9ncmFtcyIsICJTaHV0aW8iKSwKICAgICAgICAgICAgQCJJOlxTaHV0aW8iLAogICAgICAgICAgICBAIkk6XEFwcHNcU2h1dGlvIiwKICAgICAgICAgICAgQCJDOlxQcm9ncmFtIEZpbGVzXFNodXRpbyIsCiAgICAgICAgfSkKICAgICAgICB7CiAgICAgICAgICAgIGlmIChGaWxlLkV4aXN0cyhQYXRoLkNvbWJpbmUoYywgRXhlTmFtZSkpKSByZXR1cm4gYzsKICAgICAgICB9CiAgICAgICAgcmV0dXJuIG51bGw7CiAgICB9CgogICAgcHJpdmF0ZSBzdGF0aWMgdm9pZCBDbG9zZVJ1bm5pbmdBcHAoKQogICAgewogICAgICAgIHRyeQogICAgICAgIHsKICAgICAgICAgICAgZm9yZWFjaCAoUHJvY2VzcyBwIGluIFByb2Nlc3MuR2V0UHJvY2Vzc2VzQnlOYW1lKCJTaHV0aW8iKSkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgdHJ5IHsgcC5LaWxsKCk7IHAuV2FpdEZvckV4aXQoMzAwMCk7IH0gY2F0Y2ggeyB9CiAgICAgICAgICAgICAgICBmaW5hbGx5IHsgcC5EaXNwb3NlKCk7IH0KICAgICAgICAgICAgfQogICAgICAgIH0KICAgICAgICBjYXRjaCB7IH0KICAgIH0KCiAgICBwcml2YXRlIHN0YXRpYyB2b2lkIFJlbW92ZVNob3J0Y3V0KHN0cmluZyBwYXRoKQogICAgewogICAgICAgIHRyeSB7IGlmIChGaWxlLkV4aXN0cyhwYXRoKSkgRmlsZS5EZWxldGUocGF0aCk7IH0gY2F0Y2ggeyB9CiAgICB9CgogICAgcHJpdmF0ZSBzdGF0aWMgdm9pZCBEZWxldGVBbGwoc3RyaW5nIHBhdGgpCiAgICB7CiAgICAgICAgdHJ5CiAgICAgICAgewogICAgICAgICAgICBpZiAoRGlyZWN0b3J5LkV4aXN0cyhwYXRoKSkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgZm9yZWFjaCAoc3RyaW5nIGQgaW4gRGlyZWN0b3J5LkVudW1lcmF0ZURpcmVjdG9yaWVzKHBhdGgpKSBEZWxldGVBbGwoZCk7CiAgICAgICAgICAgICAgICBmb3JlYWNoIChzdHJpbmcgZiBpbiBEaXJlY3RvcnkuRW51bWVyYXRlRmlsZXMocGF0aCkpCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgdHJ5IHsgRmlsZS5EZWxldGUoZik7IH0gY2F0Y2ggeyB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB0cnkgeyBEaXJlY3RvcnkuRGVsZXRlKHBhdGgpOyB9IGNhdGNoIHsgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsc2UKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgdHJ5IHsgRmlsZS5EZWxldGUocGF0aCk7IH0gY2F0Y2ggeyB9CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgY2F0Y2ggeyB9CiAgICB9Cn0K
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Windows.Forms;
+using Microsoft.Win32;
+
+namespace ShutioUninstaller;
+
+/// <summary>
+/// Standalone, per-user, no-admin uninstaller for the portable Shutio.
+///
+/// Finds the installed app (via the "Apps &amp; features" registry entry, or next to
+/// itself, or a path you pass) and removes the app files, the Start Menu + Desktop
+/// shortcuts, and the registry entry. Your snips/recordings in Data\ are kept unless
+/// you pass --remove-data.
+///
+/// Usage:
+///   UninstallShutio.exe                  -> prompt to confirm, then remove (keeps Data)
+///   UninstallShutio.exe "C:\Wherever"    -> uninstall the copy at that path
+///   UninstallShutio.exe --yes            -> no confirmation prompt
+///   UninstallShutio.exe --remove-data    -> also delete Data\ (snips / recordings)
+///   UninstallShutio.exe --help
+/// </summary>
+internal static class Program
+{
+    private const string AppName = "Shutio";
+    private const string ExeName = "Shutio.exe";
+    private const string RegPath = @"Software\Microsoft\Windows\CurrentVersion\Uninstall\Shutio";
+
+    [STAThread]
+    private static int Main(string[] args)
+    {
+        bool      skipConfirm = false;
+        bool      removeData  = false;
+        bool      silent      = false;
+        string?   destArg     = null;
+
+        foreach (string a in args)
+        {
+            string s = a.Trim();
+            if (s.Length > 1 && (s[0] == '-' || s[0] == '/'))
+            {
+                switch (s.TrimStart('-', '/').ToLowerInvariant())
+                {
+                    case "yes":
+                    case "y":
+                    case "force":
+                    case "skip-confirm":
+                        skipConfirm = true;
+                        break;
+                    case "remove-data":
+                    case "removedata":
+                        removeData = true;
+                        break;
+                    case "silent":
+                    case "quiet":
+                        silent = true;
+                        break;
+                    case "help":
+                    case "h":
+                    case "?":
+                        PrintHelp();
+                        return 0;
+                }
+            }
+            else if (destArg == null)
+            {
+                destArg = s;
+            }
+        }
+
+        string? dest = destArg;
+        if (string.IsNullOrWhiteSpace(dest))
+            dest = FindInstallLocation();
+
+        if (string.IsNullOrWhiteSpace(dest) || !File.Exists(Path.Combine(dest, ExeName)))
+        {
+            if (!silent)
+                MessageBox.Show(
+                    $"Could not find an installed {AppName}.\n\n" +
+                    $"Looked here: {dest ?? "(unknown)"}\n\n" +
+                    $"If you know the folder, run:\nUninstallShutio.exe \"<folder>\"",
+                    AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return 1;
+        }
+
+        if (!skipConfirm && !silent)
+        {
+            DialogResult r = MessageBox.Show(
+                $"Uninstall the {AppName} installed at:\n\n{dest}\n\n" +
+                (removeData
+                    ? "Your snips and recordings in Data\\ will also be deleted."
+                    : "Your snips and recordings in Data\\ will be KEPT (delete them separately if you want).") +
+                "\n\nClick Yes to uninstall, or No to cancel.",
+                AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r != DialogResult.Yes) return 0;
+        }
+
+        CloseRunningApp();
+
+        // Shortcuts.
+        RemoveShortcut(Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+            @"Microsoft\Windows\Start Menu\Programs\Shutio.lnk"));
+        RemoveShortcut(Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Shutio.lnk"));
+
+        // Registry (Apps & features entry).
+        try { Registry.CurrentUser.DeleteSubKeyTree(RegPath, throwOnMissingSubKey: false); }
+        catch { /* ignore */ }
+
+        // Files.
+        if (removeData)
+        {
+            DeleteAll(dest);
+        }
+        else
+        {
+            foreach (string item in Directory.EnumerateFileSystemEntries(dest))
+            {
+                if (Path.GetFileName(item).Equals("Data", StringComparison.OrdinalIgnoreCase)) continue;
+                DeleteAll(item);
+            }
+            try { if (!Directory.EnumerateFileSystemEntries(dest).Any()) Directory.Delete(dest); } catch { }
+        }
+
+        if (!silent)
+            MessageBox.Show($"The {AppName} was removed.\n", AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        return 0;
+    }
+
+    private static void PrintHelp()
+    {
+        MessageBox.Show(
+            "Usage:\n" +
+            "  UninstallShutio.exe                  prompt to confirm, then remove (keeps Data)\n" +
+            "  UninstallShutio.exe \"C:\\Wherever\" uninstall that folder\n" +
+            "  UninstallShutio.exe --yes            no confirmation prompt\n" +
+            "  UninstallShutio.exe --remove-data    also delete Data\\ (snips / recordings)\n" +
+            "  UninstallShutio.exe --silent         no dialogs at all (for automation)\n",
+            AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+    }
+
+    private static string? FindInstallLocation()
+    {
+        // 1) The "Apps & features" entry we wrote at install time.
+        try
+        {
+            using RegistryKey? key = Registry.CurrentUser.OpenSubKey(RegPath);
+            string? loc = key?.GetValue("InstallLocation") as string;
+            if (!string.IsNullOrWhiteSpace(loc) && File.Exists(Path.Combine(loc, ExeName))) return loc;
+        }
+        catch { }
+
+        // 2) Next to this executable (in case it was dropped into the install folder).
+        string beside = new DirectoryInfo(AppContext.BaseDirectory).FullName.TrimEnd('\\', '/');
+        if (File.Exists(Path.Combine(beside, ExeName))) return beside;
+
+        // 3) Common default locations.
+        foreach (string c in new[]
+        {
+            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Programs", "Shutio"),
+            @"I:\Shutio",
+            @"I:\Apps\Shutio",
+            @"C:\Program Files\Shutio",
+        })
+        {
+            if (File.Exists(Path.Combine(c, ExeName))) return c;
+        }
+        return null;
+    }
+
+    private static void CloseRunningApp()
+    {
+        try
+        {
+            foreach (Process p in Process.GetProcessesByName("Shutio"))
+            {
+                try { p.Kill(); p.WaitForExit(3000); } catch { }
+                finally { p.Dispose(); }
+            }
+        }
+        catch { }
+    }
+
+    private static void RemoveShortcut(string path)
+    {
+        try { if (File.Exists(path)) File.Delete(path); } catch { }
+    }
+
+    private static void DeleteAll(string path)
+    {
+        try
+        {
+            if (Directory.Exists(path))
+            {
+                foreach (string d in Directory.EnumerateDirectories(path)) DeleteAll(d);
+                foreach (string f in Directory.EnumerateFiles(path))
+                {
+                    try { File.Delete(f); } catch { }
+                }
+                try { Directory.Delete(path); } catch { }
+            }
+            else
+            {
+                try { File.Delete(path); } catch { }
+            }
+        }
+        catch { }
+    }
+}

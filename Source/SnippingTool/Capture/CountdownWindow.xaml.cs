@@ -1,1 +1,75 @@
-dXNpbmcgU3lzdGVtLkRpYWdub3N0aWNzOwp1c2luZyBTeXN0ZW0uV2luZG93czsKdXNpbmcgU3lzdGVtLldpbmRvd3MuSW5wdXQ7CnVzaW5nIFN5c3RlbS5XaW5kb3dzLlRocmVhZGluZzsKdXNpbmcgU25pcHBpbmdUb29sLkNvcmU7CgpuYW1lc3BhY2UgU25pcHBpbmdUb29sLkNhcHR1cmU7CgpwdWJsaWMgcGFydGlhbCBjbGFzcyBDb3VudGRvd25XaW5kb3cgOiBXaW5kb3cKewogICAgcHJpdmF0ZSByZWFkb25seSBpbnQgX3NlY29uZHM7CiAgICBwcml2YXRlIHJlYWRvbmx5IFN0b3B3YXRjaCBfd2F0Y2ggPSBTdG9wd2F0Y2guU3RhcnROZXcoKTsKICAgIHByaXZhdGUgcmVhZG9ubHkgRGlzcGF0Y2hlclRpbWVyIF90aW1lcjsKICAgIHByaXZhdGUgcmVhZG9ubHkgVGFza0NvbXBsZXRpb25Tb3VyY2U8Ym9vbD4gX2NvbXBsZXRpb24gPSBuZXcoVGFza0NyZWF0aW9uT3B0aW9ucy5SdW5Db250aW51YXRpb25zQXN5bmNocm9ub3VzbHkpOwogICAgcHJpdmF0ZSBib29sIF9maW5pc2hlZDsKCiAgICBwdWJsaWMgVGFzazxib29sPiBDb21wbGV0aW9uID0+IF9jb21wbGV0aW9uLlRhc2s7CgogICAgcHVibGljIENvdW50ZG93bldpbmRvdyhpbnQgc2Vjb25kcykKICAgIHsKICAgICAgICBJbml0aWFsaXplQ29tcG9uZW50KCk7CiAgICAgICAgX3NlY29uZHMgPSBNYXRoLk1heCgxLCBzZWNvbmRzKTsKICAgICAgICBfdGltZXIgPSBuZXcgRGlzcGF0Y2hlclRpbWVyKERpc3BhdGNoZXJQcmlvcml0eS5Ob3JtYWwpIHsgSW50ZXJ2YWwgPSBUaW1lU3Bhbi5Gcm9tTWlsbGlzZWNvbmRzKDEwMCkgfTsKICAgICAgICBfdGltZXIuVGljayArPSBUaW1lcl9UaWNrOwogICAgICAgIExvYWRlZCArPSAoXywgXykgPT4KICAgICAgICB7CiAgICAgICAgICAgIHZhciB3b3JrID0gU3lzdGVtUGFyYW1ldGVycy5Xb3JrQXJlYTsKICAgICAgICAgICAgTGVmdCA9IHdvcmsuTGVmdCArICh3b3JrLldpZHRoIC0gQWN0dWFsV2lkdGgpIC8gMjsKICAgICAgICAgICAgVG9wID0gd29yay5Ub3AgKyAzODsKICAgICAgICAgICAgQWN0aXZhdGUoKTsKICAgICAgICAgICAgRm9jdXMoKTsKICAgICAgICAgICAgS2V5Ym9hcmQuRm9jdXModGhpcyk7CiAgICAgICAgICAgIF90aW1lci5TdGFydCgpOwogICAgICAgICAgICBVcGRhdGVUZXh0KCk7CiAgICAgICAgfTsKICAgICAgICBDYW5jZWxCdXR0b24uQ2xpY2sgKz0gKF8sIF8pID0+IEZpbmlzaChmYWxzZSk7CiAgICAgICAgUHJldmlld0tleURvd24gKz0gKF8sIGUpID0+CiAgICAgICAgewogICAgICAgICAgICBpZiAoZS5LZXkgPT0gS2V5LkVzY2FwZSkgeyBGaW5pc2goZmFsc2UpOyBlLkhhbmRsZWQgPSB0cnVlOyB9CiAgICAgICAgfTsKICAgIH0KCiAgICBwcml2YXRlIHZvaWQgVGltZXJfVGljayhvYmplY3Q/IHNlbmRlciwgRXZlbnRBcmdzIGUpCiAgICB7CiAgICAgICAgVXBkYXRlVGV4dCgpOwogICAgICAgIGlmIChfd2F0Y2guRWxhcHNlZC5Ub3RhbFNlY29uZHMgPj0gX3NlY29uZHMpIEZpbmlzaCh0cnVlKTsKICAgIH0KCiAgICBwcml2YXRlIHZvaWQgVXBkYXRlVGV4dCgpCiAgICB7CiAgICAgICAgZG91YmxlIHJlbWFpbmluZyA9IE1hdGguTWF4KDAsIF9zZWNvbmRzIC0gX3dhdGNoLkVsYXBzZWQuVG90YWxTZWNvbmRzKTsKICAgICAgICBpbnQgc2hvd24gPSBNYXRoLk1heCgxLCAoaW50KU1hdGguQ2VpbGluZyhyZW1haW5pbmcpKTsKICAgICAgICBDb3VudFRleHQuVGV4dCA9IHNob3duID09IDEgPyAiMSBzZWNvbmQiIDogJCJ7c2hvd259IHNlY29uZHMiOwogICAgfQoKICAgIHByaXZhdGUgdm9pZCBGaW5pc2goYm9vbCBjb21wbGV0ZWQpCiAgICB7CiAgICAgICAgaWYgKF9maW5pc2hlZCkgcmV0dXJuOwogICAgICAgIF9maW5pc2hlZCA9IHRydWU7CiAgICAgICAgX3RpbWVyLlN0b3AoKTsKICAgICAgICBfY29tcGxldGlvbi5UcnlTZXRSZXN1bHQoY29tcGxldGVkKTsKICAgICAgICBDbG9zZSgpOwogICAgfQoKICAgIHByb3RlY3RlZCBvdmVycmlkZSB2b2lkIE9uQ2xvc2VkKEV2ZW50QXJncyBlKQogICAgewogICAgICAgIGJhc2UuT25DbG9zZWQoZSk7CiAgICAgICAgX3RpbWVyLlN0b3AoKTsKICAgICAgICBpZiAoIV9maW5pc2hlZCkKICAgICAgICB7CiAgICAgICAgICAgIF9maW5pc2hlZCA9IHRydWU7CiAgICAgICAgICAgIF9jb21wbGV0aW9uLlRyeVNldFJlc3VsdChmYWxzZSk7CiAgICAgICAgfQogICAgfQp9Cg==
+using System.Diagnostics;
+using System.Windows;
+using System.Windows.Input;
+using System.Windows.Threading;
+using SnippingTool.Core;
+
+namespace SnippingTool.Capture;
+
+public partial class CountdownWindow : Window
+{
+    private readonly int _seconds;
+    private readonly Stopwatch _watch = Stopwatch.StartNew();
+    private readonly DispatcherTimer _timer;
+    private readonly TaskCompletionSource<bool> _completion = new(TaskCreationOptions.RunContinuationsAsynchronously);
+    private bool _finished;
+
+    public Task<bool> Completion => _completion.Task;
+
+    public CountdownWindow(int seconds)
+    {
+        InitializeComponent();
+        _seconds = Math.Max(1, seconds);
+        _timer = new DispatcherTimer(DispatcherPriority.Normal) { Interval = TimeSpan.FromMilliseconds(100) };
+        _timer.Tick += Timer_Tick;
+        Loaded += (_, _) =>
+        {
+            var work = SystemParameters.WorkArea;
+            Left = work.Left + (work.Width - ActualWidth) / 2;
+            Top = work.Top + 38;
+            Activate();
+            Focus();
+            Keyboard.Focus(this);
+            _timer.Start();
+            UpdateText();
+        };
+        CancelButton.Click += (_, _) => Finish(false);
+        PreviewKeyDown += (_, e) =>
+        {
+            if (e.Key == Key.Escape) { Finish(false); e.Handled = true; }
+        };
+    }
+
+    private void Timer_Tick(object? sender, EventArgs e)
+    {
+        UpdateText();
+        if (_watch.Elapsed.TotalSeconds >= _seconds) Finish(true);
+    }
+
+    private void UpdateText()
+    {
+        double remaining = Math.Max(0, _seconds - _watch.Elapsed.TotalSeconds);
+        int shown = Math.Max(1, (int)Math.Ceiling(remaining));
+        CountText.Text = shown == 1 ? "1 second" : $"{shown} seconds";
+    }
+
+    private void Finish(bool completed)
+    {
+        if (_finished) return;
+        _finished = true;
+        _timer.Stop();
+        _completion.TrySetResult(completed);
+        Close();
+    }
+
+    protected override void OnClosed(EventArgs e)
+    {
+        base.OnClosed(e);
+        _timer.Stop();
+        if (!_finished)
+        {
+            _finished = true;
+            _completion.TrySetResult(false);
+        }
+    }
+}

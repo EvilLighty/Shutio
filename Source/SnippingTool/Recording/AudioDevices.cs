@@ -1,1 +1,63 @@
-dXNpbmcgU3lzdGVtLkRpYWdub3N0aWNzOwp1c2luZyBTbmlwcGluZ1Rvb2wuQ29yZTsKCm5hbWVzcGFjZSBTbmlwcGluZ1Rvb2wuUmVjb3JkaW5nOwoKLy8vIDxzdW1tYXJ5PgovLy8gRW51bWVyYXRlcyBhdmFpbGFibGUgbWljcm9waG9uZXMgYnkgYXNraW5nIGZmbXBlZyBpdHNlbGYgdG8gbGlzdCBpdHMgRGlyZWN0U2hvdwovLy8gYXVkaW8gY2FwdHVyZSBkZXZpY2VzLiBBc2tpbmcgdGhlIHNhbWUgYmluYXJ5IHdlIGVuY29kZSB3aXRoIGd1YXJhbnRlZXMgdGhlIG5hbWVzIHdlCi8vLyBoYW5kIGJhY2sgdG8gaXQgYXJlIGV4YWN0bHkgdGhlIG9uZXMgaXQgd2lsbCBhY2NlcHQgKG5vIG5hbWUtbWlzbWF0Y2ggc3VycHJpc2VzKS4KLy8vIDwvc3VtbWFyeT4KcHVibGljIHN0YXRpYyBjbGFzcyBBdWRpb0RldmljZXMKewogICAgLy8vIDxzdW1tYXJ5PgogICAgLy8vIFJldHVybnMgdGhlIG1pY3JvcGhvbmUgbmFtZXMgYXMgZmZtcGVnIHJlcG9ydHMgdGhlbSwgaW4gb3JkZXIuIEVtcHR5IGlmIHRoZXJlIGlzCiAgICAvLy8gbm8gZmZtcGVnIG9yIG5vIG1pY3JvcGhvbmUuIFNhZmUgdG8gY2FsbCByZXBlYXRlZGx5LgogICAgLy8vIDwvc3VtbWFyeT4KICAgIHB1YmxpYyBzdGF0aWMgTGlzdDxzdHJpbmc+IEVudW1lcmF0ZSgpCiAgICB7CiAgICAgICAgdmFyIHJlc3VsdCA9IG5ldyBMaXN0PHN0cmluZz4oKTsKICAgICAgICB0cnkKICAgICAgICB7CiAgICAgICAgICAgIHN0cmluZz8gZmZtcGVnID0gUmVjb3JkaW5nQ29udHJvbGxlci5GZm1wZWdQYXRoOwogICAgICAgICAgICBpZiAoZmZtcGVnID09IG51bGwpIHJldHVybiByZXN1bHQ7CgogICAgICAgICAgICB2YXIgcHNpID0gbmV3IFByb2Nlc3NTdGFydEluZm8KICAgICAgICAgICAgewogICAgICAgICAgICAgICAgRmlsZU5hbWUgPSBmZm1wZWcsCiAgICAgICAgICAgICAgICBVc2VTaGVsbEV4ZWN1dGUgPSBmYWxzZSwKICAgICAgICAgICAgICAgIENyZWF0ZU5vV2luZG93ID0gdHJ1ZSwKICAgICAgICAgICAgICAgIFJlZGlyZWN0U3RhbmRhcmRPdXRwdXQgPSB0cnVlLAogICAgICAgICAgICAgICAgUmVkaXJlY3RTdGFuZGFyZEVycm9yID0gdHJ1ZQogICAgICAgICAgICB9OwogICAgICAgICAgICBwc2kuQXJndW1lbnRMaXN0LkFkZCgiLWhpZGVfYmFubmVyIik7CiAgICAgICAgICAgIHBzaS5Bcmd1bWVudExpc3QuQWRkKCItZiIpOyBwc2kuQXJndW1lbnRMaXN0LkFkZCgiZHNob3ciKTsKICAgICAgICAgICAgcHNpLkFyZ3VtZW50TGlzdC5BZGQoIi1saXN0X2RldmljZXMiKTsgcHNpLkFyZ3VtZW50TGlzdC5BZGQoIjEiKTsKICAgICAgICAgICAgcHNpLkFyZ3VtZW50TGlzdC5BZGQoIi1pIik7IHBzaS5Bcmd1bWVudExpc3QuQWRkKCJkc2hvdyIpOwoKICAgICAgICAgICAgdXNpbmcgdmFyIHByb2MgPSBQcm9jZXNzLlN0YXJ0KHBzaSk7CiAgICAgICAgICAgIGlmIChwcm9jID09IG51bGwpIHJldHVybiByZXN1bHQ7CgogICAgICAgICAgICBzdHJpbmcgc3Rkb3V0ID0gcHJvYy5TdGFuZGFyZE91dHB1dC5SZWFkVG9FbmQoKTsKICAgICAgICAgICAgc3RyaW5nIHN0ZGVyciA9IHByb2MuU3RhbmRhcmRFcnJvci5SZWFkVG9FbmQoKTsKICAgICAgICAgICAgaWYgKCFwcm9jLldhaXRGb3JFeGl0KDgwMDApKSB7IHRyeSB7IHByb2MuS2lsbCgpOyB9IGNhdGNoIHsgfSB9CgogICAgICAgICAgICBmb3JlYWNoICh2YXIgcmF3IGluIChzdGRvdXQgKyAiXG4iICsgc3RkZXJyKS5TcGxpdCgnXG4nKSkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgc3RyaW5nIGxpbmUgPSByYXcuVHJpbSgpOwogICAgICAgICAgICAgICAgaWYgKGxpbmUuTGVuZ3RoID09IDApIGNvbnRpbnVlOwogICAgICAgICAgICAgICAgLy8gRHJvcCBhIGxlYWRpbmcgbG9nIHByZWZpeCBzdWNoIGFzICJbaW4jMCBAIDAwMDAwMmE5MGJmMzljYzBdIi4KICAgICAgICAgICAgICAgIHN0cmluZyBzdHJpcHBlZCA9IFN5c3RlbS5UZXh0LlJlZ3VsYXJFeHByZXNzaW9ucy5SZWdleC5SZXBsYWNlKGxpbmUsIEAiXlxzKlxbW15cXV0qXF1ccyoiLCAiIikuVHJpbSgpOwogICAgICAgICAgICAgICAgLy8gQSBkZXZpY2UgbGluZSBsb29rcyBsaWtlOiAgIk1pY3JvcGhvbmUgKOKApikiIChhdWRpbykKICAgICAgICAgICAgICAgIHZhciBtYXRjaCA9IFN5c3RlbS5UZXh0LlJlZ3VsYXJFeHByZXNzaW9ucy5SZWdleC5NYXRjaChzdHJpcHBlZCwgIl5cIiguKylcIlxccypcXChhdWRpb1xcKVxccyokIik7CiAgICAgICAgICAgICAgICBpZiAobWF0Y2guU3VjY2VzcykKICAgICAgICAgICAgICAgICAgICByZXN1bHQuQWRkKG1hdGNoLkdyb3Vwc1sxXS5WYWx1ZSk7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgY2F0Y2ggKEV4Y2VwdGlvbiBleCkKICAgICAgICB7CiAgICAgICAgICAgIExvZ2dlci5XYXJuKCJDb3VsZCBub3QgZW51bWVyYXRlIG1pY3JvcGhvbmVzIiwgZXgpOwogICAgICAgIH0KICAgICAgICByZXR1cm4gcmVzdWx0OwogICAgfQp9Cg==
+using System.Diagnostics;
+using SnippingTool.Core;
+
+namespace SnippingTool.Recording;
+
+/// <summary>
+/// Enumerates available microphones by asking ffmpeg itself to list its DirectShow
+/// audio capture devices. Asking the same binary we encode with guarantees the names we
+/// hand back to it are exactly the ones it will accept (no name-mismatch surprises).
+/// </summary>
+public static class AudioDevices
+{
+    /// <summary>
+    /// Returns the microphone names as ffmpeg reports them, in order. Empty if there is
+    /// no ffmpeg or no microphone. Safe to call repeatedly.
+    /// </summary>
+    public static List<string> Enumerate()
+    {
+        var result = new List<string>();
+        try
+        {
+            string? ffmpeg = RecordingController.FfmpegPath;
+            if (ffmpeg == null) return result;
+
+            var psi = new ProcessStartInfo
+            {
+                FileName = ffmpeg,
+                UseShellExecute = false,
+                CreateNoWindow = true,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true
+            };
+            psi.ArgumentList.Add("-hide_banner");
+            psi.ArgumentList.Add("-f"); psi.ArgumentList.Add("dshow");
+            psi.ArgumentList.Add("-list_devices"); psi.ArgumentList.Add("1");
+            psi.ArgumentList.Add("-i"); psi.ArgumentList.Add("dshow");
+
+            using var proc = Process.Start(psi);
+            if (proc == null) return result;
+
+            string stdout = proc.StandardOutput.ReadToEnd();
+            string stderr = proc.StandardError.ReadToEnd();
+            if (!proc.WaitForExit(8000)) { try { proc.Kill(); } catch { } }
+
+            foreach (var raw in (stdout + "\n" + stderr).Split('\n'))
+            {
+                string line = raw.Trim();
+                if (line.Length == 0) continue;
+                // Drop a leading log prefix such as "[in#0 @ 000002a90bf39cc0]".
+                string stripped = System.Text.RegularExpressions.Regex.Replace(line, @"^\s*\[[^\]]*\]\s*", "").Trim();
+                // A device line looks like:  "Microphone (…)" (audio)
+                var match = System.Text.RegularExpressions.Regex.Match(stripped, "^\"(.+)\"\\s*\\(audio\\)\\s*$");
+                if (match.Success)
+                    result.Add(match.Groups[1].Value);
+            }
+        }
+        catch (Exception ex)
+        {
+            Logger.Warn("Could not enumerate microphones", ex);
+        }
+        return result;
+    }
+}

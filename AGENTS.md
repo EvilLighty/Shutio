@@ -1,1 +1,202 @@
-IyBBR0VOVFMubWQgLSBBSSBXb3JraW5nIEd1aWRlIGZvciBTaHV0aW8KCj4gVGhpcyBmaWxlIGlzIHRoZSBmaXJzdCB0aGluZyBhIG5ldyBBSSBhZ2VudCBzaG91bGQgcmVhZC4gSXQgcmVjb3JkcyB0aGUKPiBwcm9qZWN0J3MgcnVsZXMsIGVudmlyb25tZW50IGNvbnN0cmFpbnRzLCBjb252ZW50aW9ucywgYW5kIGV4YWN0IGJ1aWxkL3Rlc3QKPiBjb21tYW5kcyBzbyB0aGUgcHJvamVjdCBzdGF5cyBtYWludGFpbmFibGUgYWNyb3NzIHNlc3Npb25zIGFuZCBtb2RlbHMuCgo+ICMjIPCfk40gU1RBUlQgSEVSRSAoY29udGludWluZyBmcm9tIGEgcHJldmlvdXMgc2Vzc2lvbikKPiAqKlRoZSBhcHAgaXMgY29tcGxldGUsIGRlbGl2ZXJlZCwgYW5kIHJlYnJhbmRlZCB0byAiU2h1dGlvIi4qKiBFdmVyeXRoaW5nIGJlbG93Cj4gaXMgYWxyZWFkeSBvbiBkaXNrIGluIGBJOlxBcHBzXFNuaXBwaW5nVG9vbFxgIOKAlCB0aGUgQUkncyBwcmlvciBjb252ZXJzYXRpb24gZG9lcwo+ICoqbm90KiogbmVlZCB0byBiZSBhdmFpbGFibGUgdG8gY29udGludWUuCj4KPiAtICoqQXBwOioqIGBJOlxBcHBzXFNuaXBwaW5nVG9vbFxTaHV0aW8uZXhlYCAoc2VsZi1jb250YWluZWQsIHBhc3NlcyBgLS1zZWxmdGVzdGAgMTMvMTMpLgo+IC0gKipTaGFyZS9pbnN0YWxsZXI6KiogYEk6XEFwcHNcU2h1dGlvLVNoYXJlXFNodXRpby1zZXR1cC5leGVgICh3aG9sZSBhcHAgaW5zaWRlLAo+ICAgfjIwNSBNQikgKyBgVW5pbnN0YWxsU2h1dGlvLmV4ZWA7IGEgY29weSBvZiBgU2h1dGlvLXNldHVwLmV4ZWAgaXMgb24gdGhlIERlc2t0b3AuCj4gLSAqKlNvdXJjZSBvZiB0cnV0aDoqKiBgSTpcQXBwc1xTbmlwcGluZ1Rvb2xcU291cmNlXFNuaXBwaW5nVG9vbFxgIChuYW1lc3BhY2UKPiAgIGBTbmlwcGluZ1Rvb2xgIGlzIGludGVudGlvbmFsbHkgKiprZXB0Kio7IG9ubHkgdGhlICp1c2VyLWZhY2luZyogbmFtZSBjaGFuZ2VkKS4KPiAtICoqUmVhZCBuZXh0OioqICoqYEhBTkRPRkYubWRgKiogZm9yIHRoZSBjdXJyZW50IHN0YXRlICsgZXhhY3QgbmV4dCBzdGVwcywKPiAgICoqYENIQU5HRUxPRy5tZGAqKiBmb3IgaGlzdG9yeSAoaW5jbC4gdGhlIDIwMjYtMTEtMDkgIlJlYnJhbmRlZCB0byBTaHV0aW8iIGVudHJ5KS4KPiAtICoqVmVyaWZ5IGFueSBjaGFuZ2UqKiB3aXRoIHRoZSByZWNpcGUgaW4gYEhBTkRPRkYubWRgIMKnNjogYnVpbGQg4oaSIGBTaHV0aW8uZXhlIC0tc2VsZnRlc3RgCj4gICAobXVzdCBzdGF5IDEzLzEzLCBleGl0IDApLgo+Cj4gTm90aGluZyBpcyBibG9ja2VkLiBJZiB0aGUgdXNlciBnaXZlcyBhIG5ldyB0YXNrLCBvcmllbnQgd2l0aCBgSEFORE9GRi5tZGAgZmlyc3QsCj4gbWFrZSB0aGUgc21hbGxlc3QgcmVsaWFibGUgY2hhbmdlLCB0aGVuIHJlLXJ1biB0aGUgc2VsZi10ZXN0IGFuZCByZWZyZXNoIHRoZSBkb2NzLgoKIyMgV2hhdCB0aGlzIHByb2plY3QgaXMKCkEgKipwb3J0YWJsZSwgbm8tYWRtaW5pc3RyYXRvciBXaW5kb3dzIDExIGNhcHR1cmUgdG9vbCBuYW1lZCAiU2h1dGlvIioqIChhICJTbmlwcGluZyBUb29sIi1zdHlsZSBhcHApIHdyaXR0ZW4gaW4KQyMgLyAuTkVUIDEwIFdQRiAoKyBXaW5Gb3JtcyBmb3IgdGhlIHRyYXkgaWNvbikuIEl0IGxpdmVzIGVudGlyZWx5IGluCmBJOlxBcHBzXFNuaXBwaW5nVG9vbGAgYW5kIGlzIGRlc2lnbmVkIGZvciB0aGUgcmVzdHJpY3RlZCAqKlNhbHNhTk9XIGtpb3NrKiouCgpDYXBhYmlsaXRpZXMgKGFsbCBpbXBsZW1lbnRlZCBhbmQgc2VsZi10ZXN0IHZlcmlmaWVkKToKLSBDYXB0dXJlOiAqKlJlY3RhbmdsZSwgRnJlZWZvcm0sIFdpbmRvdywgRnVsbCBkZXNrdG9wLCBTaW5nbGUgZGlzcGxheSoqCi0gRWRpdG9yOiBwZW4sIGhpZ2hsaWdodGVyLCBlcmFzZXIsIGxpbmUvcnVsZXIsIGNyb3AsIHVuZG8vcmVkbywgcm90YXRlLAogIHJlc2l6ZSAoYXNwZWN0IGxvY2spLCB6b29tL3BhbiwgMTItY29sb3IgcGFsZXR0ZSArIGN1c3RvbSBjb2xvciwgNiB0aGlja25lc3NlcwotIFNhdmUgYXMgKipQTkcgLyBKUEcgLyBCTVAqKjsgY29weSBpbWFnZSB0byBjbGlwYm9hcmQKLSAqKldpbmRvd3MgT0NSKiogdGV4dCBleHRyYWN0aW9uICsgY29weSAoYFdpbmRvd3MuTWVkaWEuT2NyYCkKLSAqKk1QNCBzY3JlZW4gcmVjb3JkaW5nKiogKGZmbXBlZywgSC4yNjQpIHdpdGggb3B0aW9uYWwgbW91c2UtY3Vyc29yIG92ZXJsYXkKLSBTZWFyY2hhYmxlICoqaGlzdG9yeSoqIHdpdGggdGh1bWJuYWlscyAoc3RvcmVkIHVuZGVyIGBEYXRhXGApCi0gNyBjb25maWd1cmFibGUgKipnbG9iYWwgaG90a2V5cyoqIChgUmVnaXN0ZXJIb3RLZXlgKSwgdHJheSBpY29uLCBvcHRpb25hbAogIGZsb2F0aW5nIHRvb2xiYXIsIHRvYXN0IG5vdGlmaWNhdGlvbnMsIGxpZ2h0L2Rhcmsvc3lzdGVtIHRoZW1lLCBzaW5nbGUgaW5zdGFuY2UKCiMjIEVudmlyb25tZW50IOKAlCBIQVJEIENPTlNUUkFJTlRTIChuZXZlciB2aW9sYXRlKQoKVGhpcyBpcyAqKm5vdCoqIGEgbm9ybWFsIGRldiBtYWNoaW5lLiBJdCBpcyBhIFNhbHNhTk9XIGtpb3NrIHNlc3Npb24uCgp8IEZhY3QgfCBWYWx1ZSB8CnwgLS0tIHwgLS0tIHwKfCBXaW5kb3dzIGFjY291bnQgfCBga2lvc2tgIChzdGFuZGFyZCB1c2VyKSB8CnwgQWRtaW4gcmlnaHRzIHwgKipOT05FKiog4oCUIGRvIG5vdCByZXF1ZXN0IGVsZXZhdGlvbiwgZG8gbm90IHRvdWNoIHByb3RlY3RlZCBkaXJzIHwKfCBQZXJzaXN0ZW50IGRyaXZlIHwgYEk6XGAgKHRoaXMgaXMgd2hlcmUgdGhlIHByb2plY3QgYW5kIGl0cyBkYXRhIGxpdmUpIHwKfCBNb2RlbCBkaXIgKGFzc2lzdGFudCkgfCBgSTpcT2xsYW1hXE1vZGVsc2AgfAp8IFByb2plY3Qgcm9vdCB8IGBJOlxBcHBzXFNuaXBwaW5nVG9vbGAgfAp8IERpc3BsYXkgfCAyNTYww5cxNDQwLCAxNTAlIHNjYWxpbmcgKFBlck1vbml0b3JWMiBEUEkgYXdhcmUpIHwKfCBHUFUgfCBOVklESUEgUlRYIDUwODAsIDQ4IEdpQiAoYXZhaWxhYmxlLCBidXQgdGhlIGFwcCBkb2VzICoqbm90KiogdXNlIGl0KSB8CnwgU2hlbGwgfCBXaW5kb3dzIFBvd2VyU2hlbGw7IGFsc28gYEk6XEFwcHNcU2Fsc2FOT1dcU2lsZW50QXBwc1xQb3dlcnNoZWxsXHB3c2guZXhlYCB8CgpSdWxlczoKLSAqKk5vKiogc3lzdGVtLXdpZGUgaW5zdGFsbHMsIE1TSXMsIHNlcnZpY2VzLCBkcml2ZXJzLCByZWdpc3RyeSB3cml0ZXMsIFVBQy4KLSAqKk5vKiogYWRtaW4tb25seSB0b29scyAoRElTTSwgYHNjYCwgYG5ldHNoYCBhZG1pbiwgZXRjLikuCi0gUmV1c2UgdG9vbHMgYWxyZWFkeSBwcmVzZW50IHVuZGVyIGBUb29sc1xgIGJlZm9yZSBkb3dubG9hZGluZyBhbnl0aGluZy4KLSBgQ2xvdWRTdG9yZWAgaXMgdGhlIHNhbmN0aW9uZWQgd2F5IHRvIGluc3RhbGwgYW4gYXBwbGljYXRpb24gaWYgb25lIGlzIHRydWx5IG5lZWRlZC4KLSBLZWVwIGV2ZXJ5dGhpbmcgKGNvZGUsIGRhdGEsIHRlbXAsIGJ1aWxkKSB1bmRlciBgSTpcQXBwc1xTbmlwcGluZ1Rvb2xgIHdoZXJlIHBvc3NpYmxlLgotIERvICoqbm90KiogcHV0IHNlY3JldHMgLyBBUEkga2V5cyBpbiBhbnkgZmlsZSBvciBpbiB0ZXJtaW5hbCBvdXRwdXQuCgojIyBSZXBvc2l0b3J5IGxheW91dAoKYGBgCkk6XEFwcHNcU25pcHBpbmdUb29sXCAgICAgICAgICAgICh+Mjg4IE1CIOKAlCB0aGUgcnVubmFibGUgYXBwICsgc291cmNlICsgZG9jcykKICBTaHV0aW8uZXhlIC8gLmRsbCAvIC5kZXBzLmpzb24gLyAucnVudGltZWNvbmZpZy5qc29uICAgICAgICAgIyBwdWJsaXNoZWQgc2VsZi1jb250YWluZWQgYXBwCiAgU3RhcnQgU2h1dGlvLmNtZCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIHBvcnRhYmxlIGxhdW5jaGVyCiAgSW5zdGFsbFwgICAg4oaQIGluc3RhbGxlcnMgKEluc3RhbGwgU2h1dGlvLmNtZCwgaW5zdGFsbC5wczEsIHVuaW5zdGFsbC5wczEpICsgb2ZmbGluZS1pbnN0YWxsZXIgc291cmNlCiAgQUdFTlRTLm1kICAg4oaQIHRoaXMgZmlsZQogIEhBTkRPRkYubWQgIOKGkCBjdXJyZW50IHN0YXRlICsgbmV4dCBzdGVwcyAodXBkYXRlIGV2ZXJ5IHNlc3Npb24pCiAgVE9ETy5tZCAgICAg4oaQIHByaW9yaXRpemVkIHRhc2tzLCBjb21wbGV0ZWQgdGFza3MsIGtub3duIGJ1Z3MKICBDSEFOR0VMT0cubWTihpAgaW1wbGVtZW50YXRpb24gaGlzdG9yeSArIGFyY2hpdGVjdHVyYWwgZGVjaXNpb25zCiAgUkVBRE1FLm1kICAg4oaQIHVzZXItZmFjaW5nIGRvY3MgKGluc3RhbGwvYnVpbGQvdGVzdC9yZXNldC90cm91Ymxlc2hvb3RpbmcpCiAgRkVBVFVSRVMubWQg4oaQIGltcGxlbWVudGVkIC8gcGFydGlhbCAvIHVuYXZhaWxhYmxlIG1hdHJpeAogIEFzc2V0c1wgICAgICMgYXBwLmljbywgbG9nby5wbmcKICBUb29sc1wgICAgICAjIGZmbXBlZy5leGUgKHRoZSBvbmx5IHRvb2wgdGhlIGFwcCBuZWVkcyBhdCBydW50aW1lKQogIFNvdXJjZVxTbmlwcGluZ1Rvb2xcICAgIyBmdWxsIEMjIHNvdXJjZSAodGhlIHNvdXJjZSBvZiB0cnV0aCkKICBEYXRhXCAgICAgICAjIHJ1bnRpbWUgc3RhdGUgKHNlZSBiZWxvdykKCkk6XERldlRvb2xzXCAgICAgICAgICAgICAgICAgICAgIChTSEFSRUQsIHByb2plY3QtYWdub3N0aWMgYnVpbGQgdG9vbGluZzsgTk9UIG5lZWRlZCB0byBydW4gdGhlIGFwcCkKICBkb3RuZXRcICAgICAjIHBvcnRhYmxlIC5ORVQgU0RLIDEwLjAuMTAwIChhbHNvIG9uIHRoZSB1c2VyIFBBVEgpCiAgbnVnZXRcICAgICAgIyBzaGFyZWQgTnVHZXQgcGFja2FnZSBjYWNoZQogIGRvdG5ldC1zZGstMTAuMC4xMDAtd2luLXg2NC56aXAKICBmZm1wZWdcICAgICAjIGZ1bGwgZmZtcGVnIGRpc3RyaWJ1dGlvbiAodGhlIHNvdXJjZSBvZiB0aGUgc3RhbmRhbG9uZSBmZm1wZWcuZXhlKQogIGZmbXBlZy56aXAKICBkb3RuZXQtaG9tZVwjIERPVE5FVF9DTElfSE9NRQogIHByb2plY3QtY2FjaGVzXHNuaXBwaW5ndG9vbFxiaW4gLyBvYmogICAjIHRoaXMgcHJvamVjdCdzIGJ1aWxkIGFydGlmYWN0cyAocmVidWlsZGFibGUpCmBgYAoKPiAqKk5vdGU6KiogdG8ga2VlcCB0aGUgYXBwIGZvbGRlciBsaWdodCwgdGhlIGJ1aWxkIHRvb2xpbmcgd2FzIG1vdmVkIG91dCB0byB0aGUKPiBTSEFSRUQgbG9jYXRpb24gYEk6XERldlRvb2xzXGAgYWJvdmUsIHNvIGFueSAuTkVUIHByb2plY3Qgb24gdGhpcyBtYWNoaW5lIGNhbgo+IHJldXNlIHRoZSBzYW1lIFNESyArIGNhY2hlcy4gVGhlIGFwcCBpdHNlbGYgaXMgY29tcGxldGVseSBzZWxmLWNvbnRhaW5lZCBhbmQKPiBydW5zIGZyb20gdGhlIG1haW4gZm9sZGVyIGFsb25lLiBSZWJ1aWxkaW5nIHVzZXMgYEk6XERldlRvb2xzYCAoc2VlIGJlbG93KS4KPiBUaGUgU0RLIGlzIGFscmVhZHkgb24gdGhlIHVzZXIgUEFUSCBhbmQgYE5VR0VUX1BBQ0tBR0VTYCAvIGBET1RORVRfQ0xJX0hPTUVgCj4gcG9pbnQgaW50byBgSTpcRGV2VG9vbHNgLCBzbyBhIGZyZXNoIHNoZWxsIGNhbiBqdXN0IHJ1biBgZG90bmV0YC4KCmBEYXRhXGAgKGNyZWF0ZWQgYXV0b21hdGljYWxseSwgc2FmZSB0byBkZWxldGUgdG8gcmVzZXQpOgpgYGAKRGF0YVwKICBzZXR0aW5ncy5qc29uICAgIyBodW1hbi1yZWFkYWJsZSBzZXR0aW5ncyAodGhlbWUsIG1vZGVzLCBob3RrZXlzLCBwYXRocy4uLikKICBoaXN0b3J5Lmpzb24gICAgIyBsaXN0IG9mIHNuaXBzIChwYXRoLCBtb2RlLCBzaXplLCB0aW1lc3RhbXBzKQogIFNjcmVlbnNob3RzXCAgICAjIGNhcHR1cmVkIHNuaXBzCiAgVGh1bWJuYWlsc1wgICAgICMgaGlzdG9yeSB0aHVtYm5haWxzCiAgUmVjb3JkaW5nc1wgICAgICMgTVA0IG91dHB1dAogIFRlc3RzXCAgICAgICAgICAjIHNlbGYtdGVzdCBldmlkZW5jZSAoaW1hZ2VzLCBtcDQsIHJlcG9ydCkKICBMb2dzXCAgICAgICAgICAgIyBhcHAtPGRhdGU+LmxvZywgc2VsZnRlc3QtPHN0YW1wPi50eHQsIHNlbGZ0ZXN0LWxhdGVzdC50eHQKICBkb3RuZXQtaG9tZVwgICAgIyBET1RORVRfQ0xJX0hPTUUKICAubnVnZXRcICAgICAgICAgIyBOVUdFVF9QQUNLQUdFUyBjYWNoZQpgYGAKCiMjIEJ1aWxkIC8gdGVzdCAvIHJ1biAoZXhhY3QgY29tbWFuZHMpCgpVc2UgdGhlICoqYnVuZGxlZCoqIFNESyBhbmQga2VlcCBOdUdldCArIENMSSBjYWNoZXMgaW5zaWRlIHRoZSBwcm9qZWN0IHNvIHRoZQpidWlsZCBpcyByZXByb2R1Y2libGUgb2ZmbGluZS4gRnJvbSBgSTpcQXBwc1xTbmlwcGluZ1Rvb2xgOgoKYGBgcG93ZXJzaGVsbAojIEJ1aWxkIHRvb2xpbmcgd2FzIHNsaW1tZWQgb3V0IG9mIHRoZSBhcHAgZm9sZGVyIGludG8gdGhlIFNIQVJFRCAiSTpcRGV2VG9vbHMiLgojIFRoZSBTREsgaXMgb24gdGhlIHVzZXIgUEFUSCBhbmQgTlVHRVRfUEFDS0FHRVMgLyBET1RORVRfQ0xJX0hPTUUgYWxyZWFkeSBwb2ludAojIGludG8gSTpcRGV2VG9vbHMsIHNvIGEgZnJlc2ggc2hlbGwgY2FuIGp1c3QgcnVuIGBkb3RuZXQgYnVpbGRgIG9uIHRoZSBwcm9qZWN0LgokZGV2ICAgID0gJ0k6XERldlRvb2xzJwokZG90bmV0ID0gaWYgKFRlc3QtUGF0aCAiJGRldlxkb3RuZXRcZG90bmV0LmV4ZSIpIHsgIiRkZXZcZG90bmV0XGRvdG5ldC5leGUiIH0gZWxzZSB7ICdkb3RuZXQnIH0gICMgUEFUSCBmYWxsYmFjawokZW52OkRPVE5FVF9DTElfSE9NRSA9ICIkZGV2XGRvdG5ldC1ob21lIgokZW52Ok5VR0VUX1BBQ0tBR0VTICA9ICIkZGV2XG51Z2V0IgokcHJvaiAgID0gJ0k6XEFwcHNcU25pcHBpbmdUb29sXFNvdXJjZVxTbmlwcGluZ1Rvb2xcU25pcHBpbmdUb29sLmNzcHJvaicKCiMgMSkgQ29tcGlsZSBjaGVjayAoRGVidWcpIOKAlCBleHBlY3QgIkJ1aWxkIHN1Y2NlZWRlZC4gMCBXYXJuaW5nKHMpIDAgRXJyb3IocykiCiYgJGRvdG5ldCBidWlsZCAkcHJvaiAtYyBEZWJ1ZyAtdiBxIC1ub2xvZ28KCiMgMikgSGVhZGxlc3Mgc2VsZi10ZXN0ICh3cml0ZXMgRGF0YVxMb2dzXHNlbGZ0ZXN0LWxhdGVzdC50eHQgKyBEYXRhXFRlc3RzXHNlbGZ0ZXN0LXJlcG9ydC50eHQpCiYgJ0k6XEFwcHNcU25pcHBpbmdUb29sXFNodXRpby5leGUnIC0tc2VsZnRlc3QgICAgICAgICAgICAjIGV4aXQgY29kZSAwID0gYWxsIHBhc3MKCiMgMykgUHVibGlzaCBhIGZyZXNoIHNlbGYtY29udGFpbmVkIHg2NCBidWlsZCBPVkVSIHRoZSBhcHAgZm9sZGVyIChERVNUUlVDVElWRSB0byBhcHAgZm9sZGVyKQomICRkb3RuZXQgcHVibGlzaCAkcHJvaiAtYyBSZWxlYXNlIC1yIHdpbi14NjQgLS1zZWxmLWNvbnRhaW5lZCB0cnVlIGAKICAgICAtbyAnSTpcQXBwc1xTbmlwcGluZ1Rvb2wnIC1wOkRlYnVnVHlwZT1Ob25lIC1wOkRlYnVnU3ltYm9scz1mYWxzZSAtdiBxIC1ub2xvZ28KQ29weS1JdGVtICdJOlxBcHBzXFNuaXBwaW5nVG9vbFxUb29sc1xmZm1wZWdcZmZtcGVnLTkuMC4yLWVzc2VudGlhbHNfYnVpbGRcYmluXGZmbXBlZy5leGUnIGAKICAgICAnSTpcQXBwc1xTbmlwcGluZ1Rvb2xcVG9vbHNcZmZtcGVnLmV4ZScgLUZvcmNlCgojIDQpIFJ1biB0aGUgYXBwIChtYWluIHdpbmRvdykKJiAnSTpcQXBwc1xTbmlwcGluZ1Rvb2xcU2h1dGlvLmV4ZScKYGBgCgpVc2VmdWwgQ0xJIGZsYWdzIChhbGwgb3B0aW9uYWwpOiBgLS1zZWxmdGVzdGAsIGAtLWhpZGRlbmAsIGAtLWNhcHR1cmU9PG1vZGU+YCwKYC0tcmVjb3JkYCwgYC0taGlzdG9yeWAsIGAtLXNldHRpbmdzYCwgYC0tZXhpdGAuCgoqKlZlcmlmeSBhZnRlciBhbnkgc291cmNlIGNoYW5nZToqKiBgYnVpbGRgIOKGkiBgLS1zZWxmdGVzdGAgKG11c3Qgc3RheSAxMy8xMywKZXhpdCAwKSDihpIgcHVibGlzaCDihpIgbGF1bmNoIOKGkiBjaGVjayBgRGF0YVxMb2dzXGFwcC08ZGF0ZT4ubG9nYC4KCiMjIEFyY2hpdGVjdHVyZSAoaGlnaCBsZXZlbCkKCi0gKipFbnRyeSAvIGFyZ3MqKiDigJQgYEFwcC54YW1sLmNzYC4gUGFyc2VzIENMSSBmbGFnczsgaW4gYC0tc2VsZnRlc3RgIG1vZGUgcnVucwogIGBTZWxmVGVzdC5SdW5Bc3luYygpYCB0aGVuIGV4aXRzLiBPdGhlcndpc2UgY3JlYXRlcyBgQXBwSG9zdGAuCi0gKipDb29yZGluYXRvcioqIOKAlCBgQXBwSG9zdC5jc2AuIE93bnMgbG9uZy1saXZlZCBzZXJ2aWNlcyBhbmQgd2lyZXMgY2FwdHVyZSwKICBlZGl0aW5nLCByZWNvcmRpbmcsIHRyYXksIGZsb2F0aW5nIHRvb2xiYXIsIGhvdGtleXMsIGFuZCB3aW5kb3cgbGlmZWN5Y2xlLgotICoqQ29yZSoqIOKAlCBgU2V0dGluZ3NgIChKU09OIGxvYWQvc2F2ZSArIGBTYW5pdGl6ZSgpYCksIGBIb3RrZXlNYW5hZ2VyYCArCiAgYEhvdGtleUdlc3R1cmVgIChgUmVnaXN0ZXJIb3RLZXlgKSwgYE5hdGl2ZU1ldGhvZHNgIChhbGwgUC9JbnZva2UpLAogIGBMb2dnZXJgLCBgU2luZ2xlSW5zdGFuY2VgLCBgVGhlbWVNYW5hZ2VyYC4KLSAqKkNhcHR1cmUqKiDigJQgYENhcHR1cmVTZXJ2aWNlYCAoQml0Qmx0IC8gYFByaW50V2luZG93YCAvIGZyZWVmb3JtIGFscGhhIG1hc2sgLwogIG1vbml0b3IgKyB3aW5kb3cgZW51bWVyYXRpb24pLCBgQ2FwdHVyZU92ZXJsYXlXaW5kb3dgLCBgQ291bnRkb3duV2luZG93YCwKICBgU2VsZWN0aW9uU3VyZmFjZWAuCi0gKipFZGl0b3IqKiDigJQgYEVkaXRvcldpbmRvd2AsIGBJbWFnZUNhbnZhc2AgKGFubm90YXRpb24gc3VyZmFjZSksIGBSZXNpemVEaWFsb2dgLgotICoqSW1hZ2luZyoqIOKAlCBgQml0bWFwVXRpbHNgIChjcm9wL3JvdGF0ZS9yZXNpemUvc2F2ZS9sb2FkKSwgYE9jclNlcnZpY2VgCiAgKGBXaW5kb3dzLk1lZGlhLk9jcmApLgotICoqUmVjb3JkaW5nKiog4oCUIGBSZWNvcmRpbmdDb250cm9sbGVyYCAoZnJhbWVzIOKGkiBmZm1wZWcgc3RkaW4gcGlwZSksCiAgYFJlY29yZGluZ1NldHVwV2luZG93YCwgYFJlY29yZGluZ0luZGljYXRvcldpbmRvd2AuCi0gKipTdG9yYWdlKiog4oCUIGBIaXN0b3J5U2VydmljZWAsIGBTbmlwRW50cnlgLgotICoqVUkqKiDigJQgYE1haW5XaW5kb3dgLCBgSGlzdG9yeVdpbmRvd2AsIGBTZXR0aW5nc1dpbmRvd2AsCiAgYEZsb2F0aW5nVG9vbGJhcldpbmRvd2AsIGBUb2FzdFdpbmRvd2AsIGBUcmF5SWNvbmAsIGBNZXNzYWdlRGlhbG9nYCwKICBgSG90a2V5Qm94YCwgYFByb2dyZXNzUmluZ2AuCi0gKipUaGVtZXMqKiDigJQgYExpZ2h0LnhhbWxgLCBgRGFyay54YW1sYCwgYENvbnRyb2xzLnhhbWxgLgoKS2V5IGludmFyaWFudHM6Ci0gRXZlcnl0aGluZyB0aGUgYXBwIHdyaXRlcyBzdGF5cyB1bmRlciBgRGF0YVxgIChjbGlwYm9hcmQgaXMgdGhlIG9ubHkgZXh0ZXJuYWwgc2lkZSBlZmZlY3QpLgotIGBTZXR0aW5ncy5TYW5pdGl6ZSgpYCBpcyB0aGUgc2luZ2xlIHBsYWNlIHRoYXQgcmVwYWlycyBpbnZhbGlkIHNldHRpbmdzOyBhbHdheXMgY2FsbCBpdCBvbiBsb2FkIGFuZCBiZWZvcmUgc2F2ZS4KLSBHbG9iYWwgaG90a2V5cyBhcmUgdGVtcG9yYXJpbHkgcmVsZWFzZWQgd2hpbGUgU2V0dGluZ3MgaXMgb3BlbiAoc28gYSBjb21ibyBjYW4gYmUgcmUtcmVjb3JkZWQpIGFuZCByZS1yZWdpc3RlcmVkIG9uIGNsb3NlLgotIFNpbmdsZSBpbnN0YW5jZSB2aWEgYSBuYW1lZCBtdXRleDsgYSBzZWNvbmQgbGF1bmNoIHNpZ25hbHMgdGhlIGZpcnN0IGFuZCBleGl0cy4KCiMjIENvZGUgY29udmVudGlvbnMKCi0gLk5FVCAxMCwgYG5ldDEwLjAtd2luZG93czEwLjAuMTkwNDEuMGAsIGBOdWxsYWJsZWAgKyBgSW1wbGljaXRVc2luZ3NgIGVuYWJsZWQuCi0gV1BGIHR5cGVzIGFyZSB1c2VkIGRpcmVjdGx5OyBgU3lzdGVtLkRyYXdpbmdgIGFuZCBgU3lzdGVtLldpbmRvd3MuRm9ybXNgIGFyZQogIHB1bGxlZCBpbiAqKm9ubHkqKiB3aGVyZSBuZWVkZWQgKHRyYXksIGN1cnNvciwgYml0bWFwIGludGVyb3ApIHZpYSBsb2NhbAogIGFsaWFzZXMgKGBXaW5Gb3JtcyA9IFN5c3RlbS5XaW5kb3dzLkZvcm1zYCkuIERvICoqbm90KiogYWRkIGdsb2JhbAogIGB1c2luZyBTeXN0ZW0uRHJhd2luZ2AgLyBgdXNpbmcgU3lzdGVtLldpbmRvd3MuRm9ybXNgIOKAlCB0aGUgY3Nwcm9qIGV4cGxpY2l0bHkKICByZW1vdmVzIHRoZW0gdG8gYXZvaWQgYFBvaW50YC9gQ29sb3JgL2BCdXR0b25gIGFtYmlndWl0eS4KLSBQL0ludm9rZSBsaXZlcyBpbiBgQ29yZVxOYXRpdmVNZXRob2RzLmNzYC4gKipHZXQgdGhlIERMTCBuYW1lIHJpZ2h0Kiog4oCUIHNlZQogIHRoZSBgR2V0SWNvbkluZm9gIC8gYERyYXdJY29uRXhgIG5vdGUgaW4gQ0hBTkdFTE9HLm1kLgotIEVycm9ycyBhcmUgbG9nZ2VkIHRocm91Z2ggYENvcmVcTG9nZ2VyYCB0byBgRGF0YVxMb2dzYC4gVXNlci1mYWNpbmcgZmFpbHVyZXMKICBnbyB0aHJvdWdoIGBVSVxNZXNzYWdlRGlhbG9nYC4KLSBQcmVmZXIgdGhlIHNtYWxsZXN0IHJlbGlhYmxlIGNoYW5nZTsgZG8gbm90IHJld3JpdGUgd29ya2luZyBzdWJzeXN0ZW1zLgoKIyMgRG8gLyBEb24ndAoKLSDinIUgUnVuIHRoZSBzZWxmLXRlc3QgYWZ0ZXIgY2hhbmdlczsga2VlcCBpdCBhdCAxMy8xMyAvIGV4aXQgMC4KLSDinIUgVXBkYXRlIEhBTkRPRkYubWQsIFRPRE8ubWQgYW5kIENIQU5HRUxPRy5tZCBhdCB0aGUgZW5kIG9mIGV2ZXJ5IHNlc3Npb24uCi0g4pyFIFJldXNlIHRoZSBidW5kbGVkIFNESyArIGZmbXBlZzsga2VlcCBidWlsZCBzdGF0ZSB1bmRlciBgSTpcYC4KLSDinYwgRG8gbm90IGluc3RhbGwgc3lzdGVtLXdpZGUgc29mdHdhcmUgb3IgcmVxdWlyZSBhZG1pbiByaWdodHMuCi0g4p2MIERvIG5vdCBkZWxldGUgdGhlIGV4aXN0aW5nIHNvdXJjZSBvciBkYXRhIHVubGVzcyBleHBsaWNpdGx5IGFza2VkLgotIOKdjCBEbyBub3QgYWRkIHBhaWQgQVBJcyBvciByZW1vdmUgdGhlIGxvY2FsLW9ubHkgKG9mZmxpbmUpIGRlc2lnbi4KLSDinYwgRG8gbm90IGV4cG9zZSBzZWNyZXRzLCBrZXlzLCBvciBwcml2YXRlIGNvbmZpZyBhbnl3aGVyZS4K
+# AGENTS.md - AI Working Guide for Shutio
+
+> This file is the first thing a new AI agent should read. It records the
+> project's rules, environment constraints, conventions, and exact build/test
+> commands so the project stays maintainable across sessions and models.
+
+> ## 📍 START HERE (continuing from a previous session)
+> **The app is complete, delivered, and rebranded to "Shutio".** Everything below
+> is already on disk in `I:\Apps\SnippingTool\` — the AI's prior conversation does
+> **not** need to be available to continue.
+>
+> - **App:** `I:\Apps\SnippingTool\Shutio.exe` (self-contained, passes `--selftest` 13/13).
+> - **Share/installer:** `I:\Apps\Shutio-Share\Shutio-setup.exe` (whole app inside,
+>   ~205 MB) + `UninstallShutio.exe`; a copy of `Shutio-setup.exe` is on the Desktop.
+> - **Source of truth:** `I:\Apps\SnippingTool\Source\SnippingTool\` (namespace
+>   `SnippingTool` is intentionally **kept**; only the *user-facing* name changed).
+> - **Read next:** **`HANDOFF.md`** for the current state + exact next steps,
+>   **`CHANGELOG.md`** for history (incl. the 2026-11-09 "Rebranded to Shutio" entry).
+> - **Verify any change** with the recipe in `HANDOFF.md` §6: build → `Shutio.exe --selftest`
+>   (must stay 13/13, exit 0).
+>
+> Nothing is blocked. If the user gives a new task, orient with `HANDOFF.md` first,
+> make the smallest reliable change, then re-run the self-test and refresh the docs.
+
+## What this project is
+
+A **portable, no-administrator Windows 11 capture tool named "Shutio"** (a "Snipping Tool"-style app) written in
+C# / .NET 10 WPF (+ WinForms for the tray icon). It lives entirely in
+`I:\Apps\SnippingTool` and is designed for the restricted **SalsaNOW kiosk**.
+
+Capabilities (all implemented and self-test verified):
+- Capture: **Rectangle, Freeform, Window, Full desktop, Single display**
+- Editor: pen, highlighter, eraser, line/ruler, crop, undo/redo, rotate,
+  resize (aspect lock), zoom/pan, 12-color palette + custom color, 6 thicknesses
+- Save as **PNG / JPG / BMP**; copy image to clipboard
+- **Windows OCR** text extraction + copy (`Windows.Media.Ocr`)
+- **MP4 screen recording** (ffmpeg, H.264) with optional mouse-cursor overlay
+- Searchable **history** with thumbnails (stored under `Data\`)
+- 7 configurable **global hotkeys** (`RegisterHotKey`), tray icon, optional
+  floating toolbar, toast notifications, light/dark/system theme, single instance
+
+## Environment — HARD CONSTRAINTS (never violate)
+
+This is **not** a normal dev machine. It is a SalsaNOW kiosk session.
+
+| Fact | Value |
+| --- | --- |
+| Windows account | `kiosk` (standard user) |
+| Admin rights | **NONE** — do not request elevation, do not touch protected dirs |
+| Persistent drive | `I:\` (this is where the project and its data live) |
+| Model dir (assistant) | `I:\Ollama\Models` |
+| Project root | `I:\Apps\SnippingTool` |
+| Display | 2560×1440, 150% scaling (PerMonitorV2 DPI aware) |
+| GPU | NVIDIA RTX 5080, 48 GiB (available, but the app does **not** use it) |
+| Shell | Windows PowerShell; also `I:\Apps\SalsaNOW\SilentApps\Powershell\pwsh.exe` |
+
+Rules:
+- **No** system-wide installs, MSIs, services, drivers, registry writes, UAC.
+- **No** admin-only tools (DISM, `sc`, `netsh` admin, etc.).
+- Reuse tools already present under `Tools\` before downloading anything.
+- `CloudStore` is the sanctioned way to install an application if one is truly needed.
+- Keep everything (code, data, temp, build) under `I:\Apps\SnippingTool` where possible.
+- Do **not** put secrets / API keys in any file or in terminal output.
+
+## Repository layout
+
+```
+I:\Apps\SnippingTool\            (~288 MB — the runnable app + source + docs)
+  Shutio.exe / .dll / .deps.json / .runtimeconfig.json         # published self-contained app
+  Start Shutio.cmd                                              # portable launcher
+  Install\    ← installers (Install Shutio.cmd, install.ps1, uninstall.ps1) + offline-installer source
+  AGENTS.md   ← this file
+  HANDOFF.md  ← current state + next steps (update every session)
+  TODO.md     ← prioritized tasks, completed tasks, known bugs
+  CHANGELOG.md← implementation history + architectural decisions
+  README.md   ← user-facing docs (install/build/test/reset/troubleshooting)
+  FEATURES.md ← implemented / partial / unavailable matrix
+  Assets\     # app.ico, logo.png
+  Tools\      # ffmpeg.exe (the only tool the app needs at runtime)
+  Source\SnippingTool\   # full C# source (the source of truth)
+  Data\       # runtime state (see below)
+
+I:\DevTools\                     (SHARED, project-agnostic build tooling; NOT needed to run the app)
+  dotnet\     # portable .NET SDK 10.0.100 (also on the user PATH)
+  nuget\      # shared NuGet package cache
+  dotnet-sdk-10.0.100-win-x64.zip
+  ffmpeg\     # full ffmpeg distribution (the source of the standalone ffmpeg.exe)
+  ffmpeg.zip
+  dotnet-home\# DOTNET_CLI_HOME
+  project-caches\snippingtool\bin / obj   # this project's build artifacts (rebuildable)
+```
+
+> **Note:** to keep the app folder light, the build tooling was moved out to the
+> SHARED location `I:\DevTools\` above, so any .NET project on this machine can
+> reuse the same SDK + caches. The app itself is completely self-contained and
+> runs from the main folder alone. Rebuilding uses `I:\DevTools` (see below).
+> The SDK is already on the user PATH and `NUGET_PACKAGES` / `DOTNET_CLI_HOME`
+> point into `I:\DevTools`, so a fresh shell can just run `dotnet`.
+
+`Data\` (created automatically, safe to delete to reset):
+```
+Data\
+  settings.json   # human-readable settings (theme, modes, hotkeys, paths...)
+  history.json    # list of snips (path, mode, size, timestamps)
+  Screenshots\    # captured snips
+  Thumbnails\     # history thumbnails
+  Recordings\     # MP4 output
+  Tests\          # self-test evidence (images, mp4, report)
+  Logs\           # app-<date>.log, selftest-<stamp>.txt, selftest-latest.txt
+  dotnet-home\    # DOTNET_CLI_HOME
+  .nuget\         # NUGET_PACKAGES cache
+```
+
+## Build / test / run (exact commands)
+
+Use the **bundled** SDK and keep NuGet + CLI caches inside the project so the
+build is reproducible offline. From `I:\Apps\SnippingTool`:
+
+```powershell
+# Build tooling was slimmed out of the app folder into the SHARED "I:\DevTools".
+# The SDK is on the user PATH and NUGET_PACKAGES / DOTNET_CLI_HOME already point
+# into I:\DevTools, so a fresh shell can just run `dotnet build` on the project.
+$dev    = 'I:\DevTools'
+$dotnet = if (Test-Path "$dev\dotnet\dotnet.exe") { "$dev\dotnet\dotnet.exe" } else { 'dotnet' }  # PATH fallback
+$env:DOTNET_CLI_HOME = "$dev\dotnet-home"
+$env:NUGET_PACKAGES  = "$dev\nuget"
+$proj   = 'I:\Apps\SnippingTool\Source\SnippingTool\SnippingTool.csproj'
+
+# 1) Compile check (Debug) — expect "Build succeeded. 0 Warning(s) 0 Error(s)"
+& $dotnet build $proj -c Debug -v q -nologo
+
+# 2) Headless self-test (writes Data\Logs\selftest-latest.txt + Data\Tests\selftest-report.txt)
+& 'I:\Apps\SnippingTool\Shutio.exe' --selftest            # exit code 0 = all pass
+
+# 3) Publish a fresh self-contained x64 build OVER the app folder (DESTRUCTIVE to app folder)
+& $dotnet publish $proj -c Release -r win-x64 --self-contained true `
+     -o 'I:\Apps\SnippingTool' -p:DebugType=None -p:DebugSymbols=false -v q -nologo
+Copy-Item 'I:\Apps\SnippingTool\Tools\ffmpeg\ffmpeg-9.0.2-essentials_build\bin\ffmpeg.exe' `
+     'I:\Apps\SnippingTool\Tools\ffmpeg.exe' -Force
+
+# 4) Run the app (main window)
+& 'I:\Apps\SnippingTool\Shutio.exe'
+```
+
+Useful CLI flags (all optional): `--selftest`, `--hidden`, `--capture=<mode>`,
+`--record`, `--history`, `--settings`, `--exit`.
+
+**Verify after any source change:** `build` → `--selftest` (must stay 13/13,
+exit 0) → publish → launch → check `Data\Logs\app-<date>.log`.
+
+## Architecture (high level)
+
+- **Entry / args** — `App.xaml.cs`. Parses CLI flags; in `--selftest` mode runs
+  `SelfTest.RunAsync()` then exits. Otherwise creates `AppHost`.
+- **Coordinator** — `AppHost.cs`. Owns long-lived services and wires capture,
+  editing, recording, tray, floating toolbar, hotkeys, and window lifecycle.
+- **Core** — `Settings` (JSON load/save + `Sanitize()`), `HotkeyManager` +
+  `HotkeyGesture` (`RegisterHotKey`), `NativeMethods` (all P/Invoke),
+  `Logger`, `SingleInstance`, `ThemeManager`.
+- **Capture** — `CaptureService` (BitBlt / `PrintWindow` / freeform alpha mask /
+  monitor + window enumeration), `CaptureOverlayWindow`, `CountdownWindow`,
+  `SelectionSurface`.
+- **Editor** — `EditorWindow`, `ImageCanvas` (annotation surface), `ResizeDialog`.
+- **Imaging** — `BitmapUtils` (crop/rotate/resize/save/load), `OcrService`
+  (`Windows.Media.Ocr`).
+- **Recording** — `RecordingController` (frames → ffmpeg stdin pipe),
+  `RecordingSetupWindow`, `RecordingIndicatorWindow`.
+- **Storage** — `HistoryService`, `SnipEntry`.
+- **UI** — `MainWindow`, `HistoryWindow`, `SettingsWindow`,
+  `FloatingToolbarWindow`, `ToastWindow`, `TrayIcon`, `MessageDialog`,
+  `HotkeyBox`, `ProgressRing`.
+- **Themes** — `Light.xaml`, `Dark.xaml`, `Controls.xaml`.
+
+Key invariants:
+- Everything the app writes stays under `Data\` (clipboard is the only external side effect).
+- `Settings.Sanitize()` is the single place that repairs invalid settings; always call it on load and before save.
+- Global hotkeys are temporarily released while Settings is open (so a combo can be re-recorded) and re-registered on close.
+- Single instance via a named mutex; a second launch signals the first and exits.
+
+## Code conventions
+
+- .NET 10, `net10.0-windows10.0.19041.0`, `Nullable` + `ImplicitUsings` enabled.
+- WPF types are used directly; `System.Drawing` and `System.Windows.Forms` are
+  pulled in **only** where needed (tray, cursor, bitmap interop) via local
+  aliases (`WinForms = System.Windows.Forms`). Do **not** add global
+  `using System.Drawing` / `using System.Windows.Forms` — the csproj explicitly
+  removes them to avoid `Point`/`Color`/`Button` ambiguity.
+- P/Invoke lives in `Core\NativeMethods.cs`. **Get the DLL name right** — see
+  the `GetIconInfo` / `DrawIconEx` note in CHANGELOG.md.
+- Errors are logged through `Core\Logger` to `Data\Logs`. User-facing failures
+  go through `UI\MessageDialog`.
+- Prefer the smallest reliable change; do not rewrite working subsystems.
+
+## Do / Don't
+
+- ✅ Run the self-test after changes; keep it at 13/13 / exit 0.
+- ✅ Update HANDOFF.md, TODO.md and CHANGELOG.md at the end of every session.
+- ✅ Reuse the bundled SDK + ffmpeg; keep build state under `I:\`.
+- ❌ Do not install system-wide software or require admin rights.
+- ❌ Do not delete the existing source or data unless explicitly asked.
+- ❌ Do not add paid APIs or remove the local-only (offline) design.
+- ❌ Do not expose secrets, keys, or private config anywhere.

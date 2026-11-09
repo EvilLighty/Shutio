@@ -1,1 +1,236 @@
-dXNpbmcgU3lzdGVtLkRyYXdpbmc7CnVzaW5nIFN5c3RlbS5EcmF3aW5nLkltYWdpbmc7CnVzaW5nIFN5c3RlbS5UZXh0Lkpzb247CnVzaW5nIFNuaXBwaW5nVG9vbC5Db3JlOwp1c2luZyBTbmlwcGluZ1Rvb2wuSW1hZ2luZzsKCm5hbWVzcGFjZSBTbmlwcGluZ1Rvb2wuU3RvcmFnZTsKCnB1YmxpYyBzZWFsZWQgY2xhc3MgSGlzdG9yeVNlcnZpY2UKewogICAgcHJpdmF0ZSByZWFkb25seSBvYmplY3QgX2dhdGUgPSBuZXcoKTsKICAgIHByaXZhdGUgTGlzdDxTbmlwRW50cnk+IF9lbnRyaWVzID0gbmV3KCk7CgogICAgcHVibGljIGV2ZW50IEV2ZW50SGFuZGxlcj8gQ2hhbmdlZDsKCiAgICBwdWJsaWMgSVJlYWRPbmx5TGlzdDxTbmlwRW50cnk+IEFsbAogICAgewogICAgICAgIGdldAogICAgICAgIHsKICAgICAgICAgICAgbG9jayAoX2dhdGUpCiAgICAgICAgICAgICAgICByZXR1cm4gX2VudHJpZXMuT3JkZXJCeURlc2NlbmRpbmcoZSA9PiBlLkNyZWF0ZWRVdGMpLlRvTGlzdCgpOwogICAgICAgIH0KICAgIH0KCiAgICBwdWJsaWMgSVJlYWRPbmx5TGlzdDxTbmlwRW50cnk+IFJlY2VudChpbnQgY291bnQpCiAgICB7CiAgICAgICAgbG9jayAoX2dhdGUpCiAgICAgICAgICAgIHJldHVybiBfZW50cmllcy5PcmRlckJ5RGVzY2VuZGluZyhlID0+IGUuQ3JlYXRlZFV0YykuVGFrZShjb3VudCkuVG9MaXN0KCk7CiAgICB9CgogICAgcHVibGljIGludCBDb3VudAogICAgewogICAgICAgIGdldCB7IGxvY2sgKF9nYXRlKSByZXR1cm4gX2VudHJpZXMuQ291bnQ7IH0KICAgIH0KCiAgICBwdWJsaWMgdm9pZCBMb2FkKCkKICAgIHsKICAgICAgICBsb2NrIChfZ2F0ZSkKICAgICAgICB7CiAgICAgICAgICAgIHRyeQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpZiAoIUZpbGUuRXhpc3RzKEFwcFBhdGhzLkhpc3RvcnlGaWxlKSkgcmV0dXJuOwogICAgICAgICAgICAgICAgdmFyIGpzb24gPSBGaWxlLlJlYWRBbGxUZXh0KEFwcFBhdGhzLkhpc3RvcnlGaWxlKTsKICAgICAgICAgICAgICAgIHZhciBlbnRyaWVzID0gSnNvblNlcmlhbGl6ZXIuRGVzZXJpYWxpemU8TGlzdDxTbmlwRW50cnk+Pihqc29uLCBTZXR0aW5nc1NlcnZpY2UuSnNvbk9wdGlvbnMpOwogICAgICAgICAgICAgICAgaWYgKGVudHJpZXMgIT0gbnVsbCkKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICBfZW50cmllcyA9IGVudHJpZXMKICAgICAgICAgICAgICAgICAgICAgICAgLldoZXJlKGUgPT4gIXN0cmluZy5Jc051bGxPcldoaXRlU3BhY2UoZS5GaWxlUGF0aCkpCiAgICAgICAgICAgICAgICAgICAgICAgIC5Hcm91cEJ5KGUgPT4gZS5JZCkKICAgICAgICAgICAgICAgICAgICAgICAgLlNlbGVjdChnID0+IGcuRmlyc3QoKSkKICAgICAgICAgICAgICAgICAgICAgICAgLk9yZGVyQnlEZXNjZW5kaW5nKGUgPT4gZS5DcmVhdGVkVXRjKQogICAgICAgICAgICAgICAgICAgICAgICAuVG9MaXN0KCk7CiAgICAgICAgICAgICAgICAgICAgZm9yZWFjaCAodmFyIGVudHJ5IGluIF9lbnRyaWVzKQogICAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAgICAgaWYgKGVudHJ5LldpZHRoIDw9IDAgfHwgZW50cnkuSGVpZ2h0IDw9IDApCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBUcnlSZWFkRGltZW5zaW9ucyhlbnRyeSk7CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgTG9nZ2VyLkluZm8oJCJIaXN0b3J5IGxvYWRlZDoge19lbnRyaWVzLkNvdW50fSBlbnRyaWVzLiIpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGNhdGNoIChFeGNlcHRpb24gZXgpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIExvZ2dlci5FcnJvcigiSGlzdG9yeSBsb2FkIGZhaWxlZCIsIGV4KTsKICAgICAgICAgICAgICAgIFRyeUJhY2t1cCgpOwogICAgICAgICAgICAgICAgX2VudHJpZXMgPSBuZXcgTGlzdDxTbmlwRW50cnk+KCk7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CgogICAgcHVibGljIFNuaXBFbnRyeT8gQWRkKHN0cmluZyBmaWxlUGF0aCwgQ2FwdHVyZU1vZGUgbW9kZSwgQml0bWFwIGJpdG1hcCkKICAgIHsKICAgICAgICB0cnkKICAgICAgICB7CiAgICAgICAgICAgIHZhciBpbmZvID0gbmV3IEZpbGVJbmZvKGZpbGVQYXRoKTsKICAgICAgICAgICAgdmFyIGVudHJ5ID0gbmV3IFNuaXBFbnRyeQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBGaWxlUGF0aCA9IGZpbGVQYXRoLAogICAgICAgICAgICAgICAgRmlsZU5hbWUgPSBQYXRoLkdldEZpbGVOYW1lKGZpbGVQYXRoKSwKICAgICAgICAgICAgICAgIE1vZGUgPSBtb2RlLlRvU3RyaW5nKCksCiAgICAgICAgICAgICAgICBDcmVhdGVkVXRjID0gRGF0ZVRpbWUuVXRjTm93LAogICAgICAgICAgICAgICAgTW9kaWZpZWRVdGMgPSBEYXRlVGltZS5VdGNOb3csCiAgICAgICAgICAgICAgICBXaWR0aCA9IGJpdG1hcC5XaWR0aCwKICAgICAgICAgICAgICAgIEhlaWdodCA9IGJpdG1hcC5IZWlnaHQsCiAgICAgICAgICAgICAgICBGaWxlU2l6ZSA9IGluZm8uRXhpc3RzID8gaW5mby5MZW5ndGggOiAwCiAgICAgICAgICAgIH07CiAgICAgICAgICAgIGVudHJ5LlRodW1ibmFpbFBhdGggPSBDcmVhdGVUaHVtYm5haWwoZW50cnkuSWQsIGJpdG1hcCk7CiAgICAgICAgICAgIGxvY2sgKF9nYXRlKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBfZW50cmllcy5BZGQoZW50cnkpOwogICAgICAgICAgICAgICAgU2F2ZSgpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIENoYW5nZWQ/Lkludm9rZSh0aGlzLCBFdmVudEFyZ3MuRW1wdHkpOwogICAgICAgICAgICBMb2dnZXIuSW5mbygkIlNuaXAgYWRkZWQgdG8gaGlzdG9yeToge2VudHJ5LkZpbGVOYW1lfSAoe2VudHJ5LldpZHRofXh7ZW50cnkuSGVpZ2h0fSwge21vZGV9KS4iKTsKICAgICAgICAgICAgcmV0dXJuIGVudHJ5OwogICAgICAgIH0KICAgICAgICBjYXRjaCAoRXhjZXB0aW9uIGV4KQogICAgICAgIHsKICAgICAgICAgICAgTG9nZ2VyLkVycm9yKCJDb3VsZCBub3QgYWRkIHNuaXAgdG8gaGlzdG9yeSIsIGV4KTsKICAgICAgICAgICAgcmV0dXJuIG51bGw7CiAgICAgICAgfQogICAgfQoKICAgIHB1YmxpYyBTbmlwRW50cnk/IEFkZEV4aXN0aW5nRmlsZShzdHJpbmcgZmlsZVBhdGgsIHN0cmluZyBtb2RlKQogICAgewogICAgICAgIHRyeQogICAgICAgIHsKICAgICAgICAgICAgaWYgKCFGaWxlLkV4aXN0cyhmaWxlUGF0aCkpIHJldHVybiBudWxsOwogICAgICAgICAgICB1c2luZyB2YXIgYml0bWFwID0gQml0bWFwVXRpbHMuTG9hZChmaWxlUGF0aCk7CiAgICAgICAgICAgIHJldHVybiBBZGQoZmlsZVBhdGgsIEVudW0uVHJ5UGFyc2U8Q2FwdHVyZU1vZGU+KG1vZGUsIG91dCB2YXIgbSkgPyBtIDogQ2FwdHVyZU1vZGUuUmVjdGFuZ2xlLCBiaXRtYXApOwogICAgICAgIH0KICAgICAgICBjYXRjaCAoRXhjZXB0aW9uIGV4KQogICAgICAgIHsKICAgICAgICAgICAgTG9nZ2VyLkVycm9yKCJDb3VsZCBub3QgcmVnaXN0ZXIgZXhpc3RpbmcgaW1hZ2UiLCBleCk7CiAgICAgICAgICAgIHJldHVybiBudWxsOwogICAgICAgIH0KICAgIH0KCiAgICBwdWJsaWMgdm9pZCBVcGRhdGUoU25pcEVudHJ5IGVudHJ5LCBCaXRtYXAgYml0bWFwLCBib29sIHJlZnJlc2hUaHVtYm5haWwgPSB0cnVlKQogICAgewogICAgICAgIHRyeQogICAgICAgIHsKICAgICAgICAgICAgdmFyIGluZm8gPSBuZXcgRmlsZUluZm8oZW50cnkuRmlsZVBhdGgpOwogICAgICAgICAgICBlbnRyeS5GaWxlTmFtZSA9IFBhdGguR2V0RmlsZU5hbWUoZW50cnkuRmlsZVBhdGgpOwogICAgICAgICAgICBlbnRyeS5XaWR0aCA9IGJpdG1hcC5XaWR0aDsKICAgICAgICAgICAgZW50cnkuSGVpZ2h0ID0gYml0bWFwLkhlaWdodDsKICAgICAgICAgICAgZW50cnkuRmlsZVNpemUgPSBpbmZvLkV4aXN0cyA/IGluZm8uTGVuZ3RoIDogMDsKICAgICAgICAgICAgZW50cnkuTW9kaWZpZWRVdGMgPSBEYXRlVGltZS5VdGNOb3c7CiAgICAgICAgICAgIGlmIChyZWZyZXNoVGh1bWJuYWlsKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICB2YXIgbmV3VGh1bWIgPSBDcmVhdGVUaHVtYm5haWwoZW50cnkuSWQsIGJpdG1hcCk7CiAgICAgICAgICAgICAgICBpZiAoIXN0cmluZy5Jc051bGxPckVtcHR5KG5ld1RodW1iKSkgZW50cnkuVGh1bWJuYWlsUGF0aCA9IG5ld1RodW1iOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGxvY2sgKF9nYXRlKSBTYXZlKCk7CiAgICAgICAgICAgIENoYW5nZWQ/Lkludm9rZSh0aGlzLCBFdmVudEFyZ3MuRW1wdHkpOwogICAgICAgIH0KICAgICAgICBjYXRjaCAoRXhjZXB0aW9uIGV4KQogICAgICAgIHsKICAgICAgICAgICAgTG9nZ2VyLkVycm9yKCJDb3VsZCBub3QgdXBkYXRlIGhpc3RvcnkgZW50cnkiLCBleCk7CiAgICAgICAgfQogICAgfQoKICAgIHB1YmxpYyB2b2lkIFJlbW92ZShTbmlwRW50cnkgZW50cnksIGJvb2wgZGVsZXRlRmlsZXMpCiAgICB7CiAgICAgICAgdHJ5CiAgICAgICAgewogICAgICAgICAgICBsb2NrIChfZ2F0ZSkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgX2VudHJpZXMuUmVtb3ZlQWxsKGUgPT4gZS5JZCA9PSBlbnRyeS5JZCk7CiAgICAgICAgICAgICAgICBTYXZlKCk7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgaWYgKGRlbGV0ZUZpbGVzKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICB0cnkgeyBpZiAoRmlsZS5FeGlzdHMoZW50cnkuRmlsZVBhdGgpKSBGaWxlLkRlbGV0ZShlbnRyeS5GaWxlUGF0aCk7IH0KICAgICAgICAgICAgICAgIGNhdGNoIChFeGNlcHRpb24gZXgpIHsgTG9nZ2VyLldhcm4oIkNvdWxkIG5vdCBkZWxldGUgc25pcCBmaWxlIiwgZXgpOyB9CiAgICAgICAgICAgICAgICB0cnkgeyBpZiAoRmlsZS5FeGlzdHMoZW50cnkuVGh1bWJuYWlsUGF0aCkpIEZpbGUuRGVsZXRlKGVudHJ5LlRodW1ibmFpbFBhdGgpOyB9CiAgICAgICAgICAgICAgICBjYXRjaCB7IH0KICAgICAgICAgICAgfQogICAgICAgICAgICBDaGFuZ2VkPy5JbnZva2UodGhpcywgRXZlbnRBcmdzLkVtcHR5KTsKICAgICAgICAgICAgTG9nZ2VyLkluZm8oJCJTbmlwIHJlbW92ZWQgZnJvbSBoaXN0b3J5OiB7ZW50cnkuRmlsZU5hbWV9Iik7CiAgICAgICAgfQogICAgICAgIGNhdGNoIChFeGNlcHRpb24gZXgpCiAgICAgICAgewogICAgICAgICAgICBMb2dnZXIuRXJyb3IoIkNvdWxkIG5vdCByZW1vdmUgaGlzdG9yeSBlbnRyeSIsIGV4KTsKICAgICAgICB9CiAgICB9CgogICAgcHVibGljIHN0cmluZyBDcmVhdGVUaHVtYm5haWwoc3RyaW5nIGlkLCBCaXRtYXAgYml0bWFwKQogICAgewogICAgICAgIHRyeQogICAgICAgIHsKICAgICAgICAgICAgRGlyZWN0b3J5LkNyZWF0ZURpcmVjdG9yeShBcHBQYXRocy5UaHVtYm5haWxzKTsKICAgICAgICAgICAgdmFyIHBhdGggPSBQYXRoLkNvbWJpbmUoQXBwUGF0aHMuVGh1bWJuYWlscywgaWQgKyAiLnBuZyIpOwogICAgICAgICAgICB1c2luZyB2YXIgdGh1bWIgPSBCaXRtYXBVdGlscy5DcmVhdGVUaHVtYm5haWwoYml0bWFwLCA1MjAsIDM0MCk7CiAgICAgICAgICAgIEJpdG1hcFV0aWxzLlNhdmUodGh1bWIsIHBhdGgpOwogICAgICAgICAgICByZXR1cm4gcGF0aDsKICAgICAgICB9CiAgICAgICAgY2F0Y2ggKEV4Y2VwdGlvbiBleCkKICAgICAgICB7CiAgICAgICAgICAgIExvZ2dlci5XYXJuKCJUaHVtYm5haWwgY3JlYXRpb24gZmFpbGVkIiwgZXgpOwogICAgICAgICAgICByZXR1cm4gIiI7CiAgICAgICAgfQogICAgfQoKICAgIHB1YmxpYyB2b2lkIFJlZnJlc2hFbnRyeU1ldGFkYXRhKFNuaXBFbnRyeSBlbnRyeSkKICAgIHsKICAgICAgICB0cnkKICAgICAgICB7CiAgICAgICAgICAgIGlmICghRmlsZS5FeGlzdHMoZW50cnkuRmlsZVBhdGgpKSByZXR1cm47CiAgICAgICAgICAgIHVzaW5nIHZhciBiaXRtYXAgPSBCaXRtYXBVdGlscy5Mb2FkKGVudHJ5LkZpbGVQYXRoKTsKICAgICAgICAgICAgZW50cnkuV2lkdGggPSBiaXRtYXAuV2lkdGg7CiAgICAgICAgICAgIGVudHJ5LkhlaWdodCA9IGJpdG1hcC5IZWlnaHQ7CiAgICAgICAgICAgIGVudHJ5LkZpbGVTaXplID0gbmV3IEZpbGVJbmZvKGVudHJ5LkZpbGVQYXRoKS5MZW5ndGg7CiAgICAgICAgICAgIGlmIChzdHJpbmcuSXNOdWxsT3JFbXB0eShlbnRyeS5UaHVtYm5haWxQYXRoKSB8fCAhRmlsZS5FeGlzdHMoZW50cnkuVGh1bWJuYWlsUGF0aCkpCiAgICAgICAgICAgICAgICBlbnRyeS5UaHVtYm5haWxQYXRoID0gQ3JlYXRlVGh1bWJuYWlsKGVudHJ5LklkLCBiaXRtYXApOwogICAgICAgICAgICBsb2NrIChfZ2F0ZSkgU2F2ZSgpOwogICAgICAgIH0KICAgICAgICBjYXRjaCB7IH0KICAgIH0KCiAgICBwcml2YXRlIHZvaWQgVHJ5UmVhZERpbWVuc2lvbnMoU25pcEVudHJ5IGVudHJ5KQogICAgewogICAgICAgIHRyeQogICAgICAgIHsKICAgICAgICAgICAgaWYgKCFGaWxlLkV4aXN0cyhlbnRyeS5GaWxlUGF0aCkpIHJldHVybjsKICAgICAgICAgICAgdXNpbmcgdmFyIGltYWdlID0gSW1hZ2UuRnJvbUZpbGUoZW50cnkuRmlsZVBhdGgpOwogICAgICAgICAgICBlbnRyeS5XaWR0aCA9IGltYWdlLldpZHRoOwogICAgICAgICAgICBlbnRyeS5IZWlnaHQgPSBpbWFnZS5IZWlnaHQ7CiAgICAgICAgfQogICAgICAgIGNhdGNoIHsgfQogICAgfQoKICAgIHByaXZhdGUgdm9pZCBTYXZlKCkKICAgIHsKICAgICAgICB0cnkKICAgICAgICB7CiAgICAgICAgICAgIERpcmVjdG9yeS5DcmVhdGVEaXJlY3RvcnkoQXBwUGF0aHMuRGF0YSk7CiAgICAgICAgICAgIHZhciB0ZW1wID0gQXBwUGF0aHMuSGlzdG9yeUZpbGUgKyAiLnRtcCI7CiAgICAgICAgICAgIEZpbGUuV3JpdGVBbGxUZXh0KHRlbXAsIEpzb25TZXJpYWxpemVyLlNlcmlhbGl6ZShfZW50cmllcywgU2V0dGluZ3NTZXJ2aWNlLkpzb25PcHRpb25zKSk7CiAgICAgICAgICAgIEZpbGUuTW92ZSh0ZW1wLCBBcHBQYXRocy5IaXN0b3J5RmlsZSwgdHJ1ZSk7CiAgICAgICAgfQogICAgICAgIGNhdGNoIChFeGNlcHRpb24gZXgpCiAgICAgICAgewogICAgICAgICAgICBMb2dnZXIuRXJyb3IoIkhpc3Rvcnkgc2F2ZSBmYWlsZWQiLCBleCk7CiAgICAgICAgfQogICAgfQoKICAgIHByaXZhdGUgdm9pZCBUcnlCYWNrdXAoKQogICAgewogICAgICAgIHRyeQogICAgICAgIHsKICAgICAgICAgICAgaWYgKEZpbGUuRXhpc3RzKEFwcFBhdGhzLkhpc3RvcnlGaWxlKSkKICAgICAgICAgICAgICAgIEZpbGUuQ29weShBcHBQYXRocy5IaXN0b3J5RmlsZSwgQXBwUGF0aHMuSGlzdG9yeUZpbGUgKyAkIi5icm9rZW4te0RhdGVUaW1lLk5vdzp5eXl5TU1kZC1ISG1tc3N9IiwgdHJ1ZSk7CiAgICAgICAgfQogICAgICAgIGNhdGNoIHsgfQogICAgfQp9Cg==
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Text.Json;
+using SnippingTool.Core;
+using SnippingTool.Imaging;
+
+namespace SnippingTool.Storage;
+
+public sealed class HistoryService
+{
+    private readonly object _gate = new();
+    private List<SnipEntry> _entries = new();
+
+    public event EventHandler? Changed;
+
+    public IReadOnlyList<SnipEntry> All
+    {
+        get
+        {
+            lock (_gate)
+                return _entries.OrderByDescending(e => e.CreatedUtc).ToList();
+        }
+    }
+
+    public IReadOnlyList<SnipEntry> Recent(int count)
+    {
+        lock (_gate)
+            return _entries.OrderByDescending(e => e.CreatedUtc).Take(count).ToList();
+    }
+
+    public int Count
+    {
+        get { lock (_gate) return _entries.Count; }
+    }
+
+    public void Load()
+    {
+        lock (_gate)
+        {
+            try
+            {
+                if (!File.Exists(AppPaths.HistoryFile)) return;
+                var json = File.ReadAllText(AppPaths.HistoryFile);
+                var entries = JsonSerializer.Deserialize<List<SnipEntry>>(json, SettingsService.JsonOptions);
+                if (entries != null)
+                {
+                    _entries = entries
+                        .Where(e => !string.IsNullOrWhiteSpace(e.FilePath))
+                        .GroupBy(e => e.Id)
+                        .Select(g => g.First())
+                        .OrderByDescending(e => e.CreatedUtc)
+                        .ToList();
+                    foreach (var entry in _entries)
+                    {
+                        if (entry.Width <= 0 || entry.Height <= 0)
+                            TryReadDimensions(entry);
+                    }
+                }
+                Logger.Info($"History loaded: {_entries.Count} entries.");
+            }
+            catch (Exception ex)
+            {
+                Logger.Error("History load failed", ex);
+                TryBackup();
+                _entries = new List<SnipEntry>();
+            }
+        }
+    }
+
+    public SnipEntry? Add(string filePath, CaptureMode mode, Bitmap bitmap)
+    {
+        try
+        {
+            var info = new FileInfo(filePath);
+            var entry = new SnipEntry
+            {
+                FilePath = filePath,
+                FileName = Path.GetFileName(filePath),
+                Mode = mode.ToString(),
+                CreatedUtc = DateTime.UtcNow,
+                ModifiedUtc = DateTime.UtcNow,
+                Width = bitmap.Width,
+                Height = bitmap.Height,
+                FileSize = info.Exists ? info.Length : 0
+            };
+            entry.ThumbnailPath = CreateThumbnail(entry.Id, bitmap);
+            lock (_gate)
+            {
+                _entries.Add(entry);
+                Save();
+            }
+            Changed?.Invoke(this, EventArgs.Empty);
+            Logger.Info($"Snip added to history: {entry.FileName} ({entry.Width}x{entry.Height}, {mode}).");
+            return entry;
+        }
+        catch (Exception ex)
+        {
+            Logger.Error("Could not add snip to history", ex);
+            return null;
+        }
+    }
+
+    public SnipEntry? AddExistingFile(string filePath, string mode)
+    {
+        try
+        {
+            if (!File.Exists(filePath)) return null;
+            using var bitmap = BitmapUtils.Load(filePath);
+            return Add(filePath, Enum.TryParse<CaptureMode>(mode, out var m) ? m : CaptureMode.Rectangle, bitmap);
+        }
+        catch (Exception ex)
+        {
+            Logger.Error("Could not register existing image", ex);
+            return null;
+        }
+    }
+
+    public void Update(SnipEntry entry, Bitmap bitmap, bool refreshThumbnail = true)
+    {
+        try
+        {
+            var info = new FileInfo(entry.FilePath);
+            entry.FileName = Path.GetFileName(entry.FilePath);
+            entry.Width = bitmap.Width;
+            entry.Height = bitmap.Height;
+            entry.FileSize = info.Exists ? info.Length : 0;
+            entry.ModifiedUtc = DateTime.UtcNow;
+            if (refreshThumbnail)
+            {
+                var newThumb = CreateThumbnail(entry.Id, bitmap);
+                if (!string.IsNullOrEmpty(newThumb)) entry.ThumbnailPath = newThumb;
+            }
+            lock (_gate) Save();
+            Changed?.Invoke(this, EventArgs.Empty);
+        }
+        catch (Exception ex)
+        {
+            Logger.Error("Could not update history entry", ex);
+        }
+    }
+
+    public void Remove(SnipEntry entry, bool deleteFiles)
+    {
+        try
+        {
+            lock (_gate)
+            {
+                _entries.RemoveAll(e => e.Id == entry.Id);
+                Save();
+            }
+            if (deleteFiles)
+            {
+                try { if (File.Exists(entry.FilePath)) File.Delete(entry.FilePath); }
+                catch (Exception ex) { Logger.Warn("Could not delete snip file", ex); }
+                try { if (File.Exists(entry.ThumbnailPath)) File.Delete(entry.ThumbnailPath); }
+                catch { }
+            }
+            Changed?.Invoke(this, EventArgs.Empty);
+            Logger.Info($"Snip removed from history: {entry.FileName}");
+        }
+        catch (Exception ex)
+        {
+            Logger.Error("Could not remove history entry", ex);
+        }
+    }
+
+    public string CreateThumbnail(string id, Bitmap bitmap)
+    {
+        try
+        {
+            Directory.CreateDirectory(AppPaths.Thumbnails);
+            var path = Path.Combine(AppPaths.Thumbnails, id + ".png");
+            using var thumb = BitmapUtils.CreateThumbnail(bitmap, 520, 340);
+            BitmapUtils.Save(thumb, path);
+            return path;
+        }
+        catch (Exception ex)
+        {
+            Logger.Warn("Thumbnail creation failed", ex);
+            return "";
+        }
+    }
+
+    public void RefreshEntryMetadata(SnipEntry entry)
+    {
+        try
+        {
+            if (!File.Exists(entry.FilePath)) return;
+            using var bitmap = BitmapUtils.Load(entry.FilePath);
+            entry.Width = bitmap.Width;
+            entry.Height = bitmap.Height;
+            entry.FileSize = new FileInfo(entry.FilePath).Length;
+            if (string.IsNullOrEmpty(entry.ThumbnailPath) || !File.Exists(entry.ThumbnailPath))
+                entry.ThumbnailPath = CreateThumbnail(entry.Id, bitmap);
+            lock (_gate) Save();
+        }
+        catch { }
+    }
+
+    private void TryReadDimensions(SnipEntry entry)
+    {
+        try
+        {
+            if (!File.Exists(entry.FilePath)) return;
+            using var image = Image.FromFile(entry.FilePath);
+            entry.Width = image.Width;
+            entry.Height = image.Height;
+        }
+        catch { }
+    }
+
+    private void Save()
+    {
+        try
+        {
+            Directory.CreateDirectory(AppPaths.Data);
+            var temp = AppPaths.HistoryFile + ".tmp";
+            File.WriteAllText(temp, JsonSerializer.Serialize(_entries, SettingsService.JsonOptions));
+            File.Move(temp, AppPaths.HistoryFile, true);
+        }
+        catch (Exception ex)
+        {
+            Logger.Error("History save failed", ex);
+        }
+    }
+
+    private void TryBackup()
+    {
+        try
+        {
+            if (File.Exists(AppPaths.HistoryFile))
+                File.Copy(AppPaths.HistoryFile, AppPaths.HistoryFile + $".broken-{DateTime.Now:yyyyMMdd-HHmmss}", true);
+        }
+        catch { }
+    }
+}

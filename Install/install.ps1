@@ -1,1 +1,195 @@
-I3JlcXVpcmVzIC12ZXJzaW9uIDMKPCMKICBTaHV0aW8g4oCUIHNpbXBsZSBpbnN0YWxsZXIgKHBlci11c2VyLCBubyBhZG1pbiwgbm8gZXh0cmEgc29mdHdhcmUpLgogIENvcGllcyB0aGUgbGVhbiwgc2VsZi1jb250YWluZWQgYXBwIHRvIGEgZm9sZGVyIFlPVSBjaG9vc2UsIHRoZW4gY3JlYXRlcwogIFN0YXJ0IE1lbnUgKyBEZXNrdG9wIHNob3J0Y3V0cyBhbmQgYW4gZW50cnkgaW4gIkFwcHMgJiBmZWF0dXJlcyIuCgogIFJ1biBpdCBieSBkb3VibGUtY2xpY2tpbmcgIkluc3RhbGwgU2h1dGlvLmNtZCIsIG9yOgogICAgICBwb3dlcnNoZWxsIC1FeGVjdXRpb25Qb2xpY3kgQnlwYXNzIC1GaWxlIGluc3RhbGwucHMxIFstSW5zdGFsbFBhdGggIkM6XFNvbWV3aGVyZSJdCiM+CltDbWRsZXRCaW5kaW5nKCldCnBhcmFtKAogICAgW3N0cmluZ10kSW5zdGFsbFBhdGgsICAjIG9wdGlvbmFsOiBza2lwIHRoZSBmb2xkZXIgZGlhbG9nIGFuZCBpbnN0YWxsIGhlcmUKICAgIFtzd2l0Y2hdJFNraXBQcm9tcHRzICAgIyBza2lwIHRoZSBmaW5hbCAibGF1bmNoIG5vdz8iIC8gInByZXNzIGVudGVyIiBwcm9tcHRzCikKCiRFcnJvckFjdGlvblByZWZlcmVuY2UgPSAnU3RvcCcKJEFwcE5hbWUgID0gJ1NodXRpbycKJFZlcnNpb24gID0gJzEuMS4xJwokUHVibGlzaGVyPSAnU2Fsc2FOT1cgRWRpdGlvbicKJFNvdXJjZSAgID0gU3BsaXQtUGF0aCAtUGFyZW50ICRQU1NjcmlwdFJvb3QgICAjIHRoZSBhcHAgZm9sZGVyIHRoYXQgY29udGFpbnMgSW5zdGFsbFwKCmZ1bmN0aW9uIFdyaXRlLUJhbm5lciB7CiAgICBXcml0ZS1Ib3N0ICcnCiAgICBXcml0ZS1Ib3N0ICgiICB7MH0g4oCUIEluc3RhbGxlciB2ezF9IiAtZiAkQXBwTmFtZSwgJFZlcnNpb24pIC1Gb3JlZ3JvdW5kQ29sb3IgQ3lhbgogICAgV3JpdGUtSG9zdCAoIiAgU291cmNlOiB7MH0iIC1mICRTb3VyY2UpCiAgICBXcml0ZS1Ib3N0ICcnCn0KCmZ1bmN0aW9uIFRlc3QtSW5zdGFsbGFibGUoW3N0cmluZ10kcCkgewogICAgIyBUaGUgZGVzdGluYXRpb24gbWF5IG5vdCBleGlzdCB5ZXQ7IHdlIG5lZWQgdGhlIFBBUkVOVCB0byBiZSB3cml0YWJsZSB0byBjcmVhdGUgaXQuCiAgICAkY2hlY2tEaXIgPSBpZiAoVGVzdC1QYXRoICRwKSB7ICRwIH0gZWxzZSB7IFNwbGl0LVBhdGggLVBhcmVudCAkcCB9CiAgICBpZiAoLW5vdCAkY2hlY2tEaXIgLW9yIC1ub3QgKFRlc3QtUGF0aCAkY2hlY2tEaXIpKSB7ICRjaGVja0RpciA9ICdDOlwnIH0KICAgIHRyeSB7CiAgICAgICAgJHQgPSBKb2luLVBhdGggJGNoZWNrRGlyICgicHJvYmVfIiArIFtndWlkXTo6TmV3R3VpZCgpLlRvU3RyaW5nKCJOIikpCiAgICAgICAgW1N5c3RlbS5JTy5GaWxlXTo6V3JpdGVBbGxUZXh0KCR0LCAnb2snKSB8IE91dC1OdWxsCiAgICAgICAgUmVtb3ZlLUl0ZW0gLUxpdGVyYWxQYXRoICR0IC1Gb3JjZSAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZQogICAgICAgIHJldHVybiAkdHJ1ZQogICAgfSBjYXRjaCB7IHJldHVybiAkZmFsc2UgfQp9CgpXcml0ZS1CYW5uZXIKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBzYW5pdHkgLS0tLQokZXhlID0gSm9pbi1QYXRoICRTb3VyY2UgJ1NodXRpby5leGUnCmlmICgtbm90IChUZXN0LVBhdGggJGV4ZSkpIHsKICAgIFdyaXRlLUhvc3QgKCJFUlJPUjogezB9IHdhcyBub3QgZm91bmQuIEtlZXAgdGhlIHdob2xlIGFwcCBmb2xkZXIgaW50YWN0IGFuZCBydW4gdGhlIGluc3RhbGxlciBmcm9tIGluc2lkZSBpdC4iIC1mICRleGUpIC1Gb3JlZ3JvdW5kQ29sb3IgUmVkCiAgICByZXR1cm4gMQp9CiRmZm1wZWcgPSBKb2luLVBhdGggJFNvdXJjZSAnVG9vbHNcZmZtcGVnLmV4ZScKJGhhc0ZmbXBlZyA9IFRlc3QtUGF0aCAkZmZtcGVnCmlmICgtbm90ICRoYXNGZm1wZWcpIHsgV3JpdGUtSG9zdCAiTk9URTogZmZtcGVnIG5vdCBmb3VuZCDigJQgcmVjb3JkaW5nIHdpbGwgYmUgZGlzYWJsZWQgYWZ0ZXIgaW5zdGFsbC4iIC1Gb3JlZ3JvdW5kQ29sb3IgWWVsbG93IH0KCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIGNob29zZSBwYXRoIC0tLS0tLQokZGVzdCA9ICRJbnN0YWxsUGF0aAppZiAoLW5vdCAkZGVzdCkgewogICAgdHJ5IHsKICAgICAgICBBZGQtVHlwZSAtQXNzZW1ibHlOYW1lIFN5c3RlbS5XaW5kb3dzLkZvcm1zCiAgICAgICAgQWRkLVR5cGUgLUFzc2VtYmx5TmFtZSBTeXN0ZW0uRHJhd2luZwogICAgICAgICRkbGcgPSBOZXctT2JqZWN0IFN5c3RlbS5XaW5kb3dzLkZvcm1zLkZvbGRlckJyb3dzZXJEaWFsb2cKICAgICAgICAkZGxnLkRlc2NyaXB0aW9uID0gIkNob29zZSB3aGVyZSB0byBpbnN0YWxsIHRoZSAkQXBwTmFtZSIKICAgICAgICAkZGxnLlNob3dOZXdGb2xkZXJCdXR0b24gPSAkdHJ1ZQogICAgICAgIGZvcmVhY2ggKCRpbml0IGluIEAoJ0k6XCcsICRlbnY6TE9DQUxBUFBEQVRBLCAnQzpcJykpIHsKICAgICAgICAgICAgaWYgKFRlc3QtUGF0aCAkaW5pdCkgeyAkZGxnLlNlbGVjdGVkUGF0aCA9ICRpbml0OyBicmVhayB9CiAgICAgICAgfQogICAgICAgICRyZXN1bHQgPSAkZGxnLlNob3dEaWFsb2coKQogICAgICAgIGlmICgkcmVzdWx0IC1uZSBbU3lzdGVtLldpbmRvd3MuRm9ybXMuRGlhbG9nUmVzdWx0XTo6T0spIHsKICAgICAgICAgICAgV3JpdGUtSG9zdCAiSW5zdGFsbGF0aW9uIGNhbmNlbGxlZC4iIC1Gb3JlZ3JvdW5kQ29sb3IgWWVsbG93CiAgICAgICAgICAgIHJldHVybiAwCiAgICAgICAgfQogICAgICAgICRkZXN0ID0gJGRsZy5TZWxlY3RlZFBhdGgKICAgIH0KICAgIGNhdGNoIHsKICAgICAgICBXcml0ZS1Ib3N0ICJDb3VsZCBub3Qgb3BlbiB0aGUgZm9sZGVyIHBpY2tlciAodXNpbmcgZGVmYXVsdCkuIiAtRm9yZWdyb3VuZENvbG9yIFllbGxvdwogICAgICAgICRkZXN0ID0gSm9pbi1QYXRoICRlbnY6TE9DQUxBUFBEQVRBICdQcm9ncmFtc1xTaHV0aW8nCiAgICB9Cn0KJGRlc3QgPSAoJGRlc3QgLXJlcGxhY2UgJ1xzKyQnLCcnKS5UcmltRW5kKCdcJykKCmlmICgtbm90IChUZXN0LUluc3RhbGxhYmxlICRkZXN0KSkgewogICAgV3JpdGUtSG9zdCAoIkVSUk9SOiB0aGF0IGxvY2F0aW9uIGlzIG5vdCB3cml0YWJsZTogezB9IiAtZiAkZGVzdCkgLUZvcmVncm91bmRDb2xvciBSZWQKICAgIFdyaXRlLUhvc3QgIlBpY2sgYSBmb2xkZXIgdW5kZXIgeW91ciB1c2VyIHByb2ZpbGUgb3Igb24gdGhlIEk6IGRyaXZlLCB0aGVuIHRyeSBhZ2Fpbi4iIC1Gb3JlZ3JvdW5kQ29sb3IgWWVsbG93CiAgICByZXR1cm4gMQp9CldyaXRlLUhvc3QgKCJJbnN0YWxsaW5nIHRvOiB7MH0iIC1mICRkZXN0KSAtRm9yZWdyb3VuZENvbG9yIEN5YW4KCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gY29weSAtLS0tCiRmYWlsdXJlcyA9IDAKZnVuY3Rpb24gQ29weS1GaWxlKFtzdHJpbmddJGZyb20sIFtzdHJpbmddJHRvKSB7CiAgICAkZ2xvYmFsOmZhaWx1cmVzCiAgICBOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAoU3BsaXQtUGF0aCAtUGFyZW50ICR0bykgfCBPdXQtTnVsbAogICAgdHJ5IHsgQ29weS1JdGVtIC1MaXRlcmFsUGF0aCAkZnJvbSAtRGVzdGluYXRpb24gJHRvIC1Gb3JjZSB9CiAgICBjYXRjaCB7IFdyaXRlLUhvc3QgKCIgICEgY291bGQgbm90IGNvcHkgezB9IiAtZiAoU3BsaXQtUGF0aCAtTGVhZiAkdG8pKSAtRm9yZWdyb3VuZENvbG9yIFJlZDsgJGdsb2JhbDpmYWlsdXJlcysrIH0KfQoKV3JpdGUtSG9zdCAiICBDb3B5aW5nIHRoZSBhcHBsaWNhdGlvbiBmaWxlcy4uLiIKIyAxKSBBbGwgcm9vdCBmaWxlcyAoZXhlLCBydW50aW1lIERMTHMsIGpzb24sIGRvY3MsIGxhdW5jaGVyKSBleGNlcHQgdGhlIGRlYnVnIGR1bXBlcgokZGVueSA9IEAoJ2NyZWF0ZWR1bXAuZXhlJykKR2V0LUNoaWxkSXRlbSAtTGl0ZXJhbFBhdGggJFNvdXJjZSAtRmlsZSB8CiAgICBXaGVyZS1PYmplY3QgeyAkZGVueSAtbm90Y29udGFpbnMgJF8uTmFtZSB9IHwKICAgIEZvckVhY2gtT2JqZWN0IHsgQ29weS1GaWxlICRfLkZ1bGxOYW1lIChKb2luLVBhdGggJGRlc3QgJF8uTmFtZSkgfQoKIyAyKSBBc3NldHMgZm9sZGVyCiRhc3NldHNTcmMgPSBKb2luLVBhdGggJFNvdXJjZSAnQXNzZXRzJwppZiAoVGVzdC1QYXRoICRhc3NldHNTcmMpIHsKICAgIENvcHktSXRlbSAtTGl0ZXJhbFBhdGggJGFzc2V0c1NyYyAtRGVzdGluYXRpb24gJGRlc3QgLVJlY3Vyc2UgLUZvcmNlCn0KCiMgMykgVGhlIHNpbmdsZSBmZm1wZWcuZXhlIHRoZSBhcHAgbmVlZHMKaWYgKCRoYXNGZm1wZWcpIHsgQ29weS1GaWxlICRmZm1wZWcgKEpvaW4tUGF0aCAkZGVzdCAnVG9vbHNcZmZtcGVnLmV4ZScpIH0KCiMgNCkgUHJlc2VydmUgZXhpc3RpbmcgdXNlciB3b3JrIChzZXR0aW5ncywgaGlzdG9yeSwgc25pcHMsIHJlY29yZGluZ3MpIGlmIGFueQokc3JjRGF0YSA9IEpvaW4tUGF0aCAkU291cmNlICdEYXRhJwppZiAoVGVzdC1QYXRoICRzcmNEYXRhKSB7CiAgICBmb3JlYWNoICgkc3ViIGluIEAoJ1NjcmVlbnNob3RzJywnVGh1bWJuYWlscycsJ1JlY29yZGluZ3MnKSkgewogICAgICAgICRzID0gSm9pbi1QYXRoICRzcmNEYXRhICRzdWIKICAgICAgICBpZiAoVGVzdC1QYXRoICRzKSB7CiAgICAgICAgICAgICRkID0gSm9pbi1QYXRoICRkZXN0ICJEYXRhXCRzdWIiCiAgICAgICAgICAgIE5ldy1JdGVtIC1JdGVtVHlwZSBEaXJlY3RvcnkgLUZvcmNlIC1QYXRoICRkIHwgT3V0LU51bGwKICAgICAgICAgICAgQ29weS1JdGVtIC1MaXRlcmFsUGF0aCAkcyAtRGVzdGluYXRpb24gJGQgLVJlY3Vyc2UgLUZvcmNlCiAgICAgICAgfQogICAgfQogICAgZm9yZWFjaCAoJGYgaW4gQCgnc2V0dGluZ3MuanNvbicsJ2hpc3RvcnkuanNvbicpKSB7CiAgICAgICAgJHMgPSBKb2luLVBhdGggJHNyY0RhdGEgJGYKICAgICAgICBpZiAoVGVzdC1QYXRoICRzKSB7IENvcHktSXRlbSAtTGl0ZXJhbFBhdGggJHMgLURlc3RpbmF0aW9uIChKb2luLVBhdGggJGRlc3QgIkRhdGFcJGYiKSAtRm9yY2UgfQogICAgfQp9CldyaXRlLUhvc3QgIiAgRmlsZSBjb3B5IGNvbXBsZXRlLiIgLUZvcmVncm91bmRDb2xvciBHcmVlbgoKaWYgKCRmYWlsdXJlcyAtZ3QgMCkgewogICAgV3JpdGUtSG9zdCAoIkVSUk9SOiB7MH0gZmlsZShzKSBmYWlsZWQgdG8gY29weS4gVGhlIGluc3RhbGwgbWF5IGJlIGluY29tcGxldGUuIiAtZiAkZmFpbHVyZXMpIC1Gb3JlZ3JvdW5kQ29sb3IgUmVkCiAgICByZXR1cm4gMQp9CgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBzaG9ydGN1dHMgLS0tLS0KJHdzaCA9IE5ldy1PYmplY3QgLUNvbU9iamVjdCBXU2NyaXB0LlNoZWxsCiR0YXJnZXQgPSBKb2luLVBhdGggJGRlc3QgJ1NodXRpby5leGUnCiRpY29uICAgPSBKb2luLVBhdGggJGRlc3QgJ0Fzc2V0c1xhcHAuaWNvJwokbWFrZVNob3J0Y3V0ID0gewogICAgcGFyYW0oJHBhdGgpCiAgICAkc2MgPSAkd3NoLkNyZWF0ZVNob3J0Y3V0KCRwYXRoKQogICAgJHNjLlRhcmdldFBhdGggPSAkdGFyZ2V0CiAgICAkc2MuV29ya2luZ0RpcmVjdG9yeSA9ICRkZXN0CiAgICAkc2MuRGVzY3JpcHRpb24gPSAiQ2FwdHVyZSwgYW5ub3RhdGUsIE9DUiBhbmQgc2NyZWVuIHJlY29yZGluZyIKICAgIGlmIChUZXN0LVBhdGggJGljb24pIHsgJHNjLkljb25Mb2NhdGlvbiA9ICIkaWNvbiwwIiB9CiAgICAkc2MuU2F2ZSgpCn0KJHNtUGF0aCAgPSBKb2luLVBhdGggJGVudjpBUFBEQVRBICdNaWNyb3NvZnRcV2luZG93c1xTdGFydCBNZW51XFByb2dyYW1zXFNodXRpby5sbmsnCiRkZXNrUGF0aD0gSm9pbi1QYXRoIChbRW52aXJvbm1lbnRdOjpHZXRGb2xkZXJQYXRoKCdEZXNrdG9wJykpICdTaHV0aW8ubG5rJwpOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAoU3BsaXQtUGF0aCAtUGFyZW50ICRzbVBhdGgpIHwgT3V0LU51bGwKJiAkbWFrZVNob3J0Y3V0ICRzbVBhdGgKJiAkbWFrZVNob3J0Y3V0ICRkZXNrUGF0aApXcml0ZS1Ib3N0ICIgIENyZWF0ZWQgU3RhcnQgTWVudSBhbmQgRGVza3RvcCBzaG9ydGN1dHMuIiAtRm9yZWdyb3VuZENvbG9yIEdyZWVuCgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gdW5pbnN0YWxsIGVudHJ5IC0KJHJlZyA9ICdIS0NVOlxTb2Z0d2FyZVxNaWNyb3NvZnRcV2luZG93c1xDdXJyZW50VmVyc2lvblxVbmluc3RhbGxcU2h1dGlvJwpOZXctSXRlbSAtUGF0aCAkcmVnIC1Gb3JjZSB8IE91dC1OdWxsClNldC1JdGVtUHJvcGVydHkgJHJlZyAtTmFtZSAnRGlzcGxheU5hbWUnICAgICAgIC1WYWx1ZSAkQXBwTmFtZQpTZXQtSXRlbVByb3BlcnR5ICRyZWcgLU5hbWUgJ0Rpc3BsYXlWZXJzaW9uJyAgICAtVmFsdWUgJFZlcnNpb24KU2V0LUl0ZW1Qcm9wZXJ0eSAkcmVnIC1OYW1lICdQdWJsaXNoZXInICAgICAgICAgLVZhbHVlICRQdWJsaXNoZXIKU2V0LUl0ZW1Qcm9wZXJ0eSAkcmVnIC1OYW1lICdJbnN0YWxsTG9jYXRpb24nICAgLVZhbHVlICRkZXN0ClNldC1JdGVtUHJvcGVydHkgJHJlZyAtTmFtZSAnVW5pbnN0YWxsU3RyaW5nJyAgIC1WYWx1ZSAoJyJ7MH1cVW5pbnN0YWxsIFNodXRpby5jbWQiJyAtZiAkZGVzdCkKU2V0LUl0ZW1Qcm9wZXJ0eSAkcmVnIC1OYW1lICdOb01vZGlmeScgICAgICAgICAgLVZhbHVlIDEKU2V0LUl0ZW1Qcm9wZXJ0eSAkcmVnIC1OYW1lICdOb0NoYW5nZScgICAgICAgICAgLVZhbHVlIDEKV3JpdGUtSG9zdCAiICBSZWdpc3RlcmVkIGFuIGVudHJ5IGluIEFwcHMgJiBmZWF0dXJlcy4iIC1Gb3JlZ3JvdW5kQ29sb3IgR3JlZW4KCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSB1bmluc3RhbGwgbGF1bmNoZXIgLQpDb3B5LUl0ZW0gLUxpdGVyYWxQYXRoIChKb2luLVBhdGggJFNvdXJjZSAnSW5zdGFsbFx1bmluc3RhbGwucHMxJykgLURlc3RpbmF0aW9uIChKb2luLVBhdGggJGRlc3QgJ3VuaW5zdGFsbC5wczEnKSAtRm9yY2UKJHVuaW5zdENtZCA9IEpvaW4tUGF0aCAkZGVzdCAnVW5pbnN0YWxsIFNodXRpby5jbWQnCkAiCkBlY2hvIG9mZgpyZW0gUmVtb3ZlcyB0aGUgJEFwcE5hbWUgKGFuZCBvcHRpb25hbGx5IGl0cyBkYXRhIGZvbGRlcikuCnBvd2Vyc2hlbGwuZXhlIC1Ob1Byb2ZpbGUgLUV4ZWN1dGlvblBvbGljeSBCeXBhc3MgLUZpbGUgIiV+ZHAwdW5pbnN0YWxsLnBzMSIgLUluc3RhbGxQYXRoICIlfmRwMCIKIkAgfCBTZXQtQ29udGVudCAtTGl0ZXJhbFBhdGggJHVuaW5zdENtZCAtRW5jb2RpbmcgQVNDSUkKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIGRvbmUgLS0tLS0tLQpXcml0ZS1Ib3N0ICcnCldyaXRlLUhvc3QgIiAgPT09PT09PT09PT09PT0gIERPTkUgID09PT09PT09PT09PT0iIC1Gb3JlZ3JvdW5kQ29sb3IgQ3lhbgpXcml0ZS1Ib3N0ICgiICBJbnN0YWxsZWQgdG8gOiB7MH0iIC1mICRkZXN0KQpXcml0ZS1Ib3N0ICgiICBSZWNvcmRpbmcgICAgOiB7MH0iIC1mICQoaWYgKCRoYXNGZm1wZWcpIHsnZW5hYmxlZCAoZmZtcGVnIGluY2x1ZGVkKSd9IGVsc2UgeydESVNBQkxFRCDigJQgbm8gZmZtcGVnJ30pKQpXcml0ZS1Ib3N0ICIgIExhdW5jaCAgICAgICA6IFN0YXJ0IE1lbnUgLyBEZXNrdG9wIGljb246IFNodXRpbyIKV3JpdGUtSG9zdCAiICBVbmluc3RhbGwgICAgOiBVbmluc3RhbGwgU2h1dGlvLmNtZCAgKG9yIEFwcHMgJiBmZWF0dXJlcykiCldyaXRlLUhvc3QgJycKCmlmICgkU2tpcFByb21wdHMpIHsKICAgIFdyaXRlLUhvc3QgIiAgKEludGVyYWN0aXZlIHByb21wdHMgc2tpcHBlZC4pIiAtRm9yZWdyb3VuZENvbG9yIERhcmtHcmF5CiAgICByZXR1cm4gMAp9CiRsYXVuY2ggPSBSZWFkLUhvc3QgIiAgTGF1bmNoIHRoZSBTaHV0aW8gbm93PyAoWS9OKSIKaWYgKCRsYXVuY2ggLW1hdGNoICdeW1l5XScpIHsKICAgIFN0YXJ0LVByb2Nlc3MgLUZpbGVQYXRoICR0YXJnZXQKICAgIFdyaXRlLUhvc3QgIiAgTGF1bmNoZWQuIiAtRm9yZWdyb3VuZENvbG9yIEdyZWVuCn0KV3JpdGUtSG9zdCAnICBQcmVzcyBFbnRlciB0byBjbG9zZSB0aGlzIHdpbmRvdy4nIHwgT3V0LU51bGwKUmVhZC1Ib3N0CnJldHVybiAwCg==
+#requires -version 3
+<#
+  Shutio — simple installer (per-user, no admin, no extra software).
+  Copies the lean, self-contained app to a folder YOU choose, then creates
+  Start Menu + Desktop shortcuts and an entry in "Apps & features".
+
+  Run it by double-clicking "Install Shutio.cmd", or:
+      powershell -ExecutionPolicy Bypass -File install.ps1 [-InstallPath "C:\Somewhere"]
+#>
+[CmdletBinding()]
+param(
+    [string]$InstallPath,  # optional: skip the folder dialog and install here
+    [switch]$SkipPrompts   # skip the final "launch now?" / "press enter" prompts
+)
+
+$ErrorActionPreference = 'Stop'
+$AppName  = 'Shutio'
+$Version  = '1.1.1'
+$Publisher= 'SalsaNOW Edition'
+$Source   = Split-Path -Parent $PSScriptRoot   # the app folder that contains Install\
+
+function Write-Banner {
+    Write-Host ''
+    Write-Host ("  {0} — Installer v{1}" -f $AppName, $Version) -ForegroundColor Cyan
+    Write-Host ("  Source: {0}" -f $Source)
+    Write-Host ''
+}
+
+function Test-Installable([string]$p) {
+    # The destination may not exist yet; we need the PARENT to be writable to create it.
+    $checkDir = if (Test-Path $p) { $p } else { Split-Path -Parent $p }
+    if (-not $checkDir -or -not (Test-Path $checkDir)) { $checkDir = 'C:\' }
+    try {
+        $t = Join-Path $checkDir ("probe_" + [guid]::NewGuid().ToString("N"))
+        [System.IO.File]::WriteAllText($t, 'ok') | Out-Null
+        Remove-Item -LiteralPath $t -Force -ErrorAction SilentlyContinue
+        return $true
+    } catch { return $false }
+}
+
+Write-Banner
+
+# ---------------------------------------------------------------- sanity ----
+$exe = Join-Path $Source 'Shutio.exe'
+if (-not (Test-Path $exe)) {
+    Write-Host ("ERROR: {0} was not found. Keep the whole app folder intact and run the installer from inside it." -f $exe) -ForegroundColor Red
+    return 1
+}
+$ffmpeg = Join-Path $Source 'Tools\ffmpeg.exe'
+$hasFfmpeg = Test-Path $ffmpeg
+if (-not $hasFfmpeg) { Write-Host "NOTE: ffmpeg not found — recording will be disabled after install." -ForegroundColor Yellow }
+
+# --------------------------------------------------------- choose path ------
+$dest = $InstallPath
+if (-not $dest) {
+    try {
+        Add-Type -AssemblyName System.Windows.Forms
+        Add-Type -AssemblyName System.Drawing
+        $dlg = New-Object System.Windows.Forms.FolderBrowserDialog
+        $dlg.Description = "Choose where to install the $AppName"
+        $dlg.ShowNewFolderButton = $true
+        foreach ($init in @('I:\', $env:LOCALAPPDATA, 'C:\')) {
+            if (Test-Path $init) { $dlg.SelectedPath = $init; break }
+        }
+        $result = $dlg.ShowDialog()
+        if ($result -ne [System.Windows.Forms.DialogResult]::OK) {
+            Write-Host "Installation cancelled." -ForegroundColor Yellow
+            return 0
+        }
+        $dest = $dlg.SelectedPath
+    }
+    catch {
+        Write-Host "Could not open the folder picker (using default)." -ForegroundColor Yellow
+        $dest = Join-Path $env:LOCALAPPDATA 'Programs\Shutio'
+    }
+}
+$dest = ($dest -replace '\s+$','').TrimEnd('\')
+
+if (-not (Test-Installable $dest)) {
+    Write-Host ("ERROR: that location is not writable: {0}" -f $dest) -ForegroundColor Red
+    Write-Host "Pick a folder under your user profile or on the I: drive, then try again." -ForegroundColor Yellow
+    return 1
+}
+Write-Host ("Installing to: {0}" -f $dest) -ForegroundColor Cyan
+
+# ----------------------------------------------------------------- copy ----
+$failures = 0
+function Copy-File([string]$from, [string]$to) {
+    $global:failures
+    New-Item -ItemType Directory -Force -Path (Split-Path -Parent $to) | Out-Null
+    try { Copy-Item -LiteralPath $from -Destination $to -Force }
+    catch { Write-Host ("  ! could not copy {0}" -f (Split-Path -Leaf $to)) -ForegroundColor Red; $global:failures++ }
+}
+
+Write-Host "  Copying the application files..."
+# 1) All root files (exe, runtime DLLs, json, docs, launcher) except the debug dumper
+$deny = @('createdump.exe')
+Get-ChildItem -LiteralPath $Source -File |
+    Where-Object { $deny -notcontains $_.Name } |
+    ForEach-Object { Copy-File $_.FullName (Join-Path $dest $_.Name) }
+
+# 2) Assets folder
+$assetsSrc = Join-Path $Source 'Assets'
+if (Test-Path $assetsSrc) {
+    Copy-Item -LiteralPath $assetsSrc -Destination $dest -Recurse -Force
+}
+
+# 3) The single ffmpeg.exe the app needs
+if ($hasFfmpeg) { Copy-File $ffmpeg (Join-Path $dest 'Tools\ffmpeg.exe') }
+
+# 4) Preserve existing user work (settings, history, snips, recordings) if any
+$srcData = Join-Path $Source 'Data'
+if (Test-Path $srcData) {
+    foreach ($sub in @('Screenshots','Thumbnails','Recordings')) {
+        $s = Join-Path $srcData $sub
+        if (Test-Path $s) {
+            $d = Join-Path $dest "Data\$sub"
+            New-Item -ItemType Directory -Force -Path $d | Out-Null
+            Copy-Item -LiteralPath $s -Destination $d -Recurse -Force
+        }
+    }
+    foreach ($f in @('settings.json','history.json')) {
+        $s = Join-Path $srcData $f
+        if (Test-Path $s) { Copy-Item -LiteralPath $s -Destination (Join-Path $dest "Data\$f") -Force }
+    }
+}
+Write-Host "  File copy complete." -ForegroundColor Green
+
+if ($failures -gt 0) {
+    Write-Host ("ERROR: {0} file(s) failed to copy. The install may be incomplete." -f $failures) -ForegroundColor Red
+    return 1
+}
+
+# ------------------------------------------------------------ shortcuts -----
+$wsh = New-Object -ComObject WScript.Shell
+$target = Join-Path $dest 'Shutio.exe'
+$icon   = Join-Path $dest 'Assets\app.ico'
+$makeShortcut = {
+    param($path)
+    $sc = $wsh.CreateShortcut($path)
+    $sc.TargetPath = $target
+    $sc.WorkingDirectory = $dest
+    $sc.Description = "Capture, annotate, OCR and screen recording"
+    if (Test-Path $icon) { $sc.IconLocation = "$icon,0" }
+    $sc.Save()
+}
+$smPath  = Join-Path $env:APPDATA 'Microsoft\Windows\Start Menu\Programs\Shutio.lnk'
+$deskPath= Join-Path ([Environment]::GetFolderPath('Desktop')) 'Shutio.lnk'
+New-Item -ItemType Directory -Force -Path (Split-Path -Parent $smPath) | Out-Null
+& $makeShortcut $smPath
+& $makeShortcut $deskPath
+Write-Host "  Created Start Menu and Desktop shortcuts." -ForegroundColor Green
+
+# ---------------------------------------------------------- uninstall entry -
+$reg = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\Shutio'
+New-Item -Path $reg -Force | Out-Null
+Set-ItemProperty $reg -Name 'DisplayName'       -Value $AppName
+Set-ItemProperty $reg -Name 'DisplayVersion'    -Value $Version
+Set-ItemProperty $reg -Name 'Publisher'         -Value $Publisher
+Set-ItemProperty $reg -Name 'InstallLocation'   -Value $dest
+Set-ItemProperty $reg -Name 'UninstallString'   -Value ('"{0}\Uninstall Shutio.cmd"' -f $dest)
+Set-ItemProperty $reg -Name 'NoModify'          -Value 1
+Set-ItemProperty $reg -Name 'NoChange'          -Value 1
+Write-Host "  Registered an entry in Apps & features." -ForegroundColor Green
+
+# ------------------------------------------------------- uninstall launcher -
+Copy-Item -LiteralPath (Join-Path $Source 'Install\uninstall.ps1') -Destination (Join-Path $dest 'uninstall.ps1') -Force
+$uninstCmd = Join-Path $dest 'Uninstall Shutio.cmd'
+@"
+@echo off
+rem Removes the $AppName (and optionally its data folder).
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0uninstall.ps1" -InstallPath "%~dp0"
+"@ | Set-Content -LiteralPath $uninstCmd -Encoding ASCII
+
+# --------------------------------------------------------------- done -------
+Write-Host ''
+Write-Host "  ==============  DONE  =============" -ForegroundColor Cyan
+Write-Host ("  Installed to : {0}" -f $dest)
+Write-Host ("  Recording    : {0}" -f $(if ($hasFfmpeg) {'enabled (ffmpeg included)'} else {'DISABLED — no ffmpeg'}))
+Write-Host "  Launch       : Start Menu / Desktop icon: Shutio"
+Write-Host "  Uninstall    : Uninstall Shutio.cmd  (or Apps & features)"
+Write-Host ''
+
+if ($SkipPrompts) {
+    Write-Host "  (Interactive prompts skipped.)" -ForegroundColor DarkGray
+    return 0
+}
+$launch = Read-Host "  Launch the Shutio now? (Y/N)"
+if ($launch -match '^[Yy]') {
+    Start-Process -FilePath $target
+    Write-Host "  Launched." -ForegroundColor Green
+}
+Write-Host '  Press Enter to close this window.' | Out-Null
+Read-Host
+return 0

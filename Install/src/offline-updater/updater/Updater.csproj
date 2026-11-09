@@ -1,1 +1,37 @@
-PFByb2plY3QgU2RrPSJNaWNyb3NvZnQuTkVULlNkayI+CgogIDxQcm9wZXJ0eUdyb3VwPgogICAgPE91dHB1dFR5cGU+RXhlPC9PdXRwdXRUeXBlPgogICAgPFRhcmdldEZyYW1ld29yaz5uZXQxMC4wLXdpbmRvd3M8L1RhcmdldEZyYW1ld29yaz4KICAgIDxVc2VXaW5kb3dzRm9ybXM+dHJ1ZTwvVXNlV2luZG93c0Zvcm1zPgogICAgPFJ1bnRpbWVJZGVudGlmaWVyPndpbi14NjQ8L1J1bnRpbWVJZGVudGlmaWVyPgogICAgPFNlbGZDb250YWluZWQ+dHJ1ZTwvU2VsZkNvbnRhaW5lZD4KICAgIDxQdWJsaXNoU2luZ2xlRmlsZT50cnVlPC9QdWJsaXNoU2luZ2xlRmlsZT4KICAgIDxJbmNsdWRlTmF0aXZlTGlicmFyaWVzRm9yU2VsZkV4dHJhY3Q+dHJ1ZTwvSW5jbHVkZU5hdGl2ZUxpYnJhcmllc0ZvclNlbGZFeHRyYWN0PgogICAgPEVuYWJsZUNvbXByZXNzaW9uSW5TaW5nbGVGaWxlPnRydWU8L0VuYWJsZUNvbXByZXNzaW9uSW5TaW5nbGVGaWxlPgogICAgPERlYnVnVHlwZT5ub25lPC9EZWJ1Z1R5cGU+CiAgICA8RGVidWdTeW1ib2xzPmZhbHNlPC9EZWJ1Z1N5bWJvbHM+CiAgICA8QXNzZW1ibHlOYW1lPlNodXRpby1VcGRhdGVyPC9Bc3NlbWJseU5hbWU+CiAgICA8Um9vdE5hbWVzcGFjZT5TaHV0aW9VcGRhdGVyPC9Sb290TmFtZXNwYWNlPgogICAgPFZlcnNpb24+MS4xLjE8L1ZlcnNpb24+CiAgICA8QXNzZW1ibHlWZXJzaW9uPjEuMS4xLjA8L0Fzc2VtYmx5VmVyc2lvbj4KICAgIDxGaWxlVmVyc2lvbj4xLjEuMS4wPC9GaWxlVmVyc2lvbj4KICAgIDxOdWxsYWJsZT5lbmFibGU8L051bGxhYmxlPgogICAgPEltcGxpY2l0VXNpbmdzPmVuYWJsZTwvSW1wbGljaXRVc2luZ3M+CiAgICA8U2F0ZWxsaXRlUmVzb3VyY2VMYW5ndWFnZXM+ZW48L1NhdGVsbGl0ZVJlc291cmNlTGFuZ3VhZ2VzPgogIDwvUHJvcGVydHlHcm91cD4KCiAgPCEtLQogICAgRXZlcnl0aGluZyB0aGUgdGFyZ2V0IG1hY2hpbmUgbmVlZHMgaXMgRU1CRURERUQgc28gdGhpcyBPTkUgZmlsZSBjYW4gcmVwYWlyIGFuCiAgICBhbHJlYWR5LWluc3RhbGxlZCBjb3B5IG9mIFNodXRpbyB3aXRoIG5vIGludGVybmV0LCBubyBhZG1pbiwgYW5kIG5vIG90aGVyIGZpbGVzLgogICAgcmVidWlsZC5wczEgc3VwcGxpZXMgdGhlIHBheWxvYWQgYXQgYnVpbGQgdGltZToKICAgICAgICAtcDpQYXlsb2FkWmlwPTwuLi4+XGFwcC1wYXlsb2FkLnppcCAgICAgICAgICAodGhlIHppcHBlZCwgY2xlYW4gYXBwKQogIC0tPgogIDxJdGVtR3JvdXAgQ29uZGl0aW9uPSInJChQYXlsb2FkWmlwKScgIT0gJyciPgogICAgPEVtYmVkZGVkUmVzb3VyY2UgSW5jbHVkZT0iJChQYXlsb2FkWmlwKSI+CiAgICAgIDxMb2dpY2FsTmFtZT5BcHBQYXlsb2FkLnppcDwvTG9naWNhbE5hbWU+CiAgICAgIDxXaXRoQ3VsdHVyZT5mYWxzZTwvV2l0aEN1bHR1cmU+CiAgICA8L0VtYmVkZGVkUmVzb3VyY2U+CiAgPC9JdGVtR3JvdXA+Cgo8L1Byb2plY3Q+Cg==
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <AssemblyName>Shutio-Updater</AssemblyName>
+    <RootNamespace>ShutioUpdater</RootNamespace>
+    <Version>1.1.1</Version>
+    <AssemblyVersion>1.1.1.0</AssemblyVersion>
+    <FileVersion>1.1.1.0</FileVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+  <!--
+    Everything the target machine needs is EMBEDDED so this ONE file can repair an
+    already-installed copy of Shutio with no internet, no admin, and no other files.
+    rebuild.ps1 supplies the payload at build time:
+        -p:PayloadZip=<...>\app-payload.zip          (the zipped, clean app)
+  -->
+  <ItemGroup Condition="'$(PayloadZip)' != ''">
+    <EmbeddedResource Include="$(PayloadZip)">
+      <LogicalName>AppPayload.zip</LogicalName>
+      <WithCulture>false</WithCulture>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

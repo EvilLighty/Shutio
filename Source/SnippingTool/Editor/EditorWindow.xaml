@@ -1,1 +1,266 @@
-PFdpbmRvdyB4OkNsYXNzPSJTbmlwcGluZ1Rvb2wuRWRpdG9yLkVkaXRvcldpbmRvdyIKICAgICAgICB4bWxucz0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93aW5meC8yMDA2L3hhbWwvcHJlc2VudGF0aW9uIgogICAgICAgIHhtbG5zOng9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd2luZngvMjAwNi94YW1sIgogICAgICAgIHhtbG5zOmVkaXRvcj0iY2xyLW5hbWVzcGFjZTpTbmlwcGluZ1Rvb2wuRWRpdG9yIgogICAgICAgIHhtbG5zOnVpPSJjbHItbmFtZXNwYWNlOlNuaXBwaW5nVG9vbC5VSSIKICAgICAgICBUaXRsZT0iU2h1dGlvIgogICAgICAgIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgTW9kZXJuV2luZG93fSIKICAgICAgICBXaW5kb3dTdHlsZT0iTm9uZSIKICAgICAgICBSZXNpemVNb2RlPSJDYW5SZXNpemUiCiAgICAgICAgV2lkdGg9IjExODAiCiAgICAgICAgSGVpZ2h0PSI3OTAiCiAgICAgICAgTWluV2lkdGg9IjkwMCIKICAgICAgICBNaW5IZWlnaHQ9IjU4MCIKICAgICAgICBXaW5kb3dTdGFydHVwTG9jYXRpb249IkNlbnRlclNjcmVlbiIKICAgICAgICBCYWNrZ3JvdW5kPSJ7RHluYW1pY1Jlc291cmNlIEFwcEJhY2tncm91bmRCcnVzaH0iPgogICAgPFdpbmRvd0Nocm9tZS5XaW5kb3dDaHJvbWU+CiAgICAgICAgPFdpbmRvd0Nocm9tZSBDYXB0aW9uSGVpZ2h0PSIwIiBSZXNpemVCb3JkZXJUaGlja25lc3M9IjciIEdsYXNzRnJhbWVUaGlja25lc3M9IjAiIENvcm5lclJhZGl1cz0iMCIgVXNlQWVyb0NhcHRpb25CdXR0b25zPSJGYWxzZSIgLz4KICAgIDwvV2luZG93Q2hyb21lLldpbmRvd0Nocm9tZT4KCiAgICA8R3JpZCB4Ok5hbWU9IlJvb3RHcmlkIj4KICAgICAgICA8R3JpZC5Sb3dEZWZpbml0aW9ucz4KICAgICAgICAgICAgPFJvd0RlZmluaXRpb24gSGVpZ2h0PSI1MCIgLz4KICAgICAgICAgICAgPFJvd0RlZmluaXRpb24gSGVpZ2h0PSI2NCIgLz4KICAgICAgICAgICAgPFJvd0RlZmluaXRpb24gSGVpZ2h0PSIqIiAvPgogICAgICAgICAgICA8Um93RGVmaW5pdGlvbiBIZWlnaHQ9IjMwIiAvPgogICAgICAgIDwvR3JpZC5Sb3dEZWZpbml0aW9ucz4KCiAgICAgICAgPCEtLSBUaXRsZSBiYXIgLS0+CiAgICAgICAgPEdyaWQgR3JpZC5Sb3c9IjAiIEJhY2tncm91bmQ9IlRyYW5zcGFyZW50IiBNb3VzZUxlZnRCdXR0b25Eb3duPSJUaXRsZUJhcl9Nb3VzZUxlZnRCdXR0b25Eb3duIj4KICAgICAgICAgICAgPFN0YWNrUGFuZWwgT3JpZW50YXRpb249Ikhvcml6b250YWwiIE1hcmdpbj0iMTYsMCwwLDAiIFZlcnRpY2FsQWxpZ25tZW50PSJDZW50ZXIiPgogICAgICAgICAgICAgICAgPEltYWdlIFNvdXJjZT0iQXNzZXRzL2xvZ28ucG5nIiBXaWR0aD0iMjAiIEhlaWdodD0iMjAiIFJlbmRlck9wdGlvbnMuQml0bWFwU2NhbGluZ01vZGU9IkhpZ2hRdWFsaXR5IiAvPgogICAgICAgICAgICAgICAgPFRleHRCbG9jayBUZXh0PSJTaHV0aW8iIEZvbnRTaXplPSIxMiIgRm9udFdlaWdodD0iU2VtaUJvbGQiIE1hcmdpbj0iOSwwLDAsMCIgVmVydGljYWxBbGlnbm1lbnQ9IkNlbnRlciIgLz4KICAgICAgICAgICAgICAgIDxCb3JkZXIgU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBUaGluU2VwYXJhdG9yfSIgSGVpZ2h0PSIxNCIgTWFyZ2luPSIxMiwwIiAvPgogICAgICAgICAgICAgICAgPFRleHRCbG9jayB4Ok5hbWU9IkZpbGVOYW1lVGV4dCIgVGV4dD0iVW50aXRsZWQiIEZvbnRTaXplPSIxMiIgRm9yZWdyb3VuZD0ie0R5bmFtaWNSZXNvdXJjZSBUZXh0U2Vjb25kYXJ5QnJ1c2h9IgogICAgICAgICAgICAgICAgICAgICAgICAgICBWZXJ0aWNhbEFsaWdubWVudD0iQ2VudGVyIiBNYXhXaWR0aD0iNDIwIiBUZXh0VHJpbW1pbmc9IkNoYXJhY3RlckVsbGlwc2lzIiAvPgogICAgICAgICAgICAgICAgPEJvcmRlciB4Ok5hbWU9IkRpcnR5RG90IiBXaWR0aD0iNiIgSGVpZ2h0PSI2IiBDb3JuZXJSYWRpdXM9IjMiIEJhY2tncm91bmQ9IntEeW5hbWljUmVzb3VyY2UgQWNjZW50QnJ1c2h9IgogICAgICAgICAgICAgICAgICAgICAgICBNYXJnaW49IjgsMCwwLDAiIFZlcnRpY2FsQWxpZ25tZW50PSJDZW50ZXIiIFZpc2liaWxpdHk9IkNvbGxhcHNlZCIgLz4KICAgICAgICAgICAgPC9TdGFja1BhbmVsPgoKICAgICAgICAgICAgPFN0YWNrUGFuZWwgT3JpZW50YXRpb249Ikhvcml6b250YWwiIEhvcml6b250YWxBbGlnbm1lbnQ9IlJpZ2h0IiBWZXJ0aWNhbEFsaWdubWVudD0iQ2VudGVyIiBNYXJnaW49IjAsMCw2LDAiPgogICAgICAgICAgICAgICAgPEJ1dHRvbiB4Ok5hbWU9Ik9jckJ1dHRvbiIgU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBJY29uQnV0dG9ufSIgVG9vbFRpcD0iRXh0cmFjdCB0ZXh0IChPQ1IpIiBNYXJnaW49IjAsMCwyLDAiIENsaWNrPSJPY3JCdXR0b25fQ2xpY2siPgogICAgICAgICAgICAgICAgICAgIDxUZXh0QmxvY2sgVGV4dD0iJiN4RThEMjsiIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgSWNvbkdseXBofSIgRm9udFNpemU9IjE2IiAvPgogICAgICAgICAgICAgICAgPC9CdXR0b24+CiAgICAgICAgICAgICAgICA8QnV0dG9uIHg6TmFtZT0iQ29weUJ1dHRvbiIgU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBJY29uQnV0dG9ufSIgVG9vbFRpcD0iQ29weSBpbWFnZSAoQ3RybCtDKSIgTWFyZ2luPSIwLDAsMiwwIiBDbGljaz0iQ29weV9DbGljayI+CiAgICAgICAgICAgICAgICAgICAgPFRleHRCbG9jayBUZXh0PSImI3hFOEM4OyIgU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBJY29uR2x5cGh9IiBGb250U2l6ZT0iMTYiIC8+CiAgICAgICAgICAgICAgICA8L0J1dHRvbj4KICAgICAgICAgICAgICAgIDxCdXR0b24geDpOYW1lPSJTYXZlQnV0dG9uIiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIFByaW1hcnlCdXR0b259IiBQYWRkaW5nPSIxMiw1IiBNYXJnaW49IjQsMCwyLDAiIFRvb2xUaXA9IlNhdmUgKEN0cmwrUykiIENsaWNrPSJTYXZlQnV0dG9uX0NsaWNrIj4KICAgICAgICAgICAgICAgICAgICA8U3RhY2tQYW5lbCBPcmllbnRhdGlvbj0iSG9yaXpvbnRhbCI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxUZXh0QmxvY2sgVGV4dD0iJiN4RTc0RTsiIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgSWNvbkdseXBofSIgRm9udFNpemU9IjEzIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEZvcmVncm91bmQ9IntEeW5hbWljUmVzb3VyY2UgQWNjZW50Rm9yZWdyb3VuZEJydXNofSIgLz4KICAgICAgICAgICAgICAgICAgICAgICAgPFRleHRCbG9jayBUZXh0PSJTYXZlIiBGb250U2l6ZT0iMTIiIEZvbnRXZWlnaHQ9IlNlbWlCb2xkIiBNYXJnaW49IjYsMCwwLDAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgRm9yZWdyb3VuZD0ie0R5bmFtaWNSZXNvdXJjZSBBY2NlbnRGb3JlZ3JvdW5kQnJ1c2h9IiBWZXJ0aWNhbEFsaWdubWVudD0iQ2VudGVyIiAvPgogICAgICAgICAgICAgICAgICAgIDwvU3RhY2tQYW5lbD4KICAgICAgICAgICAgICAgIDwvQnV0dG9uPgogICAgICAgICAgICAgICAgPEJ1dHRvbiB4Ok5hbWU9IlNhdmVBc0J1dHRvbiIgU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBJY29uQnV0dG9ufSIgVG9vbFRpcD0iU2F2ZSBhcyBQTkcsIEpQRyBvciBCTVAiIFdpZHRoPSIyOCIgTWFyZ2luPSIwLDAsNCwwIiBDbGljaz0iU2F2ZUFzQnV0dG9uX0NsaWNrIj4KICAgICAgICAgICAgICAgICAgICA8VGV4dEJsb2NrIFRleHQ9IiYjeEU3MEQ7IiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIEljb25HbHlwaH0iIEZvbnRTaXplPSIxMCIgLz4KICAgICAgICAgICAgICAgIDwvQnV0dG9uPgogICAgICAgICAgICAgICAgPEJ1dHRvbiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIFRpdGxlQmFyTWluQnV0dG9ufSIgQ2xpY2s9Ik1pbmltaXplX0NsaWNrIiBUb29sVGlwPSJNaW5pbWl6ZSIgLz4KICAgICAgICAgICAgICAgIDxCdXR0b24gU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBUaXRsZUJhck1heEJ1dHRvbn0iIENsaWNrPSJNYXhpbWl6ZV9DbGljayIgeDpOYW1lPSJNYXhpbWl6ZUJ1dHRvbiIgVG9vbFRpcD0iTWF4aW1pemUiIC8+CiAgICAgICAgICAgICAgICA8QnV0dG9uIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgVGl0bGVCYXJDbG9zZUJ1dHRvbn0iIENsaWNrPSJDbG9zZV9DbGljayIgVG9vbFRpcD0iQ2xvc2UiIE1hcmdpbj0iMCwwLDIsMCIgLz4KICAgICAgICAgICAgPC9TdGFja1BhbmVsPgogICAgICAgIDwvR3JpZD4KCiAgICAgICAgPCEtLSBUb29sIHN0cmlwIC0tPgogICAgICAgIDxCb3JkZXIgR3JpZC5Sb3c9IjEiIE1hcmdpbj0iMTYsMCwxNiw4IiBCYWNrZ3JvdW5kPSJ7RHluYW1pY1Jlc291cmNlIENhcmRCcnVzaH0iIEJvcmRlckJydXNoPSJ7RHluYW1pY1Jlc291cmNlIEJvcmRlckJydXNofSIKICAgICAgICAgICAgICAgIEJvcmRlclRoaWNrbmVzcz0iMSIgQ29ybmVyUmFkaXVzPSIxMiIgUGFkZGluZz0iNyw1Ij4KICAgICAgICAgICAgPEdyaWQ+CiAgICAgICAgICAgICAgICA8U3RhY2tQYW5lbCBPcmllbnRhdGlvbj0iSG9yaXpvbnRhbCIgVmVydGljYWxBbGlnbm1lbnQ9IkNlbnRlciI+CiAgICAgICAgICAgICAgICAgICAgPFRvZ2dsZUJ1dHRvbiB4Ok5hbWU9IlBlblRvb2wiIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgVG9vbEJ1dHRvbn0iIFRvb2xUaXA9IlBlbiIgQ2xpY2s9IlBlblRvb2xfQ2xpY2siPgogICAgICAgICAgICAgICAgICAgICAgICA8UGF0aCBEYXRhPSJNNCwyMCBMNCwxNiBMMTUsNSBMMTksOSBMOCwyMCBaIE0xMyw3IEwxNywxMSIgV2lkdGg9IjIxIiBIZWlnaHQ9IjIxIiBTdHJldGNoPSJVbmlmb3JtIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTdHJva2U9IntCaW5kaW5nIEZvcmVncm91bmQsIFJlbGF0aXZlU291cmNlPXtSZWxhdGl2ZVNvdXJjZSBBbmNlc3RvclR5cGU9VG9nZ2xlQnV0dG9ufX0iIFN0cm9rZVRoaWNrbmVzcz0iMS41IiBGaWxsPSJUcmFuc3BhcmVudCIgLz4KICAgICAgICAgICAgICAgICAgICA8L1RvZ2dsZUJ1dHRvbj4KICAgICAgICAgICAgICAgICAgICA8VG9nZ2xlQnV0dG9uIHg6TmFtZT0iSGlnaGxpZ2h0ZXJUb29sIiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIFRvb2xCdXR0b259IiBUb29sVGlwPSJIaWdobGlnaHRlciIgQ2xpY2s9IkhpZ2hsaWdodGVyVG9vbF9DbGljayI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxQYXRoIERhdGE9Ik00LDE2IEwxMSw5IEwxNiwxNCBMOSwyMSBINCBaIE0xNSw0IEwyMCw5IE0xNywyIEwyMiw3IiBXaWR0aD0iMjEiIEhlaWdodD0iMjEiIFN0cmV0Y2g9IlVuaWZvcm0iCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFN0cm9rZT0ie0JpbmRpbmcgRm9yZWdyb3VuZCwgUmVsYXRpdmVTb3VyY2U9e1JlbGF0aXZlU291cmNlIEFuY2VzdG9yVHlwZT1Ub2dnbGVCdXR0b259fSIgU3Ryb2tlVGhpY2tuZXNzPSIxLjUiIEZpbGw9IlRyYW5zcGFyZW50IiAvPgogICAgICAgICAgICAgICAgICAgIDwvVG9nZ2xlQnV0dG9uPgogICAgICAgICAgICAgICAgICAgIDxUb2dnbGVCdXR0b24geDpOYW1lPSJFcmFzZXJUb29sIiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIFRvb2xCdXR0b259IiBUb29sVGlwPSJFcmFzZXIiIENsaWNrPSJFcmFzZXJUb29sX0NsaWNrIj4KICAgICAgICAgICAgICAgICAgICAgICAgPFBhdGggRGF0YT0iTTQsMTYgTDEyLDggTDIwLDE2IEwxNCwyMiBIOCBaIE0xMSwyMSBIMjEiIFdpZHRoPSIyMSIgSGVpZ2h0PSIyMSIgU3RyZXRjaD0iVW5pZm9ybSIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU3Ryb2tlPSJ7QmluZGluZyBGb3JlZ3JvdW5kLCBSZWxhdGl2ZVNvdXJjZT17UmVsYXRpdmVTb3VyY2UgQW5jZXN0b3JUeXBlPVRvZ2dsZUJ1dHRvbn19IiBTdHJva2VUaGlja25lc3M9IjEuNSIgRmlsbD0iVHJhbnNwYXJlbnQiIC8+CiAgICAgICAgICAgICAgICAgICAgPC9Ub2dnbGVCdXR0b24+CiAgICAgICAgICAgICAgICAgICAgPFRvZ2dsZUJ1dHRvbiB4Ok5hbWU9IkxpbmVUb29sIiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIFRvb2xCdXR0b259IiBUb29sVGlwPSJTdHJhaWdodCBsaW5lIC8gcnVsZXIiIENsaWNrPSJMaW5lVG9vbF9DbGljayI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxQYXRoIERhdGE9Ik00LDIwIEwyMCw0IE0xNCw0IEgyMCBWMTAgTTQsMTQgVjIwIEgxMCIgV2lkdGg9IjIxIiBIZWlnaHQ9IjIxIiBTdHJldGNoPSJVbmlmb3JtIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTdHJva2U9IntCaW5kaW5nIEZvcmVncm91bmQsIFJlbGF0aXZlU291cmNlPXtSZWxhdGl2ZVNvdXJjZSBBbmNlc3RvclR5cGU9VG9nZ2xlQnV0dG9ufX0iIFN0cm9rZVRoaWNrbmVzcz0iMS41IiBGaWxsPSJUcmFuc3BhcmVudCIgLz4KICAgICAgICAgICAgICAgICAgICA8L1RvZ2dsZUJ1dHRvbj4KICAgICAgICAgICAgICAgICAgICA8VG9nZ2xlQnV0dG9uIHg6TmFtZT0iQ3JvcFRvb2wiIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgVG9vbEJ1dHRvbn0iIFRvb2xUaXA9IkNyb3AiIENsaWNrPSJDcm9wVG9vbF9DbGljayI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxQYXRoIERhdGE9Ik03LDMgVjE3IEgyMSBNMyw3IEgxNyBWMjEiIFdpZHRoPSIyMSIgSGVpZ2h0PSIyMSIgU3RyZXRjaD0iVW5pZm9ybSIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU3Ryb2tlPSJ7QmluZGluZyBGb3JlZ3JvdW5kLCBSZWxhdGl2ZVNvdXJjZT17UmVsYXRpdmVTb3VyY2UgQW5jZXN0b3JUeXBlPVRvZ2dsZUJ1dHRvbn19IiBTdHJva2VUaGlja25lc3M9IjEuNSIgRmlsbD0iVHJhbnNwYXJlbnQiIC8+CiAgICAgICAgICAgICAgICAgICAgPC9Ub2dnbGVCdXR0b24+CgogICAgICAgICAgICAgICAgICAgIDxCb3JkZXIgU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBUaGluU2VwYXJhdG9yfSIgLz4KCiAgICAgICAgICAgICAgICAgICAgPEJ1dHRvbiB4Ok5hbWU9IkNvbG9yQnV0dG9uIiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIEljb25CdXR0b259IiBUb29sVGlwPSJQZW4gY29sb3IgYW5kIHRoaWNrbmVzcyIgQ2xpY2s9IkNvbG9yQnV0dG9uX0NsaWNrIj4KICAgICAgICAgICAgICAgICAgICAgICAgPEdyaWQgV2lkdGg9IjIyIiBIZWlnaHQ9IjIyIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxFbGxpcHNlIHg6TmFtZT0iQ29sb3JTd2F0Y2giIFdpZHRoPSIxNiIgSGVpZ2h0PSIxNiIgRmlsbD0iI0ZGM0IzMCIgU3Ryb2tlPSIjODBGRkZGRkYiIFN0cm9rZVRoaWNrbmVzcz0iMSIgLz4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxFbGxpcHNlIHg6TmFtZT0iVGhpY2tuZXNzRG90IiBXaWR0aD0iNiIgSGVpZ2h0PSI2IiBGaWxsPSJXaGl0ZSIgSG9yaXpvbnRhbEFsaWdubWVudD0iUmlnaHQiIFZlcnRpY2FsQWxpZ25tZW50PSJCb3R0b20iIC8+CiAgICAgICAgICAgICAgICAgICAgICAgIDwvR3JpZD4KICAgICAgICAgICAgICAgICAgICA8L0J1dHRvbj4KICAgICAgICAgICAgICAgICAgICA8QnV0dG9uIHg6TmFtZT0iVGhpY2tuZXNzQnV0dG9uIiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIEljb25CdXR0b259IiBUb29sVGlwPSJCcnVzaCB0aGlja25lc3MiIENsaWNrPSJUaGlja25lc3NCdXR0b25fQ2xpY2siIFdpZHRoPSIzMCI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxUZXh0QmxvY2sgVGV4dD0iJiN4RTdDMzsiIEZvbnRGYW1pbHk9IntTdGF0aWNSZXNvdXJjZSBJY29uRm9udH0iIEZvbnRTaXplPSIxNSIgLz4KICAgICAgICAgICAgICAgICAgICA8L0J1dHRvbj4KCiAgICAgICAgICAgICAgICAgICAgPEJvcmRlciBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIFRoaW5TZXBhcmF0b3J9IiAvPgoKICAgICAgICAgICAgICAgICAgICA8QnV0dG9uIHg6TmFtZT0iUm90YXRlTGVmdEJ1dHRvbiIgU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBJY29uQnV0dG9ufSIgVG9vbFRpcD0iUm90YXRlIGxlZnQiIENsaWNrPSJSb3RhdGVMZWZ0X0NsaWNrIj4KICAgICAgICAgICAgICAgICAgICAgICAgPFBhdGggRGF0YT0iTTUsMTIgQTcsNyAwIDEgMSAxMiwxOSBNNSwxMiBWNiBNNSwxMiBIMTEiIFdpZHRoPSIyMSIgSGVpZ2h0PSIyMSIgU3RyZXRjaD0iVW5pZm9ybSIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU3Ryb2tlPSJ7QmluZGluZyBGb3JlZ3JvdW5kLCBSZWxhdGl2ZVNvdXJjZT17UmVsYXRpdmVTb3VyY2UgQW5jZXN0b3JUeXBlPUJ1dHRvbn19IiBTdHJva2VUaGlja25lc3M9IjEuNiIgRmlsbD0iVHJhbnNwYXJlbnQiIC8+CiAgICAgICAgICAgICAgICAgICAgPC9CdXR0b24+CiAgICAgICAgICAgICAgICAgICAgPEJ1dHRvbiB4Ok5hbWU9IlJvdGF0ZVJpZ2h0QnV0dG9uIiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIEljb25CdXR0b259IiBUb29sVGlwPSJSb3RhdGUgcmlnaHQiIENsaWNrPSJSb3RhdGVSaWdodF9DbGljayI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxQYXRoIERhdGE9Ik0xOSwxMiBBNyw3IDAgMSAwIDEyLDE5IE0xOSwxMiBWNiBNMTksMTIgSDEzIiBXaWR0aD0iMjEiIEhlaWdodD0iMjEiIFN0cmV0Y2g9IlVuaWZvcm0iCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFN0cm9rZT0ie0JpbmRpbmcgRm9yZWdyb3VuZCwgUmVsYXRpdmVTb3VyY2U9e1JlbGF0aXZlU291cmNlIEFuY2VzdG9yVHlwZT1CdXR0b259fSIgU3Ryb2tlVGhpY2tuZXNzPSIxLjYiIEZpbGw9IlRyYW5zcGFyZW50IiAvPgogICAgICAgICAgICAgICAgICAgIDwvQnV0dG9uPgogICAgICAgICAgICAgICAgICAgIDxCdXR0b24geDpOYW1lPSJSZXNpemVCdXR0b24iIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgSWNvbkJ1dHRvbn0iIFRvb2xUaXA9IlJlc2l6ZSBpbWFnZSIgQ2xpY2s9IlJlc2l6ZV9DbGljayI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxQYXRoIERhdGE9Ik00LDIwIEwyMCw0IE0xMyw0IEgyMCBWMTEgTTQsMTMgVjIwIEgxMSIgV2lkdGg9IjIxIiBIZWlnaHQ9IjIxIiBTdHJldGNoPSJVbmlmb3JtIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTdHJva2U9IntCaW5kaW5nIEZvcmVncm91bmQsIFJlbGF0aXZlU291cmNlPXtSZWxhdGl2ZVNvdXJjZSBBbmNlc3RvclR5cGU9QnV0dG9ufX0iIFN0cm9rZVRoaWNrbmVzcz0iMS42IiBGaWxsPSJUcmFuc3BhcmVudCIgLz4KICAgICAgICAgICAgICAgICAgICA8L0J1dHRvbj4KCiAgICAgICAgICAgICAgICAgICAgPEJvcmRlciBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIFRoaW5TZXBhcmF0b3J9IiAvPgoKICAgICAgICAgICAgICAgICAgICA8QnV0dG9uIHg6TmFtZT0iVW5kb0J1dHRvbiIgU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBJY29uQnV0dG9ufSIgVG9vbFRpcD0iVW5kbyAoQ3RybCtaKSIgQ2xpY2s9IlVuZG9fQ2xpY2siIElzRW5hYmxlZD0iRmFsc2UiPgogICAgICAgICAgICAgICAgICAgICAgICA8UGF0aCBEYXRhPSJNOCw2IEw0LDEwIEw4LDE0IE00LDEwIEgxMyBBNiw2IDAgMCAxIDEzLDIyIEg5IiBXaWR0aD0iMjEiIEhlaWdodD0iMjEiIFN0cmV0Y2g9IlVuaWZvcm0iCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFN0cm9rZT0ie0JpbmRpbmcgRm9yZWdyb3VuZCwgUmVsYXRpdmVTb3VyY2U9e1JlbGF0aXZlU291cmNlIEFuY2VzdG9yVHlwZT1CdXR0b259fSIgU3Ryb2tlVGhpY2tuZXNzPSIxLjYiIEZpbGw9IlRyYW5zcGFyZW50IiAvPgogICAgICAgICAgICAgICAgICAgIDwvQnV0dG9uPgogICAgICAgICAgICAgICAgICAgIDxCdXR0b24geDpOYW1lPSJSZWRvQnV0dG9uIiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIEljb25CdXR0b259IiBUb29sVGlwPSJSZWRvIChDdHJsK1kpIiBDbGljaz0iUmVkb19DbGljayIgSXNFbmFibGVkPSJGYWxzZSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxQYXRoIERhdGE9Ik0xNiw2IEwyMCwxMCBMMTYsMTQgTTIwLDEwIEgxMSBBNiw2IDAgMCAwIDExLDIyIEgxNSIgV2lkdGg9IjIxIiBIZWlnaHQ9IjIxIiBTdHJldGNoPSJVbmlmb3JtIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTdHJva2U9IntCaW5kaW5nIEZvcmVncm91bmQsIFJlbGF0aXZlU291cmNlPXtSZWxhdGl2ZVNvdXJjZSBBbmNlc3RvclR5cGU9QnV0dG9ufX0iIFN0cm9rZVRoaWNrbmVzcz0iMS42IiBGaWxsPSJUcmFuc3BhcmVudCIgLz4KICAgICAgICAgICAgICAgICAgICA8L0J1dHRvbj4KCiAgICAgICAgICAgICAgICAgICAgPEJvcmRlciBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIFRoaW5TZXBhcmF0b3J9IiAvPgoKICAgICAgICAgICAgICAgICAgICA8QnV0dG9uIHg6TmFtZT0iWm9vbU91dEJ1dHRvbiIgU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBJY29uQnV0dG9ufSIgVG9vbFRpcD0iWm9vbSBvdXQiIENsaWNrPSJab29tT3V0X0NsaWNrIiBGb250U2l6ZT0iMTgiIENvbnRlbnQ9IuKIkiIgLz4KICAgICAgICAgICAgICAgICAgICA8QnV0dG9uIHg6TmFtZT0iWm9vbUJ1dHRvbiIgU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBHaG9zdEJ1dHRvbn0iIFBhZGRpbmc9IjYsNSIgTWluV2lkdGg9IjU2IiBDbGljaz0iWm9vbUJ1dHRvbl9DbGljayIgVG9vbFRpcD0iWm9vbSBsZXZlbCI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxUZXh0QmxvY2sgeDpOYW1lPSJab29tVGV4dCIgVGV4dD0iMTAwJSIgRm9udFNpemU9IjEyIiBIb3Jpem9udGFsQWxpZ25tZW50PSJDZW50ZXIiIC8+CiAgICAgICAgICAgICAgICAgICAgPC9CdXR0b24+CiAgICAgICAgICAgICAgICAgICAgPEJ1dHRvbiB4Ok5hbWU9Ilpvb21JbkJ1dHRvbiIgU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBJY29uQnV0dG9ufSIgVG9vbFRpcD0iWm9vbSBpbiIgQ2xpY2s9Ilpvb21Jbl9DbGljayIgRm9udFNpemU9IjE4IiBDb250ZW50PSIrIiAvPgogICAgICAgICAgICAgICAgICAgIDxCdXR0b24geDpOYW1lPSJGaXRCdXR0b24iIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgSWNvbkJ1dHRvbn0iIFRvb2xUaXA9IkZpdCB0byB3aW5kb3cgKEN0cmwrMCkiIENsaWNrPSJGaXRfQ2xpY2siPgogICAgICAgICAgICAgICAgICAgICAgICA8UGF0aCBEYXRhPSJNNCw5IFY0IEg5IE0xNSw0IEgyMCBWOSBNMjAsMTUgVjIwIEgxNSBNOSwyMCBINCBWMTUiIFdpZHRoPSIxOSIgSGVpZ2h0PSIxOSIgU3RyZXRjaD0iVW5pZm9ybSIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU3Ryb2tlPSJ7QmluZGluZyBGb3JlZ3JvdW5kLCBSZWxhdGl2ZVNvdXJjZT17UmVsYXRpdmVTb3VyY2UgQW5jZXN0b3JUeXBlPUJ1dHRvbn19IiBTdHJva2VUaGlja25lc3M9IjEuNiIgRmlsbD0iVHJhbnNwYXJlbnQiIC8+CiAgICAgICAgICAgICAgICAgICAgPC9CdXR0b24+CiAgICAgICAgICAgICAgICA8L1N0YWNrUGFuZWw+CgogICAgICAgICAgICAgICAgPFN0YWNrUGFuZWwgT3JpZW50YXRpb249Ikhvcml6b250YWwiIEhvcml6b250YWxBbGlnbm1lbnQ9IlJpZ2h0IiBWZXJ0aWNhbEFsaWdubWVudD0iQ2VudGVyIj4KICAgICAgICAgICAgICAgICAgICA8Qm9yZGVyIHg6TmFtZT0iVG9vbFN0YXR1c0NoaXAiIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgQ2hpcH0iIE1hcmdpbj0iMCwwLDQsMCI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxUZXh0QmxvY2sgeDpOYW1lPSJUb29sU3RhdHVzVGV4dCIgVGV4dD0iUGVuIiBGb250U2l6ZT0iMTEiIEZvcmVncm91bmQ9IntEeW5hbWljUmVzb3VyY2UgVGV4dFNlY29uZGFyeUJydXNofSIgLz4KICAgICAgICAgICAgICAgICAgICA8L0JvcmRlcj4KICAgICAgICAgICAgICAgIDwvU3RhY2tQYW5lbD4KICAgICAgICAgICAgPC9HcmlkPgogICAgICAgIDwvQm9yZGVyPgoKICAgICAgICA8IS0tIENhbnZhcyAtLT4KICAgICAgICA8R3JpZCBHcmlkLlJvdz0iMiIgTWFyZ2luPSIxNiwwLDE2LDgiPgogICAgICAgICAgICA8Qm9yZGVyIENvcm5lclJhZGl1cz0iMTIiIEJhY2tncm91bmQ9IntEeW5hbWljUmVzb3VyY2UgRWRpdG9yQ2FudmFzQnJ1c2h9IiBCb3JkZXJCcnVzaD0ie0R5bmFtaWNSZXNvdXJjZSBCb3JkZXJCcnVzaH0iCiAgICAgICAgICAgICAgICAgICAgQm9yZGVyVGhpY2tuZXNzPSIxIiBDbGlwVG9Cb3VuZHM9IlRydWUiPgogICAgICAgICAgICAgICAgPEdyaWQ+CiAgICAgICAgICAgICAgICAgICAgPGVkaXRvcjpJbWFnZUNhbnZhcyB4Ok5hbWU9IkNhbnZhcyIgLz4KICAgICAgICAgICAgICAgICAgICA8Qm9yZGVyIHg6TmFtZT0iQ3JvcEhpbnQiIFZpc2liaWxpdHk9IkNvbGxhcHNlZCIgSG9yaXpvbnRhbEFsaWdubWVudD0iQ2VudGVyIiBWZXJ0aWNhbEFsaWdubWVudD0iVG9wIiBNYXJnaW49IjAsMTYsMCwwIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgQmFja2dyb3VuZD0iI0U2MUIxQzFGIiBCb3JkZXJCcnVzaD0iIzMzRkZGRkZGIiBCb3JkZXJUaGlja25lc3M9IjEiIENvcm5lclJhZGl1cz0iOTk5IiBQYWRkaW5nPSIxNCw3Ij4KICAgICAgICAgICAgICAgICAgICAgICAgPFRleHRCbG9jayBUZXh0PSJEcmFnIG92ZXIgdGhlIGltYWdlIHRvIGNyb3AiIEZvcmVncm91bmQ9IldoaXRlIiBGb250U2l6ZT0iMTIiIEZvbnRXZWlnaHQ9IlNlbWlCb2xkIiAvPgogICAgICAgICAgICAgICAgICAgIDwvQm9yZGVyPgogICAgICAgICAgICAgICAgPC9HcmlkPgogICAgICAgICAgICA8L0JvcmRlcj4KCiAgICAgICAgICAgIDxCb3JkZXIgeDpOYW1lPSJPY3JQYW5lbCIgVmlzaWJpbGl0eT0iQ29sbGFwc2VkIiBXaWR0aD0iMzQwIiBIb3Jpem9udGFsQWxpZ25tZW50PSJSaWdodCIgVmVydGljYWxBbGlnbm1lbnQ9IlN0cmV0Y2giCiAgICAgICAgICAgICAgICAgICAgTWFyZ2luPSIwLDEyLDEyLDEyIiBCYWNrZ3JvdW5kPSJ7RHluYW1pY1Jlc291cmNlIFN1cmZhY2VCcnVzaH0iIEJvcmRlckJydXNoPSJ7RHluYW1pY1Jlc291cmNlIEJvcmRlckJydXNofSIKICAgICAgICAgICAgICAgICAgICBCb3JkZXJUaGlja25lc3M9IjEiIENvcm5lclJhZGl1cz0iMTIiIFBhZGRpbmc9IjE2Ij4KICAgICAgICAgICAgICAgIDxCb3JkZXIuRWZmZWN0PgogICAgICAgICAgICAgICAgICAgIDxEcm9wU2hhZG93RWZmZWN0IEJsdXJSYWRpdXM9IjI4IiBTaGFkb3dEZXB0aD0iNiIgT3BhY2l0eT0iMC4zNSIgLz4KICAgICAgICAgICAgICAgIDwvQm9yZGVyLkVmZmVjdD4KICAgICAgICAgICAgICAgIDxHcmlkPgogICAgICAgICAgICAgICAgICAgIDxHcmlkLlJvd0RlZmluaXRpb25zPgogICAgICAgICAgICAgICAgICAgICAgICA8Um93RGVmaW5pdGlvbiBIZWlnaHQ9IkF1dG8iIC8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxSb3dEZWZpbml0aW9uIEhlaWdodD0iQXV0byIgLz4KICAgICAgICAgICAgICAgICAgICAgICAgPFJvd0RlZmluaXRpb24gSGVpZ2h0PSIqIiAvPgogICAgICAgICAgICAgICAgICAgICAgICA8Um93RGVmaW5pdGlvbiBIZWlnaHQ9IkF1dG8iIC8+CiAgICAgICAgICAgICAgICAgICAgPC9HcmlkLlJvd0RlZmluaXRpb25zPgogICAgICAgICAgICAgICAgICAgIDxHcmlkPgogICAgICAgICAgICAgICAgICAgICAgICA8U3RhY2tQYW5lbD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxUZXh0QmxvY2sgVGV4dD0iRXh0cmFjdGVkIHRleHQiIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgSDJ9IiAvPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPFRleHRCbG9jayB4Ok5hbWU9Ik9jckxhbmd1YWdlVGV4dCIgVGV4dD0iIiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIENhcHRpb259IiBNYXJnaW49IjAsMywwLDAiIC8+CiAgICAgICAgICAgICAgICAgICAgICAgIDwvU3RhY2tQYW5lbD4KICAgICAgICAgICAgICAgICAgICAgICAgPEJ1dHRvbiB4Ok5hbWU9Ik9jckNsb3NlQnV0dG9uIiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIEljb25CdXR0b259IiBIb3Jpem9udGFsQWxpZ25tZW50PSJSaWdodCIgVmVydGljYWxBbGlnbm1lbnQ9IlRvcCIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBDb250ZW50PSImI3hFOEJCOyIgRm9udEZhbWlseT0ie1N0YXRpY1Jlc291cmNlIEljb25Gb250fSIgRm9udFNpemU9IjEwIiBUb29sVGlwPSJDbG9zZSBPQ1IgcGFuZWwiIENsaWNrPSJPY3JDbG9zZV9DbGljayIgLz4KICAgICAgICAgICAgICAgICAgICA8L0dyaWQ+CiAgICAgICAgICAgICAgICAgICAgPEJ1dHRvbiB4Ok5hbWU9Ik9jckxhbmd1YWdlQnV0dG9uIiBHcmlkLlJvdz0iMSIgU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBTZWNvbmRhcnlCdXR0b259IiBIb3Jpem9udGFsQWxpZ25tZW50PSJMZWZ0IgogICAgICAgICAgICAgICAgICAgICAgICAgICAgUGFkZGluZz0iMTAsNSIgTWFyZ2luPSIwLDEyLDAsMTAiIENvbnRlbnQ9Ikxhbmd1YWdlIiBGb250U2l6ZT0iMTEiIENsaWNrPSJPY3JMYW5ndWFnZV9DbGljayIgLz4KICAgICAgICAgICAgICAgICAgICA8Qm9yZGVyIEdyaWQuUm93PSIyIiBDb3JuZXJSYWRpdXM9IjgiIEJhY2tncm91bmQ9IntEeW5hbWljUmVzb3VyY2UgU3VyZmFjZUFsdEJydXNofSIgQm9yZGVyQnJ1c2g9IntEeW5hbWljUmVzb3VyY2UgQm9yZGVyQnJ1c2h9IiBCb3JkZXJUaGlja25lc3M9IjEiPgogICAgICAgICAgICAgICAgICAgICAgICA8VGV4dEJveCB4Ok5hbWU9Ik9jclRleHRCb3giIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgTW9kZXJuVGV4dEJveH0iIEJhY2tncm91bmQ9IlRyYW5zcGFyZW50IiBCb3JkZXJUaGlja25lc3M9IjAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIElzUmVhZE9ubHk9IlRydWUiIEFjY2VwdHNSZXR1cm49IlRydWUiIFRleHRXcmFwcGluZz0iV3JhcCIgVmVydGljYWxTY3JvbGxCYXJWaXNpYmlsaXR5PSJBdXRvIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBWZXJ0aWNhbENvbnRlbnRBbGlnbm1lbnQ9IlRvcCIgRm9udFNpemU9IjEyLjUiIFBhZGRpbmc9IjEwIiAvPgogICAgICAgICAgICAgICAgICAgIDwvQm9yZGVyPgogICAgICAgICAgICAgICAgICAgIDxHcmlkIEdyaWQuUm93PSIzIiBNYXJnaW49IjAsMTAsMCwwIj4KICAgICAgICAgICAgICAgICAgICAgICAgPFRleHRCbG9jayB4Ok5hbWU9Ik9jckNvdW50VGV4dCIgVGV4dD0iIiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIFRpbnl9IiBWZXJ0aWNhbEFsaWdubWVudD0iQ2VudGVyIiAvPgogICAgICAgICAgICAgICAgICAgICAgICA8QnV0dG9uIHg6TmFtZT0iT2NyQ29weUJ1dHRvbiIgQ29udGVudD0iQ29weSB0ZXh0IiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIFNlY29uZGFyeUJ1dHRvbn0iIFBhZGRpbmc9IjEyLDYiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSG9yaXpvbnRhbEFsaWdubWVudD0iUmlnaHQiIENsaWNrPSJPY3JDb3B5X0NsaWNrIiAvPgogICAgICAgICAgICAgICAgICAgIDwvR3JpZD4KCiAgICAgICAgICAgICAgICAgICAgPEdyaWQgeDpOYW1lPSJPY3JQcm9ncmVzcyIgR3JpZC5Sb3dTcGFuPSI0IiBCYWNrZ3JvdW5kPSJ7RHluYW1pY1Jlc291cmNlIFN1cmZhY2VCcnVzaH0iIFZpc2liaWxpdHk9IkNvbGxhcHNlZCI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxTdGFja1BhbmVsIEhvcml6b250YWxBbGlnbm1lbnQ9IkNlbnRlciIgVmVydGljYWxBbGlnbm1lbnQ9IkNlbnRlciI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dWk6UHJvZ3Jlc3NSaW5nIFdpZHRoPSIzNCIgSGVpZ2h0PSIzNCIgSG9yaXpvbnRhbEFsaWdubWVudD0iQ2VudGVyIiAvPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPFRleHRCbG9jayBUZXh0PSJSZWFkaW5nIHRleHTigKYiIE1hcmdpbj0iMCwxNCwwLDAiIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgQ2FwdGlvbn0iIEhvcml6b250YWxBbGlnbm1lbnQ9IkNlbnRlciIgLz4KICAgICAgICAgICAgICAgICAgICAgICAgPC9TdGFja1BhbmVsPgogICAgICAgICAgICAgICAgICAgIDwvR3JpZD4KICAgICAgICAgICAgICAgIDwvR3JpZD4KICAgICAgICAgICAgPC9Cb3JkZXI+CiAgICAgICAgPC9HcmlkPgoKICAgICAgICA8IS0tIFN0YXR1cyBiYXIgLS0+CiAgICAgICAgPEdyaWQgR3JpZC5Sb3c9IjMiIE1hcmdpbj0iMjIsMCwyMiwwIj4KICAgICAgICAgICAgPFN0YWNrUGFuZWwgT3JpZW50YXRpb249Ikhvcml6b250YWwiIFZlcnRpY2FsQWxpZ25tZW50PSJDZW50ZXIiPgogICAgICAgICAgICAgICAgPFRleHRCbG9jayB4Ok5hbWU9IkRpbWVuc2lvbnNUZXh0IiBUZXh0PSIiIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgVGlueX0iIC8+CiAgICAgICAgICAgICAgICA8Qm9yZGVyIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgVGhpblNlcGFyYXRvcn0iIEhlaWdodD0iMTIiIE1hcmdpbj0iMTAsMCIgLz4KICAgICAgICAgICAgICAgIDxUZXh0QmxvY2sgeDpOYW1lPSJab29tU3RhdHVzVGV4dCIgVGV4dD0iMTAwJSIgU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBUaW55fSIgLz4KICAgICAgICAgICAgICAgIDxCb3JkZXIgU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBUaGluU2VwYXJhdG9yfSIgSGVpZ2h0PSIxMiIgTWFyZ2luPSIxMCwwIiAvPgogICAgICAgICAgICAgICAgPFRleHRCbG9jayB4Ok5hbWU9IlN0YXR1c1RleHQiIFRleHQ9IlJlYWR5IiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIFRpbnl9IiAvPgogICAgICAgICAgICA8L1N0YWNrUGFuZWw+CiAgICAgICAgICAgIDxTdGFja1BhbmVsIE9yaWVudGF0aW9uPSJIb3Jpem9udGFsIiBIb3Jpem9udGFsQWxpZ25tZW50PSJSaWdodCIgVmVydGljYWxBbGlnbm1lbnQ9IkNlbnRlciI+CiAgICAgICAgICAgICAgICA8VGV4dEJsb2NrIFRleHQ9IkN0cmwrWiBVbmRvIiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIFRpbnl9IiBNYXJnaW49IjAsMCwxNCwwIiAvPgogICAgICAgICAgICAgICAgPFRleHRCbG9jayBUZXh0PSJDdHJsK0MgQ29weSIgU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBUaW55fSIgTWFyZ2luPSIwLDAsMTQsMCIgLz4KICAgICAgICAgICAgICAgIDxUZXh0QmxvY2sgVGV4dD0iQ3RybCtTIFNhdmUiIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgVGlueX0iIC8+CiAgICAgICAgICAgIDwvU3RhY2tQYW5lbD4KICAgICAgICA8L0dyaWQ+CgogICAgICAgIDwhLS0gRmx5b3V0cyAtLT4KICAgICAgICA8UG9wdXAgeDpOYW1lPSJDb2xvclBvcHVwIiBQbGFjZW1lbnRUYXJnZXQ9IntCaW5kaW5nIEVsZW1lbnROYW1lPUNvbG9yQnV0dG9ufSIgUGxhY2VtZW50PSJCb3R0b20iIFN0YXlzT3Blbj0iRmFsc2UiCiAgICAgICAgICAgICAgIEFsbG93c1RyYW5zcGFyZW5jeT0iVHJ1ZSIgUG9wdXBBbmltYXRpb249IkZhZGUiIEhvcml6b250YWxPZmZzZXQ9Ii0zOCIgVmVydGljYWxPZmZzZXQ9IjYiPgogICAgICAgICAgICA8Qm9yZGVyIEJhY2tncm91bmQ9IntEeW5hbWljUmVzb3VyY2UgU3VyZmFjZUJydXNofSIgQm9yZGVyQnJ1c2g9IntEeW5hbWljUmVzb3VyY2UgQm9yZGVyU3Ryb25nQnJ1c2h9IiBCb3JkZXJUaGlja25lc3M9IjEiCiAgICAgICAgICAgICAgICAgICAgQ29ybmVyUmFkaXVzPSIxMCIgUGFkZGluZz0iMTIiPgogICAgICAgICAgICAgICAgPEJvcmRlci5FZmZlY3Q+CiAgICAgICAgICAgICAgICAgICAgPERyb3BTaGFkb3dFZmZlY3QgQmx1clJhZGl1cz0iMjQiIFNoYWRvd0RlcHRoPSI1IiBPcGFjaXR5PSIwLjM1IiAvPgogICAgICAgICAgICAgICAgPC9Cb3JkZXIuRWZmZWN0PgogICAgICAgICAgICAgICAgPFN0YWNrUGFuZWw+CiAgICAgICAgICAgICAgICAgICAgPFRleHRCbG9jayBUZXh0PSJQZW4gY29sb3IiIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgVGlueX0iIE1hcmdpbj0iMSwwLDAsOCIgLz4KICAgICAgICAgICAgICAgICAgICA8V3JhcFBhbmVsIHg6TmFtZT0iQ29sb3JTd2F0Y2hlcyIgV2lkdGg9IjE4OCIgLz4KICAgICAgICAgICAgICAgICAgICA8Qm9yZGVyIEhlaWdodD0iMSIgQmFja2dyb3VuZD0ie0R5bmFtaWNSZXNvdXJjZSBCb3JkZXJCcnVzaH0iIE1hcmdpbj0iMCwxMCIgLz4KICAgICAgICAgICAgICAgICAgICA8VGV4dEJsb2NrIFRleHQ9IlRoaWNrbmVzcyIgU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBUaW55fSIgTWFyZ2luPSIxLDAsMCw4IiAvPgogICAgICAgICAgICAgICAgICAgIDxXcmFwUGFuZWwgeDpOYW1lPSJUaGlja25lc3NPcHRpb25zIiBXaWR0aD0iMTg4IiAvPgogICAgICAgICAgICAgICAgPC9TdGFja1BhbmVsPgogICAgICAgICAgICA8L0JvcmRlcj4KICAgICAgICA8L1BvcHVwPgoKICAgICAgICA8UG9wdXAgeDpOYW1lPSJab29tUG9wdXAiIFBsYWNlbWVudFRhcmdldD0ie0JpbmRpbmcgRWxlbWVudE5hbWU9Wm9vbUJ1dHRvbn0iIFBsYWNlbWVudD0iQm90dG9tIiBTdGF5c09wZW49IkZhbHNlIgogICAgICAgICAgICAgICBBbGxvd3NUcmFuc3BhcmVuY3k9IlRydWUiIFBvcHVwQW5pbWF0aW9uPSJGYWRlIiBWZXJ0aWNhbE9mZnNldD0iNiI+CiAgICAgICAgICAgIDxCb3JkZXIgQmFja2dyb3VuZD0ie0R5bmFtaWNSZXNvdXJjZSBTdXJmYWNlQnJ1c2h9IiBCb3JkZXJCcnVzaD0ie0R5bmFtaWNSZXNvdXJjZSBCb3JkZXJTdHJvbmdCcnVzaH0iIEJvcmRlclRoaWNrbmVzcz0iMSIKICAgICAgICAgICAgICAgICAgICBDb3JuZXJSYWRpdXM9IjkiIFBhZGRpbmc9IjUiPgogICAgICAgICAgICAgICAgPEJvcmRlci5FZmZlY3Q+CiAgICAgICAgICAgICAgICAgICAgPERyb3BTaGFkb3dFZmZlY3QgQmx1clJhZGl1cz0iMjIiIFNoYWRvd0RlcHRoPSI0IiBPcGFjaXR5PSIwLjMiIC8+CiAgICAgICAgICAgICAgICA8L0JvcmRlci5FZmZlY3Q+CiAgICAgICAgICAgICAgICA8U3RhY2tQYW5lbCB4Ok5hbWU9Ilpvb21PcHRpb25zIiAvPgogICAgICAgICAgICA8L0JvcmRlcj4KICAgICAgICA8L1BvcHVwPgoKICAgICAgICA8UG9wdXAgeDpOYW1lPSJTYXZlTWVudSIgUGxhY2VtZW50VGFyZ2V0PSJ7QmluZGluZyBFbGVtZW50TmFtZT1TYXZlQXNCdXR0b259IiBQbGFjZW1lbnQ9IkJvdHRvbSIgU3RheXNPcGVuPSJGYWxzZSIKICAgICAgICAgICAgICAgQWxsb3dzVHJhbnNwYXJlbmN5PSJUcnVlIiBQb3B1cEFuaW1hdGlvbj0iRmFkZSIgVmVydGljYWxPZmZzZXQ9IjYiPgogICAgICAgICAgICA8Qm9yZGVyIEJhY2tncm91bmQ9IntEeW5hbWljUmVzb3VyY2UgU3VyZmFjZUJydXNofSIgQm9yZGVyQnJ1c2g9IntEeW5hbWljUmVzb3VyY2UgQm9yZGVyU3Ryb25nQnJ1c2h9IiBCb3JkZXJUaGlja25lc3M9IjEiCiAgICAgICAgICAgICAgICAgICAgQ29ybmVyUmFkaXVzPSI5IiBQYWRkaW5nPSI1Ij4KICAgICAgICAgICAgICAgIDxCb3JkZXIuRWZmZWN0PgogICAgICAgICAgICAgICAgICAgIDxEcm9wU2hhZG93RWZmZWN0IEJsdXJSYWRpdXM9IjIyIiBTaGFkb3dEZXB0aD0iNCIgT3BhY2l0eT0iMC4zIiAvPgogICAgICAgICAgICAgICAgPC9Cb3JkZXIuRWZmZWN0PgogICAgICAgICAgICAgICAgPFN0YWNrUGFuZWw+CiAgICAgICAgICAgICAgICAgICAgPEJ1dHRvbiBDb250ZW50PSJTYXZlIGFz4oCmIiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIEdob3N0QnV0dG9ufSIgUGFkZGluZz0iMTIsNyIgTWluV2lkdGg9IjE3MCIgQ2xpY2s9IlNhdmVBc19DbGljayIgLz4KICAgICAgICAgICAgICAgICAgICA8QnV0dG9uIENvbnRlbnQ9Ik9wZW4gY29udGFpbmluZyBmb2xkZXIiIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgR2hvc3RCdXR0b259IiBQYWRkaW5nPSIxMiw3IiBNaW5XaWR0aD0iMTcwIiBDbGljaz0iT3BlbkZvbGRlcl9DbGljayIgLz4KICAgICAgICAgICAgICAgIDwvU3RhY2tQYW5lbD4KICAgICAgICAgICAgPC9Cb3JkZXI+CiAgICAgICAgPC9Qb3B1cD4KICAgIDwvR3JpZD4KPC9XaW5kb3c+Cg0K
+<Window x:Class="SnippingTool.Editor.EditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:editor="clr-namespace:SnippingTool.Editor"
+        xmlns:ui="clr-namespace:SnippingTool.UI"
+        Title="Shutio"
+        Style="{StaticResource ModernWindow}"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        Width="1180"
+        Height="790"
+        MinWidth="900"
+        MinHeight="580"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource AppBackgroundBrush}">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0" ResizeBorderThickness="7" GlassFrameThickness="0" CornerRadius="0" UseAeroCaptionButtons="False" />
+    </WindowChrome.WindowChrome>
+
+    <Grid x:Name="RootGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="64" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+
+        <!-- Title bar -->
+        <Grid Grid.Row="0" Background="Transparent" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+            <StackPanel Orientation="Horizontal" Margin="16,0,0,0" VerticalAlignment="Center">
+                <Image Source="Assets/logo.png" Width="20" Height="20" RenderOptions.BitmapScalingMode="HighQuality" />
+                <TextBlock Text="Shutio" FontSize="12" FontWeight="SemiBold" Margin="9,0,0,0" VerticalAlignment="Center" />
+                <Border Style="{StaticResource ThinSeparator}" Height="14" Margin="12,0" />
+                <TextBlock x:Name="FileNameText" Text="Untitled" FontSize="12" Foreground="{DynamicResource TextSecondaryBrush}"
+                           VerticalAlignment="Center" MaxWidth="420" TextTrimming="CharacterEllipsis" />
+                <Border x:Name="DirtyDot" Width="6" Height="6" CornerRadius="3" Background="{DynamicResource AccentBrush}"
+                        Margin="8,0,0,0" VerticalAlignment="Center" Visibility="Collapsed" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,6,0">
+                <Button x:Name="OcrButton" Style="{StaticResource IconButton}" ToolTip="Extract text (OCR)" Margin="0,0,2,0" Click="OcrButton_Click">
+                    <TextBlock Text="&#xE8D2;" Style="{StaticResource IconGlyph}" FontSize="16" />
+                </Button>
+                <Button x:Name="CopyButton" Style="{StaticResource IconButton}" ToolTip="Copy image (Ctrl+C)" Margin="0,0,2,0" Click="Copy_Click">
+                    <TextBlock Text="&#xE8C8;" Style="{StaticResource IconGlyph}" FontSize="16" />
+                </Button>
+                <Button x:Name="SaveButton" Style="{StaticResource PrimaryButton}" Padding="12,5" Margin="4,0,2,0" ToolTip="Save (Ctrl+S)" Click="SaveButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE74E;" Style="{StaticResource IconGlyph}" FontSize="13"
+                                   Foreground="{DynamicResource AccentForegroundBrush}" />
+                        <TextBlock Text="Save" FontSize="12" FontWeight="SemiBold" Margin="6,0,0,0"
+                                   Foreground="{DynamicResource AccentForegroundBrush}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                <Button x:Name="SaveAsButton" Style="{StaticResource IconButton}" ToolTip="Save as PNG, JPG or BMP" Width="28" Margin="0,0,4,0" Click="SaveAsButton_Click">
+                    <TextBlock Text="&#xE70D;" Style="{StaticResource IconGlyph}" FontSize="10" />
+                </Button>
+                <Button Style="{StaticResource TitleBarMinButton}" Click="Minimize_Click" ToolTip="Minimize" />
+                <Button Style="{StaticResource TitleBarMaxButton}" Click="Maximize_Click" x:Name="MaximizeButton" ToolTip="Maximize" />
+                <Button Style="{StaticResource TitleBarCloseButton}" Click="Close_Click" ToolTip="Close" Margin="0,0,2,0" />
+            </StackPanel>
+        </Grid>
+
+        <!-- Tool strip -->
+        <Border Grid.Row="1" Margin="16,0,16,8" Background="{DynamicResource CardBrush}" BorderBrush="{DynamicResource BorderBrush}"
+                BorderThickness="1" CornerRadius="12" Padding="7,5">
+            <Grid>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <ToggleButton x:Name="PenTool" Style="{StaticResource ToolButton}" ToolTip="Pen" Click="PenTool_Click">
+                        <Path Data="M4,20 L4,16 L15,5 L19,9 L8,20 Z M13,7 L17,11" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ToggleButton}}" StrokeThickness="1.5" Fill="Transparent" />
+                    </ToggleButton>
+                    <ToggleButton x:Name="HighlighterTool" Style="{StaticResource ToolButton}" ToolTip="Highlighter" Click="HighlighterTool_Click">
+                        <Path Data="M4,16 L11,9 L16,14 L9,21 H4 Z M15,4 L20,9 M17,2 L22,7" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ToggleButton}}" StrokeThickness="1.5" Fill="Transparent" />
+                    </ToggleButton>
+                    <ToggleButton x:Name="EraserTool" Style="{StaticResource ToolButton}" ToolTip="Eraser" Click="EraserTool_Click">
+                        <Path Data="M4,16 L12,8 L20,16 L14,22 H8 Z M11,21 H21" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ToggleButton}}" StrokeThickness="1.5" Fill="Transparent" />
+                    </ToggleButton>
+                    <ToggleButton x:Name="LineTool" Style="{StaticResource ToolButton}" ToolTip="Straight line / ruler" Click="LineTool_Click">
+                        <Path Data="M4,20 L20,4 M14,4 H20 V10 M4,14 V20 H10" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ToggleButton}}" StrokeThickness="1.5" Fill="Transparent" />
+                    </ToggleButton>
+                    <ToggleButton x:Name="CropTool" Style="{StaticResource ToolButton}" ToolTip="Crop" Click="CropTool_Click">
+                        <Path Data="M7,3 V17 H21 M3,7 H17 V21" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ToggleButton}}" StrokeThickness="1.5" Fill="Transparent" />
+                    </ToggleButton>
+
+                    <Border Style="{StaticResource ThinSeparator}" />
+
+                    <Button x:Name="ColorButton" Style="{StaticResource IconButton}" ToolTip="Pen color and thickness" Click="ColorButton_Click">
+                        <Grid Width="22" Height="22">
+                            <Ellipse x:Name="ColorSwatch" Width="16" Height="16" Fill="#FF3B30" Stroke="#80FFFFFF" StrokeThickness="1" />
+                            <Ellipse x:Name="ThicknessDot" Width="6" Height="6" Fill="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                        </Grid>
+                    </Button>
+                    <Button x:Name="ThicknessButton" Style="{StaticResource IconButton}" ToolTip="Brush thickness" Click="ThicknessButton_Click" Width="30">
+                        <TextBlock Text="&#xE7C3;" FontFamily="{StaticResource IconFont}" FontSize="15" />
+                    </Button>
+
+                    <Border Style="{StaticResource ThinSeparator}" />
+
+                    <Button x:Name="RotateLeftButton" Style="{StaticResource IconButton}" ToolTip="Rotate left" Click="RotateLeft_Click">
+                        <Path Data="M5,12 A7,7 0 1 1 12,19 M5,12 V6 M5,12 H11" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1.6" Fill="Transparent" />
+                    </Button>
+                    <Button x:Name="RotateRightButton" Style="{StaticResource IconButton}" ToolTip="Rotate right" Click="RotateRight_Click">
+                        <Path Data="M19,12 A7,7 0 1 0 12,19 M19,12 V6 M19,12 H13" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1.6" Fill="Transparent" />
+                    </Button>
+                    <Button x:Name="ResizeButton" Style="{StaticResource IconButton}" ToolTip="Resize image" Click="Resize_Click">
+                        <Path Data="M4,20 L20,4 M13,4 H20 V11 M4,13 V20 H11" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1.6" Fill="Transparent" />
+                    </Button>
+
+                    <Border Style="{StaticResource ThinSeparator}" />
+
+                    <Button x:Name="UndoButton" Style="{StaticResource IconButton}" ToolTip="Undo (Ctrl+Z)" Click="Undo_Click" IsEnabled="False">
+                        <Path Data="M8,6 L4,10 L8,14 M4,10 H13 A6,6 0 0 1 13,22 H9" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1.6" Fill="Transparent" />
+                    </Button>
+                    <Button x:Name="RedoButton" Style="{StaticResource IconButton}" ToolTip="Redo (Ctrl+Y)" Click="Redo_Click" IsEnabled="False">
+                        <Path Data="M16,6 L20,10 L16,14 M20,10 H11 A6,6 0 0 0 11,22 H15" Width="21" Height="21" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1.6" Fill="Transparent" />
+                    </Button>
+
+                    <Border Style="{StaticResource ThinSeparator}" />
+
+                    <Button x:Name="ZoomOutButton" Style="{StaticResource IconButton}" ToolTip="Zoom out" Click="ZoomOut_Click" FontSize="18" Content="−" />
+                    <Button x:Name="ZoomButton" Style="{StaticResource GhostButton}" Padding="6,5" MinWidth="56" Click="ZoomButton_Click" ToolTip="Zoom level">
+                        <TextBlock x:Name="ZoomText" Text="100%" FontSize="12" HorizontalAlignment="Center" />
+                    </Button>
+                    <Button x:Name="ZoomInButton" Style="{StaticResource IconButton}" ToolTip="Zoom in" Click="ZoomIn_Click" FontSize="18" Content="+" />
+                    <Button x:Name="FitButton" Style="{StaticResource IconButton}" ToolTip="Fit to window (Ctrl+0)" Click="Fit_Click">
+                        <Path Data="M4,9 V4 H9 M15,4 H20 V9 M20,15 V20 H15 M9,20 H4 V15" Width="19" Height="19" Stretch="Uniform"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1.6" Fill="Transparent" />
+                    </Button>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Border x:Name="ToolStatusChip" Style="{StaticResource Chip}" Margin="0,0,4,0">
+                        <TextBlock x:Name="ToolStatusText" Text="Pen" FontSize="11" Foreground="{DynamicResource TextSecondaryBrush}" />
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Canvas -->
+        <Grid Grid.Row="2" Margin="16,0,16,8">
+            <Border CornerRadius="12" Background="{DynamicResource EditorCanvasBrush}" BorderBrush="{DynamicResource BorderBrush}"
+                    BorderThickness="1" ClipToBounds="True">
+                <Grid>
+                    <editor:ImageCanvas x:Name="Canvas" />
+                    <Border x:Name="CropHint" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,16,0,0"
+                            Background="#E61B1C1F" BorderBrush="#33FFFFFF" BorderThickness="1" CornerRadius="999" Padding="14,7">
+                        <TextBlock Text="Drag over the image to crop" Foreground="White" FontSize="12" FontWeight="SemiBold" />
+                    </Border>
+                </Grid>
+            </Border>
+
+            <Border x:Name="OcrPanel" Visibility="Collapsed" Width="340" HorizontalAlignment="Right" VerticalAlignment="Stretch"
+                    Margin="0,12,12,12" Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource BorderBrush}"
+                    BorderThickness="1" CornerRadius="12" Padding="16">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="28" ShadowDepth="6" Opacity="0.35" />
+                </Border.Effect>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <StackPanel>
+                            <TextBlock Text="Extracted text" Style="{StaticResource H2}" />
+                            <TextBlock x:Name="OcrLanguageText" Text="" Style="{StaticResource Caption}" Margin="0,3,0,0" />
+                        </StackPanel>
+                        <Button x:Name="OcrCloseButton" Style="{StaticResource IconButton}" HorizontalAlignment="Right" VerticalAlignment="Top"
+                                Content="&#xE8BB;" FontFamily="{StaticResource IconFont}" FontSize="10" ToolTip="Close OCR panel" Click="OcrClose_Click" />
+                    </Grid>
+                    <Button x:Name="OcrLanguageButton" Grid.Row="1" Style="{StaticResource SecondaryButton}" HorizontalAlignment="Left"
+                            Padding="10,5" Margin="0,12,0,10" Content="Language" FontSize="11" Click="OcrLanguage_Click" />
+                    <Border Grid.Row="2" CornerRadius="8" Background="{DynamicResource SurfaceAltBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1">
+                        <TextBox x:Name="OcrTextBox" Style="{StaticResource ModernTextBox}" Background="Transparent" BorderThickness="0"
+                                 IsReadOnly="True" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
+                                 VerticalContentAlignment="Top" FontSize="12.5" Padding="10" />
+                    </Border>
+                    <Grid Grid.Row="3" Margin="0,10,0,0">
+                        <TextBlock x:Name="OcrCountText" Text="" Style="{StaticResource Tiny}" VerticalAlignment="Center" />
+                        <Button x:Name="OcrCopyButton" Content="Copy text" Style="{StaticResource SecondaryButton}" Padding="12,6"
+                                HorizontalAlignment="Right" Click="OcrCopy_Click" />
+                    </Grid>
+
+                    <Grid x:Name="OcrProgress" Grid.RowSpan="4" Background="{DynamicResource SurfaceBrush}" Visibility="Collapsed">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <ui:ProgressRing Width="34" Height="34" HorizontalAlignment="Center" />
+                            <TextBlock Text="Reading text…" Margin="0,14,0,0" Style="{StaticResource Caption}" HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!-- Status bar -->
+        <Grid Grid.Row="3" Margin="22,0,22,0">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock x:Name="DimensionsText" Text="" Style="{StaticResource Tiny}" />
+                <Border Style="{StaticResource ThinSeparator}" Height="12" Margin="10,0" />
+                <TextBlock x:Name="ZoomStatusText" Text="100%" Style="{StaticResource Tiny}" />
+                <Border Style="{StaticResource ThinSeparator}" Height="12" Margin="10,0" />
+                <TextBlock x:Name="StatusText" Text="Ready" Style="{StaticResource Tiny}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <TextBlock Text="Ctrl+Z Undo" Style="{StaticResource Tiny}" Margin="0,0,14,0" />
+                <TextBlock Text="Ctrl+C Copy" Style="{StaticResource Tiny}" Margin="0,0,14,0" />
+                <TextBlock Text="Ctrl+S Save" Style="{StaticResource Tiny}" />
+            </StackPanel>
+        </Grid>
+
+        <!-- Flyouts -->
+        <Popup x:Name="ColorPopup" PlacementTarget="{Binding ElementName=ColorButton}" Placement="Bottom" StaysOpen="False"
+               AllowsTransparency="True" PopupAnimation="Fade" HorizontalOffset="-38" VerticalOffset="6">
+            <Border Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource BorderStrongBrush}" BorderThickness="1"
+                    CornerRadius="10" Padding="12">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="24" ShadowDepth="5" Opacity="0.35" />
+                </Border.Effect>
+                <StackPanel>
+                    <TextBlock Text="Pen color" Style="{StaticResource Tiny}" Margin="1,0,0,8" />
+                    <WrapPanel x:Name="ColorSwatches" Width="188" />
+                    <Border Height="1" Background="{DynamicResource BorderBrush}" Margin="0,10" />
+                    <TextBlock Text="Thickness" Style="{StaticResource Tiny}" Margin="1,0,0,8" />
+                    <WrapPanel x:Name="ThicknessOptions" Width="188" />
+                </StackPanel>
+            </Border>
+        </Popup>
+
+        <Popup x:Name="ZoomPopup" PlacementTarget="{Binding ElementName=ZoomButton}" Placement="Bottom" StaysOpen="False"
+               AllowsTransparency="True" PopupAnimation="Fade" VerticalOffset="6">
+            <Border Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource BorderStrongBrush}" BorderThickness="1"
+                    CornerRadius="9" Padding="5">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="22" ShadowDepth="4" Opacity="0.3" />
+                </Border.Effect>
+                <StackPanel x:Name="ZoomOptions" />
+            </Border>
+        </Popup>
+
+        <Popup x:Name="SaveMenu" PlacementTarget="{Binding ElementName=SaveAsButton}" Placement="Bottom" StaysOpen="False"
+               AllowsTransparency="True" PopupAnimation="Fade" VerticalOffset="6">
+            <Border Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource BorderStrongBrush}" BorderThickness="1"
+                    CornerRadius="9" Padding="5">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="22" ShadowDepth="4" Opacity="0.3" />
+                </Border.Effect>
+                <StackPanel>
+                    <Button Content="Save as…" Style="{StaticResource GhostButton}" Padding="12,7" MinWidth="170" Click="SaveAs_Click" />
+                    <Button Content="Open containing folder" Style="{StaticResource GhostButton}" Padding="12,7" MinWidth="170" Click="OpenFolder_Click" />
+                </StackPanel>
+            </Border>
+        </Popup>
+    </Grid>
+</Window>
+

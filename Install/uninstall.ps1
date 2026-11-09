@@ -1,1 +1,77 @@
-I3JlcXVpcmVzIC12ZXJzaW9uIDMKPCMKICBTaHV0aW8g4oCUIHVuaW5zdGFsbCAocGVyLXVzZXIsIG5vIGFkbWluKS4KICBSZW1vdmVzIHNob3J0Y3V0cyArIHRoZSBBcHBzICYgZmVhdHVyZXMgZW50cnksIGFuZCAod2l0aCB5b3VyIE9LKSB0aGUgZm9sZGVyLgogIERhdGEgKHNuaXBzIC8gcmVjb3JkaW5ncykgaXMgcHJlc2VydmVkIGJ5IGRlZmF1bHQ7IHVzZSAtUmVtb3ZlRGF0YSB0byBkZWxldGUgaXQuCiM+CltDbWRsZXRCaW5kaW5nKCldCnBhcmFtKAogICAgW3N0cmluZ10kSW5zdGFsbFBhdGgsICAgIyB0aGUgZm9sZGVyIHRoZSBhcHAgd2FzIGluc3RhbGxlZCB0byAoYXV0byBmcm9tIC5jbWQpCiAgICBbc3dpdGNoXSRSZW1vdmVEYXRhLCAgICAjIGFsc28gZGVsZXRlIHRoZSBhcHAncyBEYXRhIGZvbGRlcgogICAgW3N3aXRjaF0kU2tpcFByb21wdHMgICAgIyBub24taW50ZXJhY3RpdmU6IHJlbW92ZSBzaG9ydGN1dHMvZW50cnkgYW5kIGRlbGV0ZSB0aGUgZm9sZGVyCikKCiRFcnJvckFjdGlvblByZWZlcmVuY2UgPSAnU3RvcCcKCiMgVGhlIC5jbWQgc2V0cyAtSW5zdGFsbFBhdGggdG8gaXRzIG93biBmb2xkZXI7IG90aGVyd2lzZSBmYWxsIGJhY2sgdG8gdGhlIGtub3duIGxvY2F0aW9ucy4KaWYgKC1ub3QgJEluc3RhbGxQYXRoKSB7CiAgICAkY2FuZGlkYXRlcyA9IEAoCiAgICAgICAgKEpvaW4tUGF0aCAkZW52OkxPQ0FMQVBQREFUQSAnUHJvZ3JhbXNcU2h1dGlvJyksCiAgICAgICAgJ0k6XFNodXRpbycsICdJOlxBcHBzXFNodXRpbycsICdJOlxBcHBzXFNuaXBwaW5nVG9vbCcKICAgICkKICAgICRJbnN0YWxsUGF0aCA9ICRjYW5kaWRhdGVzIHwgV2hlcmUtT2JqZWN0IHsgVGVzdC1QYXRoIChKb2luLVBhdGggJF8gJ1NodXRpby5leGUnKSB9IHwgU2VsZWN0LU9iamVjdCAtRmlyc3QgMQp9CmlmICgtbm90ICRJbnN0YWxsUGF0aCAtb3IgLW5vdCAoVGVzdC1QYXRoIChKb2luLVBhdGggJEluc3RhbGxQYXRoICdTaHV0aW8uZXhlJykpKSB7CiAgICBXcml0ZS1Ib3N0ICJDb3VsZCBub3QgbG9jYXRlIGFuIGluc3RhbGxlZCBTaHV0aW8uIE5vdGhpbmcgdG8gZG8uIiAtRm9yZWdyb3VuZENvbG9yIFllbGxvdwogICAgcmV0dXJuIDAKfQoKV3JpdGUtSG9zdCAiIgpXcml0ZS1Ib3N0ICIgIFNodXRpbyDigJQgVW5pbnN0YWxsIiAtRm9yZWdyb3VuZENvbG9yIEN5YW4KV3JpdGUtSG9zdCAoIiAgSW5zdGFsbGVkIHRvOiB7MH0iIC1mICRJbnN0YWxsUGF0aCkKV3JpdGUtSG9zdCAiIgoKIyBDbG9zZSBhIHJ1bm5pbmcgaW5zdGFuY2Ugc28gZmlsZXMgYXJlIG5vdCBsb2NrZWQuCkdldC1Qcm9jZXNzIC1OYW1lICdTaHV0aW8nIC1FcnJvckFjdGlvbiBTaWxlbnRseUNvbnRpbnVlIHwgRm9yRWFjaC1PYmplY3QgewogICAgV3JpdGUtSG9zdCAiICBDbG9zaW5nIGEgcnVubmluZyBTaHV0aW8gKFBJRCAkKCRfLklkKSkuLi4iCiAgICB0cnkgeyAkXyB8IFN0b3AtUHJvY2VzcyAtRm9yY2UgfSBjYXRjaCB7fQp9ClN0YXJ0LVNsZWVwIC1NaWxsaXNlY29uZHMgNDAwCgojIFJlbW92ZSBzaG9ydGN1dHMuCiRzbSAgID0gSm9pbi1QYXRoICRlbnY6QVBQREFUQSAnTWljcm9zb2Z0XFdpbmRvd3NcU3RhcnQgTWVudVxQcm9ncmFtc1xTaHV0aW8ubG5rJwokZGVzayA9IEpvaW4tUGF0aCAoW0Vudmlyb25tZW50XTo6R2V0Rm9sZGVyUGF0aCgnRGVza3RvcCcpKSAnU2h1dGlvLmxuaycKZm9yZWFjaCAoJHMgaW4gQCgkc20sJGRlc2spKSB7IGlmIChUZXN0LVBhdGggJHMpIHsgUmVtb3ZlLUl0ZW0gLUxpdGVyYWxQYXRoICRzIC1Gb3JjZTsgV3JpdGUtSG9zdCAiICBSZW1vdmVkIHNob3J0Y3V0OiAkcyIgfSB9CgojIFJlbW92ZSB0aGUgQXBwcyAmIGZlYXR1cmVzIGVudHJ5LgokcmVnID0gJ0hLQ1U6XFNvZnR3YXJlXE1pY3Jvc29mdFxXaW5kb3dzXEN1cnJlbnRWZXJzaW9uXFVuaW5zdGFsbFxTaHV0aW8nCmlmIChUZXN0LVBhdGggJHJlZykgeyBSZW1vdmUtSXRlbSAtUGF0aCAkcmVnIC1SZWN1cnNlIC1Gb3JjZTsgV3JpdGUtSG9zdCAiICBSZW1vdmVkIEFwcHMgJiBmZWF0dXJlcyBlbnRyeS4iIH0KCiMgSGFuZGxlIHRoZSBpbnN0YWxsIGZvbGRlci4KaWYgKCRTa2lwUHJvbXB0cykgewogICAgV3JpdGUtSG9zdCAiICBEZWxldGluZyAkSW5zdGFsbFBhdGggKGluY2x1ZGluZyBEYXRhKS4uLiIgLUZvcmVncm91bmRDb2xvciBZZWxsb3cKICAgIFJlbW92ZS1JdGVtIC1MaXRlcmFsUGF0aCAkSW5zdGFsbFBhdGggLVJlY3Vyc2UgLUZvcmNlIC1FcnJvckFjdGlvbiBTaWxlbnRseUNvbnRpbnVlCn0KZWxzZSB7CiAgICAkY29uZmlybSA9IFJlYWQtSG9zdCAiICBEZWxldGUgdGhlIGluc3RhbGwgZm9sZGVyIChhbmQgdGhlIGFwcCk/IChZL04pIgogICAgaWYgKCRjb25maXJtIC1tYXRjaCAnXltZeV0nKSB7CiAgICAgICAgaWYgKCRSZW1vdmVEYXRhIC1vciAoUmVhZC1Ib3N0ICIgIEFsc28gZGVsZXRlIHlvdXIgc25pcHMvcmVjb3JkaW5ncyBpbiBEYXRhXD8gKFkvTikiIC1tYXRjaCAnXltZeV0nKSkgewogICAgICAgICAgICBXcml0ZS1Ib3N0ICIgIERlbGV0aW5nICRJbnN0YWxsUGF0aCAoaW5jbHVkaW5nIERhdGEpLi4uIgogICAgICAgICAgICBSZW1vdmUtSXRlbSAtTGl0ZXJhbFBhdGggJEluc3RhbGxQYXRoIC1SZWN1cnNlIC1Gb3JjZSAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZQogICAgICAgIH0KICAgICAgICBlbHNlIHsKICAgICAgICAgICAgIyBNb3ZlIHRoZSBhcHAgb3V0IGJ1dCBrZWVwIERhdGEgc28gdGhlaXIgcGljdHVyZXMgYXJlIHNhZmUuCiAgICAgICAgICAgIFdyaXRlLUhvc3QgIiAgUmVtb3ZpbmcgdGhlIGFwcCBmaWxlcywga2VlcGluZyBEYXRhXC4uLiIKICAgICAgICAgICAgR2V0LUNoaWxkSXRlbSAtTGl0ZXJhbFBhdGggJEluc3RhbGxQYXRoIC1Gb3JjZSB8IFdoZXJlLU9iamVjdCB7ICRfLk5hbWUgLW5lICdEYXRhJyB9IHwgRm9yRWFjaC1PYmplY3QgewogICAgICAgICAgICAgICAgUmVtb3ZlLUl0ZW0gLUxpdGVyYWxQYXRoICRfLkZ1bGxOYW1lIC1SZWN1cnNlIC1Gb3JjZSAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZQogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQogICAgZWxzZSB7CiAgICAgICAgV3JpdGUtSG9zdCAiICBLZWVwaW5nIHRoZSBmb2xkZXIuIE9ubHkgdGhlIHNob3J0Y3V0cyAvIEFwcHMgJiBmZWF0dXJlcyBlbnRyeSB3ZXJlIHJlbW92ZWQuIiAtRm9yZWdyb3VuZENvbG9yIFllbGxvdwogICAgfQp9CgpXcml0ZS1Ib3N0ICIiCldyaXRlLUhvc3QgIiAgVW5pbnN0YWxsIGZpbmlzaGVkLiIgLUZvcmVncm91bmRDb2xvciBDeWFuCmlmICgtbm90ICRTa2lwUHJvbXB0cykgeyBXcml0ZS1Ib3N0ICIgIFByZXNzIEVudGVyIHRvIGNsb3NlLiIgfCBPdXQtTnVsbDsgUmVhZC1Ib3N0IH0K
+#requires -version 3
+<#
+  Shutio — uninstall (per-user, no admin).
+  Removes shortcuts + the Apps & features entry, and (with your OK) the folder.
+  Data (snips / recordings) is preserved by default; use -RemoveData to delete it.
+#>
+[CmdletBinding()]
+param(
+    [string]$InstallPath,   # the folder the app was installed to (auto from .cmd)
+    [switch]$RemoveData,    # also delete the app's Data folder
+    [switch]$SkipPrompts    # non-interactive: remove shortcuts/entry and delete the folder
+)
+
+$ErrorActionPreference = 'Stop'
+
+# The .cmd sets -InstallPath to its own folder; otherwise fall back to the known locations.
+if (-not $InstallPath) {
+    $candidates = @(
+        (Join-Path $env:LOCALAPPDATA 'Programs\Shutio'),
+        'I:\Shutio', 'I:\Apps\Shutio', 'I:\Apps\SnippingTool'
+    )
+    $InstallPath = $candidates | Where-Object { Test-Path (Join-Path $_ 'Shutio.exe') } | Select-Object -First 1
+}
+if (-not $InstallPath -or -not (Test-Path (Join-Path $InstallPath 'Shutio.exe'))) {
+    Write-Host "Could not locate an installed Shutio. Nothing to do." -ForegroundColor Yellow
+    return 0
+}
+
+Write-Host ""
+Write-Host "  Shutio — Uninstall" -ForegroundColor Cyan
+Write-Host ("  Installed to: {0}" -f $InstallPath)
+Write-Host ""
+
+# Close a running instance so files are not locked.
+Get-Process -Name 'Shutio' -ErrorAction SilentlyContinue | ForEach-Object {
+    Write-Host "  Closing a running Shutio (PID $($_.Id))..."
+    try { $_ | Stop-Process -Force } catch {}
+}
+Start-Sleep -Milliseconds 400
+
+# Remove shortcuts.
+$sm   = Join-Path $env:APPDATA 'Microsoft\Windows\Start Menu\Programs\Shutio.lnk'
+$desk = Join-Path ([Environment]::GetFolderPath('Desktop')) 'Shutio.lnk'
+foreach ($s in @($sm,$desk)) { if (Test-Path $s) { Remove-Item -LiteralPath $s -Force; Write-Host "  Removed shortcut: $s" } }
+
+# Remove the Apps & features entry.
+$reg = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\Shutio'
+if (Test-Path $reg) { Remove-Item -Path $reg -Recurse -Force; Write-Host "  Removed Apps & features entry." }
+
+# Handle the install folder.
+if ($SkipPrompts) {
+    Write-Host "  Deleting $InstallPath (including Data)..." -ForegroundColor Yellow
+    Remove-Item -LiteralPath $InstallPath -Recurse -Force -ErrorAction SilentlyContinue
+}
+else {
+    $confirm = Read-Host "  Delete the install folder (and the app)? (Y/N)"
+    if ($confirm -match '^[Yy]') {
+        if ($RemoveData -or (Read-Host "  Also delete your snips/recordings in Data\? (Y/N)" -match '^[Yy]')) {
+            Write-Host "  Deleting $InstallPath (including Data)..."
+            Remove-Item -LiteralPath $InstallPath -Recurse -Force -ErrorAction SilentlyContinue
+        }
+        else {
+            # Move the app out but keep Data so their pictures are safe.
+            Write-Host "  Removing the app files, keeping Data\..."
+            Get-ChildItem -LiteralPath $InstallPath -Force | Where-Object { $_.Name -ne 'Data' } | ForEach-Object {
+                Remove-Item -LiteralPath $_.FullName -Recurse -Force -ErrorAction SilentlyContinue
+            }
+        }
+    }
+    else {
+        Write-Host "  Keeping the folder. Only the shortcuts / Apps & features entry were removed." -ForegroundColor Yellow
+    }
+}
+
+Write-Host ""
+Write-Host "  Uninstall finished." -ForegroundColor Cyan
+if (-not $SkipPrompts) { Write-Host "  Press Enter to close." | Out-Null; Read-Host }

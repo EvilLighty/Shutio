@@ -1,1 +1,156 @@
-dXNpbmcgU3lzdGVtLlJ1bnRpbWUuSW50ZXJvcFNlcnZpY2VzOwp1c2luZyBTeXN0ZW0uV2luZG93cy5JbnRlcm9wOwoKbmFtZXNwYWNlIFNuaXBwaW5nVG9vbC5Db3JlOwoKcHVibGljIHNlYWxlZCByZWNvcmQgSG90a2V5UmVnaXN0cmF0aW9uKHN0cmluZyBBY3Rpb24sIHN0cmluZyBHZXN0dXJlLCBib29sIFN1Y2Nlc3MsIGludCBFcnJvckNvZGUsIHN0cmluZz8gRXJyb3IpOwoKcHVibGljIHNlYWxlZCBjbGFzcyBIb3RrZXlNYW5hZ2VyCnsKICAgIHByaXZhdGUgcmVhZG9ubHkgRGljdGlvbmFyeTxpbnQsIHN0cmluZz4gX2lkcyA9IG5ldygpOwogICAgcHJpdmF0ZSByZWFkb25seSBEaWN0aW9uYXJ5PHN0cmluZywgSG90a2V5R2VzdHVyZT4gX2dlc3R1cmVzID0gbmV3KCk7CiAgICBwcml2YXRlIEludFB0ciBfaHduZDsKICAgIHByaXZhdGUgQWN0aW9uPHN0cmluZz4/IF9oYW5kbGVyOwogICAgcHJpdmF0ZSBib29sIF9yZWdpc3RlcmVkOwoKICAgIC8vIFRoZSBzdG9wLXJlY29yZGluZyBzaG9ydGN1dCBpcyB0cmFuc2llbnQ6IGl0IGlzIGFybWVkIG9ubHkgd2hpbGUgYSByZWNvcmRpbmcgaXMgaW4KICAgIC8vIHByb2dyZXNzIHNvIGEgYmFyZSBrZXkgKGUuZy4gRXNjKSBuZXZlciBzaGFkb3dzIHR5cGluZyBpbiBvdGhlciBhcHBzLgogICAgcHJpdmF0ZSBpbnQ/IF9zdG9wSWQ7CgogICAgcHVibGljIElSZWFkT25seURpY3Rpb25hcnk8c3RyaW5nLCBIb3RrZXlHZXN0dXJlPiBHZXN0dXJlcyA9PiBfZ2VzdHVyZXM7CiAgICBwdWJsaWMgSVJlYWRPbmx5TGlzdDxIb3RrZXlSZWdpc3RyYXRpb24+IExhc3RSZXN1bHRzIHsgZ2V0OyBwcml2YXRlIHNldDsgfSA9IEFycmF5LkVtcHR5PEhvdGtleVJlZ2lzdHJhdGlvbj4oKTsKCiAgICBwdWJsaWMgdm9pZCBBdHRhY2goSW50UHRyIGh3bmQsIEFjdGlvbjxzdHJpbmc+IGhhbmRsZXIpCiAgICB7CiAgICAgICAgX2h3bmQgPSBod25kOwogICAgICAgIF9oYW5kbGVyID0gaGFuZGxlcjsKICAgIH0KCiAgICBwdWJsaWMgdm9pZCBEZXRhY2goKQogICAgewogICAgICAgIFVucmVnaXN0ZXJBbGwoKTsKICAgICAgICBVbnJlZ2lzdGVyU3RvcFJlY29yZGluZygpOwogICAgICAgIF9od25kID0gSW50UHRyLlplcm87CiAgICAgICAgX2hhbmRsZXIgPSBudWxsOwogICAgfQoKICAgIHB1YmxpYyBJUmVhZE9ubHlMaXN0PEhvdGtleVJlZ2lzdHJhdGlvbj4gUmVnaXN0ZXJBbGwoRGljdGlvbmFyeTxzdHJpbmcsIHN0cmluZz4gc2V0dGluZ3MpCiAgICB7CiAgICAgICAgVW5yZWdpc3RlckFsbCgpOwogICAgICAgIHZhciByZXN1bHRzID0gbmV3IExpc3Q8SG90a2V5UmVnaXN0cmF0aW9uPigpOwogICAgICAgIGlmIChfaHduZCA9PSBJbnRQdHIuWmVybykKICAgICAgICB7CiAgICAgICAgICAgIGZvcmVhY2ggKHZhciBwYWlyIGluIHNldHRpbmdzKQogICAgICAgICAgICAgICAgcmVzdWx0cy5BZGQobmV3IEhvdGtleVJlZ2lzdHJhdGlvbihwYWlyLktleSwgcGFpci5WYWx1ZSwgZmFsc2UsIC0xLCAiQXBwbGljYXRpb24gd2luZG93IGlzIG5vdCByZWFkeS4iKSk7CiAgICAgICAgICAgIExhc3RSZXN1bHRzID0gcmVzdWx0czsKICAgICAgICAgICAgcmV0dXJuIHJlc3VsdHM7CiAgICAgICAgfQoKICAgICAgICBpbnQgaWQgPSAweEExMDA7CiAgICAgICAgZm9yZWFjaCAodmFyIHBhaXIgaW4gc2V0dGluZ3MpCiAgICAgICAgewogICAgICAgICAgICAvLyBTdG9wLXJlY29yZGluZyBpcyBhcm1lZCBvbmx5IHdoaWxlIGEgcmVjb3JkaW5nIGlzIGxpdmUgKHNlZSBSZWdpc3RlclN0b3BSZWNvcmRpbmcpLAogICAgICAgICAgICAvLyBzbyBpdCBpcyBpbnRlbnRpb25hbGx5IGV4Y2x1ZGVkIGZyb20gdGhlIGFsd2F5cy1vbiBzZXQuCiAgICAgICAgICAgIGlmIChwYWlyLktleSA9PSBIb3RrZXlEZWZhdWx0cy5TdG9wUmVjb3JkaW5nKSBjb250aW51ZTsKCiAgICAgICAgICAgIHZhciBnZXN0dXJlID0gSG90a2V5R2VzdHVyZS5QYXJzZShwYWlyLlZhbHVlKTsKICAgICAgICAgICAgaWYgKGdlc3R1cmUgPT0gbnVsbCkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgcmVzdWx0cy5BZGQobmV3IEhvdGtleVJlZ2lzdHJhdGlvbihwYWlyLktleSwgcGFpci5WYWx1ZSwgZmFsc2UsIC0yLCAiSW52YWxpZCBzaG9ydGN1dC4iKSk7CiAgICAgICAgICAgICAgICBjb250aW51ZTsKICAgICAgICAgICAgfQogICAgICAgICAgICBpZiAoX2dlc3R1cmVzLlZhbHVlcy5Db250YWlucyhnZXN0dXJlKSkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgcmVzdWx0cy5BZGQobmV3IEhvdGtleVJlZ2lzdHJhdGlvbihwYWlyLktleSwgcGFpci5WYWx1ZSwgZmFsc2UsIC0zLCAiVGhpcyBzaG9ydGN1dCBpcyB1c2VkIGJ5IGFub3RoZXIgYWN0aW9uLiIpKTsKICAgICAgICAgICAgICAgIGNvbnRpbnVlOwogICAgICAgICAgICB9CgogICAgICAgICAgICBpbnQgY3VycmVudElkID0gaWQrKzsKICAgICAgICAgICAgYm9vbCBvayA9IE5hdGl2ZU1ldGhvZHMuUmVnaXN0ZXJIb3RLZXkoX2h3bmQsIGN1cnJlbnRJZCwgZ2VzdHVyZS5OYXRpdmVNb2RpZmllcnMsIGdlc3R1cmUuVmlydHVhbEtleSk7CiAgICAgICAgICAgIGludCBlcnJvciA9IG9rID8gMCA6IE1hcnNoYWwuR2V0TGFzdFdpbjMyRXJyb3IoKTsKICAgICAgICAgICAgaWYgKG9rKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBfaWRzW2N1cnJlbnRJZF0gPSBwYWlyLktleTsKICAgICAgICAgICAgICAgIF9nZXN0dXJlc1twYWlyLktleV0gPSBnZXN0dXJlOwogICAgICAgICAgICB9CiAgICAgICAgICAgIHJlc3VsdHMuQWRkKG5ldyBIb3RrZXlSZWdpc3RyYXRpb24oCiAgICAgICAgICAgICAgICBwYWlyLktleSwKICAgICAgICAgICAgICAgIGdlc3R1cmUuVG9TdHJpbmcoKSwKICAgICAgICAgICAgICAgIG9rLAogICAgICAgICAgICAgICAgZXJyb3IsCiAgICAgICAgICAgICAgICBvayA/IG51bGwgOiBlcnJvciA9PSAxNDA5ID8gIkFscmVhZHkgaW4gdXNlIGJ5IGFub3RoZXIgYXBwbGljYXRpb24uIiA6ICQiUmVnaXN0cmF0aW9uIGZhaWxlZCAoZXJyb3Ige2Vycm9yfSkuIikpOwogICAgICAgIH0KCiAgICAgICAgX3JlZ2lzdGVyZWQgPSB0cnVlOwogICAgICAgIExhc3RSZXN1bHRzID0gcmVzdWx0czsKICAgICAgICBmb3JlYWNoICh2YXIgciBpbiByZXN1bHRzKQogICAgICAgICAgICBMb2dnZXIuSW5mbygkIkhvdGtleSB7ci5BY3Rpb259OiB7ci5HZXN0dXJlfSAtPiB7KHIuU3VjY2VzcyA/ICJyZWdpc3RlcmVkIiA6ICJGQUlMRUQ6ICIgKyByLkVycm9yKX0iKTsKICAgICAgICByZXR1cm4gcmVzdWx0czsKICAgIH0KCiAgICBwdWJsaWMgYm9vbCBIYW5kbGVIb3RrZXkoaW50IGlkKQogICAgewogICAgICAgIHN0cmluZz8gYWN0aW9uID0gbnVsbDsKICAgICAgICBpZiAoX3N0b3BJZC5IYXNWYWx1ZSAmJiBpZCA9PSBfc3RvcElkLlZhbHVlKSBhY3Rpb24gPSBIb3RrZXlEZWZhdWx0cy5TdG9wUmVjb3JkaW5nOwogICAgICAgIGVsc2UgaWYgKF9pZHMuVHJ5R2V0VmFsdWUoaWQsIG91dCB2YXIgYSkpIGFjdGlvbiA9IGE7CiAgICAgICAgaWYgKGFjdGlvbiAhPSBudWxsKQogICAgICAgIHsKICAgICAgICAgICAgdHJ5IHsgX2hhbmRsZXI/Lkludm9rZShhY3Rpb24pOyB9CiAgICAgICAgICAgIGNhdGNoIChFeGNlcHRpb24gZXgpIHsgTG9nZ2VyLkVycm9yKCQiSG90a2V5IGFjdGlvbiB7YWN0aW9ufSBmYWlsZWQiLCBleCk7IH0KICAgICAgICAgICAgcmV0dXJuIHRydWU7CiAgICAgICAgfQogICAgICAgIHJldHVybiBmYWxzZTsKICAgIH0KCiAgICBwdWJsaWMgdm9pZCBVbnJlZ2lzdGVyQWxsKCkKICAgIHsKICAgICAgICBpZiAoX2h3bmQgIT0gSW50UHRyLlplcm8pCiAgICAgICAgewogICAgICAgICAgICBmb3JlYWNoICh2YXIgaWQgaW4gX2lkcy5LZXlzKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICB0cnkgeyBOYXRpdmVNZXRob2RzLlVucmVnaXN0ZXJIb3RLZXkoX2h3bmQsIGlkKTsgfQogICAgICAgICAgICAgICAgY2F0Y2ggeyB9CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgX2lkcy5DbGVhcigpOwogICAgICAgIF9nZXN0dXJlcy5DbGVhcigpOwogICAgICAgIF9yZWdpc3RlcmVkID0gZmFsc2U7CiAgICB9CgogICAgLy8vIDxzdW1tYXJ5PgogICAgLy8vIEFybXMgdGhlIHN0b3AtcmVjb3JkaW5nIHNob3J0Y3V0LiBJdCBtYXkgYmUgYSBzaW5nbGUgYmFyZSBrZXkgKGUuZy4gRXNjKSBvciBhCiAgICAvLy8gbW9kaWZpZXIra2V5IGNvbWJvLiBSZXR1cm5zIGZhbHNlIGlmIHRoZSBnZXN0dXJlIGlzIGludmFsaWQsIGNvbGxpZGVzIHdpdGggYW5vdGhlcgogICAgLy8vIHNob3J0Y3V0LCBvciBXaW5kb3dzIHJlamVjdHMgaXQg4oCUIHRoZSBpbmRpY2F0b3IncyBzdG9wIGJ1dHRvbiBhbHdheXMgcmVtYWlucyBhIGZhbGxiYWNrLgogICAgLy8vIDwvc3VtbWFyeT4KICAgIHB1YmxpYyBib29sIFJlZ2lzdGVyU3RvcFJlY29yZGluZyhzdHJpbmc/IGdlc3R1cmUpCiAgICB7CiAgICAgICAgVW5yZWdpc3RlclN0b3BSZWNvcmRpbmcoKTsKICAgICAgICBpZiAoX2h3bmQgPT0gSW50UHRyLlplcm8pIHJldHVybiBmYWxzZTsKICAgICAgICB2YXIgcGFyc2VkID0gSG90a2V5R2VzdHVyZS5QYXJzZShnZXN0dXJlLCBhbGxvd0JhcmU6IHRydWUpOwogICAgICAgIGlmIChwYXJzZWQgPT0gbnVsbCkgeyBMb2dnZXIuV2FybigiU3RvcC1yZWNvcmRpbmc6IG5vdCBhIHZhbGlkIHNob3J0Y3V0OiAiICsgZ2VzdHVyZSk7IHJldHVybiBmYWxzZTsgfQogICAgICAgIGlmIChfZ2VzdHVyZXMuVmFsdWVzLkNvbnRhaW5zKHBhcnNlZCkpIHsgTG9nZ2VyLldhcm4oIlN0b3AtcmVjb3JkaW5nOiBjb2xsaWRlcyB3aXRoIGFub3RoZXIgc2hvcnRjdXQiKTsgcmV0dXJuIGZhbHNlOyB9CgogICAgICAgIGludCBpZCA9IDB4QjAwMTsKICAgICAgICBpZiAoTmF0aXZlTWV0aG9kcy5SZWdpc3RlckhvdEtleShfaHduZCwgaWQsIHBhcnNlZC5OYXRpdmVNb2RpZmllcnMsIHBhcnNlZC5WaXJ0dWFsS2V5KSkKICAgICAgICB7CiAgICAgICAgICAgIF9zdG9wSWQgPSBpZDsKICAgICAgICAgICAgTG9nZ2VyLkluZm8oJCJIb3RrZXkgc3RvcC1yZWNvcmRpbmc6IHtwYXJzZWR9IC0+IHJlZ2lzdGVyZWQiKTsKICAgICAgICAgICAgcmV0dXJuIHRydWU7CiAgICAgICAgfQogICAgICAgIGludCBlcnJvciA9IE1hcnNoYWwuR2V0TGFzdFdpbjMyRXJyb3IoKTsKICAgICAgICBMb2dnZXIuV2FybigkIlN0b3AtcmVjb3JkaW5nOiByZWdpc3RyYXRpb24gZmFpbGVkIChlcnJvciB7ZXJyb3J9KTsgdGhlIHN0b3AgYnV0dG9uIHN0aWxsIHdvcmtzLiIpOwogICAgICAgIHJldHVybiBmYWxzZTsKICAgIH0KCiAgICBwdWJsaWMgdm9pZCBVbnJlZ2lzdGVyU3RvcFJlY29yZGluZygpCiAgICB7CiAgICAgICAgaWYgKF9zdG9wSWQuSGFzVmFsdWUgJiYgX2h3bmQgIT0gSW50UHRyLlplcm8pCiAgICAgICAgewogICAgICAgICAgICB0cnkgeyBOYXRpdmVNZXRob2RzLlVucmVnaXN0ZXJIb3RLZXkoX2h3bmQsIF9zdG9wSWQuVmFsdWUpOyB9IGNhdGNoIHsgfQogICAgICAgIH0KICAgICAgICBfc3RvcElkID0gbnVsbDsKICAgIH0KCiAgICBwdWJsaWMgYm9vbCBBbnlSZWdpc3RlcmVkID0+IF9pZHMuQ291bnQgPiAwOwogICAgcHVibGljIGJvb2wgSXNSZWdpc3RlcmVkID0+IF9yZWdpc3RlcmVkOwp9Cg==
+using System.Runtime.InteropServices;
+using System.Windows.Interop;
+
+namespace SnippingTool.Core;
+
+public sealed record HotkeyRegistration(string Action, string Gesture, bool Success, int ErrorCode, string? Error);
+
+public sealed class HotkeyManager
+{
+    private readonly Dictionary<int, string> _ids = new();
+    private readonly Dictionary<string, HotkeyGesture> _gestures = new();
+    private IntPtr _hwnd;
+    private Action<string>? _handler;
+    private bool _registered;
+
+    // The stop-recording shortcut is transient: it is armed only while a recording is in
+    // progress so a bare key (e.g. Esc) never shadows typing in other apps.
+    private int? _stopId;
+
+    public IReadOnlyDictionary<string, HotkeyGesture> Gestures => _gestures;
+    public IReadOnlyList<HotkeyRegistration> LastResults { get; private set; } = Array.Empty<HotkeyRegistration>();
+
+    public void Attach(IntPtr hwnd, Action<string> handler)
+    {
+        _hwnd = hwnd;
+        _handler = handler;
+    }
+
+    public void Detach()
+    {
+        UnregisterAll();
+        UnregisterStopRecording();
+        _hwnd = IntPtr.Zero;
+        _handler = null;
+    }
+
+    public IReadOnlyList<HotkeyRegistration> RegisterAll(Dictionary<string, string> settings)
+    {
+        UnregisterAll();
+        var results = new List<HotkeyRegistration>();
+        if (_hwnd == IntPtr.Zero)
+        {
+            foreach (var pair in settings)
+                results.Add(new HotkeyRegistration(pair.Key, pair.Value, false, -1, "Application window is not ready."));
+            LastResults = results;
+            return results;
+        }
+
+        int id = 0xA100;
+        foreach (var pair in settings)
+        {
+            // Stop-recording is armed only while a recording is live (see RegisterStopRecording),
+            // so it is intentionally excluded from the always-on set.
+            if (pair.Key == HotkeyDefaults.StopRecording) continue;
+
+            var gesture = HotkeyGesture.Parse(pair.Value);
+            if (gesture == null)
+            {
+                results.Add(new HotkeyRegistration(pair.Key, pair.Value, false, -2, "Invalid shortcut."));
+                continue;
+            }
+            if (_gestures.Values.Contains(gesture))
+            {
+                results.Add(new HotkeyRegistration(pair.Key, pair.Value, false, -3, "This shortcut is used by another action."));
+                continue;
+            }
+
+            int currentId = id++;
+            bool ok = NativeMethods.RegisterHotKey(_hwnd, currentId, gesture.NativeModifiers, gesture.VirtualKey);
+            int error = ok ? 0 : Marshal.GetLastWin32Error();
+            if (ok)
+            {
+                _ids[currentId] = pair.Key;
+                _gestures[pair.Key] = gesture;
+            }
+            results.Add(new HotkeyRegistration(
+                pair.Key,
+                gesture.ToString(),
+                ok,
+                error,
+                ok ? null : error == 1409 ? "Already in use by another application." : $"Registration failed (error {error})."));
+        }
+
+        _registered = true;
+        LastResults = results;
+        foreach (var r in results)
+            Logger.Info($"Hotkey {r.Action}: {r.Gesture} -> {(r.Success ? "registered" : "FAILED: " + r.Error)}");
+        return results;
+    }
+
+    public bool HandleHotkey(int id)
+    {
+        string? action = null;
+        if (_stopId.HasValue && id == _stopId.Value) action = HotkeyDefaults.StopRecording;
+        else if (_ids.TryGetValue(id, out var a)) action = a;
+        if (action != null)
+        {
+            try { _handler?.Invoke(action); }
+            catch (Exception ex) { Logger.Error($"Hotkey action {action} failed", ex); }
+            return true;
+        }
+        return false;
+    }
+
+    public void UnregisterAll()
+    {
+        if (_hwnd != IntPtr.Zero)
+        {
+            foreach (var id in _ids.Keys)
+            {
+                try { NativeMethods.UnregisterHotKey(_hwnd, id); }
+                catch { }
+            }
+        }
+        _ids.Clear();
+        _gestures.Clear();
+        _registered = false;
+    }
+
+    /// <summary>
+    /// Arms the stop-recording shortcut. It may be a single bare key (e.g. Esc) or a
+    /// modifier+key combo. Returns false if the gesture is invalid, collides with another
+    /// shortcut, or Windows rejects it — the indicator's stop button always remains a fallback.
+    /// </summary>
+    public bool RegisterStopRecording(string? gesture)
+    {
+        UnregisterStopRecording();
+        if (_hwnd == IntPtr.Zero) return false;
+        var parsed = HotkeyGesture.Parse(gesture, allowBare: true);
+        if (parsed == null) { Logger.Warn("Stop-recording: not a valid shortcut: " + gesture); return false; }
+        if (_gestures.Values.Contains(parsed)) { Logger.Warn("Stop-recording: collides with another shortcut"); return false; }
+
+        int id = 0xB001;
+        if (NativeMethods.RegisterHotKey(_hwnd, id, parsed.NativeModifiers, parsed.VirtualKey))
+        {
+            _stopId = id;
+            Logger.Info($"Hotkey stop-recording: {parsed} -> registered");
+            return true;
+        }
+        int error = Marshal.GetLastWin32Error();
+        Logger.Warn($"Stop-recording: registration failed (error {error}); the stop button still works.");
+        return false;
+    }
+
+    public void UnregisterStopRecording()
+    {
+        if (_stopId.HasValue && _hwnd != IntPtr.Zero)
+        {
+            try { NativeMethods.UnregisterHotKey(_hwnd, _stopId.Value); } catch { }
+        }
+        _stopId = null;
+    }
+
+    public bool AnyRegistered => _ids.Count > 0;
+    public bool IsRegistered => _registered;
+}

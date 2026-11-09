@@ -1,1 +1,91 @@
-dXNpbmcgU3lzdGVtLldpbmRvd3M7CnVzaW5nIFN5c3RlbS5XaW5kb3dzLk1lZGlhOwp1c2luZyBNaWNyb3NvZnQuV2luMzI7CgpuYW1lc3BhY2UgU25pcHBpbmdUb29sLkNvcmU7CgpwdWJsaWMgc3RhdGljIGNsYXNzIFRoZW1lTWFuYWdlcgp7CiAgICBwcml2YXRlIHN0YXRpYyBSZXNvdXJjZURpY3Rpb25hcnk/IF9jdXJyZW50OwogICAgcHJpdmF0ZSBzdGF0aWMgYm9vbCBfbGlzdGVuaW5nOwogICAgcHVibGljIHN0YXRpYyBib29sIElzRGFyayB7IGdldDsgcHJpdmF0ZSBzZXQ7IH0KICAgIHB1YmxpYyBzdGF0aWMgQXBwVGhlbWUgQ3VycmVudE1vZGUgeyBnZXQ7IHByaXZhdGUgc2V0OyB9ID0gQXBwVGhlbWUuU3lzdGVtOwoKICAgIHB1YmxpYyBzdGF0aWMgdm9pZCBJbml0aWFsaXplKEFwcFRoZW1lIG1vZGUpCiAgICB7CiAgICAgICAgQXBwbHkobW9kZSk7CiAgICAgICAgaWYgKCFfbGlzdGVuaW5nKQogICAgICAgIHsKICAgICAgICAgICAgU3lzdGVtRXZlbnRzLlVzZXJQcmVmZXJlbmNlQ2hhbmdlZCArPSAoXywgXykgPT4KICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWYgKEN1cnJlbnRNb2RlID09IEFwcFRoZW1lLlN5c3RlbSkKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICB2YXIgYXBwID0gQXBwbGljYXRpb24uQ3VycmVudDsKICAgICAgICAgICAgICAgICAgICBpZiAoYXBwICE9IG51bGwpCiAgICAgICAgICAgICAgICAgICAgICAgIGFwcC5EaXNwYXRjaGVyLkJlZ2luSW52b2tlKCgpID0+IEFwcGx5KEFwcFRoZW1lLlN5c3RlbSkpOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9OwogICAgICAgICAgICBfbGlzdGVuaW5nID0gdHJ1ZTsKICAgICAgICB9CiAgICB9CgogICAgcHVibGljIHN0YXRpYyBib29sIFN5c3RlbVVzZXNMaWdodFRoZW1lKCkKICAgIHsKICAgICAgICB0cnkKICAgICAgICB7CiAgICAgICAgICAgIHVzaW5nIHZhciBrZXkgPSBSZWdpc3RyeS5DdXJyZW50VXNlci5PcGVuU3ViS2V5KEAiU29mdHdhcmVcTWljcm9zb2Z0XFdpbmRvd3NcQ3VycmVudFZlcnNpb25cVGhlbWVzXFBlcnNvbmFsaXplIik7CiAgICAgICAgICAgIHZhciB2YWx1ZSA9IGtleT8uR2V0VmFsdWUoIkFwcHNVc2VMaWdodFRoZW1lIik7CiAgICAgICAgICAgIGlmICh2YWx1ZSBpcyBpbnQgaSkgcmV0dXJuIGkgIT0gMDsKICAgICAgICB9CiAgICAgICAgY2F0Y2ggeyB9CiAgICAgICAgcmV0dXJuIHRydWU7CiAgICB9CgogICAgcHVibGljIHN0YXRpYyB2b2lkIEFwcGx5KEFwcFRoZW1lIG1vZGUpCiAgICB7CiAgICAgICAgQ3VycmVudE1vZGUgPSBtb2RlOwogICAgICAgIHZhciBsaWdodCA9IG1vZGUgc3dpdGNoCiAgICAgICAgewogICAgICAgICAgICBBcHBUaGVtZS5MaWdodCA9PiB0cnVlLAogICAgICAgICAgICBBcHBUaGVtZS5EYXJrID0+IGZhbHNlLAogICAgICAgICAgICBfID0+IFN5c3RlbVVzZXNMaWdodFRoZW1lKCkKICAgICAgICB9OwogICAgICAgIElzRGFyayA9ICFsaWdodDsKICAgICAgICB0cnkKICAgICAgICB7CiAgICAgICAgICAgIHZhciB1cmkgPSBuZXcgVXJpKGxpZ2h0ID8gIlRoZW1lcy9MaWdodC54YW1sIiA6ICJUaGVtZXMvRGFyay54YW1sIiwgVXJpS2luZC5SZWxhdGl2ZSk7CiAgICAgICAgICAgIHZhciBkaWN0ID0gbmV3IFJlc291cmNlRGljdGlvbmFyeSB7IFNvdXJjZSA9IHVyaSB9OwogICAgICAgICAgICB2YXIgYXBwID0gQXBwbGljYXRpb24uQ3VycmVudDsKICAgICAgICAgICAgaWYgKGFwcCA9PSBudWxsKSByZXR1cm47CiAgICAgICAgICAgIGFwcC5SZXNvdXJjZXMuTWVyZ2VkRGljdGlvbmFyaWVzLlJlbW92ZShfY3VycmVudCk7CiAgICAgICAgICAgIGFwcC5SZXNvdXJjZXMuTWVyZ2VkRGljdGlvbmFyaWVzLkluc2VydCgwLCBkaWN0KTsKICAgICAgICAgICAgX2N1cnJlbnQgPSBkaWN0OwogICAgICAgICAgICBhcHAuUmVzb3VyY2VzWyJJc0RhcmtUaGVtZSJdID0gIWxpZ2h0OwogICAgICAgICAgICBMb2dnZXIuSW5mbygkIlRoZW1lIGFwcGxpZWQ6IHsobGlnaHQgPyAiTGlnaHQiIDogIkRhcmsiKX0gKG1vZGUge21vZGV9KSIpOwogICAgICAgICAgICBmb3JlYWNoIChXaW5kb3cgd2luZG93IGluIGFwcC5XaW5kb3dzKQogICAgICAgICAgICAgICAgQXBwbHlXaW5kb3dDaHJvbWUod2luZG93KTsKICAgICAgICB9CiAgICAgICAgY2F0Y2ggKEV4Y2VwdGlvbiBleCkKICAgICAgICB7CiAgICAgICAgICAgIExvZ2dlci5FcnJvcigiVGhlbWUgYXBwbHkgZmFpbGVkIiwgZXgpOwogICAgICAgIH0KICAgIH0KCiAgICBwdWJsaWMgc3RhdGljIHZvaWQgQXBwbHlXaW5kb3dDaHJvbWUoV2luZG93IHdpbmRvdykKICAgIHsKICAgICAgICB0cnkKICAgICAgICB7CiAgICAgICAgICAgIHZhciBoZWxwZXIgPSBuZXcgU3lzdGVtLldpbmRvd3MuSW50ZXJvcC5XaW5kb3dJbnRlcm9wSGVscGVyKHdpbmRvdyk7CiAgICAgICAgICAgIHZhciBod25kID0gaGVscGVyLkhhbmRsZTsKICAgICAgICAgICAgaWYgKGh3bmQgPT0gSW50UHRyLlplcm8pIHJldHVybjsKICAgICAgICAgICAgaW50IGRhcmsgPSBJc0RhcmsgPyAxIDogMDsKICAgICAgICAgICAgTmF0aXZlTWV0aG9kcy5Ed21TZXRXaW5kb3dBdHRyaWJ1dGUoaHduZCwgTmF0aXZlTWV0aG9kcy5EV01XQV9VU0VfSU1NRVJTSVZFX0RBUktfTU9ERSwgcmVmIGRhcmssIHNpemVvZihpbnQpKTsKICAgICAgICAgICAgaW50IGNvcm5lcnMgPSAyOyAvLyBEV01XQ1BfUk9VTkQKICAgICAgICAgICAgTmF0aXZlTWV0aG9kcy5Ed21TZXRXaW5kb3dBdHRyaWJ1dGUoaHduZCwgTmF0aXZlTWV0aG9kcy5EV01XQV9XSU5ET1dfQ09STkVSX1BSRUZFUkVOQ0UsIHJlZiBjb3JuZXJzLCBzaXplb2YoaW50KSk7CiAgICAgICAgfQogICAgICAgIGNhdGNoIChFeGNlcHRpb24gZXgpCiAgICAgICAgewogICAgICAgICAgICBMb2dnZXIuRGVidWcoIkRXTSBjaHJvbWUgdW5hdmFpbGFibGU6ICIgKyBleC5NZXNzYWdlKTsKICAgICAgICB9CiAgICB9Cn0K
+using System.Windows;
+using System.Windows.Media;
+using Microsoft.Win32;
+
+namespace SnippingTool.Core;
+
+public static class ThemeManager
+{
+    private static ResourceDictionary? _current;
+    private static bool _listening;
+    public static bool IsDark { get; private set; }
+    public static AppTheme CurrentMode { get; private set; } = AppTheme.System;
+
+    public static void Initialize(AppTheme mode)
+    {
+        Apply(mode);
+        if (!_listening)
+        {
+            SystemEvents.UserPreferenceChanged += (_, _) =>
+            {
+                if (CurrentMode == AppTheme.System)
+                {
+                    var app = Application.Current;
+                    if (app != null)
+                        app.Dispatcher.BeginInvoke(() => Apply(AppTheme.System));
+                }
+            };
+            _listening = true;
+        }
+    }
+
+    public static bool SystemUsesLightTheme()
+    {
+        try
+        {
+            using var key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Themes\Personalize");
+            var value = key?.GetValue("AppsUseLightTheme");
+            if (value is int i) return i != 0;
+        }
+        catch { }
+        return true;
+    }
+
+    public static void Apply(AppTheme mode)
+    {
+        CurrentMode = mode;
+        var light = mode switch
+        {
+            AppTheme.Light => true,
+            AppTheme.Dark => false,
+            _ => SystemUsesLightTheme()
+        };
+        IsDark = !light;
+        try
+        {
+            var uri = new Uri(light ? "Themes/Light.xaml" : "Themes/Dark.xaml", UriKind.Relative);
+            var dict = new ResourceDictionary { Source = uri };
+            var app = Application.Current;
+            if (app == null) return;
+            app.Resources.MergedDictionaries.Remove(_current);
+            app.Resources.MergedDictionaries.Insert(0, dict);
+            _current = dict;
+            app.Resources["IsDarkTheme"] = !light;
+            Logger.Info($"Theme applied: {(light ? "Light" : "Dark")} (mode {mode})");
+            foreach (Window window in app.Windows)
+                ApplyWindowChrome(window);
+        }
+        catch (Exception ex)
+        {
+            Logger.Error("Theme apply failed", ex);
+        }
+    }
+
+    public static void ApplyWindowChrome(Window window)
+    {
+        try
+        {
+            var helper = new System.Windows.Interop.WindowInteropHelper(window);
+            var hwnd = helper.Handle;
+            if (hwnd == IntPtr.Zero) return;
+            int dark = IsDark ? 1 : 0;
+            NativeMethods.DwmSetWindowAttribute(hwnd, NativeMethods.DWMWA_USE_IMMERSIVE_DARK_MODE, ref dark, sizeof(int));
+            int corners = 2; // DWMWCP_ROUND
+            NativeMethods.DwmSetWindowAttribute(hwnd, NativeMethods.DWMWA_WINDOW_CORNER_PREFERENCE, ref corners, sizeof(int));
+        }
+        catch (Exception ex)
+        {
+            Logger.Debug("DWM chrome unavailable: " + ex.Message);
+        }
+    }
+}

@@ -1,1 +1,81 @@
-I3JlcXVpcmVzIC12ZXJzaW9uIDMKPCMKICBSZWJ1aWxkcyB0aGUgT0ZGTElORSBpbnN0YWxsZXIgKyBzdGFuZGFsb25lIHVuaW5zdGFsbGVyIGZyb20gdGhlIGFwcCBmb2xkZXIsCiAgdGhlbiByZWZyZXNoZXMgdGhlIHNoYXJlIGZvbGRlci4gRXZlcnl0aGluZyBzdGF5cyB1bmRlciBJOlwgKG9mZmxpbmUpLgoKICBQcm9kdWNlczoKICAgICBJOlxBcHBzXFNodXRpby1TaGFyZVxTaHV0aW8tc2V0dXAuZXhlICAgICAgKGNvbXBsZXRlIG9mZmxpbmUgaW5zdGFsbGVyKQogICAgIEk6XEFwcHNcU2h1dGlvLVNoYXJlXFVuaW5zdGFsbFNodXRpby5leGUgICAoc3RhbmRhbG9uZSB1bmluc3RhbGxlcikKCiAgUnVuOiAgcG93ZXJzaGVsbCAtTm9Qcm9maWxlIC1FeGVjdXRpb25Qb2xpY3kgQnlwYXNzIC1GaWxlIHJlYnVpbGQucHMxIFstU2hhcmVEaXIgIkM6XFdoZXJlIl0KIz4KW0NtZGxldEJpbmRpbmcoKV0KcGFyYW0oCiAgICBbc3RyaW5nXSRTaGFyZURpciA9ICdJOlxBcHBzXFNodXRpby1TaGFyZScKKQokRXJyb3JBY3Rpb25QcmVmZXJlbmNlID0gJ1N0b3AnCgokcHJvaiAgID0gJ0k6XEFwcHNcU25pcHBpbmdUb29sJwokc3JjICAgID0gSm9pbi1QYXRoICRwcm9qICdJbnN0YWxsXHNyY1xvZmZsaW5lLWluc3RhbGxlcicKJGJ1aWxkICA9IEpvaW4tUGF0aCAkc3JjICdfYnVpbGQnCiRkb3RuZXQgPSBpZiAoVGVzdC1QYXRoICdJOlxEZXZUb29sc1xkb3RuZXRcZG90bmV0LmV4ZScpIHsgJ0k6XERldlRvb2xzXGRvdG5ldFxkb3RuZXQuZXhlJyB9IGVsc2UgeyAnZG90bmV0JyB9CiRlbnY6RE9UTkVUX0NMSV9IT01FID0gJ0k6XERldlRvb2xzXGRvdG5ldC1ob21lJwokZW52Ok5VR0VUX1BBQ0tBR0VTICA9ICdJOlxEZXZUb29sc1xudWdldCcKJGNvbW1vbiA9IEAoJy1wOlB1Ymxpc2hTaW5nbGVGaWxlPXRydWUnLCctcDpJbmNsdWRlTmF0aXZlTGlicmFyaWVzRm9yU2VsZkV4dHJhY3Q9dHJ1ZScsCiAgICAgICAgICAgICctcDpFbmFibGVDb21wcmVzc2lvbkluU2luZ2xlRmlsZT10cnVlJywnLXA6RGVidWdUeXBlPW5vbmUnLCctcDpEZWJ1Z1N5bWJvbHM9ZmFsc2UnKQoKaWYgKFRlc3QtUGF0aCAkYnVpbGQpIHsgUmVtb3ZlLUl0ZW0gLUxpdGVyYWxQYXRoICRidWlsZCAtUmVjdXJzZSAtRm9yY2UgfQpOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAkYnVpbGQgfCBPdXQtTnVsbAoKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIDEpIHBheWxvYWQgLS0KV3JpdGUtSG9zdCAiQnVpbGRpbmcgdGhlIGFwcCBwYXlsb2FkIChjbGVhbiBhcHAsIG5vIHBlcnNvbmFsIGRhdGEpLi4uIgokcGF5bG9hZCA9IEpvaW4tUGF0aCAkYnVpbGQgJ3BheWxvYWQnCk5ldy1JdGVtIC1JdGVtVHlwZSBEaXJlY3RvcnkgLUZvcmNlIC1QYXRoIChKb2luLVBhdGggJHBheWxvYWQgJ0Fzc2V0cycpIHwgT3V0LU51bGwKTmV3LUl0ZW0gLUl0ZW1UeXBlIERpcmVjdG9yeSAtRm9yY2UgLVBhdGggKEpvaW4tUGF0aCAkcGF5bG9hZCAnVG9vbHMnKSAgfCBPdXQtTnVsbAoKIyBOZXZlciBidW5kbGUgQUkgaGFuZG92ZXIgZG9jcywgdGhlIGR1bXBlciwgZGVidWcgc3ltYm9scywgb3Igc3RhbGUgaW5zdGFsbGVyCiMgZXhlY3V0YWJsZXMgaW50byB0aGUgcGF5bG9hZCAoZGVmZW5zaXZlIGFnYWluc3Qgb2xkLW5hbWUgZmlsZXMgbGluZ2VyaW5nKS4KJGV4Y2x1ZGUgPSBAKCdjcmVhdGVkdW1wLmV4ZScsJ0FHRU5UUy5tZCcsJ0hBTkRPRkYubWQnLCdUT0RPLm1kJywnQ0hBTkdFTE9HLm1kJywKICAgICAgICAgICAgICdJbnN0YWxsU25pcHBpbmdUb29sLmV4ZScsJ1VuaW5zdGFsbFNuaXBwaW5nVG9vbC5leGUnLAogICAgICAgICAgICAgJ1NodXRpby1zZXR1cC5leGUnLCdVbmluc3RhbGxTaHV0aW8uZXhlJykKR2V0LUNoaWxkSXRlbSAtTGl0ZXJhbFBhdGggJHByb2ogLUZpbGUgfAogICAgV2hlcmUtT2JqZWN0IHsgJGV4Y2x1ZGUgLW5vdGNvbnRhaW5zICRfLk5hbWUgLWFuZCAkXy5FeHRlbnNpb24gLW5lICcucGRiJyB9IHwKICAgIEZvckVhY2gtT2JqZWN0IHsgQ29weS1JdGVtIC1MaXRlcmFsUGF0aCAkXy5GdWxsTmFtZSAtRGVzdGluYXRpb24gKEpvaW4tUGF0aCAkcGF5bG9hZCAkXy5OYW1lKSB9Cgpmb3JlYWNoICgkYSBpbiAoR2V0LUNoaWxkSXRlbSAoSm9pbi1QYXRoICRwcm9qICdBc3NldHMnKSAtUmVjdXJzZSAtRmlsZSkpIHsKICAgICRyZWwgPSAkYS5GdWxsTmFtZS5TdWJzdHJpbmcoJHByb2ouTGVuZ3RoKS5UcmltU3RhcnQoJ1wnKQogICAgJHQgICA9IEpvaW4tUGF0aCAkcGF5bG9hZCAkcmVsCiAgICBOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAoU3BsaXQtUGF0aCAkdCkgfCBPdXQtTnVsbAogICAgQ29weS1JdGVtIC1MaXRlcmFsUGF0aCAkYS5GdWxsTmFtZSAtRGVzdGluYXRpb24gJHQKfQpDb3B5LUl0ZW0gLUxpdGVyYWxQYXRoIChKb2luLVBhdGggJHByb2ogJ1Rvb2xzXGZmbXBlZy5leGUnKSAtRGVzdGluYXRpb24gKEpvaW4tUGF0aCAkcGF5bG9hZCAnVG9vbHNcZmZtcGVnLmV4ZScpCgpBZGQtVHlwZSAtQXNzZW1ibHlOYW1lIFN5c3RlbS5JTy5Db21wcmVzc2lvbi5GaWxlU3lzdGVtCiR6aXAgPSBKb2luLVBhdGggJGJ1aWxkICdhcHAtcGF5bG9hZC56aXAnCltTeXN0ZW0uSU8uQ29tcHJlc3Npb24uWmlwRmlsZV06OkNyZWF0ZUZyb21EaXJlY3RvcnkoJHBheWxvYWQsICR6aXAsIFtTeXN0ZW0uSU8uQ29tcHJlc3Npb24uQ29tcHJlc3Npb25MZXZlbF06Ok9wdGltYWwsICRmYWxzZSkgfCBPdXQtTnVsbApXcml0ZS1Ib3N0ICgiICBwYXlsb2FkIHppcDogezA6TjF9IE1CIiAtZiAoKEdldC1JdGVtICR6aXApLkxlbmd0aC8xTUIpKQoKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAyKSB1bmluc3RhbGxlciAtLQpXcml0ZS1Ib3N0ICJCdWlsZGluZyB0aGUgc3RhbmRhbG9uZSB1bmluc3RhbGxlci4uLiIKJiAkZG90bmV0IHB1Ymxpc2ggKEpvaW4tUGF0aCAkc3JjICd1bmluc3RhbGxlclxVbmluc3RhbGxlci5jc3Byb2onKSAtYyBSZWxlYXNlIC1yIHdpbi14NjQgLS1zZWxmLWNvbnRhaW5lZCB0cnVlIGAKICAgIEBjb21tb24gLW8gJGJ1aWxkIC12IHEgLW5vbG9nbwokdW5pbnN0ID0gSm9pbi1QYXRoICRidWlsZCAnVW5pbnN0YWxsU2h1dGlvLmV4ZScKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAzKSBpbnN0YWxsZXIgLS0KV3JpdGUtSG9zdCAiQnVpbGRpbmcgdGhlIG9mZmxpbmUgaW5zdGFsbGVyIChlbWJlZGRpbmcgcGF5bG9hZCArIHVuaW5zdGFsbGVyKS4uLiIKJiAkZG90bmV0IHB1Ymxpc2ggKEpvaW4tUGF0aCAkc3JjICdpbnN0YWxsZXJcSW5zdGFsbGVyLmNzcHJvaicpIC1jIFJlbGVhc2UgLXIgd2luLXg2NCAtLXNlbGYtY29udGFpbmVkIHRydWUgYAogICAgQGNvbW1vbiAtcDpQYXlsb2FkWmlwPSIkemlwIiAtcDpVbmluc3RFeGU9IiR1bmluc3QiIC1vICRidWlsZCAtdiBxIC1ub2xvZ28KJGluc3RhbCA9IEpvaW4tUGF0aCAkYnVpbGQgJ1NodXRpby1zZXR1cC5leGUnCgppZiAoLW5vdCAoVGVzdC1QYXRoICRpbnN0YWwpIC1vciAtbm90IChUZXN0LVBhdGggJHVuaW5zdCkpIHsKICAgIHRocm93ICJCdWlsZCBkaWQgbm90IHByb2R1Y2UgdGhlIGV4cGVjdGVkIGV4ZSBmaWxlcy4iCn0KCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIDQpIHB1Ymxpc2ggLS0KTmV3LUl0ZW0gLUl0ZW1UeXBlIERpcmVjdG9yeSAtRm9yY2UgLVBhdGggJFNoYXJlRGlyIHwgT3V0LU51bGwKQ29weS1JdGVtIC1MaXRlcmFsUGF0aCAkaW5zdGFsIC1EZXN0aW5hdGlvbiAoSm9pbi1QYXRoICRTaGFyZURpciAnU2h1dGlvLXNldHVwLmV4ZScpICAgLUZvcmNlCkNvcHktSXRlbSAtTGl0ZXJhbFBhdGggJHVuaW5zdCAtRGVzdGluYXRpb24gKEpvaW4tUGF0aCAkU2hhcmVEaXIgJ1VuaW5zdGFsbFNodXRpby5leGUnKSAtRm9yY2UKCldyaXRlLUhvc3QgIiIKV3JpdGUtSG9zdCAoIiAgRG9uZS4gU2hhcmUgZm9sZGVyOiB7MH0iIC1mICRTaGFyZURpcikKR2V0LUNoaWxkSXRlbSAkU2hhcmVEaXIgLUZpbGUgfCBTZWxlY3QtT2JqZWN0IE5hbWUsIEB7Tj0nTUInO0U9e1ttYXRoXTo6Um91bmQoJF8uTGVuZ3RoLzFNQiwxKX19IHwgRm9ybWF0LVRhYmxlIC1BdXRvU2l6ZQo=
+#requires -version 3
+<#
+  Rebuilds the OFFLINE installer + standalone uninstaller from the app folder,
+  then refreshes the share folder. Everything stays under I:\ (offline).
+
+  Produces:
+     I:\Apps\Shutio-Share\Shutio-setup.exe      (complete offline installer)
+     I:\Apps\Shutio-Share\UninstallShutio.exe   (standalone uninstaller)
+
+  Run:  powershell -NoProfile -ExecutionPolicy Bypass -File rebuild.ps1 [-ShareDir "C:\Where"]
+#>
+[CmdletBinding()]
+param(
+    [string]$ShareDir = 'I:\Apps\Shutio-Share'
+)
+$ErrorActionPreference = 'Stop'
+
+$proj   = 'I:\Apps\SnippingTool'
+$src    = Join-Path $proj 'Install\src\offline-installer'
+$build  = Join-Path $src '_build'
+$dotnet = if (Test-Path 'I:\DevTools\dotnet\dotnet.exe') { 'I:\DevTools\dotnet\dotnet.exe' } else { 'dotnet' }
+$env:DOTNET_CLI_HOME = 'I:\DevTools\dotnet-home'
+$env:NUGET_PACKAGES  = 'I:\DevTools\nuget'
+$common = @('-p:PublishSingleFile=true','-p:IncludeNativeLibrariesForSelfExtract=true',
+            '-p:EnableCompressionInSingleFile=true','-p:DebugType=none','-p:DebugSymbols=false')
+
+if (Test-Path $build) { Remove-Item -LiteralPath $build -Recurse -Force }
+New-Item -ItemType Directory -Force -Path $build | Out-Null
+
+# ---------------------------------------------------------------- 1) payload --
+Write-Host "Building the app payload (clean app, no personal data)..."
+$payload = Join-Path $build 'payload'
+New-Item -ItemType Directory -Force -Path (Join-Path $payload 'Assets') | Out-Null
+New-Item -ItemType Directory -Force -Path (Join-Path $payload 'Tools')  | Out-Null
+
+# Never bundle AI handover docs, the dumper, debug symbols, or stale installer
+# executables into the payload (defensive against old-name files lingering).
+$exclude = @('createdump.exe','AGENTS.md','HANDOFF.md','TODO.md','CHANGELOG.md',
+             'InstallSnippingTool.exe','UninstallSnippingTool.exe',
+             'Shutio-setup.exe','UninstallShutio.exe')
+Get-ChildItem -LiteralPath $proj -File |
+    Where-Object { $exclude -notcontains $_.Name -and $_.Extension -ne '.pdb' } |
+    ForEach-Object { Copy-Item -LiteralPath $_.FullName -Destination (Join-Path $payload $_.Name) }
+
+foreach ($a in (Get-ChildItem (Join-Path $proj 'Assets') -Recurse -File)) {
+    $rel = $a.FullName.Substring($proj.Length).TrimStart('\')
+    $t   = Join-Path $payload $rel
+    New-Item -ItemType Directory -Force -Path (Split-Path $t) | Out-Null
+    Copy-Item -LiteralPath $a.FullName -Destination $t
+}
+Copy-Item -LiteralPath (Join-Path $proj 'Tools\ffmpeg.exe') -Destination (Join-Path $payload 'Tools\ffmpeg.exe')
+
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+$zip = Join-Path $build 'app-payload.zip'
+[System.IO.Compression.ZipFile]::CreateFromDirectory($payload, $zip, [System.IO.Compression.CompressionLevel]::Optimal, $false) | Out-Null
+Write-Host ("  payload zip: {0:N1} MB" -f ((Get-Item $zip).Length/1MB))
+
+# ----------------------------------------------------------- 2) uninstaller --
+Write-Host "Building the standalone uninstaller..."
+& $dotnet publish (Join-Path $src 'uninstaller\Uninstaller.csproj') -c Release -r win-x64 --self-contained true `
+    @common -o $build -v q -nologo
+$uninst = Join-Path $build 'UninstallShutio.exe'
+
+# ------------------------------------------------------------- 3) installer --
+Write-Host "Building the offline installer (embedding payload + uninstaller)..."
+& $dotnet publish (Join-Path $src 'installer\Installer.csproj') -c Release -r win-x64 --self-contained true `
+    @common -p:PayloadZip="$zip" -p:UninstExe="$uninst" -o $build -v q -nologo
+$instal = Join-Path $build 'Shutio-setup.exe'
+
+if (-not (Test-Path $instal) -or -not (Test-Path $uninst)) {
+    throw "Build did not produce the expected exe files."
+}
+
+# --------------------------------------------------------------- 4) publish --
+New-Item -ItemType Directory -Force -Path $ShareDir | Out-Null
+Copy-Item -LiteralPath $instal -Destination (Join-Path $ShareDir 'Shutio-setup.exe')   -Force
+Copy-Item -LiteralPath $uninst -Destination (Join-Path $ShareDir 'UninstallShutio.exe') -Force
+
+Write-Host ""
+Write-Host ("  Done. Share folder: {0}" -f $ShareDir)
+Get-ChildItem $ShareDir -File | Select-Object Name, @{N='MB';E={[math]::Round($_.Length/1MB,1)}} | Format-Table -AutoSize

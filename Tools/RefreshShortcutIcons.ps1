@@ -1,1 +1,37 @@
-IyBSZWZyZXNoIHRoZSBEZXNrdG9wICsgU3RhcnQgTWVudSBzaG9ydGN1dHMgZm9yIHRoZSBpbnN0YWxsZWQgU2h1dGlvIGFuZCBudWRnZQojIHRoZSBXaW5kb3dzIHNoZWxsIGljb24gY2FjaGUgc28gdGhlIE5FVyBhcHAuaWNvIHNob3dzIChpbnN0ZWFkIG9mIHRoZSBjYWNoZWQgb25lKS4KJEVycm9yQWN0aW9uUHJlZmVyZW5jZSA9ICdTdG9wJwokaW5zdGFsbCA9ICdJOlxTaHV0aW8nCiR0YXJnZXQgID0gSm9pbi1QYXRoICRpbnN0YWxsICdTaHV0aW8uZXhlJwokaWNvbiAgICA9IChKb2luLVBhdGggJGluc3RhbGwgJ0Fzc2V0c1xhcHAuaWNvJykgKyAnLDAnCgokd3NoID0gTmV3LU9iamVjdCAtQ29tT2JqZWN0IFdTY3JpcHQuU2hlbGwKJHNtICAgPSBKb2luLVBhdGggJGVudjpBUFBEQVRBICdNaWNyb3NvZnRcV2luZG93c1xTdGFydCBNZW51XFByb2dyYW1zXFNodXRpby5sbmsnCiRkZXNrID0gSm9pbi1QYXRoIChbRW52aXJvbm1lbnRdOjpHZXRGb2xkZXJQYXRoKCdEZXNrdG9wJykpICdTaHV0aW8ubG5rJwoKZm9yZWFjaCAoJHBhdGggaW4gQCgkc20sICRkZXNrKSkgewogICAgaWYgKFRlc3QtUGF0aCAkcGF0aCkgewogICAgICAgICRsbmsgPSAkd3NoLkNyZWF0ZVNob3J0Y3V0KCRwYXRoKQogICAgICAgICRsbmsuVGFyZ2V0UGF0aCAgICAgICA9ICR0YXJnZXQKICAgICAgICAkbG5rLldvcmtpbmdEaXJlY3RvcnkgPSAkaW5zdGFsbAogICAgICAgICRsbmsuRGVzY3JpcHRpb24gICAgICA9ICJDYXB0dXJlLCBhbm5vdGF0ZSwgT0NSIGFuZCBzY3JlZW4gcmVjb3JkaW5nIgogICAgICAgICRsbmsuSWNvbkxvY2F0aW9uICAgICA9ICRpY29uCiAgICAgICAgJGxuay5TYXZlKCkKICAgICAgICBXcml0ZS1Ib3N0ICgnUmUtc2F2ZWQgc2hvcnRjdXQ6ICcgKyAkcGF0aCkKICAgIH0gZWxzZSB7CiAgICAgICAgV3JpdGUtSG9zdCAoJyhubyBzaG9ydGN1dCBhdCkgJyArICRwYXRoKQogICAgfQp9CgojIE51ZGdlIHRoZSBzaGVsbCBpY29uIGNhY2hlIGZvciB0aGUgaW5zdGFsbCBmb2xkZXIgYW5kIHRoZSBBc3NldHMgZm9sZGVyLgp0cnkgewogICAgJiAiJGVudjpXSU5ESVJcU3lzdGVtMzJcaWU0dWluaXQuZXhlIiAtc2hvdyAkaW5zdGFsbCB8IE91dC1OdWxsCiAgICAmICIkZW52OldJTkRJUlxTeXN0ZW0zMlxpZTR1aW5pdC5leGUiIC1zaG93IChKb2luLVBhdGggJGluc3RhbGwgJ0Fzc2V0cycpIHwgT3V0LU51bGwKICAgIFdyaXRlLUhvc3QgJ1JlcXVlc3RlZCBhbiBpY29uLWNhY2hlIHJlZnJlc2ggKGllNHVpbml0KS4nCn0gY2F0Y2ggewogICAgV3JpdGUtSG9zdCAoJ2llNHVpbml0IHJlZnJlc2ggZmFpbGVkIChub24tZmF0YWwpOiAnICsgJF8uRXhjZXB0aW9uLk1lc3NhZ2UpCn0KCldyaXRlLUhvc3QgJycKV3JpdGUtSG9zdCAoJ1Nob3J0Y3V0IGljb24gbG9jYXRpb246ICcgKyAkaWNvbikKV3JpdGUtSG9zdCAoJ0ljb24gZmlsZSBleGlzdHM6ICcgKyAoVGVzdC1QYXRoIChKb2luLVBhdGggJGluc3RhbGwgJ0Fzc2V0c1xhcHAuaWNvJykpKQo=
+# Refresh the Desktop + Start Menu shortcuts for the installed Shutio and nudge
+# the Windows shell icon cache so the NEW app.ico shows (instead of the cached one).
+$ErrorActionPreference = 'Stop'
+$install = 'I:\Shutio'
+$target  = Join-Path $install 'Shutio.exe'
+$icon    = (Join-Path $install 'Assets\app.ico') + ',0'
+
+$wsh = New-Object -ComObject WScript.Shell
+$sm   = Join-Path $env:APPDATA 'Microsoft\Windows\Start Menu\Programs\Shutio.lnk'
+$desk = Join-Path ([Environment]::GetFolderPath('Desktop')) 'Shutio.lnk'
+
+foreach ($path in @($sm, $desk)) {
+    if (Test-Path $path) {
+        $lnk = $wsh.CreateShortcut($path)
+        $lnk.TargetPath       = $target
+        $lnk.WorkingDirectory = $install
+        $lnk.Description      = "Capture, annotate, OCR and screen recording"
+        $lnk.IconLocation     = $icon
+        $lnk.Save()
+        Write-Host ('Re-saved shortcut: ' + $path)
+    } else {
+        Write-Host ('(no shortcut at) ' + $path)
+    }
+}
+
+# Nudge the shell icon cache for the install folder and the Assets folder.
+try {
+    & "$env:WINDIR\System32\ie4uinit.exe" -show $install | Out-Null
+    & "$env:WINDIR\System32\ie4uinit.exe" -show (Join-Path $install 'Assets') | Out-Null
+    Write-Host 'Requested an icon-cache refresh (ie4uinit).'
+} catch {
+    Write-Host ('ie4uinit refresh failed (non-fatal): ' + $_.Exception.Message)
+}
+
+Write-Host ''
+Write-Host ('Shortcut icon location: ' + $icon)
+Write-Host ('Icon file exists: ' + (Test-Path (Join-Path $install 'Assets\app.ico')))

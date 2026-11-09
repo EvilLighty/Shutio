@@ -1,1 +1,47 @@
-JEVycm9yQWN0aW9uUHJlZmVyZW5jZSA9ICdTdG9wJwokZGV2ID0gJ0k6XERldlRvb2xzJzsgJGVudjpET1RORVRfQ0xJX0hPTUUgPSAiJGRldlxkb3RuZXQtaG9tZSI7ICRlbnY6TlVHRVRfUEFDS0FHRVMgPSAiJGRldlxudWdldCIKJGRvdG5ldCA9ICIkZGV2XGRvdG5ldFxkb3RuZXQuZXhlIgokYXBwID0gJ0k6XEFwcHNcU25pcHBpbmdUb29sJwoKV3JpdGUtSG9zdCAoJ0JFRk9SRTogezB9IHRvcC1sZXZlbCBmaWxlcyBpbiB7MX0nIC1mIChHZXQtQ2hpbGRJdGVtICRhcHAgLUZpbGUpLkNvdW50LCAkYXBwKQoKIyAxKSBSZW1vdmUgc3RhbGUgbXVsdGktZmlsZSBsZWZ0b3ZlcnM6IHRvcC1sZXZlbCBydW50aW1lIERMTHMgKyBnZW5lcmF0ZWQganNvbi4KIyAgICAoT25seSB0b3AtbGV2ZWwgZmlsZXMgYXJlIHRvdWNoZWQ7IFNvdXJjZVwsIEluc3RhbGxcLCBUb29sc1wsIEFzc2V0c1wgYXJlIHN1YmZvbGRlcnMgYW5kIHVudG91Y2hlZC4pCiRkbGxzICA9IEAoR2V0LUNoaWxkSXRlbSAkYXBwIC1GaWxlIC1GaWx0ZXIgJyouZGxsJykKJGpzb25zID0gQChHZXQtQ2hpbGRJdGVtICRhcHAgLUZpbGUgfCBXaGVyZS1PYmplY3QgeyAkXy5OYW1lIC1saWtlICdTaHV0aW8uZGVwcy5qc29uJyAtb3IgJF8uTmFtZSAtbGlrZSAnU2h1dGlvLnJ1bnRpbWVjb25maWcuanNvbicgfSkKV3JpdGUtSG9zdCAoJ3JlbW92aW5nIHswfSBzdGFsZSB0b3AtbGV2ZWwgLmRsbCArIHsxfSBqc29uJyAtZiAkZGxscy5Db3VudCwgJGpzb25zLkNvdW50KQokZGxscyAgfCBSZW1vdmUtSXRlbSAtRm9yY2UKJGpzb25zIHwgUmVtb3ZlLUl0ZW0gLUZvcmNlCgojIDIpIFB1Ymxpc2ggc2luZ2xlLWZpbGUgaW50byB0aGUgYXBwIGZvbGRlci4KV3JpdGUtSG9zdCAnPT09IFBVQkxJU0ggc2luZ2xlLWZpbGUgaW50byBhcHAgZm9sZGVyID09PScKJiAkZG90bmV0IHB1Ymxpc2ggJ0k6XEFwcHNcU25pcHBpbmdUb29sXFNvdXJjZVxTbmlwcGluZ1Rvb2xcU25pcHBpbmdUb29sLmNzcHJvaicgYAogIC1jIFJlbGVhc2UgLXIgd2luLXg2NCAtLXNlbGYtY29udGFpbmVkIHRydWUgLW8gJGFwcCBgCiAgLXA6RGVidWdUeXBlPU5vbmUgLXA6RGVidWdTeW1ib2xzPWZhbHNlIC12IHEgLW5vbG9nbwoKIyAzKSBCZWx0LWFuZC1zdXNwZW5kZXJzIGNsZWFudXAgb2YgYW55IGxvb3NlIHJ1bnRpbWUgRExMcy9qc29uLgpHZXQtQ2hpbGRJdGVtICRhcHAgLUZpbGUgLUZpbHRlciAnKi5kbGwnIHwgUmVtb3ZlLUl0ZW0gLUZvcmNlCkdldC1DaGlsZEl0ZW0gJGFwcCAtRmlsZSB8IFdoZXJlLU9iamVjdCB7ICRfLk5hbWUgLWxpa2UgJ1NodXRpby5kZXBzLmpzb24nIC1vciAkXy5OYW1lIC1saWtlICdTaHV0aW8ucnVudGltZWNvbmZpZy5qc29uJyB9IHwgUmVtb3ZlLUl0ZW0gLUZvcmNlCgpXcml0ZS1Ib3N0ICcnCldyaXRlLUhvc3QgJz09PSBBRlRFUjogYXBwIGZvbGRlciB0b3AtbGV2ZWwgPT09JwpHZXQtQ2hpbGRJdGVtICRhcHAgLUZpbGUgfCBTb3J0LU9iamVjdCBMZW5ndGggLURlc2NlbmRpbmcgfCBGb3JFYWNoLU9iamVjdCB7CiAgICBXcml0ZS1Ib3N0ICgnICB7MCwtMzB9IHsxLDk6TjJ9IE1CJyAtZiAkXy5OYW1lLCAoJF8uTGVuZ3RoLzFNQikpCn0KV3JpdGUtSG9zdCAoJyAgZm9sZGVyczogJyArICgoR2V0LUNoaWxkSXRlbSAkYXBwIC1EaXJlY3RvcnkgfCBGb3JFYWNoLU9iamVjdCB7ICRfLk5hbWUgfSkgLWpvaW4gJywgJykpCgpXcml0ZS1Ib3N0ICcnCldyaXRlLUhvc3QgJz09PSBTRUxGLVRFU1QgKGFwcCBmb2xkZXIpID09PScKJHAgPSBTdGFydC1Qcm9jZXNzIC1GaWxlUGF0aCAoSm9pbi1QYXRoICRhcHAgJ1NodXRpby5leGUnKSAtQXJndW1lbnRMaXN0ICctLXNlbGZ0ZXN0JyAtV29ya2luZ0RpcmVjdG9yeSAkYXBwIC1XYWl0IC1QYXNzVGhydSAtV2luZG93U3R5bGUgSGlkZGVuCldyaXRlLUhvc3QgKCdzZWxmLXRlc3QgZXhpdDogJyArICRwLkV4aXRDb2RlKQpHZXQtQ29udGVudCAoSm9pbi1QYXRoICRhcHAgJ0RhdGFcVGVzdHNcc2VsZnRlc3QtcmVwb3J0LnR4dCcpIHwgV2hlcmUtT2JqZWN0IHsgJF8gLW1hdGNoICdTdW1tYXJ5OnxFeGl0IGNvZGU6JyB9CgpXcml0ZS1Ib3N0ICcnCldyaXRlLUhvc3QgJz09PSBHVUkgU01PS0UgVEVTVCAoYXBwIGZvbGRlcikgPT09JwpTdG9wLVByb2Nlc3MgLU5hbWUgU2h1dGlvIC1Gb3JjZSAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZQpTdGFydC1TbGVlcCAtTWlsbGlzZWNvbmRzIDYwMAokcHJvYyA9IFN0YXJ0LVByb2Nlc3MgLUZpbGVQYXRoIChKb2luLVBhdGggJGFwcCAnU2h1dGlvLmV4ZScpIC1Xb3JraW5nRGlyZWN0b3J5ICRhcHAgLVBhc3NUaHJ1ClN0YXJ0LVNsZWVwIC1TZWNvbmRzIDYKaWYgKCRwcm9jLkhhc0V4aXRlZCkgeyBXcml0ZS1Ib3N0ICgnQVBQIEVYSVRFRCBlYXJseSAoZXhpdCAnICsgJHByb2MuRXhpdENvZGUgKyAnKScpIH0gZWxzZSB7IFdyaXRlLUhvc3QgJ0FQUCBhbGl2ZSA2cyAtPiBXUEYgT0snIH0KU3RvcC1Qcm9jZXNzIC1OYW1lIFNodXRpbyAtRm9yY2UgLUVycm9yQWN0aW9uIFNpbGVudGx5Q29udGludWUKV3JpdGUtSG9zdCAnZG9uZScK
+$ErrorActionPreference = 'Stop'
+$dev = 'I:\DevTools'; $env:DOTNET_CLI_HOME = "$dev\dotnet-home"; $env:NUGET_PACKAGES = "$dev\nuget"
+$dotnet = "$dev\dotnet\dotnet.exe"
+$app = 'I:\Apps\SnippingTool'
+
+Write-Host ('BEFORE: {0} top-level files in {1}' -f (Get-ChildItem $app -File).Count, $app)
+
+# 1) Remove stale multi-file leftovers: top-level runtime DLLs + generated json.
+#    (Only top-level files are touched; Source\, Install\, Tools\, Assets\ are subfolders and untouched.)
+$dlls  = @(Get-ChildItem $app -File -Filter '*.dll')
+$jsons = @(Get-ChildItem $app -File | Where-Object { $_.Name -like 'Shutio.deps.json' -or $_.Name -like 'Shutio.runtimeconfig.json' })
+Write-Host ('removing {0} stale top-level .dll + {1} json' -f $dlls.Count, $jsons.Count)
+$dlls  | Remove-Item -Force
+$jsons | Remove-Item -Force
+
+# 2) Publish single-file into the app folder.
+Write-Host '=== PUBLISH single-file into app folder ==='
+& $dotnet publish 'I:\Apps\SnippingTool\Source\SnippingTool\SnippingTool.csproj' `
+  -c Release -r win-x64 --self-contained true -o $app `
+  -p:DebugType=None -p:DebugSymbols=false -v q -nologo
+
+# 3) Belt-and-suspenders cleanup of any loose runtime DLLs/json.
+Get-ChildItem $app -File -Filter '*.dll' | Remove-Item -Force
+Get-ChildItem $app -File | Where-Object { $_.Name -like 'Shutio.deps.json' -or $_.Name -like 'Shutio.runtimeconfig.json' } | Remove-Item -Force
+
+Write-Host ''
+Write-Host '=== AFTER: app folder top-level ==='
+Get-ChildItem $app -File | Sort-Object Length -Descending | ForEach-Object {
+    Write-Host ('  {0,-30} {1,9:N2} MB' -f $_.Name, ($_.Length/1MB))
+}
+Write-Host ('  folders: ' + ((Get-ChildItem $app -Directory | ForEach-Object { $_.Name }) -join ', '))
+
+Write-Host ''
+Write-Host '=== SELF-TEST (app folder) ==='
+$p = Start-Process -FilePath (Join-Path $app 'Shutio.exe') -ArgumentList '--selftest' -WorkingDirectory $app -Wait -PassThru -WindowStyle Hidden
+Write-Host ('self-test exit: ' + $p.ExitCode)
+Get-Content (Join-Path $app 'Data\Tests\selftest-report.txt') | Where-Object { $_ -match 'Summary:|Exit code:' }
+
+Write-Host ''
+Write-Host '=== GUI SMOKE TEST (app folder) ==='
+Stop-Process -Name Shutio -Force -ErrorAction SilentlyContinue
+Start-Sleep -Milliseconds 600
+$proc = Start-Process -FilePath (Join-Path $app 'Shutio.exe') -WorkingDirectory $app -PassThru
+Start-Sleep -Seconds 6
+if ($proc.HasExited) { Write-Host ('APP EXITED early (exit ' + $proc.ExitCode + ')') } else { Write-Host 'APP alive 6s -> WPF OK' }
+Stop-Process -Name Shutio -Force -ErrorAction SilentlyContinue
+Write-Host 'done'

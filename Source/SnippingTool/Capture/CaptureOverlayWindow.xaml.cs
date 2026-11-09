@@ -1,1 +1,244 @@
-dXNpbmcgU3lzdGVtLkRyYXdpbmc7CnVzaW5nIFN5c3RlbS5XaW5kb3dzOwp1c2luZyBTeXN0ZW0uV2luZG93cy5Db250cm9sczsKdXNpbmcgU3lzdGVtLldpbmRvd3MuSW5wdXQ7CnVzaW5nIFN5c3RlbS5XaW5kb3dzLkludGVyb3A7CnVzaW5nIFN5c3RlbS5XaW5kb3dzLk1lZGlhLkltYWdpbmc7CnVzaW5nIFNuaXBwaW5nVG9vbC5Db3JlOwp1c2luZyBDYXB0dXJlTW9kZSA9IFNuaXBwaW5nVG9vbC5Db3JlLkNhcHR1cmVNb2RlOwp1c2luZyBLZXlFdmVudEFyZ3MgPSBTeXN0ZW0uV2luZG93cy5JbnB1dC5LZXlFdmVudEFyZ3M7CnVzaW5nIFBvaW50ID0gU3lzdGVtLldpbmRvd3MuUG9pbnQ7CgpuYW1lc3BhY2UgU25pcHBpbmdUb29sLkNhcHR1cmU7CgpwdWJsaWMgcGFydGlhbCBjbGFzcyBDYXB0dXJlT3ZlcmxheVdpbmRvdyA6IFdpbmRvdwp7CiAgICBwcml2YXRlIHJlYWRvbmx5IEJpdG1hcCBfZnJvemVuOwogICAgcHJpdmF0ZSByZWFkb25seSBSZWN0YW5nbGUgX3ZpcnR1YWxTY3JlZW47CiAgICBwcml2YXRlIHJlYWRvbmx5IExpc3Q8V2luZG93SW5mbz4gX3dpbmRvd3M7CiAgICBwcml2YXRlIGRvdWJsZSBfc2NhbGUgPSAxLjA7CiAgICBwcml2YXRlIENhcHR1cmVNb2RlIF9tb2RlOwogICAgcHJpdmF0ZSBib29sIF9jb21taXR0ZWQ7CiAgICBwcml2YXRlIEludDMyUmVjdCBfbGFzdENyb3A7CgogICAgcHVibGljIENhcHR1cmVSZXN1bHQ/IFNlbGVjdGVkUmVzdWx0IHsgZ2V0OyBwcml2YXRlIHNldDsgfQogICAgcHVibGljIGJvb2wgUmVnaW9uT25seSB7IGdldDsgfQoKICAgIHB1YmxpYyBDYXB0dXJlT3ZlcmxheVdpbmRvdyhCaXRtYXAgZnJvemVuLCBSZWN0YW5nbGUgdmlydHVhbFNjcmVlbiwgQ2FwdHVyZU1vZGUgbW9kZSwgYm9vbCByZWdpb25Pbmx5ID0gZmFsc2UpCiAgICB7CiAgICAgICAgSW5pdGlhbGl6ZUNvbXBvbmVudCgpOwogICAgICAgIF9mcm96ZW4gPSBmcm96ZW47CiAgICAgICAgX3ZpcnR1YWxTY3JlZW4gPSB2aXJ0dWFsU2NyZWVuOwogICAgICAgIF9tb2RlID0gbW9kZTsKICAgICAgICBSZWdpb25Pbmx5ID0gcmVnaW9uT25seTsKICAgICAgICBfd2luZG93cyA9IENhcHR1cmVTZXJ2aWNlLkVudW1lcmF0ZVdpbmRvd3MoKTsKICAgICAgICBTdXJmYWNlLlJlZ2lvbk9ubHkgPSByZWdpb25Pbmx5OwogICAgICAgIFNvdXJjZUluaXRpYWxpemVkICs9IE9uU291cmNlSW5pdGlhbGl6ZWQ7CiAgICAgICAgTG9hZGVkICs9IE9uTG9hZGVkOwogICAgICAgIFByZXZpZXdLZXlEb3duICs9IE9uUHJldmlld0tleURvd247CiAgICAgICAgU3VyZmFjZS5Db21taXR0ZWQgKz0gT25Db21taXR0ZWQ7CiAgICAgICAgU3VyZmFjZS5DYW5jZWxsZWQgKz0gKF8sIF8pID0+IENhbmNlbFNlbGVjdGlvbigpOwogICAgICAgIFN1cmZhY2UuQ3Vyc29yTW92ZWQgKz0gT25DdXJzb3JNb3ZlZDsKICAgICAgICBUb29sUmVjdC5DbGljayArPSAoXywgXykgPT4gU2V0TW9kZShDYXB0dXJlTW9kZS5SZWN0YW5nbGUpOwogICAgICAgIFRvb2xGcmVlZm9ybS5DbGljayArPSAoXywgXykgPT4gU2V0TW9kZShDYXB0dXJlTW9kZS5GcmVlZm9ybSk7CiAgICAgICAgVG9vbFdpbmRvdy5DbGljayArPSAoXywgXykgPT4gU2V0TW9kZShDYXB0dXJlTW9kZS5XaW5kb3cpOwogICAgICAgIFRvb2xGdWxsc2NyZWVuLkNsaWNrICs9IChfLCBfKSA9PiBTZXRNb2RlKENhcHR1cmVNb2RlLkZ1bGxzY3JlZW4pOwogICAgICAgIFRvb2xNb25pdG9yLkNsaWNrICs9IChfLCBfKSA9PiBTZXRNb2RlKENhcHR1cmVNb2RlLk1vbml0b3IpOwogICAgICAgIENsb3NlQnV0dG9uLkNsaWNrICs9IChfLCBfKSA9PiBDYW5jZWxTZWxlY3Rpb24oKTsKICAgIH0KCiAgICBwcml2YXRlIHZvaWQgT25Tb3VyY2VJbml0aWFsaXplZChvYmplY3Q/IHNlbmRlciwgRXZlbnRBcmdzIGUpCiAgICB7CiAgICAgICAgdHJ5CiAgICAgICAgewogICAgICAgICAgICB2YXIgaHduZCA9IG5ldyBXaW5kb3dJbnRlcm9wSGVscGVyKHRoaXMpLkhhbmRsZTsKICAgICAgICAgICAgaW50IGNvcm5lcnMgPSAxOyAvLyBEV01XQ1BfRE9OT1RST1VORAogICAgICAgICAgICBOYXRpdmVNZXRob2RzLkR3bVNldFdpbmRvd0F0dHJpYnV0ZShod25kLCBOYXRpdmVNZXRob2RzLkRXTVdBX1dJTkRPV19DT1JORVJfUFJFRkVSRU5DRSwgcmVmIGNvcm5lcnMsIHNpemVvZihpbnQpKTsKICAgICAgICAgICAgaW50IGRhcmsgPSAxOwogICAgICAgICAgICBOYXRpdmVNZXRob2RzLkR3bVNldFdpbmRvd0F0dHJpYnV0ZShod25kLCBOYXRpdmVNZXRob2RzLkRXTVdBX1VTRV9JTU1FUlNJVkVfREFSS19NT0RFLCByZWYgZGFyaywgc2l6ZW9mKGludCkpOwogICAgICAgIH0KICAgICAgICBjYXRjaCB7IH0KICAgIH0KCiAgICBwcml2YXRlIHZvaWQgT25Mb2FkZWQob2JqZWN0IHNlbmRlciwgUm91dGVkRXZlbnRBcmdzIGUpCiAgICB7CiAgICAgICAgdHJ5CiAgICAgICAgewogICAgICAgICAgICB2YXIgaHduZCA9IG5ldyBXaW5kb3dJbnRlcm9wSGVscGVyKHRoaXMpLkhhbmRsZTsKICAgICAgICAgICAgdWludCBkcGkgPSBOYXRpdmVNZXRob2RzLkdldERwaUZvcldpbmRvdyhod25kKTsKICAgICAgICAgICAgX3NjYWxlID0gZHBpID4gMCA/IGRwaSAvIDk2LjAgOiAxLjA7CgogICAgICAgICAgICBMZWZ0ID0gX3ZpcnR1YWxTY3JlZW4uTGVmdCAvIF9zY2FsZTsKICAgICAgICAgICAgVG9wID0gX3ZpcnR1YWxTY3JlZW4uVG9wIC8gX3NjYWxlOwogICAgICAgICAgICBXaWR0aCA9IF92aXJ0dWFsU2NyZWVuLldpZHRoIC8gX3NjYWxlOwogICAgICAgICAgICBIZWlnaHQgPSBfdmlydHVhbFNjcmVlbi5IZWlnaHQgLyBfc2NhbGU7CiAgICAgICAgICAgIFVwZGF0ZUxheW91dCgpOwogICAgICAgICAgICBOYXRpdmVNZXRob2RzLlNldFdpbmRvd1Bvcyhod25kLCBOYXRpdmVNZXRob2RzLkhXTkRfVE9QTU9TVCwKICAgICAgICAgICAgICAgIF92aXJ0dWFsU2NyZWVuLkxlZnQsIF92aXJ0dWFsU2NyZWVuLlRvcCwgX3ZpcnR1YWxTY3JlZW4uV2lkdGgsIF92aXJ0dWFsU2NyZWVuLkhlaWdodCwKICAgICAgICAgICAgICAgIE5hdGl2ZU1ldGhvZHMuU1dQX05PQUNUSVZBVEUgfCBOYXRpdmVNZXRob2RzLlNXUF9TSE9XV0lORE9XKTsKCiAgICAgICAgICAgIFN1cmZhY2UuU2V0Q2FwdHVyZWREZXNrdG9wKF9mcm96ZW4sIF92aXJ0dWFsU2NyZWVuLCBfc2NhbGUsIF9tb2RlLCBfd2luZG93cyk7CiAgICAgICAgICAgIFNldE1vZGUoX21vZGUpOwogICAgICAgICAgICBQb3NpdGlvbkNocm9tZSgpOwogICAgICAgICAgICBVcGRhdGVMYXlvdXQoKTsKICAgICAgICAgICAgUG9zaXRpb25DaHJvbWUoKTsKICAgICAgICAgICAgQWN0aXZhdGUoKTsKICAgICAgICAgICAgRm9jdXMoKTsKICAgICAgICAgICAgS2V5Ym9hcmQuRm9jdXModGhpcyk7CiAgICAgICAgICAgIExvZ2dlci5JbmZvKCQiQ2FwdHVyZSBvdmVybGF5IHNob3duIG92ZXIge192aXJ0dWFsU2NyZWVuLldpZHRofXh7X3ZpcnR1YWxTY3JlZW4uSGVpZ2h0fSBhdCB7X3ZpcnR1YWxTY3JlZW4uWH0se192aXJ0dWFsU2NyZWVuLll9IChkcGkge2RwaX0pLiIpOwogICAgICAgIH0KICAgICAgICBjYXRjaCAoRXhjZXB0aW9uIGV4KQogICAgICAgIHsKICAgICAgICAgICAgTG9nZ2VyLkVycm9yKCJDb3VsZCBub3QgaW5pdGlhbGlzZSBjYXB0dXJlIG92ZXJsYXkiLCBleCk7CiAgICAgICAgICAgIENsb3NlKCk7CiAgICAgICAgfQogICAgfQoKICAgIHByaXZhdGUgdm9pZCBQb3NpdGlvbkNocm9tZSgpCiAgICB7CiAgICAgICAgdmFyIGN1cnNvclNjcmVlbiA9IG5ldyBQb2ludChfdmlydHVhbFNjcmVlbi5MZWZ0ICsgX3ZpcnR1YWxTY3JlZW4uV2lkdGggLyAyLjAsIF92aXJ0dWFsU2NyZWVuLlRvcCArIDYwKTsKICAgICAgICBpZiAoTmF0aXZlTWV0aG9kcy5HZXRDdXJzb3JQb3NpdGlvbihvdXQgdmFyIGN1cnNvcikpIGN1cnNvclNjcmVlbiA9IG5ldyBQb2ludChjdXJzb3IuWCwgY3Vyc29yLlkpOwogICAgICAgIHZhciBtb25pdG9yID0gQ2FwdHVyZVNlcnZpY2UuTW9uaXRvckF0KG5ldyBTeXN0ZW0uRHJhd2luZy5Qb2ludCgoaW50KWN1cnNvclNjcmVlbi5YLCAoaW50KWN1cnNvclNjcmVlbi5ZKSk7CgogICAgICAgIGRvdWJsZSBwYW5lbFdpZHRoID0gVG9vbGJhclBhbmVsLkFjdHVhbFdpZHRoID4gMCA/IFRvb2xiYXJQYW5lbC5BY3R1YWxXaWR0aCA6IFRvb2xiYXJQYW5lbC5EZXNpcmVkU2l6ZS5XaWR0aDsKICAgICAgICBpZiAocGFuZWxXaWR0aCA8PSAwKSBwYW5lbFdpZHRoID0gMzMwOwogICAgICAgIGRvdWJsZSBtb25pdG9yQ2VudGVyTG9jYWwgPSAobW9uaXRvci5Cb3VuZHMuTGVmdCAtIF92aXJ0dWFsU2NyZWVuLkxlZnQgKyBtb25pdG9yLkJvdW5kcy5XaWR0aCAvIDIuMCkgLyBfc2NhbGU7CiAgICAgICAgZG91YmxlIHRvcExvY2FsID0gKG1vbml0b3IuQm91bmRzLlRvcCAtIF92aXJ0dWFsU2NyZWVuLlRvcCkgLyBfc2NhbGUgKyAxNjsKICAgICAgICBkb3VibGUgbGVmdCA9IE1hdGguQ2xhbXAobW9uaXRvckNlbnRlckxvY2FsIC0gcGFuZWxXaWR0aCAvIDIsIDgsIE1hdGguTWF4KDgsIEFjdHVhbFdpZHRoIC0gcGFuZWxXaWR0aCAtIDgpKTsKICAgICAgICBUb29sYmFyUGFuZWwuTWFyZ2luID0gbmV3IFRoaWNrbmVzcyhsZWZ0LCBNYXRoLk1heCg4LCB0b3BMb2NhbCksIDAsIDApOwoKICAgICAgICBkb3VibGUgYm90dG9tR2FwID0gKF92aXJ0dWFsU2NyZWVuLkJvdHRvbSAtIG1vbml0b3IuQm91bmRzLkJvdHRvbSkgLyBfc2NhbGUgKyAyNjsKICAgICAgICBIaW50UGFuZWwuTWFyZ2luID0gbmV3IFRoaWNrbmVzcygwLCAwLCAwLCBNYXRoLk1heCgyMCwgYm90dG9tR2FwKSk7CiAgICB9CgogICAgcHJpdmF0ZSB2b2lkIFNldE1vZGUoQ2FwdHVyZU1vZGUgbW9kZSkKICAgIHsKICAgICAgICBfbW9kZSA9IG1vZGU7CiAgICAgICAgU3VyZmFjZS5Nb2RlID0gbW9kZTsKICAgICAgICBUb29sUmVjdC5Jc0NoZWNrZWQgPSBtb2RlID09IENhcHR1cmVNb2RlLlJlY3RhbmdsZTsKICAgICAgICBUb29sRnJlZWZvcm0uSXNDaGVja2VkID0gbW9kZSA9PSBDYXB0dXJlTW9kZS5GcmVlZm9ybTsKICAgICAgICBUb29sV2luZG93LklzQ2hlY2tlZCA9IG1vZGUgPT0gQ2FwdHVyZU1vZGUuV2luZG93OwogICAgICAgIFRvb2xGdWxsc2NyZWVuLklzQ2hlY2tlZCA9IG1vZGUgPT0gQ2FwdHVyZU1vZGUuRnVsbHNjcmVlbjsKICAgICAgICBUb29sTW9uaXRvci5Jc0NoZWNrZWQgPSBtb2RlID09IENhcHR1cmVNb2RlLk1vbml0b3I7CiAgICAgICAgSGludFRleHQuVGV4dCA9IG1vZGUgc3dpdGNoCiAgICAgICAgewogICAgICAgICAgICBDYXB0dXJlTW9kZS5SZWN0YW5nbGUgPT4gIkRyYWcgdG8gc2VsZWN0IGFuIGFyZWEiLAogICAgICAgICAgICBDYXB0dXJlTW9kZS5GcmVlZm9ybSA9PiAiRHJhdyBhcm91bmQgdGhlIGFyZWEgeW91IHdhbnQgdG8gY2FwdHVyZSIsCiAgICAgICAgICAgIENhcHR1cmVNb2RlLldpbmRvdyA9PiAiQ2xpY2sgdGhlIHdpbmRvdyB5b3Ugd2FudCB0byBjYXB0dXJlIiwKICAgICAgICAgICAgQ2FwdHVyZU1vZGUuRnVsbHNjcmVlbiA9PiAiQ2xpY2sgdG8gY2FwdHVyZSB0aGUgZW50aXJlIGRlc2t0b3AiLAogICAgICAgICAgICBDYXB0dXJlTW9kZS5Nb25pdG9yID0+ICJDbGljayB0aGUgZGlzcGxheSB5b3Ugd2FudCB0byBjYXB0dXJlIiwKICAgICAgICAgICAgXyA9PiAiU2VsZWN0IGFuIGFyZWEiCiAgICAgICAgfTsKICAgICAgICBIaWRlTG91cGUoKTsKICAgIH0KCiAgICBwcml2YXRlIHZvaWQgT25QcmV2aWV3S2V5RG93bihvYmplY3Qgc2VuZGVyLCBLZXlFdmVudEFyZ3MgZSkKICAgIHsKICAgICAgICBzd2l0Y2ggKGUuS2V5KQogICAgICAgIHsKICAgICAgICAgICAgY2FzZSBLZXkuRXNjYXBlOgogICAgICAgICAgICAgICAgQ2FuY2VsU2VsZWN0aW9uKCk7CiAgICAgICAgICAgICAgICBlLkhhbmRsZWQgPSB0cnVlOwogICAgICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgICAgIGNhc2UgS2V5LkQxOgogICAgICAgICAgICBjYXNlIEtleS5OdW1QYWQxOgogICAgICAgICAgICAgICAgU2V0TW9kZShDYXB0dXJlTW9kZS5SZWN0YW5nbGUpOwogICAgICAgICAgICAgICAgZS5IYW5kbGVkID0gdHJ1ZTsKICAgICAgICAgICAgICAgIGJyZWFrOwogICAgICAgICAgICBjYXNlIEtleS5EMjoKICAgICAgICAgICAgY2FzZSBLZXkuTnVtUGFkMjoKICAgICAgICAgICAgICAgIFNldE1vZGUoQ2FwdHVyZU1vZGUuRnJlZWZvcm0pOwogICAgICAgICAgICAgICAgZS5IYW5kbGVkID0gdHJ1ZTsKICAgICAgICAgICAgICAgIGJyZWFrOwogICAgICAgICAgICBjYXNlIEtleS5EMzoKICAgICAgICAgICAgY2FzZSBLZXkuTnVtUGFkMzoKICAgICAgICAgICAgICAgIFNldE1vZGUoQ2FwdHVyZU1vZGUuV2luZG93KTsKICAgICAgICAgICAgICAgIGUuSGFuZGxlZCA9IHRydWU7CiAgICAgICAgICAgICAgICBicmVhazsKICAgICAgICAgICAgY2FzZSBLZXkuRDQ6CiAgICAgICAgICAgIGNhc2UgS2V5Lk51bVBhZDQ6CiAgICAgICAgICAgICAgICBTZXRNb2RlKENhcHR1cmVNb2RlLkZ1bGxzY3JlZW4pOwogICAgICAgICAgICAgICAgZS5IYW5kbGVkID0gdHJ1ZTsKICAgICAgICAgICAgICAgIGJyZWFrOwogICAgICAgICAgICBjYXNlIEtleS5ENToKICAgICAgICAgICAgY2FzZSBLZXkuTnVtUGFkNToKICAgICAgICAgICAgICAgIFNldE1vZGUoQ2FwdHVyZU1vZGUuTW9uaXRvcik7CiAgICAgICAgICAgICAgICBlLkhhbmRsZWQgPSB0cnVlOwogICAgICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgfQogICAgfQoKICAgIHByaXZhdGUgdm9pZCBPbkNvbW1pdHRlZChvYmplY3Q/IHNlbmRlciwgQ2FwdHVyZVJlc3VsdCBlKQogICAgewogICAgICAgIGlmIChfY29tbWl0dGVkKSByZXR1cm47CiAgICAgICAgX2NvbW1pdHRlZCA9IHRydWU7CiAgICAgICAgU2VsZWN0ZWRSZXN1bHQgPSBlOwogICAgICAgIEhpZGVMb3VwZSgpOwogICAgICAgIENsb3NlKCk7CiAgICB9CgogICAgcHJpdmF0ZSB2b2lkIENhbmNlbFNlbGVjdGlvbigpCiAgICB7CiAgICAgICAgaWYgKF9jb21taXR0ZWQpIHJldHVybjsKICAgICAgICBfY29tbWl0dGVkID0gdHJ1ZTsKICAgICAgICBTZWxlY3RlZFJlc3VsdCA9IG51bGw7CiAgICAgICAgSGlkZUxvdXBlKCk7CiAgICAgICAgQ2xvc2UoKTsKICAgIH0KCiAgICBwcml2YXRlIHZvaWQgT25DdXJzb3JNb3ZlZChvYmplY3Q/IHNlbmRlciwgKFBvaW50IFNjcmVlblBvaW50LCBib29sIFNob3cpIGUpCiAgICB7CiAgICAgICAgaWYgKCFlLlNob3cpCiAgICAgICAgewogICAgICAgICAgICBIaWRlTG91cGUoKTsKICAgICAgICAgICAgcmV0dXJuOwogICAgICAgIH0KICAgICAgICB2YXIgc291cmNlID0gU3VyZmFjZS5Gcm96ZW5Tb3VyY2U7CiAgICAgICAgaWYgKHNvdXJjZSA9PSBudWxsKSByZXR1cm47CgogICAgICAgIGludCBzeCA9IChpbnQpTWF0aC5Sb3VuZChlLlNjcmVlblBvaW50LlgpIC0gX3ZpcnR1YWxTY3JlZW4uTGVmdDsKICAgICAgICBpbnQgc3kgPSAoaW50KU1hdGguUm91bmQoZS5TY3JlZW5Qb2ludC5ZKSAtIF92aXJ0dWFsU2NyZWVuLlRvcDsKICAgICAgICBjb25zdCBpbnQgc2FtcGxlID0gMTY7CiAgICAgICAgaW50IGxlZnQgPSBNYXRoLkNsYW1wKHN4IC0gc2FtcGxlIC8gMiwgMCwgTWF0aC5NYXgoMCwgX2Zyb3plbi5XaWR0aCAtIHNhbXBsZSkpOwogICAgICAgIGludCB0b3AgPSBNYXRoLkNsYW1wKHN5IC0gc2FtcGxlIC8gMiwgMCwgTWF0aC5NYXgoMCwgX2Zyb3plbi5IZWlnaHQgLSBzYW1wbGUpKTsKICAgICAgICBpbnQgd2lkdGggPSBNYXRoLk1pbihzYW1wbGUsIF9mcm96ZW4uV2lkdGggLSBsZWZ0KTsKICAgICAgICBpbnQgaGVpZ2h0ID0gTWF0aC5NaW4oc2FtcGxlLCBfZnJvemVuLkhlaWdodCAtIHRvcCk7CiAgICAgICAgaWYgKHdpZHRoIDw9IDAgfHwgaGVpZ2h0IDw9IDApIHJldHVybjsKCiAgICAgICAgdmFyIGNyb3AgPSBuZXcgSW50MzJSZWN0KGxlZnQsIHRvcCwgd2lkdGgsIGhlaWdodCk7CiAgICAgICAgaWYgKGNyb3AgIT0gX2xhc3RDcm9wKQogICAgICAgIHsKICAgICAgICAgICAgdHJ5CiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIHZhciBjcm9wcGVkID0gbmV3IENyb3BwZWRCaXRtYXAoc291cmNlLCBjcm9wKTsKICAgICAgICAgICAgICAgIGNyb3BwZWQuRnJlZXplKCk7CiAgICAgICAgICAgICAgICBMb3VwZUltYWdlLlNvdXJjZSA9IGNyb3BwZWQ7CiAgICAgICAgICAgICAgICBfbGFzdENyb3AgPSBjcm9wOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGNhdGNoIHsgfQogICAgICAgIH0KCiAgICAgICAgZG91YmxlIGxvY2FsWCA9IChlLlNjcmVlblBvaW50LlggLSBfdmlydHVhbFNjcmVlbi5MZWZ0KSAvIF9zY2FsZTsKICAgICAgICBkb3VibGUgbG9jYWxZID0gKGUuU2NyZWVuUG9pbnQuWSAtIF92aXJ0dWFsU2NyZWVuLlRvcCkgLyBfc2NhbGU7CiAgICAgICAgZG91YmxlIHB4ID0gbG9jYWxYICsgMjY7CiAgICAgICAgZG91YmxlIHB5ID0gbG9jYWxZICsgMjY7CiAgICAgICAgaWYgKHB4ICsgMTIwID4gQWN0dWFsV2lkdGgpIHB4ID0gbG9jYWxYIC0gMTI2OwogICAgICAgIGlmIChweSArIDE0MCA+IEFjdHVhbEhlaWdodCkgcHkgPSBsb2NhbFkgLSAxMzQ7CiAgICAgICAgcHggPSBNYXRoLkNsYW1wKHB4LCA0LCBNYXRoLk1heCg0LCBBY3R1YWxXaWR0aCAtIDExMikpOwogICAgICAgIHB5ID0gTWF0aC5DbGFtcChweSwgNCwgTWF0aC5NYXgoNCwgQWN0dWFsSGVpZ2h0IC0gMTMyKSk7CiAgICAgICAgQ2FudmFzLlNldExlZnQoTG91cGVCb3JkZXIsIHB4KTsKICAgICAgICBDYW52YXMuU2V0VG9wKExvdXBlQm9yZGVyLCBweSk7CiAgICAgICAgQ2FudmFzLlNldExlZnQoTG91cGVMYWJlbCwgcHgpOwogICAgICAgIENhbnZhcy5TZXRUb3AoTG91cGVMYWJlbCwgcHkgKyAxMTIpOwogICAgICAgIExvdXBlQ29vcmRzLlRleHQgPSAkIntzeCArIF92aXJ0dWFsU2NyZWVuLkxlZnR9LCB7c3kgKyBfdmlydHVhbFNjcmVlbi5Ub3B9IjsKICAgICAgICBMb3VwZUJvcmRlci5WaXNpYmlsaXR5ID0gVmlzaWJpbGl0eS5WaXNpYmxlOwogICAgICAgIExvdXBlTGFiZWwuVmlzaWJpbGl0eSA9IFZpc2liaWxpdHkuVmlzaWJsZTsKICAgIH0KCiAgICBwcml2YXRlIHZvaWQgSGlkZUxvdXBlKCkKICAgIHsKICAgICAgICBMb3VwZUJvcmRlci5WaXNpYmlsaXR5ID0gVmlzaWJpbGl0eS5Db2xsYXBzZWQ7CiAgICAgICAgTG91cGVMYWJlbC5WaXNpYmlsaXR5ID0gVmlzaWJpbGl0eS5Db2xsYXBzZWQ7CiAgICB9Cn0KDQo=
+using System.Drawing;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Interop;
+using System.Windows.Media.Imaging;
+using SnippingTool.Core;
+using CaptureMode = SnippingTool.Core.CaptureMode;
+using KeyEventArgs = System.Windows.Input.KeyEventArgs;
+using Point = System.Windows.Point;
+
+namespace SnippingTool.Capture;
+
+public partial class CaptureOverlayWindow : Window
+{
+    private readonly Bitmap _frozen;
+    private readonly Rectangle _virtualScreen;
+    private readonly List<WindowInfo> _windows;
+    private double _scale = 1.0;
+    private CaptureMode _mode;
+    private bool _committed;
+    private Int32Rect _lastCrop;
+
+    public CaptureResult? SelectedResult { get; private set; }
+    public bool RegionOnly { get; }
+
+    public CaptureOverlayWindow(Bitmap frozen, Rectangle virtualScreen, CaptureMode mode, bool regionOnly = false)
+    {
+        InitializeComponent();
+        _frozen = frozen;
+        _virtualScreen = virtualScreen;
+        _mode = mode;
+        RegionOnly = regionOnly;
+        _windows = CaptureService.EnumerateWindows();
+        Surface.RegionOnly = regionOnly;
+        SourceInitialized += OnSourceInitialized;
+        Loaded += OnLoaded;
+        PreviewKeyDown += OnPreviewKeyDown;
+        Surface.Committed += OnCommitted;
+        Surface.Cancelled += (_, _) => CancelSelection();
+        Surface.CursorMoved += OnCursorMoved;
+        ToolRect.Click += (_, _) => SetMode(CaptureMode.Rectangle);
+        ToolFreeform.Click += (_, _) => SetMode(CaptureMode.Freeform);
+        ToolWindow.Click += (_, _) => SetMode(CaptureMode.Window);
+        ToolFullscreen.Click += (_, _) => SetMode(CaptureMode.Fullscreen);
+        ToolMonitor.Click += (_, _) => SetMode(CaptureMode.Monitor);
+        CloseButton.Click += (_, _) => CancelSelection();
+    }
+
+    private void OnSourceInitialized(object? sender, EventArgs e)
+    {
+        try
+        {
+            var hwnd = new WindowInteropHelper(this).Handle;
+            int corners = 1; // DWMWCP_DONOTROUND
+            NativeMethods.DwmSetWindowAttribute(hwnd, NativeMethods.DWMWA_WINDOW_CORNER_PREFERENCE, ref corners, sizeof(int));
+            int dark = 1;
+            NativeMethods.DwmSetWindowAttribute(hwnd, NativeMethods.DWMWA_USE_IMMERSIVE_DARK_MODE, ref dark, sizeof(int));
+        }
+        catch { }
+    }
+
+    private void OnLoaded(object sender, RoutedEventArgs e)
+    {
+        try
+        {
+            var hwnd = new WindowInteropHelper(this).Handle;
+            uint dpi = NativeMethods.GetDpiForWindow(hwnd);
+            _scale = dpi > 0 ? dpi / 96.0 : 1.0;
+
+            Left = _virtualScreen.Left / _scale;
+            Top = _virtualScreen.Top / _scale;
+            Width = _virtualScreen.Width / _scale;
+            Height = _virtualScreen.Height / _scale;
+            UpdateLayout();
+            NativeMethods.SetWindowPos(hwnd, NativeMethods.HWND_TOPMOST,
+                _virtualScreen.Left, _virtualScreen.Top, _virtualScreen.Width, _virtualScreen.Height,
+                NativeMethods.SWP_NOACTIVATE | NativeMethods.SWP_SHOWWINDOW);
+
+            Surface.SetCapturedDesktop(_frozen, _virtualScreen, _scale, _mode, _windows);
+            SetMode(_mode);
+            PositionChrome();
+            UpdateLayout();
+            PositionChrome();
+            Activate();
+            Focus();
+            Keyboard.Focus(this);
+            Logger.Info($"Capture overlay shown over {_virtualScreen.Width}x{_virtualScreen.Height} at {_virtualScreen.X},{_virtualScreen.Y} (dpi {dpi}).");
+        }
+        catch (Exception ex)
+        {
+            Logger.Error("Could not initialise capture overlay", ex);
+            Close();
+        }
+    }
+
+    private void PositionChrome()
+    {
+        var cursorScreen = new Point(_virtualScreen.Left + _virtualScreen.Width / 2.0, _virtualScreen.Top + 60);
+        if (NativeMethods.GetCursorPosition(out var cursor)) cursorScreen = new Point(cursor.X, cursor.Y);
+        var monitor = CaptureService.MonitorAt(new System.Drawing.Point((int)cursorScreen.X, (int)cursorScreen.Y));
+
+        double panelWidth = ToolbarPanel.ActualWidth > 0 ? ToolbarPanel.ActualWidth : ToolbarPanel.DesiredSize.Width;
+        if (panelWidth <= 0) panelWidth = 330;
+        double monitorCenterLocal = (monitor.Bounds.Left - _virtualScreen.Left + monitor.Bounds.Width / 2.0) / _scale;
+        double topLocal = (monitor.Bounds.Top - _virtualScreen.Top) / _scale + 16;
+        double left = Math.Clamp(monitorCenterLocal - panelWidth / 2, 8, Math.Max(8, ActualWidth - panelWidth - 8));
+        ToolbarPanel.Margin = new Thickness(left, Math.Max(8, topLocal), 0, 0);
+
+        double bottomGap = (_virtualScreen.Bottom - monitor.Bounds.Bottom) / _scale + 26;
+        HintPanel.Margin = new Thickness(0, 0, 0, Math.Max(20, bottomGap));
+    }
+
+    private void SetMode(CaptureMode mode)
+    {
+        _mode = mode;
+        Surface.Mode = mode;
+        ToolRect.IsChecked = mode == CaptureMode.Rectangle;
+        ToolFreeform.IsChecked = mode == CaptureMode.Freeform;
+        ToolWindow.IsChecked = mode == CaptureMode.Window;
+        ToolFullscreen.IsChecked = mode == CaptureMode.Fullscreen;
+        ToolMonitor.IsChecked = mode == CaptureMode.Monitor;
+        HintText.Text = mode switch
+        {
+            CaptureMode.Rectangle => "Drag to select an area",
+            CaptureMode.Freeform => "Draw around the area you want to capture",
+            CaptureMode.Window => "Click the window you want to capture",
+            CaptureMode.Fullscreen => "Click to capture the entire desktop",
+            CaptureMode.Monitor => "Click the display you want to capture",
+            _ => "Select an area"
+        };
+        HideLoupe();
+    }
+
+    private void OnPreviewKeyDown(object sender, KeyEventArgs e)
+    {
+        switch (e.Key)
+        {
+            case Key.Escape:
+                CancelSelection();
+                e.Handled = true;
+                break;
+            case Key.D1:
+            case Key.NumPad1:
+                SetMode(CaptureMode.Rectangle);
+                e.Handled = true;
+                break;
+            case Key.D2:
+            case Key.NumPad2:
+                SetMode(CaptureMode.Freeform);
+                e.Handled = true;
+                break;
+            case Key.D3:
+            case Key.NumPad3:
+                SetMode(CaptureMode.Window);
+                e.Handled = true;
+                break;
+            case Key.D4:
+            case Key.NumPad4:
+                SetMode(CaptureMode.Fullscreen);
+                e.Handled = true;
+                break;
+            case Key.D5:
+            case Key.NumPad5:
+                SetMode(CaptureMode.Monitor);
+                e.Handled = true;
+                break;
+        }
+    }
+
+    private void OnCommitted(object? sender, CaptureResult e)
+    {
+        if (_committed) return;
+        _committed = true;
+        SelectedResult = e;
+        HideLoupe();
+        Close();
+    }
+
+    private void CancelSelection()
+    {
+        if (_committed) return;
+        _committed = true;
+        SelectedResult = null;
+        HideLoupe();
+        Close();
+    }
+
+    private void OnCursorMoved(object? sender, (Point ScreenPoint, bool Show) e)
+    {
+        if (!e.Show)
+        {
+            HideLoupe();
+            return;
+        }
+        var source = Surface.FrozenSource;
+        if (source == null) return;
+
+        int sx = (int)Math.Round(e.ScreenPoint.X) - _virtualScreen.Left;
+        int sy = (int)Math.Round(e.ScreenPoint.Y) - _virtualScreen.Top;
+        const int sample = 16;
+        int left = Math.Clamp(sx - sample / 2, 0, Math.Max(0, _frozen.Width - sample));
+        int top = Math.Clamp(sy - sample / 2, 0, Math.Max(0, _frozen.Height - sample));
+        int width = Math.Min(sample, _frozen.Width - left);
+        int height = Math.Min(sample, _frozen.Height - top);
+        if (width <= 0 || height <= 0) return;
+
+        var crop = new Int32Rect(left, top, width, height);
+        if (crop != _lastCrop)
+        {
+            try
+            {
+                var cropped = new CroppedBitmap(source, crop);
+                cropped.Freeze();
+                LoupeImage.Source = cropped;
+                _lastCrop = crop;
+            }
+            catch { }
+        }
+
+        double localX = (e.ScreenPoint.X - _virtualScreen.Left) / _scale;
+        double localY = (e.ScreenPoint.Y - _virtualScreen.Top) / _scale;
+        double px = localX + 26;
+        double py = localY + 26;
+        if (px + 120 > ActualWidth) px = localX - 126;
+        if (py + 140 > ActualHeight) py = localY - 134;
+        px = Math.Clamp(px, 4, Math.Max(4, ActualWidth - 112));
+        py = Math.Clamp(py, 4, Math.Max(4, ActualHeight - 132));
+        Canvas.SetLeft(LoupeBorder, px);
+        Canvas.SetTop(LoupeBorder, py);
+        Canvas.SetLeft(LoupeLabel, px);
+        Canvas.SetTop(LoupeLabel, py + 112);
+        LoupeCoords.Text = $"{sx + _virtualScreen.Left}, {sy + _virtualScreen.Top}";
+        LoupeBorder.Visibility = Visibility.Visible;
+        LoupeLabel.Visibility = Visibility.Visible;
+    }
+
+    private void HideLoupe()
+    {
+        LoupeBorder.Visibility = Visibility.Collapsed;
+        LoupeLabel.Visibility = Visibility.Collapsed;
+    }
+}
+

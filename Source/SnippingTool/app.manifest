@@ -1,1 +1,26 @@
-PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGFzc2VtYmx5IG1hbmlmZXN0VmVyc2lvbj0iMS4wIiB4bWxucz0idXJuOnNjaGVtYXMtbWljcm9zb2Z0LWNvbTphc20udjEiPgogIDxhc3NlbWJseUlkZW50aXR5IHZlcnNpb249IjEuMS4xLjAiIG5hbWU9IlNhbHNhTk9XLlNodXRpbyIgLz4KICA8dHJ1c3RJbmZvIHhtbG5zPSJ1cm46c2NoZW1hcy1taWNyb3NvZnQtY29tOmFzbS52MyI+CiAgICA8c2VjdXJpdHk+CiAgICAgIDxyZXF1ZXN0ZWRQcml2aWxlZ2VzPgogICAgICAgIDxyZXF1ZXN0ZWRFeGVjdXRpb25MZXZlbCBsZXZlbD0iYXNJbnZva2VyIiB1aUFjY2Vzcz0iZmFsc2UiIC8+CiAgICAgIDwvcmVxdWVzdGVkUHJpdmlsZWdlcz4KICAgIDwvc2VjdXJpdHk+CiAgPC90cnVzdEluZm8+CiAgPGNvbXBhdGliaWxpdHkgeG1sbnM9InVybjpzY2hlbWFzLW1pY3Jvc29mdC1jb206Y29tcGF0aWJpbGl0eS52MSI+CiAgICA8YXBwbGljYXRpb24+CiAgICAgIDxzdXBwb3J0ZWRPUyBJZD0iezhlMGY3YTEyLWJmYjMtNGZlOC1iOWE1LTQ4ZmQ1MGExNWE5YX0iIC8+CiAgICAgIDxzdXBwb3J0ZWRPUyBJZD0iezFmNjc2Yzc2LTgwZTEtNDIzOS05NWJiLTgzZDBmNmQwZGE3OH0iIC8+CiAgICAgIDxzdXBwb3J0ZWRPUyBJZD0iezRhMmYyOGUzLTUzYjktNDQ0MS1iYTljLWQ2OWQ0YTRhNmUzOH0iIC8+CiAgICA8L2FwcGxpY2F0aW9uPgogIDwvY29tcGF0aWJpbGl0eT4KICA8YXBwbGljYXRpb24geG1sbnM9InVybjpzY2hlbWFzLW1pY3Jvc29mdC1jb206YXNtLnYzIj4KICAgIDx3aW5kb3dzU2V0dGluZ3M+CiAgICAgIDxkcGlBd2FyZSB4bWxucz0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9TTUkvMjAwNS9XaW5kb3dzU2V0dGluZ3MiPnRydWUvcG08L2RwaUF3YXJlPgogICAgICA8ZHBpQXdhcmVuZXNzIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL1NNSS8yMDE2L1dpbmRvd3NTZXR0aW5ncyI+UGVyTW9uaXRvclYyPC9kcGlBd2FyZW5lc3M+CiAgICAgIDxsb25nUGF0aEF3YXJlIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL1NNSS8yMDE2L1dpbmRvd3NTZXR0aW5ncyI+dHJ1ZTwvbG9uZ1BhdGhBd2FyZT4KICAgICAgPGFjdGl2ZUNvZGVQYWdlIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL1NNSS8yMDE5L1dpbmRvd3NTZXR0aW5ncyI+VVRGLTg8L2FjdGl2ZUNvZGVQYWdlPgogICAgPC93aW5kb3dzU2V0dGluZ3M+CiAgPC9hcHBsaWNhdGlvbj4KPC9hc3NlbWJseT4K
+<?xml version="1.0" encoding="utf-8"?>
+<assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1">
+  <assemblyIdentity version="1.1.1.0" name="SalsaNOW.Shutio" />
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+    <security>
+      <requestedPrivileges>
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />
+      <supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />
+      <supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />
+    </application>
+  </compatibility>
+  <application xmlns="urn:schemas-microsoft-com:asm.v3">
+    <windowsSettings>
+      <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true/pm</dpiAware>
+      <dpiAwareness xmlns="http://schemas.microsoft.com/SMI/2016/WindowsSettings">PerMonitorV2</dpiAwareness>
+      <longPathAware xmlns="http://schemas.microsoft.com/SMI/2016/WindowsSettings">true</longPathAware>
+      <activeCodePage xmlns="http://schemas.microsoft.com/SMI/2019/WindowsSettings">UTF-8</activeCodePage>
+    </windowsSettings>
+  </application>
+</assembly>

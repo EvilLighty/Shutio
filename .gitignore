@@ -1,1 +1,42 @@
-IyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KIyAgU2h1dGlvIOKAlCAuZ2l0aWdub3JlCiMKIyAgVGhlIEdpdEh1YiByZXBvIGhvbGRzIFNPVVJDRSArIERPQ1MgKyBidWlsZCB0b29saW5nIG9ubHkuCiMgIEl0IGRlbGliZXJhdGVseSBFWENMVURFUyBwZXJzb25hbCBkYXRhLCBsYXJnZSBidW5kbGVkCiMgIGJpbmFyaWVzLCBhbmQgYWxsIC5ORVQgYnVpbGQgb3V0cHV0IChhbGwgb2Ygd2hpY2ggYXJlCiMgIHJlZ2VuZXJhYmxlIG9uIHRoZSBtYWNoaW5lIG9yIHByb3ZpZGVkIHNlcGFyYXRlbHkpLgojID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKIyAtLS0gcGVyc29uYWwgLyB1c2VyIGRhdGEgKHNuaXBzLCByZWNvcmRpbmdzLCBzZXR0aW5ncywgbG9ncykg4oCUIE5FVkVSIGNvbW1pdApEYXRhLwoKIyAtLS0gYnVuZGxlZCByZWNvcmRpbmcgZW5naW5lIChsYXJnZSBiaW5hcnk7IGRpc3RyaWJ1dGVkIHNlcGFyYXRlbHkpIC0tLQpmZm1wZWcuZXhlCgojIC0tLSBwdWJsaXNoZWQgc2luZ2xlLWZpbGUgYXBwIChidWlsZCBvdXRwdXQpIC0tLQojICAgICByZWdlbmVyYXRlIHdpdGg6ICBUb29sc1xSZWJ1aWxkQXBwU2luZ2xlRmlsZS5wczEKU2h1dGlvLmV4ZQpTaHV0aW8uZGVwcy5qc29uClNodXRpby5ydW50aW1lY29uZmlnLmpzb24KY3JlYXRlZHVtcC5leGUKCiMgLS0tIC5ORVQgYnVpbGQgb3V0cHV0IChhdCBhbnkgbGV2ZWwpIC0tLQpiaW4vCm9iai8KX2J1aWxkLwpfYmFja3VwLwoqLnVzZXIKKi5zdW8KLnZzLwoKIyAtLS0gYWQtaG9jIHRlc3QgLyB2ZXJpZmljYXRpb24gYXJ0aWZhY3RzIChkZWJ1ZyBzY3JlZW5zaG90cyBsYW5kIGF0IHJlcG8gcm9vdCkgLS0tCnRlc3QtKi5tcDQKdGVzdC0qLm00YQovcHJldmlldy0qLnBuZwovdmVyaWZ5LSoucG5nCi9mb250dGVzdC5wbmcKL3Rlc3QtKi5wbmcKL3NjcmVlbnNob3QqLnBuZwovaG90a2V5LXNjcmVlbnNob3QucG5nCi9mdWxsKi5wbmcKL2NhcHRpb24tKi5wbmcK
+# ============================================================
+#  Shutio — .gitignore
+#
+#  The GitHub repo holds SOURCE + DOCS + build tooling only.
+#  It deliberately EXCLUDES personal data, large bundled
+#  binaries, and all .NET build output (all of which are
+#  regenerable on the machine or provided separately).
+# ============================================================
+
+# --- personal / user data (snips, recordings, settings, logs) — NEVER commit
+Data/
+
+# --- bundled recording engine (large binary; distributed separately) ---
+ffmpeg.exe
+
+# --- published single-file app (build output) ---
+#     regenerate with:  Tools\RebuildAppSingleFile.ps1
+Shutio.exe
+Shutio.deps.json
+Shutio.runtimeconfig.json
+createdump.exe
+
+# --- .NET build output (at any level) ---
+bin/
+obj/
+_build/
+_backup/
+*.user
+*.suo
+.vs/
+
+# --- ad-hoc test / verification artifacts (debug screenshots land at repo root) ---
+test-*.mp4
+test-*.m4a
+/preview-*.png
+/verify-*.png
+/fonttest.png
+/test-*.png
+/screenshot*.png
+/hotkey-screenshot.png
+/full*.png
+/caption-*.png

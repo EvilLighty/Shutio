@@ -1,1 +1,12 @@
-PFByb2plY3QgU2RrPSJNaWNyb3NvZnQuTkVULlNkayI+CiAgPFByb3BlcnR5R3JvdXA+CiAgICA8T3V0cHV0VHlwZT5FeGU8L091dHB1dFR5cGU+CiAgICA8VGFyZ2V0RnJhbWV3b3JrPm5ldDEwLjAtd2luZG93czwvVGFyZ2V0RnJhbWV3b3JrPgogICAgPFVzZVdpbmRvd3NGb3Jtcz50cnVlPC9Vc2VXaW5kb3dzRm9ybXM+CiAgICA8TnVsbGFibGU+ZW5hYmxlPC9OdWxsYWJsZT4KICAgIDxJbXBsaWNpdFVzaW5ncz5lbmFibGU8L0ltcGxpY2l0VXNpbmdzPgogICAgPEFzc2VtYmx5TmFtZT5NYWtlSWNvPC9Bc3NlbWJseU5hbWU+CiAgICA8Um9vdE5hbWVzcGFjZT5NYWtlSWNvPC9Sb290TmFtZXNwYWNlPgogICAgPFNhdGVsbGl0ZVJlc291cmNlTGFuZ3VhZ2VzPmVuPC9TYXRlbGxpdGVSZXNvdXJjZUxhbmd1YWdlcz4KICA8L1Byb3BlcnR5R3JvdXA+CjwvUHJvamVjdD4K
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>MakeIco</AssemblyName>
+    <RootNamespace>MakeIco</RootNamespace>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+</Project>

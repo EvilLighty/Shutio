@@ -1,1 +1,117 @@
-IyBGZWF0dXJlIHN0YXR1cwoKTGVnZW5kOiAqKlllcyoqID0gaW1wbGVtZW50ZWQgYW5kIHZlcmlmaWVkIG9uIHRoZSBraW9zay4gKipQYXJ0aWFsKiogPSBpbXBsZW1lbnRlZAp3aXRoIGEgZG9jdW1lbnRlZCBsaW1pdGF0aW9uLiAqKk5vKiogPSBub3QgYXZhaWxhYmxlIGJ5IGRlc2lnbiBvciBibG9ja2VkIGJ5IHRoZQplbnZpcm9ubWVudC4KCiMjIENhcHR1cmUKCnwgRmVhdHVyZSB8IFN0YXR1cyB8IE5vdGVzIHwKfCAtLS0gfCAtLS0gfCAtLS0gfAp8IFJlY3Rhbmd1bGFyIGNhcHR1cmUgfCBZZXMgfCBMaXZlIHNpemUgcmVhZG91dCBhbmQgcGl4ZWwtYWNjdXJhdGUgY3JvcC4gfAp8IEZyZWVmb3JtIGNhcHR1cmUgfCBZZXMgfCBUcmFuc3BhcmVudCBvdXRzaWRlIHRoZSBsYXNzbyBpbiBQTkcuIHwKfCBXaW5kb3cgY2FwdHVyZSB8IFllcyB8IFByZXZpZXcgb24gaG92ZXI7IFByaW50V2luZG93IGNvbnRlbnQ7IGRlc2t0b3AtY3JvcCBmYWxsYmFjay4gfAp8IEZ1bGwgZGVza3RvcCBjYXB0dXJlIHwgWWVzIHwgU2luZ2xlIHZpcnR1YWwtZGVza3RvcCBpbWFnZS4gfAp8IEluZGl2aWR1YWwgbW9uaXRvciBjYXB0dXJlIHwgWWVzIHwgTW9uaXRvciB1bmRlciB0aGUgcG9pbnRlci4gfAp8IE11bHRpLW1vbml0b3IgLyBuZWdhdGl2ZSBjb29yZGluYXRlcyB8IFllcyB8IFVzZXMgdGhlIFdpbjMyIHZpcnR1YWwgc2NyZWVuLCBpbmNsdWRpbmcgbGVmdC91cCBtb25pdG9ycy4gfAp8IE1peGVkIHBlci1tb25pdG9yIERQSSB8IFBhcnRpYWwgfCBEUEktYXdhcmUgY2FwdHVyZTsgZXh0cmVtZSBtaXhlZC1EUEkgbGF5b3V0cyBub3QgbGFiLXRlc3RlZC4gfAp8IENhcHR1cmUgZGVsYXkgMCAvIDMgLyA1IC8gMTAgcyB8IFllcyB8IENvdW50ZG93biBvdmVybGF5LiB8CnwgTW91c2UgY3Vyc29yIGluIHNjcmVlbnNob3RzIHwgWWVzIHwgUmVuZGVyZWQgZnJvbSB0aGUgY3VycmVudCBjdXJzb3IgYml0bWFwLiB8CnwgSGlkZS9yZXN0b3JlIGFwcCB3aW5kb3dzIGR1cmluZyBjYXB0dXJlIHwgWWVzIHwgQXZvaWRzIHRoZSBhcHAgY292ZXJpbmcgdGhlIHRhcmdldC4gfAoKIyMgRWRpdG9yCgp8IEZlYXR1cmUgfCBTdGF0dXMgfAp8IC0tLSB8IC0tLSB8CnwgUGVuIHwgWWVzIHwKfCBIaWdobGlnaHRlciAoc2VtaS10cmFuc3BhcmVudCwgd2lkZSkgfCBZZXMgfAp8IEVyYXNlciAoc3Ryb2tlIGVyYXNlcikgfCBZZXMgfAp8IFN0cmFpZ2h0IGxpbmUgLyBydWxlciB8IFllcyB8CnwgQ3JvcCB8IFllcyB8CnwgVW5kbyAvIHJlZG8gfCBZZXMgfAp8IFJvdGF0ZSBsZWZ0IC8gcmlnaHQgfCBZZXMgfAp8IFJlc2l6ZSB3aXRoIGFzcGVjdCBsb2NrIGFuZCBwcmVzZXRzIHwgWWVzIHwKfCBDb2xvciBwYWxldHRlICsgY3VzdG9tIGNvbG9yIHwgWWVzIHwKfCBUaGlja25lc3MgcHJlc2V0cyAyLTIyIHB4IHwgWWVzIHwKfCBab29tIGluIC8gb3V0IC8gZml0IC8gcGFuIHwgWWVzIHwKfCBTYXZlIGFzIFBORyAvIEpQRyAvIEJNUCB8IFllcyB8CnwgQ29weSBpbWFnZSB0byBjbGlwYm9hcmQgfCBZZXMgfAp8IE9DUiB0ZXh0IGV4dHJhY3Rpb24gYW5kIHRleHQgY29weSB8IFllcyB8CnwgRmxhdHRlbmVkIHNhdmUgb2YgYW5ub3RhdGlvbnMgfCBZZXMgfAoKIyMgT3V0cHV0IGFuZCBzdG9yYWdlCgp8IEZlYXR1cmUgfCBTdGF0dXMgfAp8IC0tLSB8IC0tLSB8CnwgQXV0by1zYXZlIHdpdGggY29uZmlndXJhYmxlIGZvbGRlciB8IFllcyB8CnwgQXV0by1jb3B5IHRvIGNsaXBib2FyZCB8IFllcyB8CnwgQXV0by1vcGVuIGVkaXRvciAodG9nZ2xlKSB8IFllcyB8CnwgQ29uZmlndXJhYmxlIGZpbGUtbmFtZSBwYXR0ZXJuIHwgWWVzLCB3aXRoIGxpdmUgcHJldmlldyB8CnwgSGlzdG9yeSB3aXRoIHRodW1ibmFpbHMgfCBZZXMgfAp8IFNlYXJjaCBhbmQgbW9kZSBmaWx0ZXJzIHwgWWVzIHwKfCBPcGVuIC8gY29weSAvIGRlbGV0ZSAvIG9wZW4gZm9sZGVyIGZyb20gaGlzdG9yeSB8IFllcyB8CnwgRXZlcnl0aGluZyBzdG9yZWQgdW5kZXIgYERhdGFcYCB8IFllcyB8CgojIyBTaG9ydGN1dHMgYW5kIGludGVncmF0aW9uCgp8IEZlYXR1cmUgfCBTdGF0dXMgfCBOb3RlcyB8CnwgLS0tIHwgLS0tIHwgLS0tIHwKfCBTZXZlbiBjb25maWd1cmFibGUgZ2xvYmFsIHNob3J0Y3V0cyB8IFllcyB8IGBSZWdpc3RlckhvdEtleWA7IHdvcmtzIHdoaWxlIGhpZGRlbi4gfAp8IENvbmZsaWN0IGRldGVjdGlvbiBhbmQgaW5saW5lIHZhbGlkYXRpb24gfCBZZXMgfCBEdXBsaWNhdGUgY29tYm9zIGJsb2NrIFNhdmUuIHwKfCBIb3RrZXlzIHBhdXNlZCB3aGlsZSBlZGl0aW5nIGluIFNldHRpbmdzIHwgWWVzIHwgUHJldmVudHMgV2luZG93cyBzd2FsbG93aW5nIHRoZSBjb21iby4gfAp8IFdpbmRvd3Mta2V5IHNob3J0Y3V0cyB8IE5vIHwgRGVsaWJlcmF0ZWx5IHJlamVjdGVkLiB8CnwgRmxvYXRpbmcgY2FwdHVyZSB0b29sYmFyIHwgWWVzIHwgT3B0aW9uYWwsIGRyYWdnYWJsZSwgYWx3YXlzIG9uIHRvcC4gfAp8IFRyYXkgaWNvbiBhbmQgY29udGV4dCBtZW51IHwgWWVzIHwgV2luRm9ybXMgYE5vdGlmeUljb25gLiB8CnwgVG9hc3Qgbm90aWZpY2F0aW9ucyB8IFllcyB8IE9wdGlvbmFsLiB8CnwgU3RhcnQgbWluaW1pemVkIC8gbWluaW1pemUgLyBjbG9zZSB0byB0cmF5IHwgWWVzIHwgT3B0aW9uYWwuIHwKfCBTaW5nbGUgaW5zdGFuY2UgfCBZZXMgfCBTZWNvbmQgbGF1bmNoIGFjdGl2YXRlcyB0aGUgZmlyc3QuIHwKCiMjIE9DUgoKfCBGZWF0dXJlIHwgU3RhdHVzIHwgTm90ZXMgfAp8IC0tLSB8IC0tLSB8IC0tLSB8CnwgV2luZG93cyBPQ1IgZW5naW5lIHwgWWVzIHwgYFdpbmRvd3MuTWVkaWEuT2NyYC4gfAp8IFRleHQgZXh0cmFjdGlvbiB3aXRoIGxpbmUvY2hhcmFjdGVyIGNvdW50cyB8IFllcyB8IDk5OC1jaGFyYWN0ZXIgc2FtcGxlIHZlcmlmaWVkLiB8CnwgQ29weSBPQ1IgdGV4dCB8IFllcyB8IFZlcmlmaWVkIGFnYWluc3QgdGhlIGNsaXBib2FyZC4gfAp8IE5vLXRleHQgaGFuZGxpbmcgfCBZZXMgfCBNZXNzYWdlIHNob3duIGFuZCBjb3B5IGRpc2FibGVkLiB8CnwgTGFuZ3VhZ2Ugc2VsZWN0aW9uIHwgUGFydGlhbCB8IFVzZXMgaW5zdGFsbGVkIFdpbmRvd3MgT0NSIGxhbmd1YWdlIHBhY2tzIHZpYSBgT2NyTGFuZ3VhZ2VgLiB8CgojIyBTY3JlZW4gcmVjb3JkaW5nCgp8IEZlYXR1cmUgfCBTdGF0dXMgfCBOb3RlcyB8CnwgLS0tIHwgLS0tIHwgLS0tIHwKfCBGdWxsIGRlc2t0b3AgcmVjb3JkaW5nIHwgWWVzIHwgVmVyaWZpZWQgMjU2MHgxNDQwIEguMjY0IE1QNC4gfAp8IFNpbmdsZS1kaXNwbGF5IHJlY29yZGluZyB8IFllcyB8IFByaW1hcnkgbW9uaXRvciwgYWRkZWQgaW4gdjEuMS4wLiB8CnwgV2luZG93IHJlY29yZGluZyB8IFllcyB8IFVzZXMgdGhlIHNlbGVjdGVkIHdpbmRvdyBib3VuZHMuIHwKfCBSZWdpb24gcmVjb3JkaW5nIHwgWWVzIHwgRHJhZyBhIHJlZ2lvbiBpbiB0aGUgc2V0dXAgZGlhbG9nLiB8CnwgRnJhbWUgcmF0ZSAxMCAvIDE1IC8gMjQgLyAzMCB8IFllcyB8IHwKfCBNb3VzZSBjdXJzb3Igb3ZlcmxheSB8IFllcyB8IE9wdGlvbmFsLiB8CnwgTVA0IG91dHB1dCB8IFllcyB8IGZmbXBlZyBidW5kbGVkIGF0IGBUb29sc1xmZm1wZWcuZXhlYC4gfAp8IFJlY29yZGluZyBpbmRpY2F0b3Igd2l0aCBzdG9wIGNvbnRyb2wgfCBZZXMgfCBFbGFwc2VkIHRpbWUgYW5kIGZyYW1lIGNvdW50LiB8CnwgTWljcm9waG9uZSBhdWRpbyB8IFllcyB8IE9wdGlvbmFsOyBBQUMgMTYwIGtiL3MgbXV4ZWQsIG1pYyBwaWNrZXIuIHwKfCBTeXN0ZW0tYXVkaW8gKGxvb3BiYWNrKSBjYXB0dXJlIHwgTm8gfCBNaWNyb3Bob25lIGF1ZGlvIG9ubHkuIHwKfCBIYXJkd2FyZSBlbmNvZGVyIHNlbGVjdGlvbiB8IE5vIHwgVXNlcyBsaWJ4MjY0IHNvZnR3YXJlIGVuY29kaW5nLiB8CgojIyBVSSBhbmQgcGxhdGZvcm0KCnwgRmVhdHVyZSB8IFN0YXR1cyB8CnwgLS0tIHwgLS0tIHwKfCBXaW5kb3dzIDExIEZsdWVudC1pbnNwaXJlZCBzdHlsaW5nIHwgWWVzIHwKfCBSb3VuZGVkIGNvcm5lcnMsIHNoYWRvd3MsIG1vZGVybiB0eXBvZ3JhcGh5IHwgWWVzIHwKfCBMaWdodCAvIGRhcmsgLyBzeXN0ZW0gdGhlbWVzIHdpdGggbGl2ZSBwcmV2aWV3IHwgWWVzIHwKfCBTbW9vdGggdHJhbnNpdGlvbnMgYW5kIGhvdmVyIHN0YXRlcyB8IFllcyB8CnwgTm8gYWRtaW4sIFVBQywgc2VydmljZSwgZHJpdmVyLCBNU0ksIG9yIHJlZ2lzdHJ5IHdyaXRlcyB8IFllcyB8CnwgU2VsZi1jb250YWluZWQgeDY0IGJ1aWxkIHwgWWVzIHwKfCBQb3J0YWJsZSBkYXRhLCBubyB0ZW1wLXNlc3Npb24gZGVwZW5kZW5jeSB8IFllcyB8CnwgSGVhZGxlc3Mgc2VsZi10ZXN0IHN1aXRlIHwgWWVzLCAxMy8xMyBwYXNzaW5nIHwKCiMjIE5vdCBpbXBsZW1lbnRlZCAvIG91dCBvZiBzY29wZQoKLSBTeXN0ZW0tYXVkaW8gKGxvb3BiYWNrKSByZWNvcmRpbmcgKG1pY3JvcGhvbmUgYXVkaW8gaXMgaW1wbGVtZW50ZWQpLgotIFdpbmRvd3Mta2V5IGdsb2JhbCBzaG9ydGN1dHMuCi0gQ2xvdWQgdXBsb2FkLCBzaGFyaW5nIGxpbmtzLCBvciBhY2NvdW50cy4KLSBCdWlsdC1pbiB2aWRlbyB0cmltbWluZy4KLSBBdXRvbWF0aWMgT0NSLWxhbmd1YWdlIGRvd25sb2FkICh1c2VzIHdoYXQgV2luZG93cyBhbHJlYWR5IGhhcyBpbnN0YWxsZWQpLgotIFNjcm9sbGluZy13aW5kb3cgKCJzY3JvbGxpbmcgY2FwdHVyZSIpIHN0aXRjaGluZy4KLSBTY2hlZHVsZWQgb3IgaW50ZXJ2YWwgY2FwdHVyZS4KLSBEaXJlY3QgcHJpbnRpbmcuCg==
+# Feature status
+
+Legend: **Yes** = implemented and verified on the kiosk. **Partial** = implemented
+with a documented limitation. **No** = not available by design or blocked by the
+environment.
+
+## Capture
+
+| Feature | Status | Notes |
+| --- | --- | --- |
+| Rectangular capture | Yes | Live size readout and pixel-accurate crop. |
+| Freeform capture | Yes | Transparent outside the lasso in PNG. |
+| Window capture | Yes | Preview on hover; PrintWindow content; desktop-crop fallback. |
+| Full desktop capture | Yes | Single virtual-desktop image. |
+| Individual monitor capture | Yes | Monitor under the pointer. |
+| Multi-monitor / negative coordinates | Yes | Uses the Win32 virtual screen, including left/up monitors. |
+| Mixed per-monitor DPI | Partial | DPI-aware capture; extreme mixed-DPI layouts not lab-tested. |
+| Capture delay 0 / 3 / 5 / 10 s | Yes | Countdown overlay. |
+| Mouse cursor in screenshots | Yes | Rendered from the current cursor bitmap. |
+| Hide/restore app windows during capture | Yes | Avoids the app covering the target. |
+
+## Editor
+
+| Feature | Status |
+| --- | --- |
+| Pen | Yes |
+| Highlighter (semi-transparent, wide) | Yes |
+| Eraser (stroke eraser) | Yes |
+| Straight line / ruler | Yes |
+| Crop | Yes |
+| Undo / redo | Yes |
+| Rotate left / right | Yes |
+| Resize with aspect lock and presets | Yes |
+| Color palette + custom color | Yes |
+| Thickness presets 2-22 px | Yes |
+| Zoom in / out / fit / pan | Yes |
+| Save as PNG / JPG / BMP | Yes |
+| Copy image to clipboard | Yes |
+| OCR text extraction and text copy | Yes |
+| Flattened save of annotations | Yes |
+
+## Output and storage
+
+| Feature | Status |
+| --- | --- |
+| Auto-save with configurable folder | Yes |
+| Auto-copy to clipboard | Yes |
+| Auto-open editor (toggle) | Yes |
+| Configurable file-name pattern | Yes, with live preview |
+| History with thumbnails | Yes |
+| Search and mode filters | Yes |
+| Open / copy / delete / open folder from history | Yes |
+| Everything stored under `Data\` | Yes |
+
+## Shortcuts and integration
+
+| Feature | Status | Notes |
+| --- | --- | --- |
+| Seven configurable global shortcuts | Yes | `RegisterHotKey`; works while hidden. |
+| Conflict detection and inline validation | Yes | Duplicate combos block Save. |
+| Hotkeys paused while editing in Settings | Yes | Prevents Windows swallowing the combo. |
+| Windows-key shortcuts | No | Deliberately rejected. |
+| Floating capture toolbar | Yes | Optional, draggable, always on top. |
+| Tray icon and context menu | Yes | WinForms `NotifyIcon`. |
+| Toast notifications | Yes | Optional. |
+| Start minimized / minimize / close to tray | Yes | Optional. |
+| Single instance | Yes | Second launch activates the first. |
+
+## OCR
+
+| Feature | Status | Notes |
+| --- | --- | --- |
+| Windows OCR engine | Yes | `Windows.Media.Ocr`. |
+| Text extraction with line/character counts | Yes | 998-character sample verified. |
+| Copy OCR text | Yes | Verified against the clipboard. |
+| No-text handling | Yes | Message shown and copy disabled. |
+| Language selection | Partial | Uses installed Windows OCR language packs via `OcrLanguage`. |
+
+## Screen recording
+
+| Feature | Status | Notes |
+| --- | --- | --- |
+| Full desktop recording | Yes | Verified 2560x1440 H.264 MP4. |
+| Single-display recording | Yes | Primary monitor, added in v1.1.0. |
+| Window recording | Yes | Uses the selected window bounds. |
+| Region recording | Yes | Drag a region in the setup dialog. |
+| Frame rate 10 / 15 / 24 / 30 | Yes | |
+| Mouse cursor overlay | Yes | Optional. |
+| MP4 output | Yes | ffmpeg bundled at `Tools\ffmpeg.exe`. |
+| Recording indicator with stop control | Yes | Elapsed time and frame count. |
+| Microphone audio | Yes | Optional; AAC 160 kb/s muxed, mic picker. |
+| System-audio (loopback) capture | No | Microphone audio only. |
+| Hardware encoder selection | No | Uses libx264 software encoding. |
+
+## UI and platform
+
+| Feature | Status |
+| --- | --- |
+| Windows 11 Fluent-inspired styling | Yes |
+| Rounded corners, shadows, modern typography | Yes |
+| Light / dark / system themes with live preview | Yes |
+| Smooth transitions and hover states | Yes |
+| No admin, UAC, service, driver, MSI, or registry writes | Yes |
+| Self-contained x64 build | Yes |
+| Portable data, no temp-session dependency | Yes |
+| Headless self-test suite | Yes, 13/13 passing |
+
+## Not implemented / out of scope
+
+- System-audio (loopback) recording (microphone audio is implemented).
+- Windows-key global shortcuts.
+- Cloud upload, sharing links, or accounts.
+- Built-in video trimming.
+- Automatic OCR-language download (uses what Windows already has installed).
+- Scrolling-window ("scrolling capture") stitching.
+- Scheduled or interval capture.
+- Direct printing.

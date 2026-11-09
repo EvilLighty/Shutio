@@ -1,1 +1,109 @@
-dXNpbmcgU3lzdGVtLkRyYXdpbmc7CnVzaW5nIFN5c3RlbS5UZXh0Owp1c2luZyBTbmlwcGluZ1Rvb2wuQ29yZTsKdXNpbmcgU25pcHBpbmdUb29sLkltYWdpbmc7CnVzaW5nIFNuaXBwaW5nVG9vbC5TdG9yYWdlOwoKbmFtZXNwYWNlIFNuaXBwaW5nVG9vbDsKCnB1YmxpYyBzdGF0aWMgY2xhc3MgQ2FwdHVyZVN0b3JhZ2UKewogICAgcHJpdmF0ZSBzdGF0aWMgcmVhZG9ubHkgY2hhcltdIEludmFsaWROYW1lQ2hhcnMgPSBQYXRoLkdldEludmFsaWRGaWxlTmFtZUNoYXJzKCkKICAgICAgICAuQ29uY2F0KG5ld1tdIHsgJzwnLCAnPicsICc6JywgJyInLCAnLycsICdcXCcsICd8JywgJz8nLCAnKicgfSkuRGlzdGluY3QoKS5Ub0FycmF5KCk7CgogICAgcHVibGljIHN0YXRpYyBTbmlwRW50cnk/IFNhdmVOZXcoQml0bWFwIGJpdG1hcCwgQ2FwdHVyZU1vZGUgbW9kZSwgU2V0dGluZ3Mgc2V0dGluZ3MsIEhpc3RvcnlTZXJ2aWNlIGhpc3RvcnksCiAgICAgICAgc3RyaW5nIGV4dGVuc2lvbiA9ICIucG5nIikKICAgIHsKICAgICAgICB0cnkKICAgICAgICB7CiAgICAgICAgICAgIHN0cmluZyBwYXRoID0gR2VuZXJhdGVGaWxlUGF0aChzZXR0aW5ncywgbW9kZSwgZXh0ZW5zaW9uKTsKICAgICAgICAgICAgQml0bWFwVXRpbHMuU2F2ZShiaXRtYXAsIHBhdGgpOwogICAgICAgICAgICB2YXIgZW50cnkgPSBoaXN0b3J5LkFkZChwYXRoLCBtb2RlLCBiaXRtYXApOwogICAgICAgICAgICByZXR1cm4gZW50cnk7CiAgICAgICAgfQogICAgICAgIGNhdGNoIChFeGNlcHRpb24gZXgpCiAgICAgICAgewogICAgICAgICAgICBMb2dnZXIuRXJyb3IoIkF1dG9tYXRpYyBzYXZlIGZhaWxlZCIsIGV4KTsKICAgICAgICAgICAgcmV0dXJuIG51bGw7CiAgICAgICAgfQogICAgfQoKICAgIHB1YmxpYyBzdGF0aWMgU25pcEVudHJ5IFJlZ2lzdGVyU2F2ZWRGaWxlKHN0cmluZyBwYXRoLCBDYXB0dXJlTW9kZSBtb2RlLCBCaXRtYXAgYml0bWFwLCBIaXN0b3J5U2VydmljZSBoaXN0b3J5KQogICAgewogICAgICAgIHRyeQogICAgICAgIHsKICAgICAgICAgICAgcmV0dXJuIGhpc3RvcnkuQWRkKHBhdGgsIG1vZGUsIGJpdG1hcCkgPz8gbmV3IFNuaXBFbnRyeQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBGaWxlUGF0aCA9IHBhdGgsCiAgICAgICAgICAgICAgICBGaWxlTmFtZSA9IFBhdGguR2V0RmlsZU5hbWUocGF0aCksCiAgICAgICAgICAgICAgICBNb2RlID0gbW9kZS5Ub1N0cmluZygpLAogICAgICAgICAgICAgICAgV2lkdGggPSBiaXRtYXAuV2lkdGgsCiAgICAgICAgICAgICAgICBIZWlnaHQgPSBiaXRtYXAuSGVpZ2h0CiAgICAgICAgICAgIH07CiAgICAgICAgfQogICAgICAgIGNhdGNoIChFeGNlcHRpb24gZXgpCiAgICAgICAgewogICAgICAgICAgICBMb2dnZXIuRXJyb3IoIkNvdWxkIG5vdCByZWdpc3RlciBzYXZlZCBmaWxlIiwgZXgpOwogICAgICAgICAgICByZXR1cm4gbmV3IFNuaXBFbnRyeQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBGaWxlUGF0aCA9IHBhdGgsCiAgICAgICAgICAgICAgICBGaWxlTmFtZSA9IFBhdGguR2V0RmlsZU5hbWUocGF0aCksCiAgICAgICAgICAgICAgICBNb2RlID0gbW9kZS5Ub1N0cmluZygpLAogICAgICAgICAgICAgICAgV2lkdGggPSBiaXRtYXAuV2lkdGgsCiAgICAgICAgICAgICAgICBIZWlnaHQgPSBiaXRtYXAuSGVpZ2h0CiAgICAgICAgICAgIH07CiAgICAgICAgfQogICAgfQoKICAgIHB1YmxpYyBzdGF0aWMgc3RyaW5nIEdlbmVyYXRlRmlsZVBhdGgoU2V0dGluZ3Mgc2V0dGluZ3MsIENhcHR1cmVNb2RlIG1vZGUsIHN0cmluZyBleHRlbnNpb24gPSAiLnBuZyIpCiAgICB7CiAgICAgICAgdmFyIGRpcmVjdG9yeSA9IHNldHRpbmdzLlNhdmVEaXJlY3Rvcnk7CiAgICAgICAgdHJ5CiAgICAgICAgewogICAgICAgICAgICBEaXJlY3RvcnkuQ3JlYXRlRGlyZWN0b3J5KGRpcmVjdG9yeSk7CiAgICAgICAgICAgIHZhciBwcm9iZSA9IFBhdGguQ29tYmluZShkaXJlY3RvcnksICIud3JpdGUtdGVzdCIpOwogICAgICAgICAgICBGaWxlLldyaXRlQWxsVGV4dChwcm9iZSwgInRlc3QiKTsKICAgICAgICAgICAgRmlsZS5EZWxldGUocHJvYmUpOwogICAgICAgIH0KICAgICAgICBjYXRjaCAoRXhjZXB0aW9uIGV4KQogICAgICAgIHsKICAgICAgICAgICAgTG9nZ2VyLldhcm4oJCJTYXZlIGRpcmVjdG9yeSAne2RpcmVjdG9yeX0nIGlzIG5vdCB3cml0YWJsZTsgdXNpbmcgYXBwIGRhdGEgZm9sZGVyIiwgZXgpOwogICAgICAgICAgICBkaXJlY3RvcnkgPSBBcHBQYXRocy5TY3JlZW5zaG90czsKICAgICAgICAgICAgRGlyZWN0b3J5LkNyZWF0ZURpcmVjdG9yeShkaXJlY3RvcnkpOwogICAgICAgIH0KCiAgICAgICAgdmFyIG5vdyA9IERhdGVUaW1lLk5vdzsKICAgICAgICBzdHJpbmcgcGF0dGVybiA9IHNldHRpbmdzLkZpbGVOYW1lUGF0dGVybjsKICAgICAgICBpZiAocGF0dGVybi5FbmRzV2l0aCgiLnBuZyIsIFN0cmluZ0NvbXBhcmlzb24uT3JkaW5hbElnbm9yZUNhc2UpIHx8CiAgICAgICAgICAgIHBhdHRlcm4uRW5kc1dpdGgoIi5qcGciLCBTdHJpbmdDb21wYXJpc29uLk9yZGluYWxJZ25vcmVDYXNlKSB8fAogICAgICAgICAgICBwYXR0ZXJuLkVuZHNXaXRoKCIuanBlZyIsIFN0cmluZ0NvbXBhcmlzb24uT3JkaW5hbElnbm9yZUNhc2UpIHx8CiAgICAgICAgICAgIHBhdHRlcm4uRW5kc1dpdGgoIi5ibXAiLCBTdHJpbmdDb21wYXJpc29uLk9yZGluYWxJZ25vcmVDYXNlKSkKICAgICAgICAgICAgcGF0dGVybiA9IFBhdGguR2V0RmlsZU5hbWVXaXRob3V0RXh0ZW5zaW9uKHBhdHRlcm4pOwoKICAgICAgICBwYXR0ZXJuID0gcGF0dGVybgogICAgICAgICAgICAuUmVwbGFjZSgie3l5eXl9Iiwgbm93LlRvU3RyaW5nKCJ5eXl5IikpCiAgICAgICAgICAgIC5SZXBsYWNlKCJ7eXl9Iiwgbm93LlRvU3RyaW5nKCJ5eSIpKQogICAgICAgICAgICAuUmVwbGFjZSgie01NfSIsIG5vdy5Ub1N0cmluZygiTU0iKSkKICAgICAgICAgICAgLlJlcGxhY2UoIntkZH0iLCBub3cuVG9TdHJpbmcoImRkIikpCiAgICAgICAgICAgIC5SZXBsYWNlKCJ7SEh9Iiwgbm93LlRvU3RyaW5nKCJISCIpKQogICAgICAgICAgICAuUmVwbGFjZSgie21tfSIsIG5vdy5Ub1N0cmluZygibW0iKSkKICAgICAgICAgICAgLlJlcGxhY2UoIntzc30iLCBub3cuVG9TdHJpbmcoInNzIikpCiAgICAgICAgICAgIC5SZXBsYWNlKCJ7bW9kZX0iLCBtb2RlLlRvU3RyaW5nKCkpOwoKICAgICAgICB2YXIgYnVpbGRlciA9IG5ldyBTdHJpbmdCdWlsZGVyKCk7CiAgICAgICAgZm9yZWFjaCAoY2hhciBjIGluIHBhdHRlcm4pCiAgICAgICAgICAgIGJ1aWxkZXIuQXBwZW5kKEludmFsaWROYW1lQ2hhcnMuQ29udGFpbnMoYykgPyAnXycgOiBjKTsKICAgICAgICBzdHJpbmcgYmFzZU5hbWUgPSBidWlsZGVyLlRvU3RyaW5nKCkuVHJpbSgpLlRyaW0oJy4nKTsKICAgICAgICBpZiAoc3RyaW5nLklzTnVsbE9yV2hpdGVTcGFjZShiYXNlTmFtZSkpIGJhc2VOYW1lID0gIlNuaXBfIiArIG5vdy5Ub1N0cmluZygieXl5eS1NTS1kZF9ISC1tbS1zcyIpOwoKICAgICAgICBpZiAoIWV4dGVuc2lvbi5TdGFydHNXaXRoKCcuJykpIGV4dGVuc2lvbiA9ICIuIiArIGV4dGVuc2lvbjsKICAgICAgICBzdHJpbmcgcGF0aCA9IFBhdGguQ29tYmluZShkaXJlY3RvcnksIGJhc2VOYW1lICsgZXh0ZW5zaW9uKTsKICAgICAgICBpbnQgc3VmZml4ID0gMjsKICAgICAgICB3aGlsZSAoRmlsZS5FeGlzdHMocGF0aCkpCiAgICAgICAgewogICAgICAgICAgICBwYXRoID0gUGF0aC5Db21iaW5lKGRpcmVjdG9yeSwgJCJ7YmFzZU5hbWV9ICh7c3VmZml4fSl7ZXh0ZW5zaW9ufSIpOwogICAgICAgICAgICBzdWZmaXgrKzsKICAgICAgICB9CiAgICAgICAgcmV0dXJuIHBhdGg7CiAgICB9Cn0K
+using System.Drawing;
+using System.Text;
+using SnippingTool.Core;
+using SnippingTool.Imaging;
+using SnippingTool.Storage;
+
+namespace SnippingTool;
+
+public static class CaptureStorage
+{
+    private static readonly char[] InvalidNameChars = Path.GetInvalidFileNameChars()
+        .Concat(new[] { '<', '>', ':', '"', '/', '\\', '|', '?', '*' }).Distinct().ToArray();
+
+    public static SnipEntry? SaveNew(Bitmap bitmap, CaptureMode mode, Settings settings, HistoryService history,
+        string extension = ".png")
+    {
+        try
+        {
+            string path = GenerateFilePath(settings, mode, extension);
+            BitmapUtils.Save(bitmap, path);
+            var entry = history.Add(path, mode, bitmap);
+            return entry;
+        }
+        catch (Exception ex)
+        {
+            Logger.Error("Automatic save failed", ex);
+            return null;
+        }
+    }
+
+    public static SnipEntry RegisterSavedFile(string path, CaptureMode mode, Bitmap bitmap, HistoryService history)
+    {
+        try
+        {
+            return history.Add(path, mode, bitmap) ?? new SnipEntry
+            {
+                FilePath = path,
+                FileName = Path.GetFileName(path),
+                Mode = mode.ToString(),
+                Width = bitmap.Width,
+                Height = bitmap.Height
+            };
+        }
+        catch (Exception ex)
+        {
+            Logger.Error("Could not register saved file", ex);
+            return new SnipEntry
+            {
+                FilePath = path,
+                FileName = Path.GetFileName(path),
+                Mode = mode.ToString(),
+                Width = bitmap.Width,
+                Height = bitmap.Height
+            };
+        }
+    }
+
+    public static string GenerateFilePath(Settings settings, CaptureMode mode, string extension = ".png")
+    {
+        var directory = settings.SaveDirectory;
+        try
+        {
+            Directory.CreateDirectory(directory);
+            var probe = Path.Combine(directory, ".write-test");
+            File.WriteAllText(probe, "test");
+            File.Delete(probe);
+        }
+        catch (Exception ex)
+        {
+            Logger.Warn($"Save directory '{directory}' is not writable; using app data folder", ex);
+            directory = AppPaths.Screenshots;
+            Directory.CreateDirectory(directory);
+        }
+
+        var now = DateTime.Now;
+        string pattern = settings.FileNamePattern;
+        if (pattern.EndsWith(".png", StringComparison.OrdinalIgnoreCase) ||
+            pattern.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) ||
+            pattern.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) ||
+            pattern.EndsWith(".bmp", StringComparison.OrdinalIgnoreCase))
+            pattern = Path.GetFileNameWithoutExtension(pattern);
+
+        pattern = pattern
+            .Replace("{yyyy}", now.ToString("yyyy"))
+            .Replace("{yy}", now.ToString("yy"))
+            .Replace("{MM}", now.ToString("MM"))
+            .Replace("{dd}", now.ToString("dd"))
+            .Replace("{HH}", now.ToString("HH"))
+            .Replace("{mm}", now.ToString("mm"))
+            .Replace("{ss}", now.ToString("ss"))
+            .Replace("{mode}", mode.ToString());
+
+        var builder = new StringBuilder();
+        foreach (char c in pattern)
+            builder.Append(InvalidNameChars.Contains(c) ? '_' : c);
+        string baseName = builder.ToString().Trim().Trim('.');
+        if (string.IsNullOrWhiteSpace(baseName)) baseName = "Snip_" + now.ToString("yyyy-MM-dd_HH-mm-ss");
+
+        if (!extension.StartsWith('.')) extension = "." + extension;
+        string path = Path.Combine(directory, baseName + extension);
+        int suffix = 2;
+        while (File.Exists(path))
+        {
+            path = Path.Combine(directory, $"{baseName} ({suffix}){extension}");
+            suffix++;
+        }
+        return path;
+    }
+}

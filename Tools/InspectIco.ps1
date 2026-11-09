@@ -1,1 +1,50 @@
-IyBJbnNwZWN0IGFuIC5pY28gZmlsZSdzIGVudHJpZXMgYXQgdGhlIGJ5dGUgbGV2ZWwgYW5kIGZsYWcgbWFsZm9ybWVkIERJQnMuCiMgVXNhZ2U6IEluc3BlY3RJY28ucHMxIDxwYXRoLXRvLmljbz4gICAoZGVmYXVsdHMgdG8gdGhlIGluc3RhbGxlZCBjb3B5KQokaWNvID0gJGFyZ3NbMF0KaWYgKC1ub3QgJGljbykgeyAkaWNvID0gJ0k6XFNodXRpb1xBc3NldHNcYXBwLmljbycgfQppZiAoLW5vdCAoVGVzdC1QYXRoICRpY28pKSB7IFdyaXRlLUhvc3QgIk5vdCBmb3VuZDogJGljbyI7IHJldHVybiB9CiRieXRlcyA9IFtTeXN0ZW0uSU8uRmlsZV06OlJlYWRBbGxCeXRlcygkaWNvKQoKZnVuY3Rpb24gUzE2KCRiLCRvKXsgW0JpdENvbnZlcnRlcl06OlRvSW50MTYoJGIsJG8pIH0KZnVuY3Rpb24gSTMyKCRiLCRvKXsgW0JpdENvbnZlcnRlcl06OlRvSW50MzIoJGIsJG8pIH0KCiRjb3VudCA9IFMxNiAkYnl0ZXMgNApXcml0ZS1Ib3N0ICgiRklMRSA6IHswfSAgKHsxfSBieXRlcykiIC1mICRpY28sICRieXRlcy5MZW5ndGgpCldyaXRlLUhvc3QgKCJFbnRyaWVzOiB7MH0iIC1mICRjb3VudCkKJG9mZiA9IDYKJHByb2JsZW1zID0gMApmb3IgKCRpID0gMDsgJGkgLWx0ICRjb3VudDsgJGkrKykgewogICAgJHcgPSAkYnl0ZXNbJG9mZl07ICAgICAgaWYgKCR3IC1lcSAwKSB7ICR3ID0gMjU2IH0KICAgICRoID0gJGJ5dGVzWyRvZmYgKyAxXTsgIGlmICgkaCAtZXEgMCkgeyAkaCA9IDI1NiB9CiAgICAkYkluUmVzID0gSTMyICRieXRlcyAoJG9mZiArIDgpCiAgICAkaW1nT2ZmID0gSTMyICRieXRlcyAoJG9mZiArIDEyKQoKICAgICRiMCA9ICRieXRlc1skaW1nT2ZmXTsgJGIxID0gJGJ5dGVzWyRpbWdPZmYgKyAxXQogICAgaWYgKCRiMCAtZXEgMHg4OSAtYW5kICRiMSAtZXEgMHg1MCkgewogICAgICAgIFdyaXRlLUhvc3QgKCIgIHswLDN9eHsxLC0zfSAgUE5HIGVudHJ5ICAgezIsN30gYnl0ZXMgQCB7Myw3fSAgIFtPSzogUE5HIGltYWdlXSIgLWYgJHcsICRoLCAkYkluUmVzLCAkaW1nT2ZmKQogICAgfSBlbHNlIHsKICAgICAgICAkYmlTaXplICAgICAgPSBJMzIgICRieXRlcyAkaW1nT2ZmCiAgICAgICAgJGJpV2lkdGggICAgID0gSTMyICAkYnl0ZXMgKCRpbWdPZmYgKyA0KQogICAgICAgICRiaUhlaWdodCAgICA9IEkzMiAgJGJ5dGVzICgkaW1nT2ZmICsgOCkKICAgICAgICAkYmlQbGFuZXMgICAgPSBTMTYgICRieXRlcyAoJGltZ09mZiArIDEyKQogICAgICAgICRiaUJpdENvdW50ICA9IFMxNiAgJGJ5dGVzICgkaW1nT2ZmICsgMTQpCiAgICAgICAgJGJpQ29tcCAgICAgID0gSTMyICAkYnl0ZXMgKCRpbWdPZmYgKyAxNikKICAgICAgICAkYmlTaXplSW1hZ2UgPSBJMzIgICRieXRlcyAoJGltZ09mZiArIDIwKQogICAgICAgICRweCAgICAgICAgPSAkdyAqICRoICogNAogICAgICAgICRtYXNrUm93ICAgPSBbaW50XShbTWF0aF06OkNlaWxpbmcoJHcgLyAzMi4wKSkgKiA0CiAgICAgICAgJG1hc2sgICAgICA9ICRtYXNrUm93ICogJGgKICAgICAgICAkZXhwZWN0ZWQgID0gNDAgKyAkcHggKyAkbWFzawogICAgICAgICRvayA9ICgkYmlTaXplIC1lcSA0MCAtYW5kICRiaUJpdENvdW50IC1lcSAzMiAtYW5kICRiaUNvbXAgLWVxIDAgLWFuZCAkYmlTaXplSW1hZ2UgLWVxICRweCAtYW5kICRleHBlY3RlZCAtZXEgJGJJblJlcykKICAgICAgICBpZiAoLW5vdCAkb2spIHsgJHByb2JsZW1zKysgfQogICAgICAgICR2ZXJkaWN0ID0gaWYgKCRvaykgeyAnT0snIH0gZWxzZSB7ICcqKiogTUFMRk9STUVEICoqKicgfQogICAgICAgIFdyaXRlLUhvc3QgKCIgIHswLDN9eHsxLC0zfSAgRElCICAgYmlTaXplPXsyfSBwbGFuZXM9ezN9IGJpdENvdW50PXs0fSBjb21wPXs1fSBzaXplSW1nPXs2LC02fSBweD17N30gbWFzaz17OH0gZXhwZWN0ZWQ9ezl9IGFjdHVhbD17MTB9ICB7MTF9IiAtZiBgCiAgICAgICAgICAgICR3LCAkaCwgJGJpU2l6ZSwgJGJpUGxhbmVzLCAkYmlCaXRDb3VudCwgJGJpQ29tcCwgJGJpU2l6ZUltYWdlLCAkcHgsICRtYXNrLCAkZXhwZWN0ZWQsICRiSW5SZXMsICR2ZXJkaWN0KQogICAgfQogICAgJG9mZiArPSAxNgp9CldyaXRlLUhvc3QgJycKaWYgKCRwcm9ibGVtcyAtZ3QgMCkgewogICAgV3JpdGUtSG9zdCAoIlJFU1VMVDogezB9IG1hbGZvcm1lZCBESUIgZW50cihpZXMpIGZvdW5kIiAtZiAkcHJvYmxlbXMpCn0gZWxzZSB7CiAgICBXcml0ZS1Ib3N0ICdSRVNVTFQ6IGFsbCBlbnRyaWVzIGxvb2sgdmFsaWQnCn0K
+# Inspect an .ico file's entries at the byte level and flag malformed DIBs.
+# Usage: InspectIco.ps1 <path-to.ico>   (defaults to the installed copy)
+$ico = $args[0]
+if (-not $ico) { $ico = 'I:\Shutio\Assets\app.ico' }
+if (-not (Test-Path $ico)) { Write-Host "Not found: $ico"; return }
+$bytes = [System.IO.File]::ReadAllBytes($ico)
+
+function S16($b,$o){ [BitConverter]::ToInt16($b,$o) }
+function I32($b,$o){ [BitConverter]::ToInt32($b,$o) }
+
+$count = S16 $bytes 4
+Write-Host ("FILE : {0}  ({1} bytes)" -f $ico, $bytes.Length)
+Write-Host ("Entries: {0}" -f $count)
+$off = 6
+$problems = 0
+for ($i = 0; $i -lt $count; $i++) {
+    $w = $bytes[$off];      if ($w -eq 0) { $w = 256 }
+    $h = $bytes[$off + 1];  if ($h -eq 0) { $h = 256 }
+    $bInRes = I32 $bytes ($off + 8)
+    $imgOff = I32 $bytes ($off + 12)
+
+    $b0 = $bytes[$imgOff]; $b1 = $bytes[$imgOff + 1]
+    if ($b0 -eq 0x89 -and $b1 -eq 0x50) {
+        Write-Host ("  {0,3}x{1,-3}  PNG entry   {2,7} bytes @ {3,7}   [OK: PNG image]" -f $w, $h, $bInRes, $imgOff)
+    } else {
+        $biSize      = I32  $bytes $imgOff
+        $biWidth     = I32  $bytes ($imgOff + 4)
+        $biHeight    = I32  $bytes ($imgOff + 8)
+        $biPlanes    = S16  $bytes ($imgOff + 12)
+        $biBitCount  = S16  $bytes ($imgOff + 14)
+        $biComp      = I32  $bytes ($imgOff + 16)
+        $biSizeImage = I32  $bytes ($imgOff + 20)
+        $px        = $w * $h * 4
+        $maskRow   = [int]([Math]::Ceiling($w / 32.0)) * 4
+        $mask      = $maskRow * $h
+        $expected  = 40 + $px + $mask
+        $ok = ($biSize -eq 40 -and $biBitCount -eq 32 -and $biComp -eq 0 -and $biSizeImage -eq $px -and $expected -eq $bInRes)
+        if (-not $ok) { $problems++ }
+        $verdict = if ($ok) { 'OK' } else { '*** MALFORMED ***' }
+        Write-Host ("  {0,3}x{1,-3}  DIB   biSize={2} planes={3} bitCount={4} comp={5} sizeImg={6,-6} px={7} mask={8} expected={9} actual={10}  {11}" -f `
+            $w, $h, $biSize, $biPlanes, $biBitCount, $biComp, $biSizeImage, $px, $mask, $expected, $bInRes, $verdict)
+    }
+    $off += 16
+}
+Write-Host ''
+if ($problems -gt 0) {
+    Write-Host ("RESULT: {0} malformed DIB entr(ies) found" -f $problems)
+} else {
+    Write-Host 'RESULT: all entries look valid'
+}

@@ -1,1 +1,51 @@
-PFdpbmRvdyB4OkNsYXNzPSJTbmlwcGluZ1Rvb2wuVUkuRmxvYXRpbmdUb29sYmFyV2luZG93IgogICAgICAgIHhtbG5zPSJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dpbmZ4LzIwMDYveGFtbC9wcmVzZW50YXRpb24iCiAgICAgICAgeG1sbnM6eD0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93aW5meC8yMDA2L3hhbWwiCiAgICAgICAgVGl0bGU9IlNuaXAgdG9vbGJhciIKICAgICAgICBXaW5kb3dTdHlsZT0iTm9uZSIKICAgICAgICBBbGxvd3NUcmFuc3BhcmVuY3k9IlRydWUiCiAgICAgICAgQmFja2dyb3VuZD0iVHJhbnNwYXJlbnQiCiAgICAgICAgUmVzaXplTW9kZT0iTm9SZXNpemUiCiAgICAgICAgU2hvd0luVGFza2Jhcj0iRmFsc2UiCiAgICAgICAgVG9wbW9zdD0iVHJ1ZSIKICAgICAgICBTaG93QWN0aXZhdGVkPSJGYWxzZSIKICAgICAgICBTaXplVG9Db250ZW50PSJXaWR0aEFuZEhlaWdodCIKICAgICAgICBXaW5kb3dTdGFydHVwTG9jYXRpb249Ik1hbnVhbCI+CiAgICA8Qm9yZGVyIEJhY2tncm91bmQ9IiNGMjFCMUMxRiIgQm9yZGVyQnJ1c2g9IiMzOEZGRkZGRiIgQm9yZGVyVGhpY2tuZXNzPSIxIiBDb3JuZXJSYWRpdXM9IjE0IgogICAgICAgICAgICBQYWRkaW5nPSI3IiBNYXJnaW49IjEyLDEwLDEyLDE2IiBNb3VzZUxlZnRCdXR0b25Eb3duPSJSb290X01vdXNlTGVmdEJ1dHRvbkRvd24iPgogICAgICAgIDxCb3JkZXIuRWZmZWN0PgogICAgICAgICAgICA8RHJvcFNoYWRvd0VmZmVjdCBCbHVyUmFkaXVzPSIyNiIgU2hhZG93RGVwdGg9IjYiIE9wYWNpdHk9IjAuNSIgLz4KICAgICAgICA8L0JvcmRlci5FZmZlY3Q+CiAgICAgICAgPFN0YWNrUGFuZWwgT3JpZW50YXRpb249Ikhvcml6b250YWwiPgogICAgICAgICAgICA8Qm9yZGVyIFdpZHRoPSIyNiIgSGVpZ2h0PSIzMCIgQmFja2dyb3VuZD0iVHJhbnNwYXJlbnQiIEN1cnNvcj0iU2l6ZUFsbCIgVG9vbFRpcD0iRHJhZyB0b29sYmFyIj4KICAgICAgICAgICAgICAgIDxUZXh0QmxvY2sgVGV4dD0iJiN4RTc2RjsiIEZvbnRGYW1pbHk9IntTdGF0aWNSZXNvdXJjZSBJY29uRm9udH0iIEZvbnRTaXplPSIxMCIgRm9yZWdyb3VuZD0iIzgwRkZGRkZGIgogICAgICAgICAgICAgICAgICAgICAgICAgICBIb3Jpem9udGFsQWxpZ25tZW50PSJDZW50ZXIiIFZlcnRpY2FsQWxpZ25tZW50PSJDZW50ZXIiIC8+CiAgICAgICAgICAgIDwvQm9yZGVyPgogICAgICAgICAgICA8VG9nZ2xlQnV0dG9uIHg6TmFtZT0iVGJSZWN0IiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIEZsb2F0aW5nVG9vbEJ1dHRvbn0iIFRvb2xUaXA9IlJlY3Rhbmd1bGFyIHNuaXAgKEN0cmwrU2hpZnQrUykiPgogICAgICAgICAgICAgICAgPFBhdGggRGF0YT0iTTQsNiBIMjAgVjE4IEg0IFoiIFdpZHRoPSIyMCIgSGVpZ2h0PSIyMCIgU3RyZXRjaD0iVW5pZm9ybSIKICAgICAgICAgICAgICAgICAgICAgIFN0cm9rZT0ie0JpbmRpbmcgRm9yZWdyb3VuZCwgUmVsYXRpdmVTb3VyY2U9e1JlbGF0aXZlU291cmNlIEFuY2VzdG9yVHlwZT1Ub2dnbGVCdXR0b259fSIgU3Ryb2tlVGhpY2tuZXNzPSIxLjciIEZpbGw9IlRyYW5zcGFyZW50IiAvPgogICAgICAgICAgICA8L1RvZ2dsZUJ1dHRvbj4KICAgICAgICAgICAgPFRvZ2dsZUJ1dHRvbiB4Ok5hbWU9IlRiRnJlZWZvcm0iIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgRmxvYXRpbmdUb29sQnV0dG9ufSIgVG9vbFRpcD0iRnJlZWZvcm0gc25pcCAoQ3RybCtTaGlmdCtBKSI+CiAgICAgICAgICAgICAgICA8UGF0aCBEYXRhPSJNMywxNyBDNSw4IDEyLDMgMjAsNiBDMTksMTMgMTIsMjAgMywxNyBaIiBXaWR0aD0iMjAiIEhlaWdodD0iMjAiIFN0cmV0Y2g9IlVuaWZvcm0iCiAgICAgICAgICAgICAgICAgICAgICBTdHJva2U9IntCaW5kaW5nIEZvcmVncm91bmQsIFJlbGF0aXZlU291cmNlPXtSZWxhdGl2ZVNvdXJjZSBBbmNlc3RvclR5cGU9VG9nZ2xlQnV0dG9ufX0iIFN0cm9rZVRoaWNrbmVzcz0iMS42IiBGaWxsPSJUcmFuc3BhcmVudCIgLz4KICAgICAgICAgICAgPC9Ub2dnbGVCdXR0b24+CiAgICAgICAgICAgIDxUb2dnbGVCdXR0b24geDpOYW1lPSJUYldpbmRvdyIgU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBGbG9hdGluZ1Rvb2xCdXR0b259IiBUb29sVGlwPSJXaW5kb3cgc25pcCAoQ3RybCtTaGlmdCtXKSI+CiAgICAgICAgICAgICAgICA8UGF0aCBEYXRhPSJNMyw1IEgyMSBWMTkgSDMgWiBNMyw5IEgyMSIgV2lkdGg9IjIwIiBIZWlnaHQ9IjIwIiBTdHJldGNoPSJVbmlmb3JtIgogICAgICAgICAgICAgICAgICAgICAgU3Ryb2tlPSJ7QmluZGluZyBGb3JlZ3JvdW5kLCBSZWxhdGl2ZVNvdXJjZT17UmVsYXRpdmVTb3VyY2UgQW5jZXN0b3JUeXBlPVRvZ2dsZUJ1dHRvbn19IiBTdHJva2VUaGlja25lc3M9IjEuNiIgRmlsbD0iVHJhbnNwYXJlbnQiIC8+CiAgICAgICAgICAgIDwvVG9nZ2xlQnV0dG9uPgogICAgICAgICAgICA8VG9nZ2xlQnV0dG9uIHg6TmFtZT0iVGJGdWxsIiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIEZsb2F0aW5nVG9vbEJ1dHRvbn0iIFRvb2xUaXA9IkZ1bGwgZGVza3RvcCAoQ3RybCtTaGlmdCtGKSI+CiAgICAgICAgICAgICAgICA8UGF0aCBEYXRhPSJNMyw4IFYzIEg4IE0xNiwzIEgyMSBWOCBNMjEsMTYgVjIxIEgxNiBNOCwyMSBIMyBWMTYiIFdpZHRoPSIyMCIgSGVpZ2h0PSIyMCIgU3RyZXRjaD0iVW5pZm9ybSIKICAgICAgICAgICAgICAgICAgICAgIFN0cm9rZT0ie0JpbmRpbmcgRm9yZWdyb3VuZCwgUmVsYXRpdmVTb3VyY2U9e1JlbGF0aXZlU291cmNlIEFuY2VzdG9yVHlwZT1Ub2dnbGVCdXR0b259fSIgU3Ryb2tlVGhpY2tuZXNzPSIxLjciIEZpbGw9IlRyYW5zcGFyZW50IiAvPgogICAgICAgICAgICA8L1RvZ2dsZUJ1dHRvbj4KICAgICAgICAgICAgPFRvZ2dsZUJ1dHRvbiB4Ok5hbWU9IlRiTW9uaXRvciIgU3R5bGU9IntTdGF0aWNSZXNvdXJjZSBGbG9hdGluZ1Rvb2xCdXR0b259IiBUb29sVGlwPSJTaW5nbGUgZGlzcGxheSAoQ3RybCtTaGlmdCtNKSI+CiAgICAgICAgICAgICAgICA8UGF0aCBEYXRhPSJNMyw1IEgyMSBWMTcgSDMgWiBNOCwyMSBIMTYgTTEyLDE3IFYyMSIgV2lkdGg9IjIwIiBIZWlnaHQ9IjIwIiBTdHJldGNoPSJVbmlmb3JtIgogICAgICAgICAgICAgICAgICAgICAgU3Ryb2tlPSJ7QmluZGluZyBGb3JlZ3JvdW5kLCBSZWxhdGl2ZVNvdXJjZT17UmVsYXRpdmVTb3VyY2UgQW5jZXN0b3JUeXBlPVRvZ2dsZUJ1dHRvbn19IiBTdHJva2VUaGlja25lc3M9IjEuNiIgRmlsbD0iVHJhbnNwYXJlbnQiIC8+CiAgICAgICAgICAgIDwvVG9nZ2xlQnV0dG9uPgogICAgICAgICAgICA8Qm9yZGVyIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgVGhpblNlcGFyYXRvcn0iIEJhY2tncm91bmQ9IiMzM0ZGRkZGRiIgSGVpZ2h0PSIyMCIgTWFyZ2luPSI1LDAiIC8+CiAgICAgICAgICAgIDxCdXR0b24geDpOYW1lPSJUYkhpc3RvcnkiIFN0eWxlPSJ7U3RhdGljUmVzb3VyY2UgRmxvYXRpbmdUZXh0QnV0dG9ufSIgQ29udGVudD0iSGlzdG9yeSIgVG9vbFRpcD0iT3BlbiBjYXB0dXJlIGhpc3RvcnkiIC8+CiAgICAgICAgICAgIDxCdXR0b24geDpOYW1lPSJUYkNsb3NlIiBTdHlsZT0ie1N0YXRpY1Jlc291cmNlIEZsb2F0aW5nSWNvbkJ1dHRvbn0iIFRvb2xUaXA9IkhpZGUgZmxvYXRpbmcgdG9vbGJhciI+CiAgICAgICAgICAgICAgICA8UGF0aCBEYXRhPSJNNSw1IEwxOSwxOSBNMTksNSBMNSwxOSIgU3Ryb2tlPSIjRDlGRkZGRkYiIFN0cm9rZVRoaWNrbmVzcz0iMS43IiBXaWR0aD0iMTUiIEhlaWdodD0iMTUiIFN0cmV0Y2g9IlVuaWZvcm0iIC8+CiAgICAgICAgICAgIDwvQnV0dG9uPgogICAgICAgIDwvU3RhY2tQYW5lbD4KICAgIDwvQm9yZGVyPgo8L1dpbmRvdz4K
+<Window x:Class="SnippingTool.UI.FloatingToolbarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Snip toolbar"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        Topmost="True"
+        ShowActivated="False"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="Manual">
+    <Border Background="#F21B1C1F" BorderBrush="#38FFFFFF" BorderThickness="1" CornerRadius="14"
+            Padding="7" Margin="12,10,12,16" MouseLeftButtonDown="Root_MouseLeftButtonDown">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="26" ShadowDepth="6" Opacity="0.5" />
+        </Border.Effect>
+        <StackPanel Orientation="Horizontal">
+            <Border Width="26" Height="30" Background="Transparent" Cursor="SizeAll" ToolTip="Drag toolbar">
+                <TextBlock Text="&#xE76F;" FontFamily="{StaticResource IconFont}" FontSize="10" Foreground="#80FFFFFF"
+                           HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+            <ToggleButton x:Name="TbRect" Style="{StaticResource FloatingToolButton}" ToolTip="Rectangular snip (Ctrl+Shift+S)">
+                <Path Data="M4,6 H20 V18 H4 Z" Width="20" Height="20" Stretch="Uniform"
+                      Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ToggleButton}}" StrokeThickness="1.7" Fill="Transparent" />
+            </ToggleButton>
+            <ToggleButton x:Name="TbFreeform" Style="{StaticResource FloatingToolButton}" ToolTip="Freeform snip (Ctrl+Shift+A)">
+                <Path Data="M3,17 C5,8 12,3 20,6 C19,13 12,20 3,17 Z" Width="20" Height="20" Stretch="Uniform"
+                      Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ToggleButton}}" StrokeThickness="1.6" Fill="Transparent" />
+            </ToggleButton>
+            <ToggleButton x:Name="TbWindow" Style="{StaticResource FloatingToolButton}" ToolTip="Window snip (Ctrl+Shift+W)">
+                <Path Data="M3,5 H21 V19 H3 Z M3,9 H21" Width="20" Height="20" Stretch="Uniform"
+                      Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ToggleButton}}" StrokeThickness="1.6" Fill="Transparent" />
+            </ToggleButton>
+            <ToggleButton x:Name="TbFull" Style="{StaticResource FloatingToolButton}" ToolTip="Full desktop (Ctrl+Shift+F)">
+                <Path Data="M3,8 V3 H8 M16,3 H21 V8 M21,16 V21 H16 M8,21 H3 V16" Width="20" Height="20" Stretch="Uniform"
+                      Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ToggleButton}}" StrokeThickness="1.7" Fill="Transparent" />
+            </ToggleButton>
+            <ToggleButton x:Name="TbMonitor" Style="{StaticResource FloatingToolButton}" ToolTip="Single display (Ctrl+Shift+M)">
+                <Path Data="M3,5 H21 V17 H3 Z M8,21 H16 M12,17 V21" Width="20" Height="20" Stretch="Uniform"
+                      Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=ToggleButton}}" StrokeThickness="1.6" Fill="Transparent" />
+            </ToggleButton>
+            <Border Style="{StaticResource ThinSeparator}" Background="#33FFFFFF" Height="20" Margin="5,0" />
+            <Button x:Name="TbHistory" Style="{StaticResource FloatingTextButton}" Content="History" ToolTip="Open capture history" />
+            <Button x:Name="TbClose" Style="{StaticResource FloatingIconButton}" ToolTip="Hide floating toolbar">
+                <Path Data="M5,5 L19,19 M19,5 L5,19" Stroke="#D9FFFFFF" StrokeThickness="1.7" Width="15" Height="15" Stretch="Uniform" />
+            </Button>
+        </StackPanel>
+    </Border>
+</Window>

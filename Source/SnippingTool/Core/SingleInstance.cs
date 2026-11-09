@@ -1,1 +1,47 @@
-bmFtZXNwYWNlIFNuaXBwaW5nVG9vbC5Db3JlOwoKcHVibGljIHN0YXRpYyBjbGFzcyBTaW5nbGVJbnN0YW5jZQp7CiAgICBwcml2YXRlIHN0YXRpYyBNdXRleD8gX211dGV4OwogICAgcHJpdmF0ZSBzdGF0aWMgdWludCBfYWN0aXZhdGVNZXNzYWdlOwoKICAgIHB1YmxpYyBzdGF0aWMgdWludCBBY3RpdmF0ZU1lc3NhZ2UgPT4gX2FjdGl2YXRlTWVzc2FnZTsKCiAgICBwdWJsaWMgc3RhdGljIGJvb2wgVHJ5QWNxdWlyZSgpCiAgICB7CiAgICAgICAgdHJ5CiAgICAgICAgewogICAgICAgICAgICBfYWN0aXZhdGVNZXNzYWdlID0gTmF0aXZlTWV0aG9kcy5SZWdpc3RlcldpbmRvd01lc3NhZ2UoIlNhbHNhTk9XX1NuaXBwaW5nVG9vbF9BY3RpdmF0ZV92MSIpOwogICAgICAgICAgICBfbXV0ZXggPSBuZXcgTXV0ZXgodHJ1ZSwgQCJMb2NhbFxTYWxzYU5PVy5TaHV0aW8uU2luZ2xlSW5zdGFuY2UudjEiLCBvdXQgYm9vbCBjcmVhdGVkKTsKICAgICAgICAgICAgaWYgKGNyZWF0ZWQpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIExvZ2dlci5JbmZvKCJTaW5nbGUtaW5zdGFuY2UgbXV0ZXggYWNxdWlyZWQuIik7CiAgICAgICAgICAgICAgICByZXR1cm4gdHJ1ZTsKICAgICAgICAgICAgfQogICAgICAgICAgICBfbXV0ZXguRGlzcG9zZSgpOwogICAgICAgICAgICBfbXV0ZXggPSBudWxsOwogICAgICAgICAgICByZXR1cm4gZmFsc2U7CiAgICAgICAgfQogICAgICAgIGNhdGNoIChFeGNlcHRpb24gZXgpCiAgICAgICAgewogICAgICAgICAgICBMb2dnZXIuV2FybigiU2luZ2xlLWluc3RhbmNlIGNoZWNrIGZhaWxlZDsgY29udGludWluZyIsIGV4KTsKICAgICAgICAgICAgcmV0dXJuIHRydWU7CiAgICAgICAgfQogICAgfQoKICAgIHB1YmxpYyBzdGF0aWMgdm9pZCBTaWduYWxFeGlzdGluZ0luc3RhbmNlKCkKICAgIHsKICAgICAgICB0cnkKICAgICAgICB7CiAgICAgICAgICAgIGlmIChfYWN0aXZhdGVNZXNzYWdlICE9IDApCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIE5hdGl2ZU1ldGhvZHMuUG9zdE1lc3NhZ2UoTmF0aXZlTWV0aG9kcy5IV05EX0JST0FEQ0FTVCwgKGludClfYWN0aXZhdGVNZXNzYWdlLCBJbnRQdHIuWmVybywgSW50UHRyLlplcm8pOwogICAgICAgICAgICAgICAgTG9nZ2VyLkluZm8oIlNpZ25hbGxlZCB0aGUgcnVubmluZyBpbnN0YW5jZS4iKTsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgICAgICBjYXRjaCAoRXhjZXB0aW9uIGV4KQogICAgICAgIHsKICAgICAgICAgICAgTG9nZ2VyLldhcm4oIkNvdWxkIG5vdCBzaWduYWwgZXhpc3RpbmcgaW5zdGFuY2UiLCBleCk7CiAgICAgICAgfQogICAgfQp9Cg==
+namespace SnippingTool.Core;
+
+public static class SingleInstance
+{
+    private static Mutex? _mutex;
+    private static uint _activateMessage;
+
+    public static uint ActivateMessage => _activateMessage;
+
+    public static bool TryAcquire()
+    {
+        try
+        {
+            _activateMessage = NativeMethods.RegisterWindowMessage("SalsaNOW_SnippingTool_Activate_v1");
+            _mutex = new Mutex(true, @"Local\SalsaNOW.Shutio.SingleInstance.v1", out bool created);
+            if (created)
+            {
+                Logger.Info("Single-instance mutex acquired.");
+                return true;
+            }
+            _mutex.Dispose();
+            _mutex = null;
+            return false;
+        }
+        catch (Exception ex)
+        {
+            Logger.Warn("Single-instance check failed; continuing", ex);
+            return true;
+        }
+    }
+
+    public static void SignalExistingInstance()
+    {
+        try
+        {
+            if (_activateMessage != 0)
+            {
+                NativeMethods.PostMessage(NativeMethods.HWND_BROADCAST, (int)_activateMessage, IntPtr.Zero, IntPtr.Zero);
+                Logger.Info("Signalled the running instance.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Logger.Warn("Could not signal existing instance", ex);
+        }
+    }
+}

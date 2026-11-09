@@ -1,1 +1,94 @@
-dXNpbmcgU3lzdGVtLlRleHQ7CgpuYW1lc3BhY2UgU25pcHBpbmdUb29sLkNvcmU7CgpwdWJsaWMgc3RhdGljIGNsYXNzIEFwcFBhdGhzCnsKICAgIHB1YmxpYyBzdGF0aWMgc3RyaW5nIFJvb3QgeyBnZXQ7IH0gPSBBcHBDb250ZXh0LkJhc2VEaXJlY3RvcnkuVHJpbUVuZCgnXFwnKTsKICAgIHB1YmxpYyBzdGF0aWMgc3RyaW5nIERhdGEgeyBnZXQ7IH0gPSBQYXRoLkNvbWJpbmUoUm9vdCwgIkRhdGEiKTsKICAgIHB1YmxpYyBzdGF0aWMgc3RyaW5nIExvZ3MgeyBnZXQ7IH0gPSBQYXRoLkNvbWJpbmUoRGF0YSwgIkxvZ3MiKTsKICAgIHB1YmxpYyBzdGF0aWMgc3RyaW5nIFNjcmVlbnNob3RzIHsgZ2V0OyB9ID0gUGF0aC5Db21iaW5lKERhdGEsICJTY3JlZW5zaG90cyIpOwogICAgcHVibGljIHN0YXRpYyBzdHJpbmcgUmVjb3JkaW5ncyB7IGdldDsgfSA9IFBhdGguQ29tYmluZShEYXRhLCAiUmVjb3JkaW5ncyIpOwogICAgcHVibGljIHN0YXRpYyBzdHJpbmcgVGh1bWJuYWlscyB7IGdldDsgfSA9IFBhdGguQ29tYmluZShEYXRhLCAiVGh1bWJuYWlscyIpOwogICAgcHVibGljIHN0YXRpYyBzdHJpbmcgVGVzdHMgeyBnZXQ7IH0gPSBQYXRoLkNvbWJpbmUoRGF0YSwgIlRlc3RzIik7CiAgICBwdWJsaWMgc3RhdGljIHN0cmluZyBTZXR0aW5nc0ZpbGUgeyBnZXQ7IH0gPSBQYXRoLkNvbWJpbmUoRGF0YSwgInNldHRpbmdzLmpzb24iKTsKICAgIHB1YmxpYyBzdGF0aWMgc3RyaW5nIEhpc3RvcnlGaWxlIHsgZ2V0OyB9ID0gUGF0aC5Db21iaW5lKERhdGEsICJoaXN0b3J5Lmpzb24iKTsKICAgIHB1YmxpYyBzdGF0aWMgc3RyaW5nIFRvb2xzIHsgZ2V0OyB9ID0gUGF0aC5Db21iaW5lKFJvb3QsICJUb29scyIpOwoKICAgIHB1YmxpYyBzdGF0aWMgdm9pZCBFbnN1cmVEaXJlY3RvcmllcygpCiAgICB7CiAgICAgICAgZm9yZWFjaCAodmFyIGRpciBpbiBuZXdbXSB7IERhdGEsIExvZ3MsIFNjcmVlbnNob3RzLCBSZWNvcmRpbmdzLCBUaHVtYm5haWxzLCBUZXN0cyB9KQogICAgICAgIHsKICAgICAgICAgICAgdHJ5IHsgRGlyZWN0b3J5LkNyZWF0ZURpcmVjdG9yeShkaXIpOyB9CiAgICAgICAgICAgIGNhdGNoIChFeGNlcHRpb24gZXgpIHsgTG9nZ2VyLkVycm9yKCQiVW5hYmxlIHRvIGNyZWF0ZSBkaXJlY3Rvcnkge2Rpcn0iLCBleCk7IH0KICAgICAgICB9CiAgICB9Cn0KCnB1YmxpYyBzdGF0aWMgY2xhc3MgTG9nZ2VyCnsKICAgIHByaXZhdGUgc3RhdGljIHJlYWRvbmx5IG9iamVjdCBHYXRlID0gbmV3KCk7CiAgICBwcml2YXRlIHN0YXRpYyBzdHJpbmcgX2ZpbGUgPSAiIjsKICAgIHByaXZhdGUgc3RhdGljIGJvb2wgX2luaXRpYWxpemVkOwoKICAgIHB1YmxpYyBzdGF0aWMgc3RyaW5nIEN1cnJlbnRMb2dGaWxlID0+IF9maWxlOwoKICAgIHB1YmxpYyBzdGF0aWMgdm9pZCBJbml0aWFsaXplKCkKICAgIHsKICAgICAgICB0cnkKICAgICAgICB7CiAgICAgICAgICAgIERpcmVjdG9yeS5DcmVhdGVEaXJlY3RvcnkoQXBwUGF0aHMuTG9ncyk7CiAgICAgICAgICAgIF9maWxlID0gUGF0aC5Db21iaW5lKEFwcFBhdGhzLkxvZ3MsICQiYXBwLXtEYXRlVGltZS5Ob3c6eXl5eS1NTS1kZH0ubG9nIik7CiAgICAgICAgICAgIF9pbml0aWFsaXplZCA9IHRydWU7CiAgICAgICAgICAgIENsZWFudXAoKTsKICAgICAgICAgICAgSW5mbygkIj09PT09IFNodXRpbyBzdGFydGluZyAodnt0eXBlb2YoTG9nZ2VyKS5Bc3NlbWJseS5HZXROYW1lKCkuVmVyc2lvbn0pID09PT09Iik7CiAgICAgICAgICAgIEluZm8oJCJPUzoge0Vudmlyb25tZW50Lk9TVmVyc2lvbn07IDY0LWJpdCBwcm9jZXNzOiB7RW52aXJvbm1lbnQuSXM2NEJpdFByb2Nlc3N9OyB1c2VyOiB7RW52aXJvbm1lbnQuVXNlck5hbWV9Iik7CiAgICAgICAgICAgIEluZm8oJCJSb290OiB7QXBwUGF0aHMuUm9vdH0iKTsKICAgICAgICB9CiAgICAgICAgY2F0Y2gKICAgICAgICB7CiAgICAgICAgICAgIF9pbml0aWFsaXplZCA9IGZhbHNlOwogICAgICAgIH0KICAgIH0KCiAgICBwdWJsaWMgc3RhdGljIHZvaWQgSW5mbyhzdHJpbmcgbWVzc2FnZSkgPT4gV3JpdGUoIklORk8iLCBtZXNzYWdlLCBudWxsKTsKICAgIHB1YmxpYyBzdGF0aWMgdm9pZCBXYXJuKHN0cmluZyBtZXNzYWdlLCBFeGNlcHRpb24/IGV4ID0gbnVsbCkgPT4gV3JpdGUoIldBUk4iLCBtZXNzYWdlLCBleCk7CiAgICBwdWJsaWMgc3RhdGljIHZvaWQgRXJyb3Ioc3RyaW5nIG1lc3NhZ2UsIEV4Y2VwdGlvbj8gZXggPSBudWxsKSA9PiBXcml0ZSgiRVJST1IiLCBtZXNzYWdlLCBleCk7CiAgICBwdWJsaWMgc3RhdGljIHZvaWQgRGVidWcoc3RyaW5nIG1lc3NhZ2UpID0+IFdyaXRlKCJERUJVRyIsIG1lc3NhZ2UsIG51bGwpOwoKICAgIHByaXZhdGUgc3RhdGljIHZvaWQgV3JpdGUoc3RyaW5nIGxldmVsLCBzdHJpbmcgbWVzc2FnZSwgRXhjZXB0aW9uPyBleCkKICAgIHsKICAgICAgICB2YXIgbGluZSA9ICQie0RhdGVUaW1lLk5vdzp5eXl5LU1NLWRkIEhIOm1tOnNzLmZmZn0gW3tsZXZlbH1dIHttZXNzYWdlfSI7CiAgICAgICAgaWYgKGV4ICE9IG51bGwpIGxpbmUgKz0gRW52aXJvbm1lbnQuTmV3TGluZSArIGV4OwogICAgICAgIHRyeQogICAgICAgIHsKICAgICAgICAgICAgbG9jayAoR2F0ZSkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWYgKCFfaW5pdGlhbGl6ZWQgfHwgc3RyaW5nLklzTnVsbE9yRW1wdHkoX2ZpbGUpKQogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIERpcmVjdG9yeS5DcmVhdGVEaXJlY3RvcnkoQXBwUGF0aHMuTG9ncyk7CiAgICAgICAgICAgICAgICAgICAgX2ZpbGUgPSBQYXRoLkNvbWJpbmUoQXBwUGF0aHMuTG9ncywgJCJhcHAte0RhdGVUaW1lLk5vdzp5eXl5LU1NLWRkfS5sb2ciKTsKICAgICAgICAgICAgICAgICAgICBfaW5pdGlhbGl6ZWQgPSB0cnVlOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgRmlsZS5BcHBlbmRBbGxUZXh0KF9maWxlLCBsaW5lICsgRW52aXJvbm1lbnQuTmV3TGluZSwgRW5jb2RpbmcuVVRGOCk7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgY2F0Y2gKICAgICAgICB7CiAgICAgICAgICAgIC8vIExvZ2dpbmcgbXVzdCBuZXZlciB0YWtlIHRoZSBhcHAgZG93bi4KICAgICAgICB9CiAgICB9CgogICAgcHJpdmF0ZSBzdGF0aWMgdm9pZCBDbGVhbnVwKCkKICAgIHsKICAgICAgICB0cnkKICAgICAgICB7CiAgICAgICAgICAgIGZvcmVhY2ggKHZhciBmaWxlIGluIERpcmVjdG9yeS5HZXRGaWxlcyhBcHBQYXRocy5Mb2dzLCAiYXBwLSoubG9nIikpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGlmIChGaWxlLkdldExhc3RXcml0ZVRpbWVVdGMoZmlsZSkgPCBEYXRlVGltZS5VdGNOb3cuQWRkRGF5cygtMTQpKQogICAgICAgICAgICAgICAgICAgIEZpbGUuRGVsZXRlKGZpbGUpOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIGNhdGNoIHsgfQogICAgfQp9Cg==
+using System.Text;
+
+namespace SnippingTool.Core;
+
+public static class AppPaths
+{
+    public static string Root { get; } = AppContext.BaseDirectory.TrimEnd('\\');
+    public static string Data { get; } = Path.Combine(Root, "Data");
+    public static string Logs { get; } = Path.Combine(Data, "Logs");
+    public static string Screenshots { get; } = Path.Combine(Data, "Screenshots");
+    public static string Recordings { get; } = Path.Combine(Data, "Recordings");
+    public static string Thumbnails { get; } = Path.Combine(Data, "Thumbnails");
+    public static string Tests { get; } = Path.Combine(Data, "Tests");
+    public static string SettingsFile { get; } = Path.Combine(Data, "settings.json");
+    public static string HistoryFile { get; } = Path.Combine(Data, "history.json");
+    public static string Tools { get; } = Path.Combine(Root, "Tools");
+
+    public static void EnsureDirectories()
+    {
+        foreach (var dir in new[] { Data, Logs, Screenshots, Recordings, Thumbnails, Tests })
+        {
+            try { Directory.CreateDirectory(dir); }
+            catch (Exception ex) { Logger.Error($"Unable to create directory {dir}", ex); }
+        }
+    }
+}
+
+public static class Logger
+{
+    private static readonly object Gate = new();
+    private static string _file = "";
+    private static bool _initialized;
+
+    public static string CurrentLogFile => _file;
+
+    public static void Initialize()
+    {
+        try
+        {
+            Directory.CreateDirectory(AppPaths.Logs);
+            _file = Path.Combine(AppPaths.Logs, $"app-{DateTime.Now:yyyy-MM-dd}.log");
+            _initialized = true;
+            Cleanup();
+            Info($"===== Shutio starting (v{typeof(Logger).Assembly.GetName().Version}) =====");
+            Info($"OS: {Environment.OSVersion}; 64-bit process: {Environment.Is64BitProcess}; user: {Environment.UserName}");
+            Info($"Root: {AppPaths.Root}");
+        }
+        catch
+        {
+            _initialized = false;
+        }
+    }
+
+    public static void Info(string message) => Write("INFO", message, null);
+    public static void Warn(string message, Exception? ex = null) => Write("WARN", message, ex);
+    public static void Error(string message, Exception? ex = null) => Write("ERROR", message, ex);
+    public static void Debug(string message) => Write("DEBUG", message, null);
+
+    private static void Write(string level, string message, Exception? ex)
+    {
+        var line = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff} [{level}] {message}";
+        if (ex != null) line += Environment.NewLine + ex;
+        try
+        {
+            lock (Gate)
+            {
+                if (!_initialized || string.IsNullOrEmpty(_file))
+                {
+                    Directory.CreateDirectory(AppPaths.Logs);
+                    _file = Path.Combine(AppPaths.Logs, $"app-{DateTime.Now:yyyy-MM-dd}.log");
+                    _initialized = true;
+                }
+                File.AppendAllText(_file, line + Environment.NewLine, Encoding.UTF8);
+            }
+        }
+        catch
+        {
+            // Logging must never take the app down.
+        }
+    }
+
+    private static void Cleanup()
+    {
+        try
+        {
+            foreach (var file in Directory.GetFiles(AppPaths.Logs, "app-*.log"))
+            {
+                if (File.GetLastWriteTimeUtc(file) < DateTime.UtcNow.AddDays(-14))
+                    File.Delete(file);
+            }
+        }
+        catch { }
+    }
+}

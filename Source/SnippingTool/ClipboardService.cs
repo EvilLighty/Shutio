@@ -1,1 +1,48 @@
-dXNpbmcgU3lzdGVtLkRyYXdpbmc7CnVzaW5nIFN5c3RlbS5EcmF3aW5nLkltYWdpbmc7CnVzaW5nIFN5c3RlbS5XaW5kb3dzOwp1c2luZyBTbmlwcGluZ1Rvb2wuQ29yZTsKdXNpbmcgU25pcHBpbmdUb29sLkltYWdpbmc7CgpuYW1lc3BhY2UgU25pcHBpbmdUb29sOwoKcHVibGljIHN0YXRpYyBjbGFzcyBDbGlwYm9hcmRTZXJ2aWNlCnsKICAgIHB1YmxpYyBzdGF0aWMgYm9vbCBTZXRJbWFnZShCaXRtYXAgYml0bWFwKQogICAgewogICAgICAgIGZvciAoaW50IGF0dGVtcHQgPSAwOyBhdHRlbXB0IDwgNDsgYXR0ZW1wdCsrKQogICAgICAgIHsKICAgICAgICAgICAgdHJ5CiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIHZhciBzb3VyY2UgPSBCaXRtYXBVdGlscy5Ub0JpdG1hcFNvdXJjZShiaXRtYXApOwogICAgICAgICAgICAgICAgQ2xpcGJvYXJkLlNldEltYWdlKHNvdXJjZSk7CiAgICAgICAgICAgICAgICBMb2dnZXIuSW5mbygkIkltYWdlIGNvcGllZCB0byBjbGlwYm9hcmQgKHtiaXRtYXAuV2lkdGh9eHtiaXRtYXAuSGVpZ2h0fSkuIik7CiAgICAgICAgICAgICAgICByZXR1cm4gdHJ1ZTsKICAgICAgICAgICAgfQogICAgICAgICAgICBjYXRjaCAoRXhjZXB0aW9uIGV4KQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBMb2dnZXIuV2FybigkIkNsaXBib2FyZCBpbWFnZSBhdHRlbXB0IHthdHRlbXB0ICsgMX0gZmFpbGVkIiwgZXgpOwogICAgICAgICAgICAgICAgVGhyZWFkLlNsZWVwKDYwKTsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgICAgICByZXR1cm4gZmFsc2U7CiAgICB9CgogICAgcHVibGljIHN0YXRpYyBib29sIFNldFRleHQoc3RyaW5nIHRleHQpCiAgICB7CiAgICAgICAgZm9yIChpbnQgYXR0ZW1wdCA9IDA7IGF0dGVtcHQgPCA0OyBhdHRlbXB0KyspCiAgICAgICAgewogICAgICAgICAgICB0cnkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgQ2xpcGJvYXJkLlNldFRleHQodGV4dCA/PyAiIik7CiAgICAgICAgICAgICAgICByZXR1cm4gdHJ1ZTsKICAgICAgICAgICAgfQogICAgICAgICAgICBjYXRjaCAoRXhjZXB0aW9uIGV4KQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBMb2dnZXIuV2FybigkIkNsaXBib2FyZCB0ZXh0IGF0dGVtcHQge2F0dGVtcHQgKyAxfSBmYWlsZWQiLCBleCk7CiAgICAgICAgICAgICAgICBUaHJlYWQuU2xlZXAoNjApOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIHJldHVybiBmYWxzZTsKICAgIH0KfQo=
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Windows;
+using SnippingTool.Core;
+using SnippingTool.Imaging;
+
+namespace SnippingTool;
+
+public static class ClipboardService
+{
+    public static bool SetImage(Bitmap bitmap)
+    {
+        for (int attempt = 0; attempt < 4; attempt++)
+        {
+            try
+            {
+                var source = BitmapUtils.ToBitmapSource(bitmap);
+                Clipboard.SetImage(source);
+                Logger.Info($"Image copied to clipboard ({bitmap.Width}x{bitmap.Height}).");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Logger.Warn($"Clipboard image attempt {attempt + 1} failed", ex);
+                Thread.Sleep(60);
+            }
+        }
+        return false;
+    }
+
+    public static bool SetText(string text)
+    {
+        for (int attempt = 0; attempt < 4; attempt++)
+        {
+            try
+            {
+                Clipboard.SetText(text ?? "");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Logger.Warn($"Clipboard text attempt {attempt + 1} failed", ex);
+                Thread.Sleep(60);
+            }
+        }
+        return false;
+    }
+}

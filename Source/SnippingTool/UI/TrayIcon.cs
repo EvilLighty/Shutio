@@ -1,1 +1,116 @@
-dXNpbmcgU3lzdGVtLkRyYXdpbmc7CnVzaW5nIFN5c3RlbS5XaW5kb3dzLkZvcm1zOwp1c2luZyBTbmlwcGluZ1Rvb2wuQ29yZTsKCm5hbWVzcGFjZSBTbmlwcGluZ1Rvb2wuVUk7CgpwdWJsaWMgc2VhbGVkIGNsYXNzIFRyYXlJY29uIDogSURpc3Bvc2FibGUKewogICAgcHJpdmF0ZSByZWFkb25seSBOb3RpZnlJY29uIF9pY29uOwogICAgcHJpdmF0ZSByZWFkb25seSBJY29uPyBfb3duZWRJY29uOwogICAgcHJpdmF0ZSBib29sIF9kaXNwb3NlZDsKCiAgICBwdWJsaWMgZXZlbnQgRXZlbnRIYW5kbGVyPENhcHR1cmVNb2RlPj8gQ2FwdHVyZVJlcXVlc3RlZDsKICAgIHB1YmxpYyBldmVudCBFdmVudEhhbmRsZXI/IFNob3dSZXF1ZXN0ZWQ7CiAgICBwdWJsaWMgZXZlbnQgRXZlbnRIYW5kbGVyPyBIaXN0b3J5UmVxdWVzdGVkOwogICAgcHVibGljIGV2ZW50IEV2ZW50SGFuZGxlcj8gU2V0dGluZ3NSZXF1ZXN0ZWQ7CiAgICBwdWJsaWMgZXZlbnQgRXZlbnRIYW5kbGVyPyBSZWNvcmRpbmdSZXF1ZXN0ZWQ7CiAgICBwdWJsaWMgZXZlbnQgRXZlbnRIYW5kbGVyPyBFeGl0UmVxdWVzdGVkOwoKICAgIHB1YmxpYyBUcmF5SWNvbigpCiAgICB7CiAgICAgICAgSWNvbiBpY29uOwogICAgICAgIHRyeQogICAgICAgIHsKICAgICAgICAgICAgc3RyaW5nIHBhdGggPSBQYXRoLkNvbWJpbmUoQXBwUGF0aHMuUm9vdCwgIkFzc2V0cyIsICJhcHAuaWNvIik7CiAgICAgICAgICAgIGlmIChGaWxlLkV4aXN0cyhwYXRoKSkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgdmFyIGxvYWRlZCA9IG5ldyBJY29uKHBhdGgpOwogICAgICAgICAgICAgICAgX293bmVkSWNvbiA9IGxvYWRlZDsKICAgICAgICAgICAgICAgIGljb24gPSBsb2FkZWQ7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxzZQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICB2YXIgZXh0cmFjdGVkID0gSWNvbi5FeHRyYWN0QXNzb2NpYXRlZEljb24oRW52aXJvbm1lbnQuUHJvY2Vzc1BhdGggPz8gIiIpOwogICAgICAgICAgICAgICAgX293bmVkSWNvbiA9IGV4dHJhY3RlZDsKICAgICAgICAgICAgICAgIGljb24gPSBleHRyYWN0ZWQgPz8gU3lzdGVtSWNvbnMuQXBwbGljYXRpb247CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgY2F0Y2gKICAgICAgICB7CiAgICAgICAgICAgIGljb24gPSBTeXN0ZW1JY29ucy5BcHBsaWNhdGlvbjsKICAgICAgICB9CgogICAgICAgIHZhciBtZW51ID0gbmV3IENvbnRleHRNZW51U3RyaXAKICAgICAgICB7CiAgICAgICAgICAgIEZvbnQgPSBuZXcgRm9udCgiU2Vnb2UgVUkiLCA5ZiksCiAgICAgICAgICAgIFNob3dJbWFnZU1hcmdpbiA9IGZhbHNlLAogICAgICAgICAgICBSZW5kZXJNb2RlID0gVG9vbFN0cmlwUmVuZGVyTW9kZS5TeXN0ZW0KICAgICAgICB9OwogICAgICAgIEFkZChtZW51LCAiUmVjdGFuZ3VsYXIgc25pcCIsICgpID0+IENhcHR1cmVSZXF1ZXN0ZWQ/Lkludm9rZSh0aGlzLCBDYXB0dXJlTW9kZS5SZWN0YW5nbGUpKTsKICAgICAgICBBZGQobWVudSwgIkZyZWVmb3JtIHNuaXAiLCAoKSA9PiBDYXB0dXJlUmVxdWVzdGVkPy5JbnZva2UodGhpcywgQ2FwdHVyZU1vZGUuRnJlZWZvcm0pKTsKICAgICAgICBBZGQobWVudSwgIldpbmRvdyBzbmlwIiwgKCkgPT4gQ2FwdHVyZVJlcXVlc3RlZD8uSW52b2tlKHRoaXMsIENhcHR1cmVNb2RlLldpbmRvdykpOwogICAgICAgIEFkZChtZW51LCAiRnVsbCBkZXNrdG9wIHNuaXAiLCAoKSA9PiBDYXB0dXJlUmVxdWVzdGVkPy5JbnZva2UodGhpcywgQ2FwdHVyZU1vZGUuRnVsbHNjcmVlbikpOwogICAgICAgIEFkZChtZW51LCAiU2luZ2xlIGRpc3BsYXkgc25pcCIsICgpID0+IENhcHR1cmVSZXF1ZXN0ZWQ/Lkludm9rZSh0aGlzLCBDYXB0dXJlTW9kZS5Nb25pdG9yKSk7CiAgICAgICAgbWVudS5JdGVtcy5BZGQobmV3IFRvb2xTdHJpcFNlcGFyYXRvcigpKTsKICAgICAgICBBZGQobWVudSwgIlJlY29yZCBzY3JlZW7igKYiLCAoKSA9PiBSZWNvcmRpbmdSZXF1ZXN0ZWQ/Lkludm9rZSh0aGlzLCBFdmVudEFyZ3MuRW1wdHkpKTsKICAgICAgICBBZGQobWVudSwgIlNuaXAgaGlzdG9yeSIsICgpID0+IEhpc3RvcnlSZXF1ZXN0ZWQ/Lkludm9rZSh0aGlzLCBFdmVudEFyZ3MuRW1wdHkpKTsKICAgICAgICBBZGQobWVudSwgIlNldHRpbmdzIiwgKCkgPT4gU2V0dGluZ3NSZXF1ZXN0ZWQ/Lkludm9rZSh0aGlzLCBFdmVudEFyZ3MuRW1wdHkpKTsKICAgICAgICBtZW51Lkl0ZW1zLkFkZChuZXcgVG9vbFN0cmlwU2VwYXJhdG9yKCkpOwogICAgICAgIEFkZChtZW51LCAiU2hvdyBTaHV0aW8iLCAoKSA9PiBTaG93UmVxdWVzdGVkPy5JbnZva2UodGhpcywgRXZlbnRBcmdzLkVtcHR5KSk7CiAgICAgICAgQWRkKG1lbnUsICJFeGl0IiwgKCkgPT4gRXhpdFJlcXVlc3RlZD8uSW52b2tlKHRoaXMsIEV2ZW50QXJncy5FbXB0eSkpOwoKICAgICAgICBfaWNvbiA9IG5ldyBOb3RpZnlJY29uCiAgICAgICAgewogICAgICAgICAgICBJY29uID0gaWNvbiwKICAgICAgICAgICAgVGV4dCA9ICJTaHV0aW8iLAogICAgICAgICAgICBWaXNpYmxlID0gdHJ1ZSwKICAgICAgICAgICAgQ29udGV4dE1lbnVTdHJpcCA9IG1lbnUKICAgICAgICB9OwogICAgICAgIF9pY29uLkRvdWJsZUNsaWNrICs9IChfLCBfKSA9PiBTaG93UmVxdWVzdGVkPy5JbnZva2UodGhpcywgRXZlbnRBcmdzLkVtcHR5KTsKICAgICAgICBfaWNvbi5Nb3VzZUNsaWNrICs9IChfLCBlKSA9PgogICAgICAgIHsKICAgICAgICAgICAgaWYgKGUuQnV0dG9uID09IE1vdXNlQnV0dG9ucy5MZWZ0KSBTaG93UmVxdWVzdGVkPy5JbnZva2UodGhpcywgRXZlbnRBcmdzLkVtcHR5KTsKICAgICAgICB9OwogICAgfQoKICAgIHB1YmxpYyB2b2lkIFVwZGF0ZVRvb2x0aXAoc3RyaW5nIHRleHQpCiAgICB7CiAgICAgICAgdHJ5CiAgICAgICAgewogICAgICAgICAgICBfaWNvbi5UZXh0ID0gdGV4dC5MZW5ndGggPiAxMjAgPyB0ZXh0Wy4uMTIwXSA6IHRleHQ7CiAgICAgICAgfQogICAgICAgIGNhdGNoIHsgfQogICAgfQoKICAgIHB1YmxpYyB2b2lkIFNob3dCYWxsb29uKHN0cmluZyB0aXRsZSwgc3RyaW5nIG1lc3NhZ2UpCiAgICB7CiAgICAgICAgdHJ5CiAgICAgICAgewogICAgICAgICAgICBfaWNvbi5CYWxsb29uVGlwVGl0bGUgPSB0aXRsZTsKICAgICAgICAgICAgX2ljb24uQmFsbG9vblRpcFRleHQgPSBtZXNzYWdlOwogICAgICAgICAgICBfaWNvbi5TaG93QmFsbG9vblRpcCg0MDAwKTsKICAgICAgICB9CiAgICAgICAgY2F0Y2ggeyB9CiAgICB9CgogICAgcHJpdmF0ZSBzdGF0aWMgdm9pZCBBZGQoQ29udGV4dE1lbnVTdHJpcCBtZW51LCBzdHJpbmcgbGFiZWwsIEFjdGlvbiBhY3Rpb24pCiAgICB7CiAgICAgICAgdmFyIGl0ZW0gPSBuZXcgVG9vbFN0cmlwTWVudUl0ZW0obGFiZWwpOwogICAgICAgIGl0ZW0uQ2xpY2sgKz0gKF8sIF8pID0+IGFjdGlvbigpOwogICAgICAgIG1lbnUuSXRlbXMuQWRkKGl0ZW0pOwogICAgfQoKICAgIHB1YmxpYyB2b2lkIERpc3Bvc2UoKQogICAgewogICAgICAgIGlmIChfZGlzcG9zZWQpIHJldHVybjsKICAgICAgICBfZGlzcG9zZWQgPSB0cnVlOwogICAgICAgIHRyeQogICAgICAgIHsKICAgICAgICAgICAgX2ljb24uVmlzaWJsZSA9IGZhbHNlOwogICAgICAgICAgICBfaWNvbi5EaXNwb3NlKCk7CiAgICAgICAgfQogICAgICAgIGNhdGNoIHsgfQogICAgICAgIHRyeSB7IF9vd25lZEljb24/LkRpc3Bvc2UoKTsgfSBjYXRjaCB7IH0KICAgIH0KfQo=
+using System.Drawing;
+using System.Windows.Forms;
+using SnippingTool.Core;
+
+namespace SnippingTool.UI;
+
+public sealed class TrayIcon : IDisposable
+{
+    private readonly NotifyIcon _icon;
+    private readonly Icon? _ownedIcon;
+    private bool _disposed;
+
+    public event EventHandler<CaptureMode>? CaptureRequested;
+    public event EventHandler? ShowRequested;
+    public event EventHandler? HistoryRequested;
+    public event EventHandler? SettingsRequested;
+    public event EventHandler? RecordingRequested;
+    public event EventHandler? ExitRequested;
+
+    public TrayIcon()
+    {
+        Icon icon;
+        try
+        {
+            string path = Path.Combine(AppPaths.Root, "Assets", "app.ico");
+            if (File.Exists(path))
+            {
+                var loaded = new Icon(path);
+                _ownedIcon = loaded;
+                icon = loaded;
+            }
+            else
+            {
+                var extracted = Icon.ExtractAssociatedIcon(Environment.ProcessPath ?? "");
+                _ownedIcon = extracted;
+                icon = extracted ?? SystemIcons.Application;
+            }
+        }
+        catch
+        {
+            icon = SystemIcons.Application;
+        }
+
+        var menu = new ContextMenuStrip
+        {
+            Font = new Font("Segoe UI", 9f),
+            ShowImageMargin = false,
+            RenderMode = ToolStripRenderMode.System
+        };
+        Add(menu, "Rectangular snip", () => CaptureRequested?.Invoke(this, CaptureMode.Rectangle));
+        Add(menu, "Freeform snip", () => CaptureRequested?.Invoke(this, CaptureMode.Freeform));
+        Add(menu, "Window snip", () => CaptureRequested?.Invoke(this, CaptureMode.Window));
+        Add(menu, "Full desktop snip", () => CaptureRequested?.Invoke(this, CaptureMode.Fullscreen));
+        Add(menu, "Single display snip", () => CaptureRequested?.Invoke(this, CaptureMode.Monitor));
+        menu.Items.Add(new ToolStripSeparator());
+        Add(menu, "Record screen…", () => RecordingRequested?.Invoke(this, EventArgs.Empty));
+        Add(menu, "Snip history", () => HistoryRequested?.Invoke(this, EventArgs.Empty));
+        Add(menu, "Settings", () => SettingsRequested?.Invoke(this, EventArgs.Empty));
+        menu.Items.Add(new ToolStripSeparator());
+        Add(menu, "Show Shutio", () => ShowRequested?.Invoke(this, EventArgs.Empty));
+        Add(menu, "Exit", () => ExitRequested?.Invoke(this, EventArgs.Empty));
+
+        _icon = new NotifyIcon
+        {
+            Icon = icon,
+            Text = "Shutio",
+            Visible = true,
+            ContextMenuStrip = menu
+        };
+        _icon.DoubleClick += (_, _) => ShowRequested?.Invoke(this, EventArgs.Empty);
+        _icon.MouseClick += (_, e) =>
+        {
+            if (e.Button == MouseButtons.Left) ShowRequested?.Invoke(this, EventArgs.Empty);
+        };
+    }
+
+    public void UpdateTooltip(string text)
+    {
+        try
+        {
+            _icon.Text = text.Length > 120 ? text[..120] : text;
+        }
+        catch { }
+    }
+
+    public void ShowBalloon(string title, string message)
+    {
+        try
+        {
+            _icon.BalloonTipTitle = title;
+            _icon.BalloonTipText = message;
+            _icon.ShowBalloonTip(4000);
+        }
+        catch { }
+    }
+
+    private static void Add(ContextMenuStrip menu, string label, Action action)
+    {
+        var item = new ToolStripMenuItem(label);
+        item.Click += (_, _) => action();
+        menu.Items.Add(item);
+    }
+
+    public void Dispose()
+    {
+        if (_disposed) return;
+        _disposed = true;
+        try
+        {
+            _icon.Visible = false;
+            _icon.Dispose();
+        }
+        catch { }
+        try { _ownedIcon?.Dispose(); } catch { }
+    }
+}

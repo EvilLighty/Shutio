@@ -1,1 +1,54 @@
-dXNpbmcgU3lzdGVtLldpbmRvd3M7CnVzaW5nIFN5c3RlbS5XaW5kb3dzLk1lZGlhOwp1c2luZyBTeXN0ZW0uV2luZG93cy5UaHJlYWRpbmc7CgpuYW1lc3BhY2UgU25pcHBpbmdUb29sLlVJOwoKcHVibGljIHNlYWxlZCBjbGFzcyBQcm9ncmVzc1JpbmcgOiBGcmFtZXdvcmtFbGVtZW50CnsKICAgIHByaXZhdGUgcmVhZG9ubHkgRGlzcGF0Y2hlclRpbWVyIF90aW1lcjsKICAgIHByaXZhdGUgZG91YmxlIF9hbmdsZTsKCiAgICBwdWJsaWMgUHJvZ3Jlc3NSaW5nKCkKICAgIHsKICAgICAgICBXaWR0aCA9IDIyOwogICAgICAgIEhlaWdodCA9IDIyOwogICAgICAgIF90aW1lciA9IG5ldyBEaXNwYXRjaGVyVGltZXIoRGlzcGF0Y2hlclByaW9yaXR5LlJlbmRlcikgeyBJbnRlcnZhbCA9IFRpbWVTcGFuLkZyb21NaWxsaXNlY29uZHMoMzMpIH07CiAgICAgICAgX3RpbWVyLlRpY2sgKz0gKF8sIF8pID0+CiAgICAgICAgewogICAgICAgICAgICBfYW5nbGUgPSAoX2FuZ2xlICsgOSkgJSAzNjA7CiAgICAgICAgICAgIEludmFsaWRhdGVWaXN1YWwoKTsKICAgICAgICB9OwogICAgICAgIElzVmlzaWJsZUNoYW5nZWQgKz0gKF8sIF8pID0+IFVwZGF0ZVRpbWVyKCk7CiAgICB9CgogICAgcHJpdmF0ZSB2b2lkIFVwZGF0ZVRpbWVyKCkKICAgIHsKICAgICAgICBpZiAoSXNWaXNpYmxlKSBfdGltZXIuU3RhcnQoKTsKICAgICAgICBlbHNlIF90aW1lci5TdG9wKCk7CiAgICB9CgogICAgcHJvdGVjdGVkIG92ZXJyaWRlIHZvaWQgT25SZW5kZXIoRHJhd2luZ0NvbnRleHQgZGMpCiAgICB7CiAgICAgICAgYmFzZS5PblJlbmRlcihkYyk7CiAgICAgICAgZG91YmxlIHNpemUgPSBNYXRoLk1pbihBY3R1YWxXaWR0aCwgQWN0dWFsSGVpZ2h0KTsKICAgICAgICBpZiAoc2l6ZSA8PSAyKSByZXR1cm47CiAgICAgICAgdmFyIGNlbnRlciA9IG5ldyBQb2ludChBY3R1YWxXaWR0aCAvIDIsIEFjdHVhbEhlaWdodCAvIDIpOwogICAgICAgIGRvdWJsZSByYWRpdXMgPSBzaXplIC8gMiAtIDI7CiAgICAgICAgdmFyIHRyYWNrID0gbmV3IFBlbihuZXcgU29saWRDb2xvckJydXNoKENvbG9yLkZyb21BcmdiKDU1LCAyNTUsIDI1NSwgMjU1KSksIDIpOwogICAgICAgIGRjLkRyYXdFbGxpcHNlKG51bGwsIHRyYWNrLCBjZW50ZXIsIHJhZGl1cywgcmFkaXVzKTsKICAgICAgICB2YXIgYnJ1c2ggPSBUcnlGaW5kUmVzb3VyY2UoIkFjY2VudEJydXNoIikgYXMgQnJ1c2ggPz8gQnJ1c2hlcy5EZWVwU2t5Qmx1ZTsKICAgICAgICB2YXIgcGVuID0gbmV3IFBlbihicnVzaCwgMikgeyBTdGFydExpbmVDYXAgPSBQZW5MaW5lQ2FwLlJvdW5kLCBFbmRMaW5lQ2FwID0gUGVuTGluZUNhcC5Sb3VuZCB9OwogICAgICAgIGRvdWJsZSBzdGFydCA9IF9hbmdsZSAqIE1hdGguUEkgLyAxODA7CiAgICAgICAgdmFyIHAxID0gbmV3IFBvaW50KGNlbnRlci5YICsgcmFkaXVzICogTWF0aC5Db3Moc3RhcnQpLCBjZW50ZXIuWSArIHJhZGl1cyAqIE1hdGguU2luKHN0YXJ0KSk7CiAgICAgICAgdmFyIHAyID0gbmV3IFBvaW50KGNlbnRlci5YICsgcmFkaXVzICogTWF0aC5Db3Moc3RhcnQgKyBNYXRoLlBJICogMS40NSksIGNlbnRlci5ZICsgcmFkaXVzICogTWF0aC5TaW4oc3RhcnQgKyBNYXRoLlBJICogMS40NSkpOwogICAgICAgIHZhciBnZW9tZXRyeSA9IG5ldyBTdHJlYW1HZW9tZXRyeSgpOwogICAgICAgIHVzaW5nICh2YXIgY3R4ID0gZ2VvbWV0cnkuT3BlbigpKQogICAgICAgIHsKICAgICAgICAgICAgY3R4LkJlZ2luRmlndXJlKHAxLCBmYWxzZSwgZmFsc2UpOwogICAgICAgICAgICBjdHguQXJjVG8ocDIsIG5ldyBTaXplKHJhZGl1cywgcmFkaXVzKSwgMCwgdHJ1ZSwgU3dlZXBEaXJlY3Rpb24uQ2xvY2t3aXNlLCB0cnVlLCBmYWxzZSk7CiAgICAgICAgfQogICAgICAgIGdlb21ldHJ5LkZyZWV6ZSgpOwogICAgICAgIGRjLkRyYXdHZW9tZXRyeShudWxsLCBwZW4sIGdlb21ldHJ5KTsKICAgIH0KfQo=
+using System.Windows;
+using System.Windows.Media;
+using System.Windows.Threading;
+
+namespace SnippingTool.UI;
+
+public sealed class ProgressRing : FrameworkElement
+{
+    private readonly DispatcherTimer _timer;
+    private double _angle;
+
+    public ProgressRing()
+    {
+        Width = 22;
+        Height = 22;
+        _timer = new DispatcherTimer(DispatcherPriority.Render) { Interval = TimeSpan.FromMilliseconds(33) };
+        _timer.Tick += (_, _) =>
+        {
+            _angle = (_angle + 9) % 360;
+            InvalidateVisual();
+        };
+        IsVisibleChanged += (_, _) => UpdateTimer();
+    }
+
+    private void UpdateTimer()
+    {
+        if (IsVisible) _timer.Start();
+        else _timer.Stop();
+    }
+
+    protected override void OnRender(DrawingContext dc)
+    {
+        base.OnRender(dc);
+        double size = Math.Min(ActualWidth, ActualHeight);
+        if (size <= 2) return;
+        var center = new Point(ActualWidth / 2, ActualHeight / 2);
+        double radius = size / 2 - 2;
+        var track = new Pen(new SolidColorBrush(Color.FromArgb(55, 255, 255, 255)), 2);
+        dc.DrawEllipse(null, track, center, radius, radius);
+        var brush = TryFindResource("AccentBrush") as Brush ?? Brushes.DeepSkyBlue;
+        var pen = new Pen(brush, 2) { StartLineCap = PenLineCap.Round, EndLineCap = PenLineCap.Round };
+        double start = _angle * Math.PI / 180;
+        var p1 = new Point(center.X + radius * Math.Cos(start), center.Y + radius * Math.Sin(start));
+        var p2 = new Point(center.X + radius * Math.Cos(start + Math.PI * 1.45), center.Y + radius * Math.Sin(start + Math.PI * 1.45));
+        var geometry = new StreamGeometry();
+        using (var ctx = geometry.Open())
+        {
+            ctx.BeginFigure(p1, false, false);
+            ctx.ArcTo(p2, new Size(radius, radius), 0, true, SweepDirection.Clockwise, true, false);
+        }
+        geometry.Freeze();
+        dc.DrawGeometry(null, pen, geometry);
+    }
+}

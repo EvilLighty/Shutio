@@ -1,1 +1,24 @@
-PFByb2plY3QgU2RrPSJNaWNyb3NvZnQuTkVULlNkayI+CgogIDxQcm9wZXJ0eUdyb3VwPgogICAgPE91dHB1dFR5cGU+RXhlPC9PdXRwdXRUeXBlPgogICAgPFRhcmdldEZyYW1ld29yaz5uZXQxMC4wLXdpbmRvd3M8L1RhcmdldEZyYW1ld29yaz4KICAgIDxVc2VXaW5kb3dzRm9ybXM+dHJ1ZTwvVXNlV2luZG93c0Zvcm1zPgogICAgPFJ1bnRpbWVJZGVudGlmaWVyPndpbi14NjQ8L1J1bnRpbWVJZGVudGlmaWVyPgogICAgPFNlbGZDb250YWluZWQ+dHJ1ZTwvU2VsZkNvbnRhaW5lZD4KICAgIDxQdWJsaXNoU2luZ2xlRmlsZT50cnVlPC9QdWJsaXNoU2luZ2xlRmlsZT4KICAgIDxJbmNsdWRlTmF0aXZlTGlicmFyaWVzRm9yU2VsZkV4dHJhY3Q+dHJ1ZTwvSW5jbHVkZU5hdGl2ZUxpYnJhcmllc0ZvclNlbGZFeHRyYWN0PgogICAgPEVuYWJsZUNvbXByZXNzaW9uSW5TaW5nbGVGaWxlPnRydWU8L0VuYWJsZUNvbXByZXNzaW9uSW5TaW5nbGVGaWxlPgogICAgPERlYnVnVHlwZT5ub25lPC9EZWJ1Z1R5cGU+CiAgICA8RGVidWdTeW1ib2xzPmZhbHNlPC9EZWJ1Z1N5bWJvbHM+CiAgICA8QXNzZW1ibHlOYW1lPlVuaW5zdGFsbFNodXRpbzwvQXNzZW1ibHlOYW1lPgogICAgPFJvb3ROYW1lc3BhY2U+U2h1dGlvVW5pbnN0YWxsZXI8L1Jvb3ROYW1lc3BhY2U+CiAgICA8VmVyc2lvbj4xLjEuMTwvVmVyc2lvbj4KICAgIDxBc3NlbWJseVZlcnNpb24+MS4xLjEuMDwvQXNzZW1ibHlWZXJzaW9uPgogICAgPEZpbGVWZXJzaW9uPjEuMS4xLjA8L0ZpbGVWZXJzaW9uPgogICAgPE51bGxhYmxlPmVuYWJsZTwvTnVsbGFibGU+CiAgICA8SW1wbGljaXRVc2luZ3M+ZW5hYmxlPC9JbXBsaWNpdFVzaW5ncz4KICAgIDxTYXRlbGxpdGVSZXNvdXJjZUxhbmd1YWdlcz5lbjwvU2F0ZWxsaXRlUmVzb3VyY2VMYW5ndWFnZXM+CiAgPC9Qcm9wZXJ0eUdyb3VwPgoKPC9Qcm9qZWN0Pgo=
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <AssemblyName>UninstallShutio</AssemblyName>
+    <RootNamespace>ShutioUninstaller</RootNamespace>
+    <Version>1.1.1</Version>
+    <AssemblyVersion>1.1.1.0</AssemblyVersion>
+    <FileVersion>1.1.1.0</FileVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+</Project>

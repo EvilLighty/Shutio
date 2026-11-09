@@ -1,1 +1,7 @@
-QGVjaG8gb2ZmCnJlbSBTaW1wbGUgaW5zdGFsbGVyIGxhdW5jaGVyIGZvciB0aGUgcG9ydGFibGUgU2h1dGlvLgpyZW0gRG91YmxlLWNsaWNrIHRoaXMgdG8gb3BlbiB0aGUgImNob29zZSBhIGZvbGRlciIgaW5zdGFsbGVyLgpyZW0gTm8gYWRtaW4gcmlnaHRzIGFuZCBubyBpbnRlcm5ldCBhcmUgcmVxdWlyZWQuCnNldGxvY2FsCnBvd2Vyc2hlbGwuZXhlIC1Ob1Byb2ZpbGUgLUV4ZWN1dGlvblBvbGljeSBCeXBhc3MgLUZpbGUgIiV+ZHAwaW5zdGFsbC5wczEiICUqCmVuZGxvY2FsCg==
+@echo off
+rem Simple installer launcher for the portable Shutio.
+rem Double-click this to open the "choose a folder" installer.
+rem No admin rights and no internet are required.
+setlocal
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0install.ps1" %*
+endlocal

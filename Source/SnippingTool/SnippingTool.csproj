@@ -1,1 +1,50 @@
-PFByb2plY3QgU2RrPSJNaWNyb3NvZnQuTkVULlNkayI+CgogIDxQcm9wZXJ0eUdyb3VwPgogICAgPE91dHB1dFR5cGU+V2luRXhlPC9PdXRwdXRUeXBlPgogICAgPFRhcmdldEZyYW1ld29yaz5uZXQxMC4wLXdpbmRvd3MxMC4wLjE5MDQxLjA8L1RhcmdldEZyYW1ld29yaz4KICAgIDxVc2VXUEY+dHJ1ZTwvVXNlV1BGPgogICAgPFVzZVdpbmRvd3NGb3Jtcz50cnVlPC9Vc2VXaW5kb3dzRm9ybXM+CiAgICA8TnVsbGFibGU+ZW5hYmxlPC9OdWxsYWJsZT4KICAgIDxJbXBsaWNpdFVzaW5ncz5lbmFibGU8L0ltcGxpY2l0VXNpbmdzPgogICAgPEFzc2VtYmx5TmFtZT5TaHV0aW88L0Fzc2VtYmx5TmFtZT4KICAgIDxSb290TmFtZXNwYWNlPlNuaXBwaW5nVG9vbDwvUm9vdE5hbWVzcGFjZT4KICAgIDxBcHBsaWNhdGlvbkljb24+QXNzZXRzXGFwcC5pY288L0FwcGxpY2F0aW9uSWNvbj4KICAgIDxBcHBsaWNhdGlvbk1hbmlmZXN0PmFwcC5tYW5pZmVzdDwvQXBwbGljYXRpb25NYW5pZmVzdD4KICAgIDxQbGF0Zm9ybVRhcmdldD54NjQ8L1BsYXRmb3JtVGFyZ2V0PgogICAgPFBsYXRmb3Jtcz54NjQ8L1BsYXRmb3Jtcz4KICAgIDxMYW5nVmVyc2lvbj5sYXRlc3Q8L0xhbmdWZXJzaW9uPgogICAgPEFsbG93VW5zYWZlQmxvY2tzPnRydWU8L0FsbG93VW5zYWZlQmxvY2tzPgogICAgPFNhdGVsbGl0ZVJlc291cmNlTGFuZ3VhZ2VzPmVuPC9TYXRlbGxpdGVSZXNvdXJjZUxhbmd1YWdlcz4KICAgIDxWZXJzaW9uPjEuMS4xPC9WZXJzaW9uPgogICAgPEZpbGVWZXJzaW9uPjEuMS4xLjA8L0ZpbGVWZXJzaW9uPgogICAgPFByb2R1Y3Q+U2h1dGlvPC9Qcm9kdWN0PgogICAgPENvbXBhbnk+U2Fsc2FOT1cgRWRpdGlvbjwvQ29tcGFueT4KICAgIDxEZXNjcmlwdGlvbj5Qb3J0YWJsZSBXaW5kb3dzIGNhcHR1cmUsIGFubm90YXRpb24sIE9DUiBhbmQgc2NyZWVuLXJlY29yZGluZyB0b29sIChTYWxzYU5PVyBlZGl0aW9uKTwvRGVzY3JpcHRpb24+CiAgICA8Q29weXJpZ2h0PlBvcnRhYmxlIHV0aWxpdHk8L0NvcHlyaWdodD4KICAgIDxOb1dhcm4+JChOb1dhcm4pO0NBMTQxNjtXRk8xMDAwPC9Ob1dhcm4+CgogICAgPCEtLSBEaXN0cmlidXRlIGFzIGEgc2luZ2xlLWZpbGUsIHNlbGYtY29udGFpbmVkIGFwcDogdGhlIHdob2xlIC5ORVQgKyBXUEYKICAgICAgICAgcnVudGltZSBpcyBmb2xkZWQgaW50byBTaHV0aW8uZXhlICh0aGUgfjI0OSBsb29zZSBydW50aW1lIERMTHMgZ28gYXdheSkuCiAgICAgICAgIGZmbXBlZy5leGUsIEFzc2V0c1wgYW5kIHRoZSB1c2VyJ3MgRGF0YVwgc3RheSBsb29zZS4gUHVibGlzaC1vbmx5OiByZWd1bGFyCiAgICAgICAgIGRvdG5ldCBidWlsZCAvIHNlbGYtdGVzdCBhcmUgdW5hZmZlY3RlZC4gKE1hdGNoZXMgaW5zdGFsbGVyL3VwZGF0ZXIgYnVpbGRzLikgLS0+CiAgICA8UHVibGlzaFNpbmdsZUZpbGU+dHJ1ZTwvUHVibGlzaFNpbmdsZUZpbGU+CiAgICA8SW5jbHVkZU5hdGl2ZUxpYnJhcmllc0ZvclNlbGZFeHRyYWN0PnRydWU8L0luY2x1ZGVOYXRpdmVMaWJyYXJpZXNGb3JTZWxmRXh0cmFjdD4KICAgIDxFbmFibGVDb21wcmVzc2lvbkluU2luZ2xlRmlsZT50cnVlPC9FbmFibGVDb21wcmVzc2lvbkluU2luZ2xlRmlsZT4KICA8L1Byb3BlcnR5R3JvdXA+CgogIDxJdGVtR3JvdXA+CiAgICA8IS0tIFdpbmRvd3NEZXNrdG9wIFNESyBhZGRzIHRoZXNlIGdsb2JhbGx5OyB0aGV5IGNyZWF0ZSBjb25zdGFudCB0eXBlIGFtYmlndWl0eQogICAgICAgICB3aXRoIFdQRiB0eXBlcyAoUG9pbnQsIENvbG9yLCBCcnVzaCwgQnV0dG9uLCBBcHBsaWNhdGlvbi4uLikuIC0tPgogICAgPFVzaW5nIFJlbW92ZT0iU3lzdGVtLkRyYXdpbmciIC8+CiAgICA8VXNpbmcgUmVtb3ZlPSJTeXN0ZW0uV2luZG93cy5Gb3JtcyIgLz4KICAgIDxVc2luZyBJbmNsdWRlPSJTeXN0ZW0uSU8iIC8+CiAgPC9JdGVtR3JvdXA+CgogIDxJdGVtR3JvdXA+CiAgICA8UmVzb3VyY2UgSW5jbHVkZT0iQXNzZXRzXGFwcC5pY28iIC8+CiAgICA8UmVzb3VyY2UgSW5jbHVkZT0iQXNzZXRzXGxvZ28ucG5nIiAvPgogICAgPE5vbmUgVXBkYXRlPSJBc3NldHNcYXBwLmljbyIgQ29weVRvT3V0cHV0RGlyZWN0b3J5PSJQcmVzZXJ2ZU5ld2VzdCIgLz4KICA8L0l0ZW1Hcm91cD4KCjwvUHJvamVjdD4K
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Shutio</AssemblyName>
+    <RootNamespace>SnippingTool</RootNamespace>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <PlatformTarget>x64</PlatformTarget>
+    <Platforms>x64</Platforms>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <Version>1.1.1</Version>
+    <FileVersion>1.1.1.0</FileVersion>
+    <Product>Shutio</Product>
+    <Company>SalsaNOW Edition</Company>
+    <Description>Portable Windows capture, annotation, OCR and screen-recording tool (SalsaNOW edition)</Description>
+    <Copyright>Portable utility</Copyright>
+    <NoWarn>$(NoWarn);CA1416;WFO1000</NoWarn>
+
+    <!-- Distribute as a single-file, self-contained app: the whole .NET + WPF
+         runtime is folded into Shutio.exe (the ~249 loose runtime DLLs go away).
+         ffmpeg.exe, Assets\ and the user's Data\ stay loose. Publish-only: regular
+         dotnet build / self-test are unaffected. (Matches installer/updater builds.) -->
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- WindowsDesktop SDK adds these globally; they create constant type ambiguity
+         with WPF types (Point, Color, Brush, Button, Application...). -->
+    <Using Remove="System.Drawing" />
+    <Using Remove="System.Windows.Forms" />
+    <Using Include="System.IO" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\app.ico" />
+    <Resource Include="Assets\logo.png" />
+    <None Update="Assets\app.ico" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

@@ -1,1 +1,29 @@
-IyBSZW5kZXIgdGhlIGluc3RhbGxlZCBsb29zZSAuaWNvIGF0IGEgZGVza3RvcC10aWxlIHNpemUgKDMyIGFuZCA0OCBweCkgdG8gcHJvdmUKIyB0aGUgc21hbGwtc2l6ZSBESUIgZW50cmllcyBhY3R1YWxseSBkcmF3IHRoZSBlbWJsZW0gKG5vdCBibGFuaykuCkFkZC1UeXBlIC1Bc3NlbWJseU5hbWUgU3lzdGVtLkRyYXdpbmcKJGljbyA9ICRhcmdzWzBdCmlmICgtbm90ICRpY28pIHsgJGljbyA9ICdJOlxTaHV0aW9cQXNzZXRzXGFwcC5pY28nIH0KJGljb24gPSBOZXctT2JqZWN0IFN5c3RlbS5EcmF3aW5nLkljb24oJGljbykgICAjIHN0cmljdCBsb2FkIG9mIHRoZSAuaWNvIGZpbGUKJHNpemVzID0gQCgpCnRyeSB7CiAgICAjIEVudW1lcmF0ZSBob3cgbWFueSBpbWFnZXMgR0RJIHJlcG9ydHMgZm9yIHRoaXMgLmljbwogICAgJHNpemVzID0gQCgkaWNvbi5TaXplKQp9IGNhdGNoIHsgfQpXcml0ZS1Ib3N0ICgnTG9hZGVkIE9LOyBwcmltYXJ5IHNpemUgPSAnICsgJGljb24uV2lkdGggKyAneCcgKyAkaWNvbi5IZWlnaHQpCgpmb3JlYWNoICgkcHggaW4gQCgxNiwgMzIsIDQ4LCAxMjgpKSB7CiAgICAkYm1wID0gTmV3LU9iamVjdCBTeXN0ZW0uRHJhd2luZy5CaXRtYXAoJHB4LCAkcHgsIFtTeXN0ZW0uRHJhd2luZy5JbWFnaW5nLlBpeGVsRm9ybWF0XTo6Rm9ybWF0MzJicHBBcmdiKQogICAgJGcgPSBbU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NdOjpGcm9tSW1hZ2UoJGJtcCkKICAgICRnLkNsZWFyKFtTeXN0ZW0uRHJhd2luZy5Db2xvcl06OkJsYWNrKQogICAgIyBkcmF3IGV4YWN0bHkgcHgtYnktcHggKE5lYXJlc3ROZWlnaGJvcikgc28gd2Ugc2VlIHRoZSByYXcgRElCIGF0IHNtYWxsIHNpemVzCiAgICAkZy5JbnRlcnBvbGF0aW9uTW9kZSA9IFtTeXN0ZW0uRHJhd2luZy5EcmF3aW5nMkQuSW50ZXJwb2xhdGlvbk1vZGVdOjpOZWFyZXN0TmVpZ2hib3IKICAgICRnLkRyYXdJbWFnZSgkaWNvbiwgMCwgMCwgJHB4LCAkcHgpCiAgICAkZy5EaXNwb3NlKCkKICAgICRvdXQgPSAiSTpcQXBwc1xTbmlwcGluZ1Rvb2xcQXNzZXRzXF9yZW5kZXJfJHB4LnBuZyIKICAgICRibXAuU2F2ZSgkb3V0LCBbU3lzdGVtLkRyYXdpbmcuSW1hZ2luZy5JbWFnZUZvcm1hdF06OlBuZykKICAgICRibXAuRGlzcG9zZSgpCiAgICBXcml0ZS1Ib3N0ICgncmVuZGVyZWQgezB9cHggLT4gezF9JyAtZiAkcHgsICRvdXQpCn0KIyBNYWtlIGEgNHggc2NhbGVkIGNvbXBvc2l0ZSBvZiB0aGUgMTYgYW5kIDMyIHJlbmRlcnMgc28gaXQncyBlYXN5IHRvIGV5ZWJhbGwuCiRpY29uLkRpc3Bvc2UoKQpXcml0ZS1Ib3N0ICdkb25lJwo=
+# Render the installed loose .ico at a desktop-tile size (32 and 48 px) to prove
+# the small-size DIB entries actually draw the emblem (not blank).
+Add-Type -AssemblyName System.Drawing
+$ico = $args[0]
+if (-not $ico) { $ico = 'I:\Shutio\Assets\app.ico' }
+$icon = New-Object System.Drawing.Icon($ico)   # strict load of the .ico file
+$sizes = @()
+try {
+    # Enumerate how many images GDI reports for this .ico
+    $sizes = @($icon.Size)
+} catch { }
+Write-Host ('Loaded OK; primary size = ' + $icon.Width + 'x' + $icon.Height)
+
+foreach ($px in @(16, 32, 48, 128)) {
+    $bmp = New-Object System.Drawing.Bitmap($px, $px, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
+    $g = [System.Drawing.Graphics]::FromImage($bmp)
+    $g.Clear([System.Drawing.Color]::Black)
+    # draw exactly px-by-px (NearestNeighbor) so we see the raw DIB at small sizes
+    $g.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::NearestNeighbor
+    $g.DrawImage($icon, 0, 0, $px, $px)
+    $g.Dispose()
+    $out = "I:\Apps\SnippingTool\Assets\_render_$px.png"
+    $bmp.Save($out, [System.Drawing.Imaging.ImageFormat]::Png)
+    $bmp.Dispose()
+    Write-Host ('rendered {0}px -> {1}' -f $px, $out)
+}
+# Make a 4x scaled composite of the 16 and 32 renders so it's easy to eyeball.
+$icon.Dispose()
+Write-Host 'done'

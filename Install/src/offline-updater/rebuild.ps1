@@ -1,1 +1,86 @@
-I3JlcXVpcmVzIC12ZXJzaW9uIDMKPCMKICBCdWlsZHMgdGhlIE9GRkxJTkUgVVBEQVRFUiBmcm9tIHRoZSBhcHAgZm9sZGVyLCB0aGVuIHJlZnJlc2hlcyB0aGUgc2hhcmUgZm9sZGVyLgogIEV2ZXJ5dGhpbmcgc3RheXMgdW5kZXIgSTpcIChvZmZsaW5lKS4gTm8gYWRtaW4sIG5vIGludGVybmV0LgoKICBUaGUgdXBkYXRlciBpcyBhIHNpbmdsZSBzZWxmLWNvbnRhaW5lZCAuZXhlIHRoYXQgaGFzIHRoZSB3aG9sZSAobmV3KSBhcHAgZW1iZWRkZWQuCiAgUnVuIGl0IG9uIGFueSBtYWNoaW5lIHdoZXJlIFNodXRpbyBpcyBhbHJlYWR5IGluc3RhbGxlZCBhbmQgaXQgcmVwYWlycyB0aGF0IGNvcHkKICBJTiBQTEFDRSwgcHJlc2VydmluZyB0aGUgdXNlcidzIERhdGFcIGZvbGRlciAoc25pcHMsIHJlY29yZGluZ3MsIHNldHRpbmdzKS4KCiAgUHJvZHVjZXM6CiAgICAgIEk6XEFwcHNcU2h1dGlvLVNoYXJlXFNodXRpby1VcGRhdGVyLmV4ZSAgICAgIChjb21wbGV0ZSBvZmZsaW5lIHVwZGF0ZXIpCgogIFJ1bjogIHBvd2Vyc2hlbGwgLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSByZWJ1aWxkLnBzMSBbLVNoYXJlRGlyICJDOlxXaGVyZSJdCiM+CltDbWRsZXRCaW5kaW5nKCldCnBhcmFtKAogICAgW3N0cmluZ10kU2hhcmVEaXIgPSAnSTpcQXBwc1xTaHV0aW8tU2hhcmUnCikKJEVycm9yQWN0aW9uUHJlZmVyZW5jZSA9ICdTdG9wJwoKJHByb2ogICA9ICdJOlxBcHBzXFNuaXBwaW5nVG9vbCcKJHNyYyAgICA9IEpvaW4tUGF0aCAkcHJvaiAnSW5zdGFsbFxzcmNcb2ZmbGluZS11cGRhdGVyJwokYnVpbGQgID0gSm9pbi1QYXRoICRzcmMgJ19idWlsZCcKJGRvdG5ldCA9IGlmIChUZXN0LVBhdGggJ0k6XERldlRvb2xzXGRvdG5ldFxkb3RuZXQuZXhlJykgeyAnSTpcRGV2VG9vbHNcZG90bmV0XGRvdG5ldC5leGUnIH0gZWxzZSB7ICdkb3RuZXQnIH0KJGVudjpET1RORVRfQ0xJX0hPTUUgPSAnSTpcRGV2VG9vbHNcZG90bmV0LWhvbWUnCiRlbnY6TlVHRVRfUEFDS0FHRVMgID0gJ0k6XERldlRvb2xzXG51Z2V0JwokY29tbW9uID0gQCgnLXA6UHVibGlzaFNpbmdsZUZpbGU9dHJ1ZScsJy1wOkluY2x1ZGVOYXRpdmVMaWJyYXJpZXNGb3JTZWxmRXh0cmFjdD10cnVlJywKICAgICAgICAgICAgJy1wOkVuYWJsZUNvbXByZXNzaW9uSW5TaW5nbGVGaWxlPXRydWUnLCctcDpEZWJ1Z1R5cGU9bm9uZScsJy1wOkRlYnVnU3ltYm9scz1mYWxzZScpCgppZiAoVGVzdC1QYXRoICRidWlsZCkgeyBSZW1vdmUtSXRlbSAtTGl0ZXJhbFBhdGggJGJ1aWxkIC1SZWN1cnNlIC1Gb3JjZSB9Ck5ldy1JdGVtIC1JdGVtVHlwZSBEaXJlY3RvcnkgLUZvcmNlIC1QYXRoICRidWlsZCB8IE91dC1OdWxsCgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gMSkgcGF5bG9hZCAtLQpXcml0ZS1Ib3N0ICJCdWlsZGluZyB0aGUgYXBwIHBheWxvYWQgKGNsZWFuIGFwcCwgbm8gcGVyc29uYWwgZGF0YSkuLi4iCiRwYXlsb2FkID0gSm9pbi1QYXRoICRidWlsZCAncGF5bG9hZCcKTmV3LUl0ZW0gLUl0ZW1UeXBlIERpcmVjdG9yeSAtRm9yY2UgLVBhdGggKEpvaW4tUGF0aCAkcGF5bG9hZCAnQXNzZXRzJykgfCBPdXQtTnVsbApOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAoSm9pbi1QYXRoICRwYXlsb2FkICdUb29scycpICB8IE91dC1OdWxsCgojIE5ldmVyIGJ1bmRsZSBBSSBoYW5kb3ZlciBkb2NzLCB0aGUgZHVtcGVyLCBkZWJ1ZyBzeW1ib2xzLCBvciB0aGUgaW5zdGFsbGVyLwojIHVwZGF0ZXIgZXhlY3V0YWJsZXMgaW50byB0aGUgcGF5bG9hZCAoZGVmZW5zaXZlIGFnYWluc3Qgb2xkLW5hbWUgZmlsZXMgbGluZ2VyaW5nKS4KJGV4Y2x1ZGUgPSBAKCdjcmVhdGVkdW1wLmV4ZScsJ0FHRU5UUy5tZCcsJ0hBTkRPRkYubWQnLCdUT0RPLm1kJywnQ0hBTkdFTE9HLm1kJywKICAgICAgICAgICAgICdJbnN0YWxsU25pcHBpbmdUb29sLmV4ZScsJ1VuaW5zdGFsbFNuaXBwaW5nVG9vbC5leGUnLAogICAgICAgICAgICAgJ1NodXRpby1zZXR1cC5leGUnLCdVbmluc3RhbGxTaHV0aW8uZXhlJywnU2h1dGlvLVVwZGF0ZXIuZXhlJykKR2V0LUNoaWxkSXRlbSAtTGl0ZXJhbFBhdGggJHByb2ogLUZpbGUgfAogICAgV2hlcmUtT2JqZWN0IHsgJGV4Y2x1ZGUgLW5vdGNvbnRhaW5zICRfLk5hbWUgLWFuZCAkXy5FeHRlbnNpb24gLW5lICcucGRiJyB9IHwKICAgIEZvckVhY2gtT2JqZWN0IHsgQ29weS1JdGVtIC1MaXRlcmFsUGF0aCAkXy5GdWxsTmFtZSAtRGVzdGluYXRpb24gKEpvaW4tUGF0aCAkcGF5bG9hZCAkXy5OYW1lKSB9Cgpmb3JlYWNoICgkYSBpbiAoR2V0LUNoaWxkSXRlbSAoSm9pbi1QYXRoICRwcm9qICdBc3NldHMnKSAtUmVjdXJzZSAtRmlsZSkpIHsKICAgICRyZWwgPSAkYS5GdWxsTmFtZS5TdWJzdHJpbmcoJHByb2ouTGVuZ3RoKS5UcmltU3RhcnQoJ1wnKQogICAgJHQgICA9IEpvaW4tUGF0aCAkcGF5bG9hZCAkcmVsCiAgICBOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAoU3BsaXQtUGF0aCAkdCkgfCBPdXQtTnVsbAogICAgQ29weS1JdGVtIC1MaXRlcmFsUGF0aCAkYS5GdWxsTmFtZSAtRGVzdGluYXRpb24gJHQKfQpDb3B5LUl0ZW0gLUxpdGVyYWxQYXRoIChKb2luLVBhdGggJHByb2ogJ1Rvb2xzXGZmbXBlZy5leGUnKSAtRGVzdGluYXRpb24gKEpvaW4tUGF0aCAkcGF5bG9hZCAnVG9vbHNcZmZtcGVnLmV4ZScpCgojIFNhbml0eTogdGhlIHBheWxvYWQgbXVzdCBjb250YWluIHRoZSBhcHAgYW5kIG11c3QgTk9UIGNvbnRhaW4gdXNlciBkYXRhLgokbXVzdEhhdmUgPSBAKAogICAgKEpvaW4tUGF0aCAkcGF5bG9hZCAnU2h1dGlvLmV4ZScpLAogICAgKEpvaW4tUGF0aCAkcGF5bG9hZCAnVG9vbHNcZmZtcGVnLmV4ZScpCikKZm9yZWFjaCAoJG0gaW4gJG11c3RIYXZlKSB7IGlmICgtbm90IChUZXN0LVBhdGggJG0pKSB7IHRocm93ICJQYXlsb2FkIGlzIG1pc3NpbmcgJG0iIH0gfQppZiAoVGVzdC1QYXRoIChKb2luLVBhdGggJHBheWxvYWQgJ0RhdGEnKSkgeyB0aHJvdyAiUGF5bG9hZCBtdXN0IG5vdCBjb250YWluIGEgRGF0YSBmb2xkZXIiIH0KCkFkZC1UeXBlIC1Bc3NlbWJseU5hbWUgU3lzdGVtLklPLkNvbXByZXNzaW9uLkZpbGVTeXN0ZW0KJHppcCA9IEpvaW4tUGF0aCAkYnVpbGQgJ2FwcC1wYXlsb2FkLnppcCcKW1N5c3RlbS5JTy5Db21wcmVzc2lvbi5aaXBGaWxlXTo6Q3JlYXRlRnJvbURpcmVjdG9yeSgkcGF5bG9hZCwgJHppcCwgW1N5c3RlbS5JTy5Db21wcmVzc2lvbi5Db21wcmVzc2lvbkxldmVsXTo6T3B0aW1hbCwgJGZhbHNlKSB8IE91dC1OdWxsCldyaXRlLUhvc3QgKCIgIHBheWxvYWQgemlwOiB7MDpOMX0gTUIiIC1mICgoR2V0LUl0ZW0gJHppcCkuTGVuZ3RoLzFNQikpCgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gMikgdXBkYXRlciAtLQpXcml0ZS1Ib3N0ICJCdWlsZGluZyB0aGUgb2ZmbGluZSB1cGRhdGVyIChlbWJlZGRpbmcgdGhlIHBheWxvYWQpLi4uIgomICRkb3RuZXQgcHVibGlzaCAoSm9pbi1QYXRoICRzcmMgJ3VwZGF0ZXJcVXBkYXRlci5jc3Byb2onKSAtYyBSZWxlYXNlIC1yIHdpbi14NjQgLS1zZWxmLWNvbnRhaW5lZCB0cnVlIGAKICAgIEBjb21tb24gLXA6UGF5bG9hZFppcD0iJHppcCIgLW8gJGJ1aWxkIC12IHEgLW5vbG9nbwokdXBkYXRlciA9IEpvaW4tUGF0aCAkYnVpbGQgJ1NodXRpby1VcGRhdGVyLmV4ZScKCmlmICgtbm90IChUZXN0LVBhdGggJHVwZGF0ZXIpKSB7CiAgICB0aHJvdyAiQnVpbGQgZGlkIG5vdCBwcm9kdWNlIFNodXRpby1VcGRhdGVyLmV4ZS4iCn0KCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAzKSBwdWJsaXNoIC0tCk5ldy1JdGVtIC1JdGVtVHlwZSBEaXJlY3RvcnkgLUZvcmNlIC1QYXRoICRTaGFyZURpciB8IE91dC1OdWxsCkNvcHktSXRlbSAtTGl0ZXJhbFBhdGggJHVwZGF0ZXIgLURlc3RpbmF0aW9uIChKb2luLVBhdGggJFNoYXJlRGlyICdTaHV0aW8tVXBkYXRlci5leGUnKSAtRm9yY2UKCldyaXRlLUhvc3QgIiIKV3JpdGUtSG9zdCAoIiAgRG9uZS4gVXBkYXRlciB3cml0dGVuIHRvOiIpCldyaXRlLUhvc3QgKCIgICAgezB9IiAtZiAoSm9pbi1QYXRoICRTaGFyZURpciAnU2h1dGlvLVVwZGF0ZXIuZXhlJykpCkdldC1DaGlsZEl0ZW0gJFNoYXJlRGlyIC1GaWxlIHwgU2VsZWN0LU9iamVjdCBOYW1lLCBAe049J01CJztFPXtbbWF0aF06OlJvdW5kKCRfLkxlbmd0aC8xTUIsMSl9fSB8IEZvcm1hdC1UYWJsZSAtQXV0b1NpemUK
+#requires -version 3
+<#
+  Builds the OFFLINE UPDATER from the app folder, then refreshes the share folder.
+  Everything stays under I:\ (offline). No admin, no internet.
+
+  The updater is a single self-contained .exe that has the whole (new) app embedded.
+  Run it on any machine where Shutio is already installed and it repairs that copy
+  IN PLACE, preserving the user's Data\ folder (snips, recordings, settings).
+
+  Produces:
+      I:\Apps\Shutio-Share\Shutio-Updater.exe      (complete offline updater)
+
+  Run:  powershell -NoProfile -ExecutionPolicy Bypass -File rebuild.ps1 [-ShareDir "C:\Where"]
+#>
+[CmdletBinding()]
+param(
+    [string]$ShareDir = 'I:\Apps\Shutio-Share'
+)
+$ErrorActionPreference = 'Stop'
+
+$proj   = 'I:\Apps\SnippingTool'
+$src    = Join-Path $proj 'Install\src\offline-updater'
+$build  = Join-Path $src '_build'
+$dotnet = if (Test-Path 'I:\DevTools\dotnet\dotnet.exe') { 'I:\DevTools\dotnet\dotnet.exe' } else { 'dotnet' }
+$env:DOTNET_CLI_HOME = 'I:\DevTools\dotnet-home'
+$env:NUGET_PACKAGES  = 'I:\DevTools\nuget'
+$common = @('-p:PublishSingleFile=true','-p:IncludeNativeLibrariesForSelfExtract=true',
+            '-p:EnableCompressionInSingleFile=true','-p:DebugType=none','-p:DebugSymbols=false')
+
+if (Test-Path $build) { Remove-Item -LiteralPath $build -Recurse -Force }
+New-Item -ItemType Directory -Force -Path $build | Out-Null
+
+# ---------------------------------------------------------------- 1) payload --
+Write-Host "Building the app payload (clean app, no personal data)..."
+$payload = Join-Path $build 'payload'
+New-Item -ItemType Directory -Force -Path (Join-Path $payload 'Assets') | Out-Null
+New-Item -ItemType Directory -Force -Path (Join-Path $payload 'Tools')  | Out-Null
+
+# Never bundle AI handover docs, the dumper, debug symbols, or the installer/
+# updater executables into the payload (defensive against old-name files lingering).
+$exclude = @('createdump.exe','AGENTS.md','HANDOFF.md','TODO.md','CHANGELOG.md',
+             'InstallSnippingTool.exe','UninstallSnippingTool.exe',
+             'Shutio-setup.exe','UninstallShutio.exe','Shutio-Updater.exe')
+Get-ChildItem -LiteralPath $proj -File |
+    Where-Object { $exclude -notcontains $_.Name -and $_.Extension -ne '.pdb' } |
+    ForEach-Object { Copy-Item -LiteralPath $_.FullName -Destination (Join-Path $payload $_.Name) }
+
+foreach ($a in (Get-ChildItem (Join-Path $proj 'Assets') -Recurse -File)) {
+    $rel = $a.FullName.Substring($proj.Length).TrimStart('\')
+    $t   = Join-Path $payload $rel
+    New-Item -ItemType Directory -Force -Path (Split-Path $t) | Out-Null
+    Copy-Item -LiteralPath $a.FullName -Destination $t
+}
+Copy-Item -LiteralPath (Join-Path $proj 'Tools\ffmpeg.exe') -Destination (Join-Path $payload 'Tools\ffmpeg.exe')
+
+# Sanity: the payload must contain the app and must NOT contain user data.
+$mustHave = @(
+    (Join-Path $payload 'Shutio.exe'),
+    (Join-Path $payload 'Tools\ffmpeg.exe')
+)
+foreach ($m in $mustHave) { if (-not (Test-Path $m)) { throw "Payload is missing $m" } }
+if (Test-Path (Join-Path $payload 'Data')) { throw "Payload must not contain a Data folder" }
+
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+$zip = Join-Path $build 'app-payload.zip'
+[System.IO.Compression.ZipFile]::CreateFromDirectory($payload, $zip, [System.IO.Compression.CompressionLevel]::Optimal, $false) | Out-Null
+Write-Host ("  payload zip: {0:N1} MB" -f ((Get-Item $zip).Length/1MB))
+
+# ---------------------------------------------------------------- 2) updater --
+Write-Host "Building the offline updater (embedding the payload)..."
+& $dotnet publish (Join-Path $src 'updater\Updater.csproj') -c Release -r win-x64 --self-contained true `
+    @common -p:PayloadZip="$zip" -o $build -v q -nologo
+$updater = Join-Path $build 'Shutio-Updater.exe'
+
+if (-not (Test-Path $updater)) {
+    throw "Build did not produce Shutio-Updater.exe."
+}
+
+# ---------------------------------------------------------------- 3) publish --
+New-Item -ItemType Directory -Force -Path $ShareDir | Out-Null
+Copy-Item -LiteralPath $updater -Destination (Join-Path $ShareDir 'Shutio-Updater.exe') -Force
+
+Write-Host ""
+Write-Host ("  Done. Updater written to:")
+Write-Host ("    {0}" -f (Join-Path $ShareDir 'Shutio-Updater.exe'))
+Get-ChildItem $ShareDir -File | Select-Object Name, @{N='MB';E={[math]::Round($_.Length/1MB,1)}} | Format-Table -AutoSize

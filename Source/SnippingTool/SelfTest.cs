@@ -1,1 +1,393 @@
-dXNpbmcgU3lzdGVtLkRpYWdub3N0aWNzOwp1c2luZyBTeXN0ZW0uRHJhd2luZzsKdXNpbmcgU3lzdGVtLkRyYXdpbmcuRHJhd2luZzJEOwp1c2luZyBTeXN0ZW0uRHJhd2luZy5JbWFnaW5nOwp1c2luZyBTeXN0ZW0uVGV4dDsKdXNpbmcgU3lzdGVtLldpbmRvd3MuSW50ZXJvcDsKdXNpbmcgU25pcHBpbmdUb29sLkNhcHR1cmU7CnVzaW5nIFNuaXBwaW5nVG9vbC5Db3JlOwp1c2luZyBTbmlwcGluZ1Rvb2wuSW1hZ2luZzsKdXNpbmcgU25pcHBpbmdUb29sLlJlY29yZGluZzsKdXNpbmcgU25pcHBpbmdUb29sLlN0b3JhZ2U7CgpuYW1lc3BhY2UgU25pcHBpbmdUb29sOwoKLy8vIDxzdW1tYXJ5PgovLy8gSGVhZGxlc3MgdmVyaWZpY2F0aW9uIG9mIGV2ZXJ5IHN1YnN5c3RlbSB0aGF0IGNhbiBiZSBleGVyY2lzZWQgd2l0aG91dCBhIGh1bWFuLgovLy8gUnVuIHdpdGggU2h1dGlvLmV4ZSAtLXNlbGZ0ZXN0LiBSZXN1bHRzIGFyZSB3cml0dGVuIHRvIERhdGFcTG9ncyBhbmQgRGF0YVxUZXN0cy4KLy8vIDwvc3VtbWFyeT4KcHVibGljIHN0YXRpYyBjbGFzcyBTZWxmVGVzdAp7CiAgICBwcml2YXRlIHNlYWxlZCByZWNvcmQgUmVzdWx0KHN0cmluZyBOYW1lLCBzdHJpbmcgU3RhdHVzLCBzdHJpbmcgRGV0YWlsLCBsb25nIE1pbGxpc2Vjb25kcyk7CgogICAgcHJpdmF0ZSBzZWFsZWQgY2xhc3MgU2tpcFRlc3RFeGNlcHRpb24gOiBFeGNlcHRpb24KICAgIHsKICAgICAgICBwdWJsaWMgU2tpcFRlc3RFeGNlcHRpb24oc3RyaW5nIG1lc3NhZ2UpIDogYmFzZShtZXNzYWdlKSB7IH0KICAgIH0KCiAgICBwcml2YXRlIHN0YXRpYyByZWFkb25seSBMaXN0PFJlc3VsdD4gUmVzdWx0cyA9IG5ldygpOwogICAgcHJpdmF0ZSBzdGF0aWMgcmVhZG9ubHkgU3RvcHdhdGNoIENsb2NrID0gbmV3KCk7CgogICAgcHVibGljIHN0YXRpYyBhc3luYyBUYXNrPGludD4gUnVuQXN5bmMoKQogICAgewogICAgICAgIFJlc3VsdHMuQ2xlYXIoKTsKICAgICAgICBDbG9jay5TdGFydCgpOwogICAgICAgIHN0cmluZyBzdGFtcCA9IERhdGVUaW1lLk5vdy5Ub1N0cmluZygieXl5eU1NZGQtSEhtbXNzIik7CiAgICAgICAgTG9nZ2VyLkluZm8oIj09PT09IFNlbGYtdGVzdCBzdGFydGVkID09PT09Iik7CiAgICAgICAgQXBwUGF0aHMuRW5zdXJlRGlyZWN0b3JpZXMoKTsKCiAgICAgICAgYXdhaXQgUnVuKCJFbnZpcm9ubWVudCIsICgpID0+CiAgICAgICAgewogICAgICAgICAgICB2YXIgdnMgPSBDYXB0dXJlU2VydmljZS5WaXJ0dWFsU2NyZWVuOwogICAgICAgICAgICB2YXIgbW9uaXRvcnMgPSBOYXRpdmVNZXRob2RzLkdldE1vbml0b3JzKCk7CiAgICAgICAgICAgIEFzc2VydCh2cy5XaWR0aCA+IDAgJiYgdnMuSGVpZ2h0ID4gMCwgIlZpcnR1YWwgc2NyZWVuIGhhcyBubyBzaXplLiIpOwogICAgICAgICAgICBBc3NlcnQobW9uaXRvcnMuQ291bnQgPiAwLCAiTm8gZGlzcGxheXMgd2VyZSBkZXRlY3RlZC4iKTsKICAgICAgICAgICAgc3RyaW5nIGRwaSA9ICIiOwogICAgICAgICAgICB0cnkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgZHBpID0gIjsgcHJvY2VzcyBEUEkgYXdhcmVuZXNzOiAiICsgU3lzdGVtLldpbmRvd3MuRm9ybXMuQXBwbGljYXRpb24uSGlnaERwaU1vZGU7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgY2F0Y2ggeyB9CiAgICAgICAgICAgIHJldHVybiBUYXNrLkZyb21SZXN1bHQoJCJXaW5kb3dzIHtFbnZpcm9ubWVudC5PU1ZlcnNpb24uVmVyc2lvbn0gwrcgdXNlciB7RW52aXJvbm1lbnQuVXNlck5hbWV9IMK3IHZpcnR1YWwgc2NyZWVuIHt2cy5XaWR0aH3Dl3t2cy5IZWlnaHR9IGF0IHt2cy5YfSx7dnMuWX0gwrcge21vbml0b3JzLkNvdW50fSBkaXNwbGF5KHMpe2RwaX0iKTsKICAgICAgICB9KTsKCiAgICAgICAgYXdhaXQgUnVuKCJEZXNrdG9wIGNhcHR1cmUgKEJpdEJsdCkiLCAoKSA9PgogICAgICAgIHsKICAgICAgICAgICAgdmFyIHZzID0gQ2FwdHVyZVNlcnZpY2UuVmlydHVhbFNjcmVlbjsKICAgICAgICAgICAgdXNpbmcgdmFyIHNob3QgPSBDYXB0dXJlU2VydmljZS5DYXB0dXJlVmlydHVhbFNjcmVlbigpOwogICAgICAgICAgICBBc3NlcnQoc2hvdC5XaWR0aCA9PSB2cy5XaWR0aCAmJiBzaG90LkhlaWdodCA9PSB2cy5IZWlnaHQsCiAgICAgICAgICAgICAgICAkIkV4cGVjdGVkIHt2cy5XaWR0aH3Dl3t2cy5IZWlnaHR9LCBnb3Qge3Nob3QuV2lkdGh9w5d7c2hvdC5IZWlnaHR9LiIpOwogICAgICAgICAgICBBc3NlcnQoIUNhcHR1cmVTZXJ2aWNlLklzTW9zdGx5Qmxhbmsoc2hvdCksICJUaGUgY2FwdHVyZWQgZGVza3RvcCBsb29rcyBibGFuay4iKTsKICAgICAgICAgICAgc3RyaW5nIHBhdGggPSBQYXRoLkNvbWJpbmUoQXBwUGF0aHMuVGVzdHMsICJzZWxmdGVzdC1zY3JlZW4ucG5nIik7CiAgICAgICAgICAgIEJpdG1hcFV0aWxzLlNhdmUoc2hvdCwgcGF0aCk7CiAgICAgICAgICAgIHJldHVybiBUYXNrLkZyb21SZXN1bHQoJCJ7c2hvdC5XaWR0aH3Dl3tzaG90LkhlaWdodH0gY2FwdHVyZWQ7IGV2aWRlbmNlIHtwYXRofSIpOwogICAgICAgIH0pOwoKICAgICAgICBhd2FpdCBSdW4oIlJlZ2lvbiBjYXB0dXJlIiwgKCkgPT4KICAgICAgICB7CiAgICAgICAgICAgIHZhciB2cyA9IENhcHR1cmVTZXJ2aWNlLlZpcnR1YWxTY3JlZW47CiAgICAgICAgICAgIHZhciByZWdpb24gPSBSZWN0YW5nbGUuSW50ZXJzZWN0KG5ldyBSZWN0YW5nbGUodnMuTGVmdCArIDMwLCB2cy5Ub3AgKyAzMCwgMjAwLCAxMjApLCB2cyk7CiAgICAgICAgICAgIEFzc2VydChyZWdpb24uV2lkdGggPiAwICYmIHJlZ2lvbi5IZWlnaHQgPiAwLCAiUmVnaW9uIGlzIG91dHNpZGUgdGhlIGRlc2t0b3AuIik7CiAgICAgICAgICAgIHVzaW5nIHZhciBzaG90ID0gQ2FwdHVyZVNlcnZpY2UuQ2FwdHVyZVJlZ2lvbihyZWdpb24pOwogICAgICAgICAgICBBc3NlcnQoc2hvdC5XaWR0aCA9PSByZWdpb24uV2lkdGggJiYgc2hvdC5IZWlnaHQgPT0gcmVnaW9uLkhlaWdodCwKICAgICAgICAgICAgICAgICQiRXhwZWN0ZWQge3JlZ2lvbi5XaWR0aH3Dl3tyZWdpb24uSGVpZ2h0fSwgZ290IHtzaG90LldpZHRofcOXe3Nob3QuSGVpZ2h0fS4iKTsKICAgICAgICAgICAgcmV0dXJuIFRhc2suRnJvbVJlc3VsdCgkIntzaG90LldpZHRofcOXe3Nob3QuSGVpZ2h0fSBhdCB7cmVnaW9uLlh9LHtyZWdpb24uWX0iKTsKICAgICAgICB9KTsKCiAgICAgICAgYXdhaXQgUnVuKCJGcmVlZm9ybSB0cmFuc3BhcmVuY3kiLCAoKSA9PgogICAgICAgIHsKICAgICAgICAgICAgdXNpbmcgdmFyIHNvdXJjZSA9IG5ldyBCaXRtYXAoNDAwLCAzMDAsIFBpeGVsRm9ybWF0LkZvcm1hdDMyYnBwQXJnYik7CiAgICAgICAgICAgIHVzaW5nICh2YXIgZyA9IEdyYXBoaWNzLkZyb21JbWFnZShzb3VyY2UpKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBnLkNsZWFyKENvbG9yLkZyb21BcmdiKDI1NSwgMjQwLCAyNDAsIDI0MCkpOwogICAgICAgICAgICAgICAgdXNpbmcgdmFyIGJydXNoID0gbmV3IFNvbGlkQnJ1c2goQ29sb3IuRnJvbUFyZ2IoMjU1LCA2MCwgMTIwLCAyMjApKTsKICAgICAgICAgICAgICAgIGcuRmlsbFJlY3RhbmdsZShicnVzaCwgNDAsIDQwLCAzMjAsIDIyMCk7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgdmFyIHBvaW50cyA9IG5ldyBMaXN0PFBvaW50PgogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBuZXcoNTAsIDUwKSwgbmV3KDM1MCwgNjApLCBuZXcoMzQwLCAyNTApLCBuZXcoNjAsIDI0MCkKICAgICAgICAgICAgfTsKICAgICAgICAgICAgdXNpbmcgdmFyIG1hc2tlZCA9IENhcHR1cmVTZXJ2aWNlLkNyZWF0ZUZyZWVmb3JtU25pcChzb3VyY2UsIHBvaW50cyk7CiAgICAgICAgICAgIGludCBvdXRzaWRlID0gbWFza2VkLkdldFBpeGVsKDgsIDgpLkE7CiAgICAgICAgICAgIGludCBpbnNpZGUgPSBtYXNrZWQuR2V0UGl4ZWwoMjAwLCAxNTApLkE7CiAgICAgICAgICAgIEFzc2VydChvdXRzaWRlID09IDAsICQiT3V0c2lkZSBwaXhlbCBhbHBoYSB3YXMge291dHNpZGV9LCBleHBlY3RlZCAwLiIpOwogICAgICAgICAgICBBc3NlcnQoaW5zaWRlID4gMjQwLCAkIkluc2lkZSBwaXhlbCBhbHBoYSB3YXMge2luc2lkZX0sIGV4cGVjdGVkIG9wYXF1ZS4iKTsKICAgICAgICAgICAgc3RyaW5nIHBhdGggPSBQYXRoLkNvbWJpbmUoQXBwUGF0aHMuVGVzdHMsICJzZWxmdGVzdC1mcmVlZm9ybS5wbmciKTsKICAgICAgICAgICAgQml0bWFwVXRpbHMuU2F2ZShtYXNrZWQsIHBhdGgpOwogICAgICAgICAgICByZXR1cm4gVGFzay5Gcm9tUmVzdWx0KCQib3V0c2lkZSBhbHBoYSB7b3V0c2lkZX0sIGluc2lkZSBhbHBoYSB7aW5zaWRlfTsgZXZpZGVuY2Uge3BhdGh9Iik7CiAgICAgICAgfSk7CgogICAgICAgIGF3YWl0IFJ1bigiV2luZG93IGRldGVjdGlvbiIsICgpID0+CiAgICAgICAgewogICAgICAgICAgICB2YXIgd2luZG93cyA9IENhcHR1cmVTZXJ2aWNlLkVudW1lcmF0ZVdpbmRvd3MoKTsKICAgICAgICAgICAgQXNzZXJ0KHdpbmRvd3MuQ291bnQgPiAwLCAiTm8gY2FwdHVyYWJsZSB0b3AtbGV2ZWwgd2luZG93cyB3ZXJlIGZvdW5kLiIpOwogICAgICAgICAgICB2YXIgZmlyc3QgPSB3aW5kb3dzWzBdOwogICAgICAgICAgICB2YXIgYm91bmRzID0gQ2FwdHVyZVNlcnZpY2UuR2V0V2luZG93Qm91bmRzKGZpcnN0LkhhbmRsZSk7CiAgICAgICAgICAgIEFzc2VydChib3VuZHMuV2lkdGggPiAwICYmIGJvdW5kcy5IZWlnaHQgPiAwLCAiQSBkZXRlY3RlZCB3aW5kb3cgaGFzIGVtcHR5IGJvdW5kcy4iKTsKICAgICAgICAgICAgdmFyIGhpdCA9IENhcHR1cmVTZXJ2aWNlLldpbmRvd0F0KG5ldyBQb2ludChmaXJzdC5Cb3VuZHMuTGVmdCArIGZpcnN0LkJvdW5kcy5XaWR0aCAvIDIsCiAgICAgICAgICAgICAgICBmaXJzdC5Cb3VuZHMuVG9wICsgZmlyc3QuQm91bmRzLkhlaWdodCAvIDIpLCB3aW5kb3dzKTsKICAgICAgICAgICAgQXNzZXJ0KGhpdCAhPSBudWxsLCAiV2luZG93IGhpdC10ZXN0aW5nIHJldHVybmVkIG5vdGhpbmcuIik7CiAgICAgICAgICAgIHJldHVybiBUYXNrLkZyb21SZXN1bHQoJCJ7d2luZG93cy5Db3VudH0gd2luZG93czsgZmlyc3Q6IHtmaXJzdC5UaXRsZX0gKHtmaXJzdC5Cb3VuZHMuV2lkdGh9w5d7Zmlyc3QuQm91bmRzLkhlaWdodH0pIik7CiAgICAgICAgfSk7CgogICAgICAgIGF3YWl0IFJ1bigiUE5HLCBKUEVHLCBhbmQgQk1QIHJvdW5kLXRyaXAiLCAoKSA9PgogICAgICAgIHsKICAgICAgICAgICAgdXNpbmcgdmFyIHNvdXJjZSA9IG5ldyBCaXRtYXAoMTYwLCAxMDAsIFBpeGVsRm9ybWF0LkZvcm1hdDMyYnBwQXJnYik7CiAgICAgICAgICAgIHVzaW5nICh2YXIgZyA9IEdyYXBoaWNzLkZyb21JbWFnZShzb3VyY2UpKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICB1c2luZyB2YXIgZ3JhZGllbnQgPSBuZXcgTGluZWFyR3JhZGllbnRCcnVzaChuZXcgUmVjdGFuZ2xlKDAsIDAsIDE2MCwgMTAwKSwKICAgICAgICAgICAgICAgICAgICBDb2xvci5Gcm9tQXJnYigyNTUsIDMwLCAxMTAsIDIxMCksIENvbG9yLkZyb21BcmdiKDI1NSwgMjQwLCAxMjAsIDQwKSwgMzVmKTsKICAgICAgICAgICAgICAgIGcuRmlsbFJlY3RhbmdsZShncmFkaWVudCwgMCwgMCwgMTYwLCAxMDApOwogICAgICAgICAgICAgICAgZy5GaWxsRWxsaXBzZShCcnVzaGVzLldoaXRlLCAzMCwgMjAsIDYwLCA2MCk7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgdmFyIHNpemVzID0gbmV3IExpc3Q8c3RyaW5nPigpOwogICAgICAgICAgICBmb3JlYWNoICh2YXIgZXh0ZW5zaW9uIGluIG5ld1tdIHsgIi5wbmciLCAiLmpwZyIsICIuYm1wIiB9KQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBzdHJpbmcgcGF0aCA9IFBhdGguQ29tYmluZShBcHBQYXRocy5UZXN0cywgInNlbGZ0ZXN0LWZvcm1hdCIgKyBleHRlbnNpb24pOwogICAgICAgICAgICAgICAgQml0bWFwVXRpbHMuU2F2ZShzb3VyY2UsIHBhdGgpOwogICAgICAgICAgICAgICAgQXNzZXJ0KEZpbGUuRXhpc3RzKHBhdGgpLCAkIntleHRlbnNpb259IGZpbGUgd2FzIG5vdCBjcmVhdGVkLiIpOwogICAgICAgICAgICAgICAgdmFyIGluZm8gPSBuZXcgRmlsZUluZm8ocGF0aCk7CiAgICAgICAgICAgICAgICBBc3NlcnQoaW5mby5MZW5ndGggPiAxMDAsICQie2V4dGVuc2lvbn0gZmlsZSBpcyBzdXNwaWNpb3VzbHkgc21hbGwgKHtpbmZvLkxlbmd0aH0gYnl0ZXMpLiIpOwogICAgICAgICAgICAgICAgdXNpbmcgdmFyIGxvYWRlZCA9IEJpdG1hcFV0aWxzLkxvYWQocGF0aCk7CiAgICAgICAgICAgICAgICBBc3NlcnQobG9hZGVkLldpZHRoID09IHNvdXJjZS5XaWR0aCAmJiBsb2FkZWQuSGVpZ2h0ID09IHNvdXJjZS5IZWlnaHQsCiAgICAgICAgICAgICAgICAgICAgJCJ7ZXh0ZW5zaW9ufSBkaW1lbnNpb25zIGNoYW5nZWQgdG8ge2xvYWRlZC5XaWR0aH3Dl3tsb2FkZWQuSGVpZ2h0fS4iKTsKICAgICAgICAgICAgICAgIHNpemVzLkFkZCgkIntleHRlbnNpb259IHtpbmZvLkxlbmd0aCAvIDEwMjQuMDowLjB9IEtCIik7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgcmV0dXJuIFRhc2suRnJvbVJlc3VsdChzdHJpbmcuSm9pbigiLCAiLCBzaXplcykpOwogICAgICAgIH0pOwoKICAgICAgICBhd2FpdCBSdW4oIkNsaXBib2FyZCBpbWFnZSIsICgpID0+CiAgICAgICAgewogICAgICAgICAgICB1c2luZyB2YXIgc291cmNlID0gbmV3IEJpdG1hcCgxMjAsIDgwLCBQaXhlbEZvcm1hdC5Gb3JtYXQzMmJwcEFyZ2IpOwogICAgICAgICAgICB1c2luZyAodmFyIGcgPSBHcmFwaGljcy5Gcm9tSW1hZ2Uoc291cmNlKSkgZy5DbGVhcihDb2xvci5Gcm9tQXJnYigyNTUsIDIxMCwgNjAsIDkwKSk7CiAgICAgICAgICAgIGJvb2wgY29waWVkID0gQ2xpcGJvYXJkU2VydmljZS5TZXRJbWFnZShzb3VyY2UpOwogICAgICAgICAgICBBc3NlcnQoY29waWVkLCAiQ2xpcGJvYXJkU2VydmljZS5TZXRJbWFnZSByZXR1cm5lZCBmYWxzZS4iKTsKICAgICAgICAgICAgVGhyZWFkLlNsZWVwKDkwKTsKICAgICAgICAgICAgYm9vbCBjb250YWlucyA9IFN5c3RlbS5XaW5kb3dzLkNsaXBib2FyZC5Db250YWluc0ltYWdlKCk7CiAgICAgICAgICAgIEFzc2VydChjb250YWlucywgIlRoZSBjbGlwYm9hcmQgZG9lcyBub3QgY29udGFpbiBhbiBpbWFnZSBhZnRlciBjb3B5aW5nLiIpOwogICAgICAgICAgICB2YXIgaW1hZ2UgPSBTeXN0ZW0uV2luZG93cy5DbGlwYm9hcmQuR2V0SW1hZ2UoKTsKICAgICAgICAgICAgQXNzZXJ0KGltYWdlICE9IG51bGwgJiYgaW1hZ2UuUGl4ZWxXaWR0aCA9PSAxMjAgJiYgaW1hZ2UuUGl4ZWxIZWlnaHQgPT0gODAsCiAgICAgICAgICAgICAgICAkIkNsaXBib2FyZCBpbWFnZSB3YXMge2ltYWdlPy5QaXhlbFdpZHRofcOXe2ltYWdlPy5QaXhlbEhlaWdodH0uIik7CiAgICAgICAgICAgIFN5c3RlbS5XaW5kb3dzLkNsaXBib2FyZC5DbGVhcigpOwogICAgICAgICAgICByZXR1cm4gVGFzay5Gcm9tUmVzdWx0KCIxMjDDlzgwIGltYWdlIHdyaXR0ZW4gYW5kIHJlYWQgYmFjayBmcm9tIHRoZSBXaW5kb3dzIGNsaXBib2FyZCIpOwogICAgICAgIH0pOwoKICAgICAgICBhd2FpdCBSdW4oIkhpc3RvcnkgcGVyc2lzdGVuY2UiLCAoKSA9PgogICAgICAgIHsKICAgICAgICAgICAgc3RyaW5nPyBiYWNrdXAgPSBGaWxlLkV4aXN0cyhBcHBQYXRocy5IaXN0b3J5RmlsZSkgPyBGaWxlLlJlYWRBbGxUZXh0KEFwcFBhdGhzLkhpc3RvcnlGaWxlKSA6IG51bGw7CiAgICAgICAgICAgIHN0cmluZyB0ZXN0UGF0aCA9IFBhdGguQ29tYmluZShBcHBQYXRocy5UZXN0cywgJCJzZWxmdGVzdC1oaXN0b3J5LXtEYXRlVGltZS5Ob3c6SEhtbXNzfS5wbmciKTsKICAgICAgICAgICAgdmFyIGhpc3RvcnkgPSBuZXcgSGlzdG9yeVNlcnZpY2UoKTsKICAgICAgICAgICAgaGlzdG9yeS5Mb2FkKCk7CiAgICAgICAgICAgIGludCBiZWZvcmUgPSBoaXN0b3J5LkNvdW50OwogICAgICAgICAgICB0cnkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgdXNpbmcgdmFyIHNvdXJjZSA9IG5ldyBCaXRtYXAoMTQwLCA5MCwgUGl4ZWxGb3JtYXQuRm9ybWF0MzJicHBBcmdiKTsKICAgICAgICAgICAgICAgIHVzaW5nICh2YXIgZyA9IEdyYXBoaWNzLkZyb21JbWFnZShzb3VyY2UpKSBnLkNsZWFyKENvbG9yLkZyb21BcmdiKDI1NSwgNDAsIDE2MCwgMTIwKSk7CiAgICAgICAgICAgICAgICBCaXRtYXBVdGlscy5TYXZlKHNvdXJjZSwgdGVzdFBhdGgpOwogICAgICAgICAgICAgICAgdmFyIGVudHJ5ID0gaGlzdG9yeS5BZGQodGVzdFBhdGgsIENhcHR1cmVNb2RlLlJlY3RhbmdsZSwgc291cmNlKTsKICAgICAgICAgICAgICAgIEFzc2VydChlbnRyeSAhPSBudWxsLCAiSGlzdG9yeSBkaWQgbm90IGFkZCB0aGUgdGVzdCBzbmlwLiIpOwoKICAgICAgICAgICAgICAgIHZhciByZWxvYWRlZCA9IG5ldyBIaXN0b3J5U2VydmljZSgpOwogICAgICAgICAgICAgICAgcmVsb2FkZWQuTG9hZCgpOwogICAgICAgICAgICAgICAgdmFyIGZvdW5kID0gcmVsb2FkZWQuQWxsLkZpcnN0T3JEZWZhdWx0KGUgPT4gZS5JZCA9PSBlbnRyeSEuSWQpOwogICAgICAgICAgICAgICAgQXNzZXJ0KGZvdW5kICE9IG51bGwsICJUaGUgaGlzdG9yeSBlbnRyeSB3YXMgbm90IHByZXNlbnQgYWZ0ZXIgcmVsb2FkaW5nIGhpc3RvcnkuanNvbi4iKTsKICAgICAgICAgICAgICAgIEFzc2VydChGaWxlLkV4aXN0cyhmb3VuZCEuVGh1bWJuYWlsUGF0aCksICJUaGUgaGlzdG9yeSB0aHVtYm5haWwgd2FzIG5vdCBjcmVhdGVkLiIpOwogICAgICAgICAgICAgICAgQXNzZXJ0KHJlbG9hZGVkLkNvdW50ID49IGJlZm9yZSArIDEsICJIaXN0b3J5IGNvdW50IGRpZCBub3QgaW5jcmVhc2UuIik7CgogICAgICAgICAgICAgICAgaGlzdG9yeS5SZW1vdmUoZW50cnkhLCBkZWxldGVGaWxlczogdHJ1ZSk7CiAgICAgICAgICAgICAgICBBc3NlcnQoIUZpbGUuRXhpc3RzKHRlc3RQYXRoKSwgIkRlbGV0aW5nIGEgaGlzdG9yeSBlbnRyeSBkaWQgbm90IGRlbGV0ZSBpdHMgaW1hZ2UuIik7CiAgICAgICAgICAgICAgICByZXR1cm4gVGFzay5Gcm9tUmVzdWx0KCQiYWRkZWQsIHJlbG9hZGVkLCB2ZXJpZmllZCwgYW5kIHJlbW92ZWQg4oCce2ZvdW5kLkZpbGVOYW1lfeKAnSAoe2ZvdW5kLldpZHRofcOXe2ZvdW5kLkhlaWdodH0pIik7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZmluYWxseQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBpZiAoYmFja3VwICE9IG51bGwpIEZpbGUuV3JpdGVBbGxUZXh0KEFwcFBhdGhzLkhpc3RvcnlGaWxlLCBiYWNrdXApOwogICAgICAgICAgICAgICAgZWxzZSBpZiAoRmlsZS5FeGlzdHMoQXBwUGF0aHMuSGlzdG9yeUZpbGUpKSBGaWxlLkRlbGV0ZShBcHBQYXRocy5IaXN0b3J5RmlsZSk7CiAgICAgICAgICAgICAgICB0cnkgeyBpZiAoRmlsZS5FeGlzdHModGVzdFBhdGgpKSBGaWxlLkRlbGV0ZSh0ZXN0UGF0aCk7IH0gY2F0Y2ggeyB9CiAgICAgICAgICAgIH0KICAgICAgICB9KTsKCiAgICAgICAgYXdhaXQgUnVuKCJTZXR0aW5ncyB2YWxpZGF0aW9uIiwgKCkgPT4KICAgICAgICB7CiAgICAgICAgICAgIHZhciBzZXR0aW5ncyA9IG5ldyBTZXR0aW5ncwogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBEZWxheVNlY29uZHMgPSA3LAogICAgICAgICAgICAgICAgRmlsZU5hbWVQYXR0ZXJuID0gImJhZC9uYW1lOndpdGg8aW52YWxpZD5jaGFycyIsCiAgICAgICAgICAgICAgICBEZWZhdWx0TW9kZSA9IChDYXB0dXJlTW9kZSk5OSwKICAgICAgICAgICAgICAgIFJlY29yZGluZ0ZwcyA9IDEzCiAgICAgICAgICAgIH07CiAgICAgICAgICAgIHNldHRpbmdzLlNhbml0aXplKCk7CiAgICAgICAgICAgIEFzc2VydChzZXR0aW5ncy5EZWxheVNlY29uZHMgPT0gMCwgIkludmFsaWQgZGVsYXkgd2FzIG5vdCByZXNldC4iKTsKICAgICAgICAgICAgQXNzZXJ0KHNldHRpbmdzLlJlY29yZGluZ0ZwcyA9PSAxNSwgIkludmFsaWQgcmVjb3JkaW5nIGZyYW1lIHJhdGUgd2FzIG5vdCByZXNldC4iKTsKICAgICAgICAgICAgQXNzZXJ0KHNldHRpbmdzLkRlZmF1bHRNb2RlID09IENhcHR1cmVNb2RlLlJlY3RhbmdsZSwgIkludmFsaWQgY2FwdHVyZSBtb2RlIHdhcyBub3QgcmVzZXQuIik7CiAgICAgICAgICAgIGZvcmVhY2ggKGNoYXIgYyBpbiBQYXRoLkdldEludmFsaWRGaWxlTmFtZUNoYXJzKCkpCiAgICAgICAgICAgICAgICBBc3NlcnQoIXNldHRpbmdzLkZpbGVOYW1lUGF0dGVybi5Db250YWlucyhjKSwgIkZpbGUgbmFtZSBwYXR0ZXJuIHN0aWxsIGNvbnRhaW5zIGFuIGludmFsaWQgY2hhcmFjdGVyLiIpOwogICAgICAgICAgICBBc3NlcnQoc2V0dGluZ3MuSG90a2V5cy5Db3VudCA9PSBIb3RrZXlEZWZhdWx0cy5DcmVhdGUoKS5Db3VudCwgIkRlZmF1bHQgaG90a2V5cyB3ZXJlIG5vdCByZXN0b3JlZC4iKTsKICAgICAgICAgICAgc3RyaW5nIGdlbmVyYXRlZCA9IENhcHR1cmVTdG9yYWdlLkdlbmVyYXRlRmlsZVBhdGgobmV3IFNldHRpbmdzCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIFNhdmVEaXJlY3RvcnkgPSBBcHBQYXRocy5UZXN0cywKICAgICAgICAgICAgICAgIEZpbGVOYW1lUGF0dGVybiA9ICJzZWxmdGVzdC1uYW1lX3t5eXl5fS17TU19LXtkZH1fe0hIfS17bW19LXtzc31fe21vZGV9IgogICAgICAgICAgICB9LCBDYXB0dXJlTW9kZS5GcmVlZm9ybSk7CiAgICAgICAgICAgIEFzc2VydChnZW5lcmF0ZWQuU3RhcnRzV2l0aChBcHBQYXRocy5UZXN0cywgU3RyaW5nQ29tcGFyaXNvbi5PcmRpbmFsSWdub3JlQ2FzZSksICJHZW5lcmF0ZWQgcGF0aCBpcyBvdXRzaWRlIHRoZSB0ZXN0IGZvbGRlci4iKTsKICAgICAgICAgICAgQXNzZXJ0KGdlbmVyYXRlZC5Db250YWlucygiRnJlZWZvcm0iKSwgIk1vZGUgdG9rZW4gd2FzIG5vdCBleHBhbmRlZCBpbiB0aGUgZ2VuZXJhdGVkIGZpbGUgbmFtZS4iKTsKICAgICAgICAgICAgcmV0dXJuIFRhc2suRnJvbVJlc3VsdCgiaW52YWxpZCBkZWxheSwgZnBzLCBtb2RlLCBhbmQgZmlsZSBuYW1lIGNoYXJhY3RlcnMgd2VyZSByZXBhaXJlZCIpOwogICAgICAgIH0pOwoKICAgICAgICBhd2FpdCBSdW4oIkdsb2JhbCBob3RrZXkgcmVnaXN0cmF0aW9uIiwgKCkgPT4KICAgICAgICB7CiAgICAgICAgICAgIHZhciBwYXJhbWV0ZXJzID0gbmV3IEh3bmRTb3VyY2VQYXJhbWV0ZXJzKCJTbmlwcGluZ1Rvb2xTZWxmVGVzdEhvdGtleXMiKQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBXaWR0aCA9IDEsCiAgICAgICAgICAgICAgICBIZWlnaHQgPSAxLAogICAgICAgICAgICAgICAgV2luZG93U3R5bGUgPSAwCiAgICAgICAgICAgIH07CiAgICAgICAgICAgIHVzaW5nIHZhciBzb3VyY2UgPSBuZXcgSHduZFNvdXJjZShwYXJhbWV0ZXJzKTsKICAgICAgICAgICAgdmFyIG1hbmFnZXIgPSBuZXcgSG90a2V5TWFuYWdlcigpOwogICAgICAgICAgICBtYW5hZ2VyLkF0dGFjaChzb3VyY2UuSGFuZGxlLCBfID0+IHsgfSk7CgogICAgICAgICAgICAvLyBGcmllbmRseSBiYXJlLWtleSBwYXJzaW5nICh0aGUgc3RvcC1yZWNvcmRpbmcgc2hvcnRjdXQgZGVmYXVsdHMgdG8gIkVzYyIpLgogICAgICAgICAgICBBc3NlcnQoSG90a2V5R2VzdHVyZS5QYXJzZSgiRXNjIiwgYWxsb3dCYXJlOiB0cnVlKT8uS2V5ID09IFN5c3RlbS5XaW5kb3dzLklucHV0LktleS5Fc2NhcGUsCiAgICAgICAgICAgICAgICAiQmFyZSAnRXNjJyBkaWQgbm90IHJlc29sdmUgdG8gdGhlIEVzY2FwZSBrZXkuIik7CiAgICAgICAgICAgIEFzc2VydChIb3RrZXlHZXN0dXJlLlBhcnNlKCJFc2MiKSA9PSBudWxsLAogICAgICAgICAgICAgICAgIkEgYmFyZSBrZXkgbXVzdCBiZSByZWplY3RlZCBmb3IgYW4gYWx3YXlzLW9uIHNob3J0Y3V0IChubyBtb2RpZmllcikuIik7CiAgICAgICAgICAgIEFzc2VydChIb3RrZXlHZXN0dXJlLlBhcnNlKCJDdHJsK04iKT8uS2V5ID09IFN5c3RlbS5XaW5kb3dzLklucHV0LktleS5OLAogICAgICAgICAgICAgICAgIidDdHJsK04nIGRpZCBub3QgcmVzb2x2ZSB0byB0aGUgTiBrZXkuIik7CiAgICAgICAgICAgIHRyeQogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICB2YXIgcmVzdWx0cyA9IG1hbmFnZXIuUmVnaXN0ZXJBbGwobmV3IERpY3Rpb25hcnk8c3RyaW5nLCBzdHJpbmc+CiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgWyJUZXN0T25lIl0gPSAiQ3RybCtBbHQrU2hpZnQrRjgiLAogICAgICAgICAgICAgICAgICAgIFsiVGVzdFR3byJdID0gIkN0cmwrQWx0K1NoaWZ0K0Y5IgogICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICBBc3NlcnQocmVzdWx0cy5BbGwociA9PiByLlN1Y2Nlc3MpLAogICAgICAgICAgICAgICAgICAgICJDb3VsZCBub3QgcmVnaXN0ZXIgdGhlIHRlc3QgaG90a2V5czogIiArIHN0cmluZy5Kb2luKCI7ICIsIHJlc3VsdHMuU2VsZWN0KHIgPT4gJCJ7ci5HZXN0dXJlfT17ci5FcnJvcn0iKSkpOwogICAgICAgICAgICAgICAgQXNzZXJ0KG1hbmFnZXIuQW55UmVnaXN0ZXJlZCwgIkhvdGtleU1hbmFnZXIgcmVwb3J0ZWQgbm90aGluZyByZWdpc3RlcmVkLiIpOwoKICAgICAgICAgICAgICAgIHZhciBkdXBsaWNhdGVzID0gbWFuYWdlci5SZWdpc3RlckFsbChuZXcgRGljdGlvbmFyeTxzdHJpbmcsIHN0cmluZz4KICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICBbIkR1cE9uZSJdID0gIkN0cmwrQWx0K1NoaWZ0K0YxMCIsCiAgICAgICAgICAgICAgICAgICAgWyJEdXBUd28iXSA9ICJDdHJsK0FsdCtTaGlmdCtGMTAiCiAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIEFzc2VydChkdXBsaWNhdGVzLkNvdW50KHIgPT4gIXIuU3VjY2VzcykgPT0gMSAmJiBkdXBsaWNhdGVzLkFueShyID0+IHIuRXJyb3JDb2RlID09IC0zKSwKICAgICAgICAgICAgICAgICAgICAiRHVwbGljYXRlIHNob3J0Y3V0IGRldGVjdGlvbiBkaWQgbm90IHJlamVjdCBleGFjdGx5IG9uZSBlbnRyeS4iKTsKICAgICAgICAgICAgICAgIHJldHVybiBUYXNrLkZyb21SZXN1bHQoIkN0cmwrQWx0K1NoaWZ0K0Y4L0Y5IHJlZ2lzdGVyZWQ7IGR1cGxpY2F0ZSBnZXN0dXJlIHJlamVjdGVkIHdpdGggY29uZmxpY3QgY29kZSAtMyIpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGZpbmFsbHkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgbWFuYWdlci5VbnJlZ2lzdGVyQWxsKCk7CiAgICAgICAgICAgIH0KICAgICAgICB9KTsKCiAgICAgICAgYXdhaXQgUnVuKCJXaW5kb3dzIE9DUiIsIGFzeW5jICgpID0+CiAgICAgICAgewogICAgICAgICAgICBpZiAoIU9jclNlcnZpY2UuSXNBdmFpbGFibGUpCiAgICAgICAgICAgICAgICB0aHJvdyBuZXcgU2tpcFRlc3RFeGNlcHRpb24oIk5vIFdpbmRvd3MgT0NSIGxhbmd1YWdlIHBhY2sgaXMgaW5zdGFsbGVkIGZvciB0aGlzIGFjY291bnQuIik7CiAgICAgICAgICAgIHVzaW5nIHZhciBzb3VyY2UgPSBuZXcgQml0bWFwKDEwMDAsIDI2MCwgUGl4ZWxGb3JtYXQuRm9ybWF0MzJicHBBcmdiKTsKICAgICAgICAgICAgdXNpbmcgKHZhciBnID0gR3JhcGhpY3MuRnJvbUltYWdlKHNvdXJjZSkpCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGcuQ2xlYXIoQ29sb3IuV2hpdGUpOwogICAgICAgICAgICAgICAgZy5UZXh0UmVuZGVyaW5nSGludCA9IFN5c3RlbS5EcmF3aW5nLlRleHQuVGV4dFJlbmRlcmluZ0hpbnQuQW50aUFsaWFzR3JpZEZpdDsKICAgICAgICAgICAgICAgIHVzaW5nIHZhciBmb250ID0gbmV3IEZvbnQoIlNlZ29lIFVJIiwgNTgsIEZvbnRTdHlsZS5Cb2xkLCBHcmFwaGljc1VuaXQuUGl4ZWwpOwogICAgICAgICAgICAgICAgZy5EcmF3U3RyaW5nKCJTbmlwcGluZyBUb29sIDEyMzQ1IiwgZm9udCwgQnJ1c2hlcy5CbGFjaywgMzYsIDgwKTsKICAgICAgICAgICAgfQogICAgICAgICAgICBzdHJpbmcgcGF0aCA9IFBhdGguQ29tYmluZShBcHBQYXRocy5UZXN0cywgInNlbGZ0ZXN0LW9jci1pbnB1dC5wbmciKTsKICAgICAgICAgICAgQml0bWFwVXRpbHMuU2F2ZShzb3VyY2UsIHBhdGgpOwogICAgICAgICAgICB2YXIgcmVzdWx0ID0gYXdhaXQgT2NyU2VydmljZS5SZWNvZ25pemVBc3luYyhzb3VyY2UpOwogICAgICAgICAgICBBc3NlcnQocmVzdWx0LlRleHQuTGVuZ3RoID4gMCwgIk9DUiByZXR1cm5lZCBubyB0ZXh0LiIpOwogICAgICAgICAgICBib29sIG1hdGNoZXMgPSByZXN1bHQuVGV4dC5Db250YWlucygiU25pcHBpbmciLCBTdHJpbmdDb21wYXJpc29uLk9yZGluYWxJZ25vcmVDYXNlKSB8fAogICAgICAgICAgICAgICAgICAgICAgICAgICByZXN1bHQuVGV4dC5Db250YWlucygiMTIzNDUiLCBTdHJpbmdDb21wYXJpc29uLk9yZGluYWxJZ25vcmVDYXNlKSB8fAogICAgICAgICAgICAgICAgICAgICAgICAgICByZXN1bHQuVGV4dC5Db250YWlucygiVG9vbCIsIFN0cmluZ0NvbXBhcmlzb24uT3JkaW5hbElnbm9yZUNhc2UpOwogICAgICAgICAgICBBc3NlcnQobWF0Y2hlcywgJCJPQ1IgdGV4dCBkaWQgbm90IGNvbnRhaW4gdGhlIGV4cGVjdGVkIHdvcmRzOiDigJx7cmVzdWx0LlRleHR94oCdIik7CiAgICAgICAgICAgIHJldHVybiAkIntyZXN1bHQuTGFuZ3VhZ2V9OiDigJx7cmVzdWx0LlRleHQuUmVwbGFjZShFbnZpcm9ubWVudC5OZXdMaW5lLCAiIC8gIil94oCdIChpbnB1dCB7cGF0aH0pIjsKICAgICAgICB9KTsKCiAgICAgICAgYXdhaXQgUnVuKCJmZm1wZWcgZW5naW5lIiwgKCkgPT4KICAgICAgICB7CiAgICAgICAgICAgIHN0cmluZz8gcGF0aCA9IFJlY29yZGluZ0NvbnRyb2xsZXIuRmZtcGVnUGF0aDsKICAgICAgICAgICAgaWYgKHBhdGggPT0gbnVsbCkgdGhyb3cgbmV3IFNraXBUZXN0RXhjZXB0aW9uKCJmZm1wZWcuZXhlIHdhcyBub3QgZm91bmQgaW4gdGhlIFRvb2xzIGZvbGRlci4iKTsKICAgICAgICAgICAgdmFyIGluZm8gPSBuZXcgRmlsZUluZm8ocGF0aCk7CiAgICAgICAgICAgIEFzc2VydChpbmZvLkxlbmd0aCA+IDEwMF8wMDAsICJmZm1wZWcuZXhlIGxvb2tzIGluY29tcGxldGUuIik7CiAgICAgICAgICAgIHJldHVybiBUYXNrLkZyb21SZXN1bHQoJCJ7cGF0aH0gKHtpbmZvLkxlbmd0aCAvIDEwMjQgLyAxMDI0LjA6MC4wfSBNQikiKTsKICAgICAgICB9KTsKCiAgICAgICAgYXdhaXQgUnVuKCJNUDQgc2NyZWVuIHJlY29yZGluZyIsIGFzeW5jICgpID0+CiAgICAgICAgewogICAgICAgICAgICBpZiAoIVJlY29yZGluZ0NvbnRyb2xsZXIuSXNBdmFpbGFibGUpCiAgICAgICAgICAgICAgICB0aHJvdyBuZXcgU2tpcFRlc3RFeGNlcHRpb24oImZmbXBlZy5leGUgaXMgbm90IGluc3RhbGxlZCwgc28gcmVjb3JkaW5nIGNhbm5vdCBiZSB0ZXN0ZWQuIik7CiAgICAgICAgICAgIHZhciB2cyA9IENhcHR1cmVTZXJ2aWNlLlZpcnR1YWxTY3JlZW47CiAgICAgICAgICAgIHZhciByZWdpb24gPSBuZXcgUmVjdGFuZ2xlKHZzLkxlZnQgKyAyNCwgdnMuVG9wICsgMjQsCiAgICAgICAgICAgICAgICBNYXRoLk1pbigzMjAsIE1hdGguTWF4KDE2LCB2cy5XaWR0aCAtIDQ4KSksCiAgICAgICAgICAgICAgICBNYXRoLk1pbigyNDAsIE1hdGguTWF4KDE2LCB2cy5IZWlnaHQgLSA0OCkpKTsKICAgICAgICAgICAgc3RyaW5nIHBhdGggPSBQYXRoLkNvbWJpbmUoQXBwUGF0aHMuVGVzdHMsICQic2VsZnRlc3QtcmVjb3JkaW5nLXtEYXRlVGltZS5Ob3c6SEhtbXNzfS5tcDQiKTsKICAgICAgICAgICAgdXNpbmcgdmFyIGNvbnRyb2xsZXIgPSBuZXcgUmVjb3JkaW5nQ29udHJvbGxlcigpOwogICAgICAgICAgICBjb250cm9sbGVyLlN0YXJ0KG5ldyBSZWNvcmRpbmdPcHRpb25zCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIFJlZ2lvbiA9IHJlZ2lvbiwKICAgICAgICAgICAgICAgIEZwcyA9IDE1LAogICAgICAgICAgICAgICAgSW5jbHVkZUN1cnNvciA9IHRydWUsCiAgICAgICAgICAgICAgICBPdXRwdXRQYXRoID0gcGF0aAogICAgICAgICAgICB9KTsKICAgICAgICAgICAgYXdhaXQgVGFzay5EZWxheSgyNjAwKTsKICAgICAgICAgICAgdmFyIHN0b3BwZWQgPSBhd2FpdCBjb250cm9sbGVyLlN0b3BBc3luYygpOwogICAgICAgICAgICBBc3NlcnQoc3RvcHBlZC5TdWNjZXNzLCBzdG9wcGVkLkVycm9yID8/ICJUaGUgcmVjb3JkZXIgcmVwb3J0ZWQgZmFpbHVyZS4iKTsKICAgICAgICAgICAgQXNzZXJ0KEZpbGUuRXhpc3RzKHBhdGgpLCAiVGhlIE1QNCBmaWxlIHdhcyBub3QgY3JlYXRlZC4iKTsKICAgICAgICAgICAgbG9uZyBsZW5ndGggPSBuZXcgRmlsZUluZm8ocGF0aCkuTGVuZ3RoOwogICAgICAgICAgICBBc3NlcnQobGVuZ3RoID4gMTBfMDAwLCAkIlRoZSBNUDQgZmlsZSBpcyB0b28gc21hbGwgKHtsZW5ndGh9IGJ5dGVzKS4iKTsKICAgICAgICAgICAgdmFyIGhlYWRlciA9IG5ldyBieXRlWzEyXTsKICAgICAgICAgICAgdXNpbmcgKHZhciBzdHJlYW0gPSBGaWxlLk9wZW5SZWFkKHBhdGgpKSBzdHJlYW0uUmVhZEV4YWN0bHkoaGVhZGVyLCAwLCBoZWFkZXIuTGVuZ3RoKTsKICAgICAgICAgICAgYm9vbCBmdHlwID0gaGVhZGVyWzRdID09ICdmJyAmJiBoZWFkZXJbNV0gPT0gJ3QnICYmIGhlYWRlcls2XSA9PSAneScgJiYgaGVhZGVyWzddID09ICdwJzsKICAgICAgICAgICAgQXNzZXJ0KGZ0eXAsICJUaGUgb3V0cHV0IGRvZXMgbm90IHN0YXJ0IHdpdGggYW4gTVA0ICdmdHlwJyBib3guIik7CiAgICAgICAgICAgIHJldHVybiAkIntyZWdpb24uV2lkdGh9w5d7cmVnaW9uLkhlaWdodH0sIHtzdG9wcGVkLkZyYW1lc30gZnJhbWVzIGluIHtzdG9wcGVkLkR1cmF0aW9uLlRvdGFsU2Vjb25kczowLjB9cywge2xlbmd0aCAvIDEwMjQuMDowLjB9IEtCLCB7cGF0aH0iOwogICAgICAgIH0pOwoKICAgICAgICBDbG9jay5TdG9wKCk7CiAgICAgICAgcmV0dXJuIFdyaXRlUmVwb3J0KHN0YW1wLCBleGl0Q29kZTogUmVzdWx0cy5BbnkociA9PiByLlN0YXR1cyA9PSAiRkFJTCIpID8gMSA6IDApOwogICAgfQoKICAgIHByaXZhdGUgc3RhdGljIGFzeW5jIFRhc2sgUnVuKHN0cmluZyBuYW1lLCBGdW5jPFRhc2s8c3RyaW5nPj4gdGVzdCkKICAgIHsKICAgICAgICB2YXIgd2F0Y2ggPSBTdG9wd2F0Y2guU3RhcnROZXcoKTsKICAgICAgICB0cnkKICAgICAgICB7CiAgICAgICAgICAgIHN0cmluZyBkZXRhaWwgPSBhd2FpdCB0ZXN0KCk7CiAgICAgICAgICAgIHdhdGNoLlN0b3AoKTsKICAgICAgICAgICAgUmVzdWx0cy5BZGQobmV3IFJlc3VsdChuYW1lLCAiUEFTUyIsIGRldGFpbCwgd2F0Y2guRWxhcHNlZE1pbGxpc2Vjb25kcykpOwogICAgICAgICAgICBMb2dnZXIuSW5mbygkIltTRUxGVEVTVCBQQVNTXSB7bmFtZX06IHtkZXRhaWx9Iik7CiAgICAgICAgfQogICAgICAgIGNhdGNoIChTa2lwVGVzdEV4Y2VwdGlvbiBleCkKICAgICAgICB7CiAgICAgICAgICAgIHdhdGNoLlN0b3AoKTsKICAgICAgICAgICAgUmVzdWx0cy5BZGQobmV3IFJlc3VsdChuYW1lLCAiU0tJUCIsIGV4Lk1lc3NhZ2UsIHdhdGNoLkVsYXBzZWRNaWxsaXNlY29uZHMpKTsKICAgICAgICAgICAgTG9nZ2VyLldhcm4oJCJbU0VMRlRFU1QgU0tJUF0ge25hbWV9OiB7ZXguTWVzc2FnZX0iKTsKICAgICAgICB9CiAgICAgICAgY2F0Y2ggKEV4Y2VwdGlvbiBleCkKICAgICAgICB7CiAgICAgICAgICAgIHdhdGNoLlN0b3AoKTsKICAgICAgICAgICAgUmVzdWx0cy5BZGQobmV3IFJlc3VsdChuYW1lLCAiRkFJTCIsIGV4Lk1lc3NhZ2UsIHdhdGNoLkVsYXBzZWRNaWxsaXNlY29uZHMpKTsKICAgICAgICAgICAgTG9nZ2VyLkVycm9yKCQiW1NFTEZURVNUIEZBSUxdIHtuYW1lfSIsIGV4KTsKICAgICAgICB9CiAgICB9CgogICAgcHJpdmF0ZSBzdGF0aWMgdm9pZCBBc3NlcnQoYm9vbCBjb25kaXRpb24sIHN0cmluZyBtZXNzYWdlKQogICAgewogICAgICAgIGlmICghY29uZGl0aW9uKSB0aHJvdyBuZXcgSW52YWxpZE9wZXJhdGlvbkV4Y2VwdGlvbihtZXNzYWdlKTsKICAgIH0KCiAgICBwcml2YXRlIHN0YXRpYyBpbnQgV3JpdGVSZXBvcnQoc3RyaW5nIHN0YW1wLCBpbnQgZXhpdENvZGUpCiAgICB7CiAgICAgICAgdmFyIGJ1aWxkZXIgPSBuZXcgU3RyaW5nQnVpbGRlcigpOwogICAgICAgIGJ1aWxkZXIuQXBwZW5kTGluZSgiU2h1dGlvIOKAlCBzZWxmLXRlc3QgcmVwb3J0Iik7CiAgICAgICAgYnVpbGRlci5BcHBlbmRMaW5lKCI9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0iKTsKICAgICAgICBidWlsZGVyLkFwcGVuZExpbmUoJCJTdGFydGVkOiB7RGF0ZVRpbWUuTm93Onl5eXktTU0tZGQgSEg6bW06c3N9Iik7CiAgICAgICAgYnVpbGRlci5BcHBlbmRMaW5lKCQiVXNlcjoge0Vudmlyb25tZW50LlVzZXJOYW1lfSIpOwogICAgICAgIGJ1aWxkZXIuQXBwZW5kTGluZSgkIk9TOiB7RW52aXJvbm1lbnQuT1NWZXJzaW9ufSIpOwogICAgICAgIGJ1aWxkZXIuQXBwZW5kTGluZSgkIlByb2Nlc3M6IHsoRW52aXJvbm1lbnQuSXM2NEJpdFByb2Nlc3MgPyAiNjQtYml0IiA6ICIzMi1iaXQiKX0iKTsKICAgICAgICBidWlsZGVyLkFwcGVuZExpbmUoJCJSb290OiB7QXBwUGF0aHMuUm9vdH0iKTsKICAgICAgICBidWlsZGVyLkFwcGVuZExpbmUoKTsKICAgICAgICBmb3JlYWNoICh2YXIgcmVzdWx0IGluIFJlc3VsdHMpCiAgICAgICAgICAgIGJ1aWxkZXIuQXBwZW5kTGluZSgkIlt7cmVzdWx0LlN0YXR1c31dIHtyZXN1bHQuTmFtZX0gKHtyZXN1bHQuTWlsbGlzZWNvbmRzfSBtcylcbiAgICAgICAge3Jlc3VsdC5EZXRhaWx9Iik7CiAgICAgICAgaW50IHBhc3MgPSBSZXN1bHRzLkNvdW50KHIgPT4gci5TdGF0dXMgPT0gIlBBU1MiKTsKICAgICAgICBpbnQgZmFpbCA9IFJlc3VsdHMuQ291bnQociA9PiByLlN0YXR1cyA9PSAiRkFJTCIpOwogICAgICAgIGludCBza2lwID0gUmVzdWx0cy5Db3VudChyID0+IHIuU3RhdHVzID09ICJTS0lQIik7CiAgICAgICAgYnVpbGRlci5BcHBlbmRMaW5lKCk7CiAgICAgICAgYnVpbGRlci5BcHBlbmRMaW5lKCQiU3VtbWFyeToge3Bhc3N9IHBhc3NlZCwge2ZhaWx9IGZhaWxlZCwge3NraXB9IHNraXBwZWQgKHsoaW50KU1hdGguUm91bmQoQ2xvY2suRWxhcHNlZC5Ub3RhbFNlY29uZHMpfSBzKSIpOwogICAgICAgIGJ1aWxkZXIuQXBwZW5kTGluZSgkIkV4aXQgY29kZToge2V4aXRDb2RlfSIpOwoKICAgICAgICBzdHJpbmcgdGV4dCA9IGJ1aWxkZXIuVG9TdHJpbmcoKTsKICAgICAgICB0cnkKICAgICAgICB7CiAgICAgICAgICAgIHN0cmluZyBsYXRlc3QgPSBQYXRoLkNvbWJpbmUoQXBwUGF0aHMuTG9ncywgInNlbGZ0ZXN0LWxhdGVzdC50eHQiKTsKICAgICAgICAgICAgc3RyaW5nIGRhdGVkID0gUGF0aC5Db21iaW5lKEFwcFBhdGhzLkxvZ3MsICQic2VsZnRlc3Qte3N0YW1wfS50eHQiKTsKICAgICAgICAgICAgc3RyaW5nIGV2aWRlbmNlID0gUGF0aC5Db21iaW5lKEFwcFBhdGhzLlRlc3RzLCAic2VsZnRlc3QtcmVwb3J0LnR4dCIpOwogICAgICAgICAgICBGaWxlLldyaXRlQWxsVGV4dChsYXRlc3QsIHRleHQsIEVuY29kaW5nLlVURjgpOwogICAgICAgICAgICBGaWxlLldyaXRlQWxsVGV4dChkYXRlZCwgdGV4dCwgRW5jb2RpbmcuVVRGOCk7CiAgICAgICAgICAgIEZpbGUuV3JpdGVBbGxUZXh0KGV2aWRlbmNlLCB0ZXh0LCBFbmNvZGluZy5VVEY4KTsKICAgICAgICAgICAgTG9nZ2VyLkluZm8oJCJTZWxmLXRlc3QgcmVwb3J0IHdyaXR0ZW4gdG8ge2xhdGVzdH0iKTsKICAgICAgICB9CiAgICAgICAgY2F0Y2ggKEV4Y2VwdGlvbiBleCkKICAgICAgICB7CiAgICAgICAgICAgIExvZ2dlci5FcnJvcigiQ291bGQgbm90IHdyaXRlIHRoZSBzZWxmLXRlc3QgcmVwb3J0IiwgZXgpOwogICAgICAgIH0KICAgICAgICB0cnkgeyBDb25zb2xlLldyaXRlTGluZSh0ZXh0KTsgfSBjYXRjaCB7IH0KICAgICAgICByZXR1cm4gZXhpdENvZGU7CiAgICB9Cn0K
+using System.Diagnostics;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.Text;
+using System.Windows.Interop;
+using SnippingTool.Capture;
+using SnippingTool.Core;
+using SnippingTool.Imaging;
+using SnippingTool.Recording;
+using SnippingTool.Storage;
+
+namespace SnippingTool;
+
+/// <summary>
+/// Headless verification of every subsystem that can be exercised without a human.
+/// Run with Shutio.exe --selftest. Results are written to Data\Logs and Data\Tests.
+/// </summary>
+public static class SelfTest
+{
+    private sealed record Result(string Name, string Status, string Detail, long Milliseconds);
+
+    private sealed class SkipTestException : Exception
+    {
+        public SkipTestException(string message) : base(message) { }
+    }
+
+    private static readonly List<Result> Results = new();
+    private static readonly Stopwatch Clock = new();
+
+    public static async Task<int> RunAsync()
+    {
+        Results.Clear();
+        Clock.Start();
+        string stamp = DateTime.Now.ToString("yyyyMMdd-HHmmss");
+        Logger.Info("===== Self-test started =====");
+        AppPaths.EnsureDirectories();
+
+        await Run("Environment", () =>
+        {
+            var vs = CaptureService.VirtualScreen;
+            var monitors = NativeMethods.GetMonitors();
+            Assert(vs.Width > 0 && vs.Height > 0, "Virtual screen has no size.");
+            Assert(monitors.Count > 0, "No displays were detected.");
+            string dpi = "";
+            try
+            {
+                dpi = "; process DPI awareness: " + System.Windows.Forms.Application.HighDpiMode;
+            }
+            catch { }
+            return Task.FromResult($"Windows {Environment.OSVersion.Version} · user {Environment.UserName} · virtual screen {vs.Width}×{vs.Height} at {vs.X},{vs.Y} · {monitors.Count} display(s){dpi}");
+        });
+
+        await Run("Desktop capture (BitBlt)", () =>
+        {
+            var vs = CaptureService.VirtualScreen;
+            using var shot = CaptureService.CaptureVirtualScreen();
+            Assert(shot.Width == vs.Width && shot.Height == vs.Height,
+                $"Expected {vs.Width}×{vs.Height}, got {shot.Width}×{shot.Height}.");
+            Assert(!CaptureService.IsMostlyBlank(shot), "The captured desktop looks blank.");
+            string path = Path.Combine(AppPaths.Tests, "selftest-screen.png");
+            BitmapUtils.Save(shot, path);
+            return Task.FromResult($"{shot.Width}×{shot.Height} captured; evidence {path}");
+        });
+
+        await Run("Region capture", () =>
+        {
+            var vs = CaptureService.VirtualScreen;
+            var region = Rectangle.Intersect(new Rectangle(vs.Left + 30, vs.Top + 30, 200, 120), vs);
+            Assert(region.Width > 0 && region.Height > 0, "Region is outside the desktop.");
+            using var shot = CaptureService.CaptureRegion(region);
+            Assert(shot.Width == region.Width && shot.Height == region.Height,
+                $"Expected {region.Width}×{region.Height}, got {shot.Width}×{shot.Height}.");
+            return Task.FromResult($"{shot.Width}×{shot.Height} at {region.X},{region.Y}");
+        });
+
+        await Run("Freeform transparency", () =>
+        {
+            using var source = new Bitmap(400, 300, PixelFormat.Format32bppArgb);
+            using (var g = Graphics.FromImage(source))
+            {
+                g.Clear(Color.FromArgb(255, 240, 240, 240));
+                using var brush = new SolidBrush(Color.FromArgb(255, 60, 120, 220));
+                g.FillRectangle(brush, 40, 40, 320, 220);
+            }
+            var points = new List<Point>
+            {
+                new(50, 50), new(350, 60), new(340, 250), new(60, 240)
+            };
+            using var masked = CaptureService.CreateFreeformSnip(source, points);
+            int outside = masked.GetPixel(8, 8).A;
+            int inside = masked.GetPixel(200, 150).A;
+            Assert(outside == 0, $"Outside pixel alpha was {outside}, expected 0.");
+            Assert(inside > 240, $"Inside pixel alpha was {inside}, expected opaque.");
+            string path = Path.Combine(AppPaths.Tests, "selftest-freeform.png");
+            BitmapUtils.Save(masked, path);
+            return Task.FromResult($"outside alpha {outside}, inside alpha {inside}; evidence {path}");
+        });
+
+        await Run("Window detection", () =>
+        {
+            var windows = CaptureService.EnumerateWindows();
+            Assert(windows.Count > 0, "No capturable top-level windows were found.");
+            var first = windows[0];
+            var bounds = CaptureService.GetWindowBounds(first.Handle);
+            Assert(bounds.Width > 0 && bounds.Height > 0, "A detected window has empty bounds.");
+            var hit = CaptureService.WindowAt(new Point(first.Bounds.Left + first.Bounds.Width / 2,
+                first.Bounds.Top + first.Bounds.Height / 2), windows);
+            Assert(hit != null, "Window hit-testing returned nothing.");
+            return Task.FromResult($"{windows.Count} windows; first: {first.Title} ({first.Bounds.Width}×{first.Bounds.Height})");
+        });
+
+        await Run("PNG, JPEG, and BMP round-trip", () =>
+        {
+            using var source = new Bitmap(160, 100, PixelFormat.Format32bppArgb);
+            using (var g = Graphics.FromImage(source))
+            {
+                using var gradient = new LinearGradientBrush(new Rectangle(0, 0, 160, 100),
+                    Color.FromArgb(255, 30, 110, 210), Color.FromArgb(255, 240, 120, 40), 35f);
+                g.FillRectangle(gradient, 0, 0, 160, 100);
+                g.FillEllipse(Brushes.White, 30, 20, 60, 60);
+            }
+            var sizes = new List<string>();
+            foreach (var extension in new[] { ".png", ".jpg", ".bmp" })
+            {
+                string path = Path.Combine(AppPaths.Tests, "selftest-format" + extension);
+                BitmapUtils.Save(source, path);
+                Assert(File.Exists(path), $"{extension} file was not created.");
+                var info = new FileInfo(path);
+                Assert(info.Length > 100, $"{extension} file is suspiciously small ({info.Length} bytes).");
+                using var loaded = BitmapUtils.Load(path);
+                Assert(loaded.Width == source.Width && loaded.Height == source.Height,
+                    $"{extension} dimensions changed to {loaded.Width}×{loaded.Height}.");
+                sizes.Add($"{extension} {info.Length / 1024.0:0.0} KB");
+            }
+            return Task.FromResult(string.Join(", ", sizes));
+        });
+
+        await Run("Clipboard image", () =>
+        {
+            using var source = new Bitmap(120, 80, PixelFormat.Format32bppArgb);
+            using (var g = Graphics.FromImage(source)) g.Clear(Color.FromArgb(255, 210, 60, 90));
+            bool copied = ClipboardService.SetImage(source);
+            Assert(copied, "ClipboardService.SetImage returned false.");
+            Thread.Sleep(90);
+            bool contains = System.Windows.Clipboard.ContainsImage();
+            Assert(contains, "The clipboard does not contain an image after copying.");
+            var image = System.Windows.Clipboard.GetImage();
+            Assert(image != null && image.PixelWidth == 120 && image.PixelHeight == 80,
+                $"Clipboard image was {image?.PixelWidth}×{image?.PixelHeight}.");
+            System.Windows.Clipboard.Clear();
+            return Task.FromResult("120×80 image written and read back from the Windows clipboard");
+        });
+
+        await Run("History persistence", () =>
+        {
+            string? backup = File.Exists(AppPaths.HistoryFile) ? File.ReadAllText(AppPaths.HistoryFile) : null;
+            string testPath = Path.Combine(AppPaths.Tests, $"selftest-history-{DateTime.Now:HHmmss}.png");
+            var history = new HistoryService();
+            history.Load();
+            int before = history.Count;
+            try
+            {
+                using var source = new Bitmap(140, 90, PixelFormat.Format32bppArgb);
+                using (var g = Graphics.FromImage(source)) g.Clear(Color.FromArgb(255, 40, 160, 120));
+                BitmapUtils.Save(source, testPath);
+                var entry = history.Add(testPath, CaptureMode.Rectangle, source);
+                Assert(entry != null, "History did not add the test snip.");
+
+                var reloaded = new HistoryService();
+                reloaded.Load();
+                var found = reloaded.All.FirstOrDefault(e => e.Id == entry!.Id);
+                Assert(found != null, "The history entry was not present after reloading history.json.");
+                Assert(File.Exists(found!.ThumbnailPath), "The history thumbnail was not created.");
+                Assert(reloaded.Count >= before + 1, "History count did not increase.");
+
+                history.Remove(entry!, deleteFiles: true);
+                Assert(!File.Exists(testPath), "Deleting a history entry did not delete its image.");
+                return Task.FromResult($"added, reloaded, verified, and removed “{found.FileName}” ({found.Width}×{found.Height})");
+            }
+            finally
+            {
+                if (backup != null) File.WriteAllText(AppPaths.HistoryFile, backup);
+                else if (File.Exists(AppPaths.HistoryFile)) File.Delete(AppPaths.HistoryFile);
+                try { if (File.Exists(testPath)) File.Delete(testPath); } catch { }
+            }
+        });
+
+        await Run("Settings validation", () =>
+        {
+            var settings = new Settings
+            {
+                DelaySeconds = 7,
+                FileNamePattern = "bad/name:with<invalid>chars",
+                DefaultMode = (CaptureMode)99,
+                RecordingFps = 13
+            };
+            settings.Sanitize();
+            Assert(settings.DelaySeconds == 0, "Invalid delay was not reset.");
+            Assert(settings.RecordingFps == 15, "Invalid recording frame rate was not reset.");
+            Assert(settings.DefaultMode == CaptureMode.Rectangle, "Invalid capture mode was not reset.");
+            foreach (char c in Path.GetInvalidFileNameChars())
+                Assert(!settings.FileNamePattern.Contains(c), "File name pattern still contains an invalid character.");
+            Assert(settings.Hotkeys.Count == HotkeyDefaults.Create().Count, "Default hotkeys were not restored.");
+            string generated = CaptureStorage.GenerateFilePath(new Settings
+            {
+                SaveDirectory = AppPaths.Tests,
+                FileNamePattern = "selftest-name_{yyyy}-{MM}-{dd}_{HH}-{mm}-{ss}_{mode}"
+            }, CaptureMode.Freeform);
+            Assert(generated.StartsWith(AppPaths.Tests, StringComparison.OrdinalIgnoreCase), "Generated path is outside the test folder.");
+            Assert(generated.Contains("Freeform"), "Mode token was not expanded in the generated file name.");
+            return Task.FromResult("invalid delay, fps, mode, and file name characters were repaired");
+        });
+
+        await Run("Global hotkey registration", () =>
+        {
+            var parameters = new HwndSourceParameters("SnippingToolSelfTestHotkeys")
+            {
+                Width = 1,
+                Height = 1,
+                WindowStyle = 0
+            };
+            using var source = new HwndSource(parameters);
+            var manager = new HotkeyManager();
+            manager.Attach(source.Handle, _ => { });
+
+            // Friendly bare-key parsing (the stop-recording shortcut defaults to "Esc").
+            Assert(HotkeyGesture.Parse("Esc", allowBare: true)?.Key == System.Windows.Input.Key.Escape,
+                "Bare 'Esc' did not resolve to the Escape key.");
+            Assert(HotkeyGesture.Parse("Esc") == null,
+                "A bare key must be rejected for an always-on shortcut (no modifier).");
+            Assert(HotkeyGesture.Parse("Ctrl+N")?.Key == System.Windows.Input.Key.N,
+                "'Ctrl+N' did not resolve to the N key.");
+            try
+            {
+                var results = manager.RegisterAll(new Dictionary<string, string>
+                {
+                    ["TestOne"] = "Ctrl+Alt+Shift+F8",
+                    ["TestTwo"] = "Ctrl+Alt+Shift+F9"
+                });
+                Assert(results.All(r => r.Success),
+                    "Could not register the test hotkeys: " + string.Join("; ", results.Select(r => $"{r.Gesture}={r.Error}")));
+                Assert(manager.AnyRegistered, "HotkeyManager reported nothing registered.");
+
+                var duplicates = manager.RegisterAll(new Dictionary<string, string>
+                {
+                    ["DupOne"] = "Ctrl+Alt+Shift+F10",
+                    ["DupTwo"] = "Ctrl+Alt+Shift+F10"
+                });
+                Assert(duplicates.Count(r => !r.Success) == 1 && duplicates.Any(r => r.ErrorCode == -3),
+                    "Duplicate shortcut detection did not reject exactly one entry.");
+                return Task.FromResult("Ctrl+Alt+Shift+F8/F9 registered; duplicate gesture rejected with conflict code -3");
+            }
+            finally
+            {
+                manager.UnregisterAll();
+            }
+        });
+
+        await Run("Windows OCR", async () =>
+        {
+            if (!OcrService.IsAvailable)
+                throw new SkipTestException("No Windows OCR language pack is installed for this account.");
+            using var source = new Bitmap(1000, 260, PixelFormat.Format32bppArgb);
+            using (var g = Graphics.FromImage(source))
+            {
+                g.Clear(Color.White);
+                g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
+                using var font = new Font("Segoe UI", 58, FontStyle.Bold, GraphicsUnit.Pixel);
+                g.DrawString("Snipping Tool 12345", font, Brushes.Black, 36, 80);
+            }
+            string path = Path.Combine(AppPaths.Tests, "selftest-ocr-input.png");
+            BitmapUtils.Save(source, path);
+            var result = await OcrService.RecognizeAsync(source);
+            Assert(result.Text.Length > 0, "OCR returned no text.");
+            bool matches = result.Text.Contains("Snipping", StringComparison.OrdinalIgnoreCase) ||
+                           result.Text.Contains("12345", StringComparison.OrdinalIgnoreCase) ||
+                           result.Text.Contains("Tool", StringComparison.OrdinalIgnoreCase);
+            Assert(matches, $"OCR text did not contain the expected words: “{result.Text}”");
+            return $"{result.Language}: “{result.Text.Replace(Environment.NewLine, " / ")}” (input {path})";
+        });
+
+        await Run("ffmpeg engine", () =>
+        {
+            string? path = RecordingController.FfmpegPath;
+            if (path == null) throw new SkipTestException("ffmpeg.exe was not found in the Tools folder.");
+            var info = new FileInfo(path);
+            Assert(info.Length > 100_000, "ffmpeg.exe looks incomplete.");
+            return Task.FromResult($"{path} ({info.Length / 1024 / 1024.0:0.0} MB)");
+        });
+
+        await Run("MP4 screen recording", async () =>
+        {
+            if (!RecordingController.IsAvailable)
+                throw new SkipTestException("ffmpeg.exe is not installed, so recording cannot be tested.");
+            var vs = CaptureService.VirtualScreen;
+            var region = new Rectangle(vs.Left + 24, vs.Top + 24,
+                Math.Min(320, Math.Max(16, vs.Width - 48)),
+                Math.Min(240, Math.Max(16, vs.Height - 48)));
+            string path = Path.Combine(AppPaths.Tests, $"selftest-recording-{DateTime.Now:HHmmss}.mp4");
+            using var controller = new RecordingController();
+            controller.Start(new RecordingOptions
+            {
+                Region = region,
+                Fps = 15,
+                IncludeCursor = true,
+                OutputPath = path
+            });
+            await Task.Delay(2600);
+            var stopped = await controller.StopAsync();
+            Assert(stopped.Success, stopped.Error ?? "The recorder reported failure.");
+            Assert(File.Exists(path), "The MP4 file was not created.");
+            long length = new FileInfo(path).Length;
+            Assert(length > 10_000, $"The MP4 file is too small ({length} bytes).");
+            var header = new byte[12];
+            using (var stream = File.OpenRead(path)) stream.ReadExactly(header, 0, header.Length);
+            bool ftyp = header[4] == 'f' && header[5] == 't' && header[6] == 'y' && header[7] == 'p';
+            Assert(ftyp, "The output does not start with an MP4 'ftyp' box.");
+            return $"{region.Width}×{region.Height}, {stopped.Frames} frames in {stopped.Duration.TotalSeconds:0.0}s, {length / 1024.0:0.0} KB, {path}";
+        });
+
+        Clock.Stop();
+        return WriteReport(stamp, exitCode: Results.Any(r => r.Status == "FAIL") ? 1 : 0);
+    }
+
+    private static async Task Run(string name, Func<Task<string>> test)
+    {
+        var watch = Stopwatch.StartNew();
+        try
+        {
+            string detail = await test();
+            watch.Stop();
+            Results.Add(new Result(name, "PASS", detail, watch.ElapsedMilliseconds));
+            Logger.Info($"[SELFTEST PASS] {name}: {detail}");
+        }
+        catch (SkipTestException ex)
+        {
+            watch.Stop();
+            Results.Add(new Result(name, "SKIP", ex.Message, watch.ElapsedMilliseconds));
+            Logger.Warn($"[SELFTEST SKIP] {name}: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            watch.Stop();
+            Results.Add(new Result(name, "FAIL", ex.Message, watch.ElapsedMilliseconds));
+            Logger.Error($"[SELFTEST FAIL] {name}", ex);
+        }
+    }
+
+    private static void Assert(bool condition, string message)
+    {
+        if (!condition) throw new InvalidOperationException(message);
+    }
+
+    private static int WriteReport(string stamp, int exitCode)
+    {
+        var builder = new StringBuilder();
+        builder.AppendLine("Shutio — self-test report");
+        builder.AppendLine("=================================");
+        builder.AppendLine($"Started: {DateTime.Now:yyyy-MM-dd HH:mm:ss}");
+        builder.AppendLine($"User: {Environment.UserName}");
+        builder.AppendLine($"OS: {Environment.OSVersion}");
+        builder.AppendLine($"Process: {(Environment.Is64BitProcess ? "64-bit" : "32-bit")}");
+        builder.AppendLine($"Root: {AppPaths.Root}");
+        builder.AppendLine();
+        foreach (var result in Results)
+            builder.AppendLine($"[{result.Status}] {result.Name} ({result.Milliseconds} ms)\n        {result.Detail}");
+        int pass = Results.Count(r => r.Status == "PASS");
+        int fail = Results.Count(r => r.Status == "FAIL");
+        int skip = Results.Count(r => r.Status == "SKIP");
+        builder.AppendLine();
+        builder.AppendLine($"Summary: {pass} passed, {fail} failed, {skip} skipped ({(int)Math.Round(Clock.Elapsed.TotalSeconds)} s)");
+        builder.AppendLine($"Exit code: {exitCode}");
+
+        string text = builder.ToString();
+        try
+        {
+            string latest = Path.Combine(AppPaths.Logs, "selftest-latest.txt");
+            string dated = Path.Combine(AppPaths.Logs, $"selftest-{stamp}.txt");
+            string evidence = Path.Combine(AppPaths.Tests, "selftest-report.txt");
+            File.WriteAllText(latest, text, Encoding.UTF8);
+            File.WriteAllText(dated, text, Encoding.UTF8);
+            File.WriteAllText(evidence, text, Encoding.UTF8);
+            Logger.Info($"Self-test report written to {latest}");
+        }
+        catch (Exception ex)
+        {
+            Logger.Error("Could not write the self-test report", ex);
+        }
+        try { Console.WriteLine(text); } catch { }
+        return exitCode;
+    }
+}
