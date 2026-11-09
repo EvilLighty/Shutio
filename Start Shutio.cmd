@@ -1,13 +1,1 @@
-@echo off
-rem Portable launcher: starts the self-contained build next to this file.
-rem No installation, admin rights, or working-directory assumptions.
-setlocal
-set "APP=%~dp0Shutio.exe"
-if not exist "%APP%" (
-  echo Shutio.exe was not found next to this launcher.
-  echo Expected: "%APP%"
-  pause
-  exit /b 1
-)
-start "" "%APP%"
-endlocal
+QGVjaG8gb2ZmCnJlbSBQb3J0YWJsZSBsYXVuY2hlcjogc3RhcnRzIHRoZSBzZWxmLWNvbnRhaW5lZCBidWlsZCBuZXh0IHRvIHRoaXMgZmlsZS4KcmVtIE5vIGluc3RhbGxhdGlvbiwgYWRtaW4gcmlnaHRzLCBvciB3b3JraW5nLWRpcmVjdG9yeSBhc3N1bXB0aW9ucy4Kc2V0bG9jYWwKc2V0ICJBUFA9JX5kcDBTaHV0aW8uZXhlIgppZiBub3QgZXhpc3QgIiVBUFAlIiAoCiAgZWNobyBTaHV0aW8uZXhlIHdhcyBub3QgZm91bmQgbmV4dCB0byB0aGlzIGxhdW5jaGVyLgogIGVjaG8gRXhwZWN0ZWQ6ICIlQVBQJSIKICBwYXVzZQogIGV4aXQgL2IgMQopCnN0YXJ0ICIiICIlQVBQJSIKZW5kbG9jYWwK

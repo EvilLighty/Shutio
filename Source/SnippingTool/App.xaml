@@ -1,12 +1,1 @@
-<Application x:Class="SnippingTool.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             ShutdownMode="OnExplicitShutdown">
-    <Application.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Themes/Controls.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Application.Resources>
-</Application>
+PEFwcGxpY2F0aW9uIHg6Q2xhc3M9IlNuaXBwaW5nVG9vbC5BcHAiCiAgICAgICAgICAgICB4bWxucz0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93aW5meC8yMDA2L3hhbWwvcHJlc2VudGF0aW9uIgogICAgICAgICAgICAgeG1sbnM6eD0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93aW5meC8yMDA2L3hhbWwiCiAgICAgICAgICAgICBTaHV0ZG93bk1vZGU9Ik9uRXhwbGljaXRTaHV0ZG93biI+CiAgICA8QXBwbGljYXRpb24uUmVzb3VyY2VzPgogICAgICAgIDxSZXNvdXJjZURpY3Rpb25hcnk+CiAgICAgICAgICAgIDxSZXNvdXJjZURpY3Rpb25hcnkuTWVyZ2VkRGljdGlvbmFyaWVzPgogICAgICAgICAgICAgICAgPFJlc291cmNlRGljdGlvbmFyeSBTb3VyY2U9IlRoZW1lcy9Db250cm9scy54YW1sIiAvPgogICAgICAgICAgICA8L1Jlc291cmNlRGljdGlvbmFyeS5NZXJnZWREaWN0aW9uYXJpZXM+CiAgICAgICAgPC9SZXNvdXJjZURpY3Rpb25hcnk+CiAgICA8L0FwcGxpY2F0aW9uLlJlc291cmNlcz4KPC9BcHBsaWNhdGlvbj4K
