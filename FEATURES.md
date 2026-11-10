@@ -1,6 +1,6 @@
 # Feature status
 
-Legend: **Yes** = implemented and verified on the kiosk. **Partial** = implemented
+Legend: **Yes** = implemented and verified on the reference machine. **Partial** = implemented
 with a documented limitation. **No** = not available by design or blocked by the
 environment.
 

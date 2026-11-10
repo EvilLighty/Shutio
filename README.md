@@ -1,21 +1,22 @@
 # Shutio for Windows 11 (portable)
 
-A self-contained, no-admin screenshot and screen-recording app. It is a native WPF application styled like the Windows 11 Snipping
-Tool and stores everything inside this folder.
+A self-contained, no-admin screenshot and screen-recording app for Windows 10/11
+(64-bit). It is a native WPF application styled like the Windows 11 Snipping Tool
+and stores everything inside its own folder.
 
-- **App location:** `I:\Apps\SnippingTool\Shutio.exe`
-- **Portable data:** `I:\Apps\SnippingTool\Data\`
+- **Where it lives:** anywhere you put it. The installer lets you pick the folder;
+  the portable version runs from any folder, drive, or USB stick.
+- **Your data:** the `Data\` folder right next to the app (snips, recordings,
+  settings, history). It moves with the app, and the exact path is shown in
+  Settings. The snip *save folder* is itself a setting you can change.
 - **Runtime:** self-contained .NET 10 (x64). No .NET install, MSI, service, driver,
   registry change, UAC prompt, or Windows-key shortcut is used.
-- **Tested on:** Windows 11 build 22621, standard user `geforce-now\kiosk`,
-  2560x1440 display at 150% scaling.
+- **Tested on:** Windows 11 (build 22621), 2560x1440 display at 150% scaling.
 
 ## Quick start
 
-Double-click any of:
-
-- `I:\Apps\SnippingTool\Shutio.exe`
-- `I:\Apps\SnippingTool\Start Shutio.cmd`
+Double-click **`Shutio.exe`** (or `Start Shutio.cmd`) in the folder you installed
+it into.
 
 The main window opens. Use **New snip**, a capture card, the floating toolbar, the
 notification-area icon, or a global shortcut.
@@ -27,7 +28,7 @@ in Settings (or use the tray button on the title bar).
 
 There is a **complete offline installer** that contains the whole app inside one
 file. It needs no internet, no admin rights, and no other files — so you can copy
-**`I:\Apps\Shutio-Share\Shutio-setup.exe`** to a USB stick or email it
+**`Shutio-setup.exe`** to a USB stick or email it
 and it installs on any Windows 10/11 (64-bit) PC.
 
 **To install:**
@@ -42,16 +43,16 @@ and it installs on any Windows 10/11 (64-bit) PC.
 - Your saved snips/recordings in `Data\` are **kept** unless you choose to delete them
   (the uninstaller also supports `--silent`, `--yes`, and `--remove-data` for automation).
 
-> Both `.exe` files live in **`I:\Apps\Shutio-Share\`** (alongside a plain
-> `README.txt`). The app is built as a self-contained .NET program — no PowerShell or
-> extra runtime required. To rebuild the installer from source:
+> Both `.exe` files ship with the releases (or in your share folder). The app is
+> built as a self-contained .NET program — no PowerShell or extra runtime required.
+> To rebuild the installer from source:
 > `Install\src\offline-installer\rebuild.ps1`. A simpler PowerShell installer that
 > also keeps your local `Data\` is in `Install\install.ps1`.
 
 ## Update an existing install (offline)
 
-If the app is already installed somewhere, **`I:\Apps\Shutio-Share\Shutio-Updater.exe`**
-(~158 MB, the whole new app is inside) repairs that copy **in place**:
+If the app is already installed somewhere, **`Shutio-Updater.exe`** (from the
+release; the whole new app is inside) repairs that copy **in place**:
 
 1. Double-click **`Shutio-Updater.exe`**.
 2. It finds the install (Apps & features entry, or the folder it sits in, or a common
@@ -178,35 +179,26 @@ Saving applies changes immediately and re-registers shortcuts.
 ## Data layout
 
 ```
-I:\Apps\SnippingTool\          (≈288 MB — the runnable app)
-  Shutio.exe          published app
-  Start Shutio.cmd   portable launcher
-  Install\                  installers: install.ps1 / uninstall.ps1 / .cmd + offline-installer source
+<install folder>          (wherever you put it — any drive, any depth)
+  Shutio.exe                the app (self-contained, ~73 MB)
+  Start Shutio.cmd          portable launcher
+  UninstallShutio.exe       standalone uninstaller (added by the installer)
+  Install\                  installer/updater source + build scripts
   README.md                 this file
   FEATURES.md               implemented / unavailable matrix
   CHANGELOG.md              change history
   Assets\                   icons and logo
-  Tools\ffmpeg.exe          recording engine
+  Tools\ffmpeg.exe          recording engine (bundled with releases)
   Source\SnippingTool\      full C# source
-  Data\
-    settings.json
-    history.json
-    Screenshots\            default snip output
+  Data\                     your data (created on first run — delete to reset)
+    settings.json           settings (human-readable JSON)
+    history.json            snip history index
+    Screenshots\            default snip output (the save folder is a setting)
     Thumbnails\             history thumbnails
     Recordings\             MP4 output
+    Exports\                Shutio Cut video exports
     Logs\                   daily app logs
     Tests\                  self-test reports
-
-I:\Apps\Shutio-Share\       (≈252 MB — copy/share these two files with anyone)
-  Shutio-setup.exe         complete offline installer (whole app inside, ~205 MB)
-  UninstallShutio.exe       standalone uninstaller (~47 MB)
-  README.txt                      plain-language instructions
-
-I:\DevTools\                      (SHARED, project-agnostic build tooling, not needed to run)
-  dotnet\                   portable .NET SDK 10.0.100 (also on the user PATH)
-  nuget\                    shared NuGet package cache
-  ffmpeg\                   full ffmpeg distribution
-  (SDK zip, ffmpeg zip, this project's bin/obj build artifacts)
 ```
 
 Nothing is written outside this folder (the Windows clipboard is used only when
@@ -225,38 +217,24 @@ The app recreates the folders and default settings on the next launch.
 
 ## Build from source
 
-A portable .NET SDK is bundled in the SHARED folder `I:\DevTools` (kept out of the
-app folder to keep it light, and shared with other .NET projects on this machine).
-It is already on the user PATH with `NUGET_PACKAGES` / `DOTNET_CLI_HOME` pointed
-there, so a fresh shell can just run `dotnet build`. To rebuild explicitly:
+Requires the .NET 10 SDK on the PATH (any x64 Windows machine). From the repo root:
 
 ```powershell
-$dev    = 'I:\DevTools'
-$dotnet = "$dev\dotnet\dotnet.exe"
-$env:DOTNET_CLI_HOME = "$dev\dotnet-home"
-$env:NUGET_PACKAGES  = "$dev\nuget"
-& $dotnet build 'I:\Apps\SnippingTool\Source\SnippingTool\SnippingTool.csproj' -c Debug -v q -nologo
+# Compile check
+dotnet build Source\SnippingTool\SnippingTool.csproj -c Debug
+
+# Self-contained single-file publish (the single-file settings live in the csproj)
+dotnet publish Source\SnippingTool\SnippingTool.csproj -c Release -r win-x64 `
+  --self-contained true -o .\publish -p:DebugType=None -p:DebugSymbols=false
 ```
 
-Publish a fresh self-contained build over the app folder:
-
-```powershell
-$dev    = 'I:\DevTools'
-$env:DOTNET_CLI_HOME = "$dev\dotnet-home"
-$env:NUGET_PACKAGES  = "$dev\nuget"
-& "$dev\dotnet\dotnet.exe" publish `
-  'I:\Apps\SnippingTool\Source\SnippingTool\SnippingTool.csproj' `
-  -c Release -r win-x64 --self-contained true -o 'I:\Apps\SnippingTool' `
-  -p:DebugType=None -p:DebugSymbols=false -v q -nologo
-# Only if Tools\ffmpeg.exe is missing — the full ffmpeg build lives in the shared tools:
-# Copy-Item "$dev\ffmpeg\ffmpeg-9.0.2-essentials_build\bin\ffmpeg.exe" `
-#   'I:\Apps\SnippingTool\Tools\ffmpeg.exe' -Force
-```
+For recording support, place an `ffmpeg.exe` in `Tools\` next to the published
+app (releases bundle one; the source tree deliberately does not).
 
 ## Self-test
 
 ```powershell
-& 'I:\Apps\SnippingTool\Shutio.exe' --selftest
+.\Shutio.exe --selftest        # run from the app folder
 ```
 
 The headless suite exercises paths, settings round-trip, PNG/JPEG/BMP encoding,
@@ -266,8 +244,8 @@ to `Data\Tests\selftest-report.txt`; exit code 0 means all tests passed.
 
 ## Known limitations
 
-- Global hotkeys depend on the desktop shell allowing `RegisterHotKey`. The kiosk
-  shell can refuse them; use the floating toolbar or tray menu instead.
+- Global hotkeys depend on the desktop shell allowing `RegisterHotKey`. Locked-down
+  shells can refuse them; use the floating toolbar or tray menu instead.
 - Windows-key combinations are not supported by design.
 - Window capture of protected/DRM/hardware-overlay windows may fall back to a
   desktop crop; it then includes whatever is on screen.
@@ -277,7 +255,7 @@ to `Data\Tests\selftest-report.txt`; exit code 0 means all tests passed.
   (off by default) and depends on the selected mic delivering frames.
 - OCR quality depends on the installed Windows language pack and on text size.
 - The UI is designed for one or more monitors at 100-200% scaling; extreme
-  mixed-DPI layouts have not been lab-tested beyond the kiosk's 150% display.
+  mixed-DPI layouts have not been lab-tested beyond 150% scaling.
 
 ## Troubleshooting
 
@@ -292,7 +270,7 @@ to `Data\Tests\selftest-report.txt`; exit code 0 means all tests passed.
 
 ## Verification performed
 
-The published build was exercised end to end on the kiosk:
+The published build was exercised end to end on the reference machine:
 
 - Rectangle, freeform (alpha 0 outside / 255 inside), full desktop (2560x1440),
   single display (2560x1440), and window capture (2560x1368 via PrintWindow).
