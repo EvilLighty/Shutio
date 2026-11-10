@@ -8,6 +8,28 @@ using SnippingTool.Core;
 
 namespace SnippingTool.Recording;
 
+/// <summary>
+/// Everything needed to start a recording, collected by the UI (the Recording tab) and
+/// consumed by <c>AppHost</c>. Kept separate from the ffmpeg <see cref="RecordingOptions"/>
+/// so the controller stays a pure engine.
+/// </summary>
+public sealed class RecordingConfig
+{
+    public RecordingSource Source { get; set; } = RecordingSource.Fullscreen;
+    public int Fps { get; set; } = 15;
+    public bool IncludeCursor { get; set; } = true;
+    public bool IncludeAudio { get; set; }
+    public string Microphone { get; set; } = "";
+    public int TargetHeight { get; set; } = 0;      // 0 = native
+    public bool SeparateAudio { get; set; }
+    public bool WebcamEnabled { get; set; }
+    public string WebcamDevice { get; set; } = "";
+    public int WebcamSize { get; set; } = 1;        // 0 = S, 1 = M, 2 = L
+    public double WebcamX { get; set; } = 0.76;     // 0..1 fraction of output width (left edge of the PiP)
+    public double WebcamY { get; set; } = 0.62;     // 0..1 fraction of output height (top edge of the PiP)
+    public bool WebcamMirror { get; set; } = true;
+}
+
 public sealed class RecordingOptions
 {
     public Rectangle Region { get; init; }
@@ -16,11 +38,27 @@ public sealed class RecordingOptions
     public bool IncludeAudio { get; init; }
     public string Microphone { get; init; } = "";
     public string OutputPath { get; init; } = "";
+
+    // Output resolution. 0 = native (record at the captured size); otherwise the target output height.
+    public int TargetHeight { get; init; } = 0;
+
+    // When true (and audio is on) the video is saved WITHOUT audio and the microphone is
+    // saved as a separate lossless .wav file, so the editor can treat them independently.
+    public bool SeparateAudio { get; init; }
+
+    // Webcam picture-in-picture overlay.
+    public bool WebcamEnabled { get; init; }
+    public string WebcamDevice { get; init; } = "";
+    public int WebcamSize { get; init; } = 1;    // 0 = S, 1 = M, 2 = L
+    public double WebcamX { get; init; } = 0.76;  // 0..1 fraction of output width (left edge of the PiP)
+    public double WebcamY { get; init; } = 0.62;  // 0..1 fraction of output height (top edge of the PiP)
+    public bool WebcamMirror { get; init; } = true;
 }
 
 public sealed class RecordingStoppedEventArgs : EventArgs
 {
     public string OutputPath { get; init; } = "";
+    public string AudioOutputPath { get; init; } = "";
     public bool Success { get; init; }
     public string? Error { get; init; }
     public TimeSpan Duration { get; init; }
@@ -40,6 +78,7 @@ public sealed class RecordingController : IDisposable
 
     public bool IsRecording { get; private set; }
     public string OutputPath { get; private set; } = "";
+    public string AudioOutputPath { get; private set; } = "";
     public TimeSpan Elapsed => _elapsed.Elapsed;
     public int Frames => _frames;
     public string? LastError => _error;
@@ -86,6 +125,18 @@ public sealed class RecordingController : IDisposable
         if (region.Width < 8 || region.Height < 8) throw new InvalidOperationException("The recording area is too small.");
 
         int fps = options.Fps is >= 5 and <= 60 ? options.Fps : 15;
+
+        // Output resolution. 0 = native; otherwise scale the video down to this height (even dims for H.264).
+        int outW = region.Width, outH = region.Height;
+        if (options.TargetHeight > 0 && options.TargetHeight < region.Height)
+        {
+            outH = options.TargetHeight % 2 == 0 ? options.TargetHeight : options.TargetHeight - 1;
+            outW = (int)Math.Round(region.Width * (double)outH / region.Height);
+            if (outW % 2 != 0) outW -= 1;
+            if (outW < 8 || outH < 8) { outW = region.Width; outH = region.Height; }
+        }
+        bool scaled = outW != region.Width || outH != region.Height;
+
         string output = options.OutputPath;
         if (string.IsNullOrWhiteSpace(output))
         {
@@ -97,6 +148,32 @@ public sealed class RecordingController : IDisposable
             output = Path.Combine(Path.GetDirectoryName(output) ?? AppPaths.Recordings,
                 Path.GetFileNameWithoutExtension(output) + "_" + DateTime.Now.ToString("HHmmss") + ".mp4");
 
+        bool wantAudio = options.IncludeAudio && !string.IsNullOrWhiteSpace(options.Microphone);
+        bool separate = wantAudio && options.SeparateAudio;
+        string? audioOutput = separate
+            ? Path.Combine(Path.GetDirectoryName(output) ?? AppPaths.Recordings,
+                Path.GetFileNameWithoutExtension(output) + "_audio.wav")
+            : null;
+
+        bool webcam = options.WebcamEnabled && !string.IsNullOrWhiteSpace(options.WebcamDevice);
+        // Input layout: 0 = screen (pipe), 1 = webcam (if any), last = microphone (if any).
+        int micIndex = webcam ? 2 : 1;
+
+        // Webcam overlay geometry, computed in OUTPUT pixels so it stays proportional at any resolution.
+        int camW = 0, camH = 0, camX = 0, camY = 0;
+        if (webcam)
+        {
+            int denom = options.WebcamSize switch { 0 => 5, 2 => 3, _ => 4 };
+            camH = Math.Max(48, outH / denom);
+            if (camH % 2 != 0) camH -= 1;
+            camW = (int)Math.Round(camH * 16.0 / 9.0);
+            if (camW % 2 != 0) camW -= 1;
+            double fx = Math.Clamp(options.WebcamX, 0.0, 1.0);
+            double fy = Math.Clamp(options.WebcamY, 0.0, 1.0);
+            camX = Math.Clamp((int)Math.Round(fx * (outW - camW)), 0, Math.Max(0, outW - camW));
+            camY = Math.Clamp((int)Math.Round(fy * (outH - camH)), 0, Math.Max(0, outH - camH));
+        }
+
         var psi = new ProcessStartInfo
         {
             FileName = ffmpeg,
@@ -106,53 +183,75 @@ public sealed class RecordingController : IDisposable
             RedirectStandardError = true,
             RedirectStandardOutput = true
         };
-        psi.ArgumentList.Add("-hide_banner");
-        psi.ArgumentList.Add("-loglevel"); psi.ArgumentList.Add("error");
-        psi.ArgumentList.Add("-f"); psi.ArgumentList.Add("rawvideo");
-        psi.ArgumentList.Add("-pix_fmt"); psi.ArgumentList.Add("bgra");
-        psi.ArgumentList.Add("-s"); psi.ArgumentList.Add($"{region.Width}x{region.Height}");
-        psi.ArgumentList.Add("-r"); psi.ArgumentList.Add(fps.ToString());
-        psi.ArgumentList.Add("-i"); psi.ArgumentList.Add("pipe:0");
-
-        bool useAudio = options.IncludeAudio && !string.IsNullOrWhiteSpace(options.Microphone);
-        if (useAudio)
+        var a = psi.ArgumentList;
+        a.Add("-hide_banner");
+        a.Add("-loglevel"); a.Add("error");
+        // Input 0: the screen frames we pipe in (raw BGR A).
+        a.Add("-f"); a.Add("rawvideo");
+        a.Add("-pix_fmt"); a.Add("bgra");
+        a.Add("-s"); a.Add($"{region.Width}x{region.Height}");
+        a.Add("-r"); a.Add(fps.ToString());
+        a.Add("-i"); a.Add("pipe:0");
+        // Input 1 (optional): the webcam, via DirectShow under its exact device name.
+        if (webcam)
         {
-            // Second input: the microphone, captured via DirectShow under its exact device name.
-            psi.ArgumentList.Add("-f"); psi.ArgumentList.Add("dshow");
-            psi.ArgumentList.Add("-i"); psi.ArgumentList.Add("audio=" + options.Microphone);
+            a.Add("-f"); a.Add("dshow");
+            a.Add("-i"); a.Add("video=" + options.WebcamDevice);
+        }
+        // Input (last, optional): the microphone, via DirectShow.
+        if (wantAudio)
+        {
+            a.Add("-f"); a.Add("dshow");
+            a.Add("-i"); a.Add("audio=" + options.Microphone);
         }
 
-        psi.ArgumentList.Add("-map"); psi.ArgumentList.Add("0:v:0");
-        if (useAudio)
+        bool audioInVideo = wantAudio && !separate;
+        if (webcam)
         {
-            psi.ArgumentList.Add("-map"); psi.ArgumentList.Add("1:a:0");
-            psi.ArgumentList.Add("-c:a"); psi.ArgumentList.Add("aac");
-            psi.ArgumentList.Add("-b:a"); psi.ArgumentList.Add("160k");
+            // Compose screen + webcam overlay, optionally scale, then map the result.
+            string cam = $"scale={camW}:{camH}{(options.WebcamMirror ? ",hflip" : "")}";
+            string overlay = $"overlay={camX}:{camY}";
+            string baseChain = scaled ? $"[0:v]scale={outW}:{outH}[base];" : "[0:v]null[base];";
+            a.Add("-filter_complex");
+            a.Add($"{baseChain}[1:v]{cam}[cam];[base][cam]{overlay}[vout]");
+            a.Add("-map"); a.Add("[vout]");
+            if (audioInVideo) { a.Add("-map"); a.Add($"{micIndex}:a:0"); a.Add("-c:a"); a.Add("aac"); a.Add("-b:a"); a.Add("160k"); }
+            else a.Add("-an");
         }
         else
         {
-            psi.ArgumentList.Add("-an");
+            if (scaled) { a.Add("-vf"); a.Add($"scale={outW}:{outH}"); }
+            a.Add("-map"); a.Add("0:v:0");
+            if (audioInVideo) { a.Add("-map"); a.Add($"{micIndex}:a:0"); a.Add("-c:a"); a.Add("aac"); a.Add("-b:a"); a.Add("160k"); }
+            else a.Add("-an");
         }
 
-        psi.ArgumentList.Add("-c:v"); psi.ArgumentList.Add("libx264");
-        psi.ArgumentList.Add("-preset"); psi.ArgumentList.Add("ultrafast");
-        psi.ArgumentList.Add("-crf"); psi.ArgumentList.Add("23");
-        psi.ArgumentList.Add("-pix_fmt"); psi.ArgumentList.Add("yuv420p");
-        psi.ArgumentList.Add("-movflags"); psi.ArgumentList.Add("+faststart");
-        // -shortest: finalize & exit when the finite video input (our pipe:0) ends,
-        // even if the live microphone input is still streaming. Without this the
-        // endless dshow audio keeps ffmpeg running after the video pipe closes, so
-        // "Stop" hangs until the timeout kills ffmpeg mid-flush -> corrupt MP4 and a
-        // false "recording failed" error. (No effect when recording video-only.)
-        psi.ArgumentList.Add("-shortest");
-        psi.ArgumentList.Add("-r"); psi.ArgumentList.Add(fps.ToString());
-        psi.ArgumentList.Add("-y");
-        psi.ArgumentList.Add(output);
+        // Output 1: the video file.
+        a.Add("-c:v"); a.Add("libx264");
+        a.Add("-preset"); a.Add("ultrafast");
+        a.Add("-crf"); a.Add("23");
+        a.Add("-pix_fmt"); a.Add("yuv420p");
+        a.Add("-movflags"); a.Add("+faststart");
+        // -shortest: finalize & exit when the finite video input (our pipe:0) ends, even if the
+        // live dshow webcam/mic inputs are still streaming. Without this "Stop" hangs until the
+        // timeout kills ffmpeg mid-flush -> corrupt MP4 and a false "recording failed" error.
+        a.Add("-shortest");
+        a.Add("-r"); a.Add(fps.ToString());
+        a.Add("-y"); a.Add(output);
+
+        // Output 2 (separate-audio mode): the microphone as a lossless .wav, independent of the video.
+        if (separate)
+        {
+            a.Add("-map"); a.Add($"{micIndex}:a:0");
+            a.Add("-c:a"); a.Add("pcm_s16le");
+            a.Add("-y"); a.Add(audioOutput!);
+        }
 
         _stderr.Clear();
         _error = null;
         _frames = 0;
         OutputPath = output;
+        AudioOutputPath = audioOutput ?? "";
         _ffmpeg = new Process { StartInfo = psi, EnableRaisingEvents = true };
         _ffmpeg.ErrorDataReceived += (_, args) =>
         {
@@ -172,8 +271,10 @@ public sealed class RecordingController : IDisposable
         IsRecording = true;
         _elapsed.Restart();
         _loop = Task.Run(() => RecordLoop(region, fps, options.IncludeCursor, _cts.Token));
-        string audioDesc = useAudio ? ("on (" + options.Microphone + ")") : "off";
-        Logger.Info($"Recording started: {region.Width}x{region.Height} @ {fps}fps, audio={audioDesc} -> {output}");
+        string audioDesc = wantAudio ? ("on (" + options.Microphone + (separate ? ", separate" : "") + ")") : "off";
+        string camDesc = webcam ? ("on (" + options.WebcamDevice + ")") : "off";
+        string resDesc = scaled ? $"{outW}x{outH}" : "native";
+        Logger.Info($"Recording started: {region.Width}x{region.Height} @ {fps}fps, res={resDesc}, audio={audioDesc}, webcam={camDesc} -> {output}");
     }
 
     private void RecordLoop(Rectangle region, int fps, bool includeCursor, CancellationToken token)
@@ -297,6 +398,7 @@ public sealed class RecordingController : IDisposable
         var result = new RecordingStoppedEventArgs
         {
             OutputPath = OutputPath,
+            AudioOutputPath = AudioOutputPath,
             Success = success,
             Error = success ? null : _error,
             Duration = _elapsed.Elapsed,

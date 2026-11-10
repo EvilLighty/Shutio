@@ -30,6 +30,21 @@ public partial class SettingsWindow : Window
         ThemeLight.Click += (_, _) => PreviewTheme(AppTheme.Light);
         ThemeDark.Click += (_, _) => PreviewTheme(AppTheme.Dark);
 
+        GlassEnabledToggle.Checked += (_, _) => { _working.TranslucentWindow = true; UpdateGlassLabels(); PreviewGlass(); };
+        GlassEnabledToggle.Unchecked += (_, _) => { _working.TranslucentWindow = false; UpdateGlassLabels(); PreviewGlass(); };
+        BlurSlider.ValueChanged += (_, _) =>
+        {
+            _working.GlassBlur = (int)Math.Round(BlurSlider.Value);
+            UpdateGlassLabels();
+            PreviewGlass();
+        };
+        TransparencySlider.ValueChanged += (_, _) =>
+        {
+            _working.GlassOpacity = Math.Round(TransparencySlider.Value * 100) / 100.0;
+            UpdateGlassLabels();
+            PreviewGlass();
+        };
+
         ModeRectangle.Click += (_, _) => SelectMode(CaptureMode.Rectangle);
         ModeFreeform.Click += (_, _) => SelectMode(CaptureMode.Freeform);
         ModeWindow.Click += (_, _) => SelectMode(CaptureMode.Window);
@@ -88,6 +103,10 @@ public partial class SettingsWindow : Window
     {
         _initializing = true;
         SelectThemeVisual(_working.Theme);
+        GlassEnabledToggle.IsChecked = _working.TranslucentWindow;
+        BlurSlider.Value = _working.GlassBlur;
+        TransparencySlider.Value = _working.GlassOpacity;
+        UpdateGlassLabels();
         SelectModeVisual(_working.DefaultMode);
         SelectDelayVisual(_working.DelaySeconds);
         SelectFpsVisual(_working.RecordingFps);
@@ -246,6 +265,28 @@ public partial class SettingsWindow : Window
         _working.Theme = theme;
         SelectThemeVisual(theme);
         ThemeManager.Apply(theme);
+    }
+
+    private void UpdateGlassLabels()
+    {
+        if (BlurValueText != null) BlurValueText.Text = ((int)Math.Round(BlurSlider.Value)).ToString();
+        if (TransparencyValueText != null) TransparencyValueText.Text = ((int)Math.Round(TransparencySlider.Value * 100)) + "%";
+    }
+
+    /// <summary>
+    /// Renders the main window's glass with the current draft values (without persisting them),
+    /// so the user sees the frost/blur live while dragging. Re-asserts this window's foreground
+    /// because the preview briefly hides/shows the main window behind it.
+    /// </summary>
+    private void PreviewGlass()
+    {
+        if (_initializing) return;
+        try
+        {
+            _host.MainWindow?.RefreshGlass(_working.GlassOpacity, _working.GlassBlur, _working.TranslucentWindow);
+        }
+        catch { /* preview is best-effort; the value still applies on Save */ }
+        Dispatcher.BeginInvoke(System.Windows.Threading.DispatcherPriority.ApplicationIdle, new Action(() => { Activate(); }));
     }
 
     private void SelectMode(CaptureMode mode)

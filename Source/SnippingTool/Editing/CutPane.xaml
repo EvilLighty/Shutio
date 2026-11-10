@@ -1,0 +1,228 @@
+<UserControl x:Class="SnippingTool.Editing.CutPane"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="clr-namespace:SnippingTool.UI"
+             Focusable="True">
+
+    <UserControl.Resources>
+        <!-- ToggleButton mirror of GhostButton, plus a checked state (BaseButton targets Button, so a
+             ToggleButton can't use it — this is the checked "Snap" toggle). -->
+        <Style x:Key="SnapToggle" TargetType="ToggleButton">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Padding" Value="9,6" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Border x:Name="Root" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="7" Padding="{TemplateBinding Padding}"
+                                SnapsToDevicePixels="True">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Root" Property="Background" Value="{DynamicResource SubtleHoverBrush}" />
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="Root" Property="Background" Value="{DynamicResource AccentSoftBrush}" />
+                                <Setter Property="Foreground" Value="{DynamicResource AccentBrush}" />
+                                <Setter TargetName="Root" Property="BorderBrush" Value="{DynamicResource AccentSoftBorderBrush}" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="Root" Property="Opacity" Value="0.42" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Margin="20,14,20,16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" MinHeight="250" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- ===================== TITLE + TOOLBAR (single line) ===================== -->
+        <Border Grid.Row="0" Margin="2,0,2,10" Background="{DynamicResource CardBrush}" BorderBrush="{DynamicResource BorderBrush}"
+                BorderThickness="1" CornerRadius="12" Padding="10,7">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" Text="Shutio Cut" FontFamily="{StaticResource AppFontDisplay}"
+                           FontSize="18" FontWeight="SemiBold" VerticalAlignment="Center" Margin="2,0,16,0" />
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Button x:Name="OpenButton" Style="{StaticResource IconButton}" Width="34" Margin="1,0" ToolTip="Open a recording or audio file…" Click="Open_Click">
+                        <TextBlock Text="&#xE8E5;" Style="{StaticResource IconGlyph}" FontSize="15" />
+                    </Button>
+                    <Button x:Name="AddClipButton" Style="{StaticResource GhostButton}" Padding="9,6" Margin="1,0" ToolTip="Append the opened file to the selected track" Click="AddClip_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE710;" Style="{StaticResource IconGlyph}" FontSize="11" />
+                            <TextBlock Text="Add clip" FontSize="11" Margin="5,0,0,0" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+
+                    <Border Style="{StaticResource ThinSeparator}" Margin="3,4" />
+
+                    <Button x:Name="SplitButton" Style="{StaticResource GhostButton}" Padding="9,6" Margin="1,0" ToolTip="Split the selected clip at the playhead (Ctrl+K)" Click="Split_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE8A1;" Style="{StaticResource IconGlyph}" FontSize="11" />
+                            <TextBlock Text="Split" FontSize="11" Margin="5,0,0,0" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="CutButton" Style="{StaticResource GhostButton}" Padding="9,6" Margin="1,0" ToolTip="Cut — remove the selected clip (Ctrl+X / Del)" Click="Cut_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE7C1;" Style="{StaticResource IconGlyph}" FontSize="11" />
+                            <TextBlock Text="Cut" FontSize="11" Margin="5,0,0,0" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+                    <ToggleButton x:Name="SnapButton" Style="{StaticResource SnapToggle}" Margin="1,0" IsChecked="True"
+                                  ToolTip="Snap clips to the playhead and to each other" Checked="Snap_Changed" Unchecked="Snap_Changed">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE7A8;" Style="{StaticResource IconGlyph}" FontSize="11" />
+                            <TextBlock Text="Snap" FontSize="11" Margin="5,0,0,0" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ToggleButton>
+
+                    <Border Style="{StaticResource ThinSeparator}" Margin="3,4" />
+
+                    <Button x:Name="AddVideoButton" Style="{StaticResource GhostButton}" Padding="9,6" Margin="1,0" ToolTip="Add a video track (max 6 tracks)" Click="AddVideo_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE8B9;" Style="{StaticResource IconGlyph}" FontSize="11" />
+                            <TextBlock Text="+Video" FontSize="11" Margin="5,0,0,0" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="AddAudioButton" Style="{StaticResource GhostButton}" Padding="9,6" Margin="1,0" ToolTip="Add an audio track (max 6 tracks)" Click="AddAudio_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE768;" Style="{StaticResource IconGlyph}" FontSize="11" />
+                            <TextBlock Text="+Audio" FontSize="11" Margin="5,0,0,0" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+
+                    <Border Style="{StaticResource ThinSeparator}" Margin="3,4" />
+
+                    <Button x:Name="ZoomOutButton" Style="{StaticResource IconButton}" Width="28" Margin="1,0" Content="−" FontSize="15" ToolTip="Zoom timeline out" Click="ZoomOut_Click" />
+                    <Button x:Name="ZoomButton" Style="{StaticResource GhostButton}" Padding="7,5" MinWidth="46" Content="100%" FontSize="11" ToolTip="Timeline zoom" Click="ZoomButton_Click" />
+                    <Button x:Name="ZoomInButton" Style="{StaticResource IconButton}" Width="28" Margin="1,0" Content="+" FontSize="15" ToolTip="Zoom timeline in" Click="ZoomIn_Click" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="14,0,0,0">
+                    <Border Style="{StaticResource Chip}" Margin="0,0,10,0">
+                        <TextBlock x:Name="TrackCountText" Text="2/6 tracks" FontSize="11" Foreground="{DynamicResource TextSecondaryBrush}" />
+                    </Border>
+                    <Button x:Name="ExportButton" Style="{StaticResource PrimaryButton}" Padding="13,6" ToolTip="Export the timeline to an MP4" Click="Export_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE74E;" Style="{StaticResource IconGlyph}" FontSize="13" Foreground="{DynamicResource AccentForegroundBrush}" />
+                            <TextBlock Text="Export MP4" FontSize="12" FontWeight="SemiBold" Margin="6,0,0,0" Foreground="{DynamicResource AccentForegroundBrush}" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- ===================== PREVIEW + TRANSPORT ===================== -->
+        <Grid Grid.Row="1" Margin="2,0,2,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Preview canvas -->
+            <Border Grid.Column="0" CornerRadius="10" Background="#FF0B0C0E" BorderBrush="{DynamicResource BorderBrush}"
+                    BorderThickness="1" MinHeight="150" ClipToBounds="True">
+                <Grid>
+                    <Image x:Name="PreviewImage" Stretch="Uniform" Margin="10"
+                           RenderOptions.BitmapScalingMode="HighQuality" />
+                    <!-- Empty state -->
+                    <StackPanel x:Name="PreviewEmpty" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Open a file to preview" FontSize="15" FontWeight="SemiBold"
+                                   Foreground="{DynamicResource TextTertiaryBrush}" HorizontalAlignment="Center" />
+                        <TextBlock Text="Add clips to up to six tracks, then export an MP4." FontSize="12"
+                                   Foreground="{DynamicResource TextTertiaryBrush}" HorizontalAlignment="Center" Margin="0,5,0,0" />
+                    </StackPanel>
+                    <!-- Busy overlay (export / preview decode) -->
+                    <Grid x:Name="PreviewBusy" Background="#B30B0C0E" Visibility="Collapsed">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <ui:ProgressRing Width="30" Height="30" HorizontalAlignment="Center" />
+                            <TextBlock x:Name="BusyText" Text="Working…" Margin="0,12,0,0" Style="{StaticResource Caption}"
+                                       Foreground="White" HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Border>
+
+            <!-- Transport -->
+            <Border Grid.Column="1" Width="210" Margin="12,0,0,0" Background="{DynamicResource CardBrush}"
+                    BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="10" Padding="12">
+                <StackPanel>
+                    <Grid>
+                        <TextBlock Text="Preview" Style="{StaticResource H3}" />
+                        <TextBlock x:Name="SourceNameText" Text="" Style="{StaticResource Tiny}" HorizontalAlignment="Right"
+                                   MaxWidth="120" TextTrimming="CharacterEllipsis" ToolTip="Opened file" />
+                    </Grid>
+                    <Grid Margin="0,10,0,0">
+                        <Button x:Name="PlayButton" Style="{StaticResource IconButton}" Width="34" Height="34" Margin="0,0,8,0"
+                                ToolTip="Play / pause (Space)" Click="Play_Click">
+                            <TextBlock x:Name="PlayGlyph" Text="&#xE768;" Style="{StaticResource IconGlyph}" FontSize="15" />
+                        </Button>
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock x:Name="TimeText" Text="0.0 / 0.0 s" Style="{StaticResource Tiny}" Margin="0,0,0,4" />
+                            <Slider x:Name="Scrub" Minimum="0" Maximum="1" IsEnabled="False" SmallChange="0.1" LargeChange="0.5"
+                                    TickFrequency="0.1" IsSnapToTickEnabled="False" ValueChanged="Scrub_ValueChanged" />
+                        </StackPanel>
+                    </Grid>
+                    <TextBlock x:Name="EngineText" Text="" Style="{StaticResource Tiny}" Margin="0,10,0,0" TextWrapping="Wrap" />
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <!-- ===================== TIMELINE (built in code: ruler + ≤6 tracks) ===================== -->
+        <Border Grid.Row="2" CornerRadius="10" Background="{DynamicResource CardBrush}" BorderBrush="{DynamicResource BorderBrush}"
+                BorderThickness="1" Padding="6" ClipToBounds="True">
+            <Grid x:Name="TimelineRoot">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Left gutter: track labels, aligned to the same row heights as the lanes. -->
+                <Grid Grid.Column="0" x:Name="Gutter" Background="Transparent" />
+
+                <!-- Lanes scroll horizontally; the gutter stays put. -->
+                <ScrollViewer Grid.Column="1" x:Name="LanesScroller" VerticalScrollBarVisibility="Disabled"
+                              HorizontalScrollBarVisibility="Auto" Padding="0,0,0,2">
+                    <Grid x:Name="Lanes" />
+                </ScrollViewer>
+
+                <!-- Empty state -->
+                <TextBlock x:Name="TimelineEmpty" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           Text="Add a clip, or drop a file onto a track." Style="{StaticResource Caption}"
+                           Foreground="{DynamicResource TextTertiaryBrush}" />
+            </Grid>
+        </Border>
+
+        <!-- ===================== STATUS BAR ===================== -->
+        <Grid Grid.Row="3" Margin="2,8,2,0">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock x:Name="StatusText" Text="Ready" Style="{StaticResource Tiny}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <TextBlock Text="Ctrl+K Split" Style="{StaticResource Tiny}" Margin="0,0,14,0" />
+                <TextBlock Text="Del Cut" Style="{StaticResource Tiny}" Margin="0,0,14,0" />
+                <TextBlock Text="Space Play" Style="{StaticResource Tiny}" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

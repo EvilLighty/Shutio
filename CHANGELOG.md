@@ -7,6 +7,151 @@ Format: `## [date]` sections with **Added / Changed / Fixed / Verified / Docs**.
 
 ---
 
+## 2026-11-10 — 2.0.0 "Shutio 2.0" — MAJOR RELEASE
+
+Major release (from **1.1.1**) bundling a full generation jump: the redesigned
+**single-window** UI (frosted glass · 3 tabs), the **inline screenshot editor**,
+and the all-new **Shutio Cut** timeline video editor (≤6 tracks, split/cut/snap,
+**MP4 export**) with a **smooth real-time preview**. All offline, on the bundled
+ffmpeg, no new paid dependencies.
+
+**Added**
+- **Version 2.0.0** everywhere: `Shutio.exe` (file/assembly 2.0.0.0), installer,
+  uninstaller, and updater all report 2.0.0 and stamp the Apps & features entry
+  (was 1.0.1/1.1.1).
+- **Smooth preview** (Phase C follow-up): playback no longer re-seeks ffmpeg per
+  frame. One continuous `ffmpeg -f image2pipe` process (`Editing\PreviewDecoder.cs`)
+  streams JPEG frames into a bounded, time-indexed buffer on a background thread;
+  a 30 fps UI timer pulls the frame for the current playhead. Decouples fast
+  decode from paced display → smooth playback; scrubbing still resolves frames
+  from the buffer via `FrameAt`. Verified headless (`--previewtest`): frames at
+  every sampled time, exit 0.
+
+**Release artifacts**
+- `I:\Apps\SnippingTool\Shutio.exe` — deployed app, **2.0.0.0**, self-test 13/13.
+- `I:\Apps\Shutio-Share\Shutio-setup.exe` — true-offline installer (whole app inside).
+- `I:\Apps\Shutio-Share\Shutio-Updater.exe` — offline in-place updater (payload = 2.0.0).
+- `I:\Apps\Shutio-Share\UninstallShutio.exe` — standalone uninstaller.
+- Installed copy `I:\Shutio` refreshed to 2.0.0 in place (Data\ preserved).
+
+**Contents** (details in the entries below)
+- Single window · frosted glass (tunable blur/transparency) · 3 tabs
+  (Screenshot · Video editing · Recording) · inline editor, no pop-ups.
+- Inline screenshot editor: pen, shapes, text, resize/rotate, undo/redo, OCR.
+- **Shutio Cut**: open media, up to **6 tracks** (Full frame + PiP video + mixed
+  audio), split/cut, drag/trim/snap, **Export MP4** (H.264 + AAC, faststart).
+
+---
+
+## 2026-11-10 — Phase C: Shutio Cut timeline editor (≤6 tracks · MP4 export)
+
+The **Video editing tab** is now a working Premiere‑lite timeline editor, **Shutio Cut**:
+open a recording or audio file, put clips on up to **six tracks** (6 is the hard cap),
+split/cut them, drag/trim with snapping, and **export an MP4** — all inline (no pop‑up)
+and on the bundled ffmpeg, offline, no new paid dependencies. Self‑test stays **13/13, exit 0**.
+
+**Added**
+- **`CutPane`** (UserControl, `Editing\`) — the inline editor on the Video editing tab:
+  a **single‑line toolbar** (Open · Add clip · Split · Cut · Snap toggle · +Video · +Audio ·
+  timeline zoom −/100%/+ · a **`n/6 tracks`** counter · **Export MP4**), a **preview** with
+  **transport** (Play/Pause · time · scrub slider · engine status), and a **timeline** with a
+  ruler, a red **playhead**, and one row per track.
+- **6‑track model** (`Editing\TimelineModel.cs`) — `TimelineProject` / `TimelineTrack` /
+  `TimelineClip` with `TimelineConstants.MaxTracks = 6` (min 1). Track 0 is **Full frame**;
+  later video tracks are **picture‑in‑picture** (Top/Bottom‑Left/Right); audio tracks are mixed.
+  `+Video` / `+Audio` add tracks up to the cap, tracks can be removed, muted (audio) or hidden
+  (video). The toolbar disables the add buttons and reports "Max 6 tracks reached" at the cap.
+- **ffmpeg engine** (`Editing\`) — `FfmpegRunner` (run + probe for duration/dims/fps/streams),
+  `FramePreview` (decode one frame at a time for the preview), and `TimelineExport` (builds the
+  composite filtergraph: base canvas + per‑clip `trim`+`setpts`+`scale`, chained `overlay` with
+  `enable='between(t,…)'`, and per‑clip `atrim`+`asetpts`+`adelay`+`amix=normalize=0`, then
+  H.264/AAC MP4). `AppPaths.Exports` added for output.
+- **Interactive timeline** — clip drag (move), edge **trim** (left/right), **select**, and
+  **snap** to the playhead and neighbouring clip edges; ruler/track‑lane clicks move the playhead.
+  **Split** divides the selected clip at the playhead (Ctrl+K); **Cut** removes the selection
+  (Del/Backspace); **Space** plays/pauses the preview.
+- **`--cutexport <input> [--out <path>]`** headless mode (and `--video` to open straight on the
+  editor tab) for no‑GUI verification of the engine, mirroring the UI's export path.
+
+**Fixed**
+- **Export produced no file — `No such filter: ''`.** The audio chain's output **label**
+  (`[a0]`) was comma‑joined in with the filters, leaving an empty filter after `aformat`.
+  The label is now appended to the chain rather than added as a filter part. Caught by the
+  headless export; the shipped app now exports a valid MP4.
+- **CutPane crashed on the Video tab.** (a) the **Snap** ToggleButton used a `Button`‑typed
+  style (`GhostButton`) — now a ToggleButton‑typed `SnapToggle` style with a checked state;
+  (b) the same `RowDefinition` objects were added to both the gutter and lane grids (a
+  RowDefinition belongs to one collection) — now built as two independent row sets.
+
+**Verified**
+- Self‑test **13/13, exit 0** after the build; single‑file publish **73.3 MB**, WPF smoke OK.
+- **Headless engine, both Debug and the shipped single‑file app:** a real 1.6 s, 2560×1440
+  H.264 + AAC recording on V1 (Full) + V2 (PiP) + A1 → **valid MP4 (≈2.6 MB, video + audio)**,
+  exit 0. (The filtergraph was also proven in the shell before porting to C#.)
+- **Live UI:** launched straight to the Video tab → the Shutio Cut editor renders with the
+  single‑line toolbar, preview/transport ("Engine ready · ffmpeg.exe"), the timeline ruler,
+  playhead, and the default **V1 Full** / **A1** tracks with mute/delete controls, plus the
+  **2/6 tracks** counter.
+
+**Docs**
+- HANDOFF: Phase C marked done; editor row + next steps updated.
+
+---
+
+## 2026-11-10 — Redesigned as one window (glass · 3 tabs · inline editor)
+
+A structural redesign into **a single window with three top-right tabs**
+(Screenshot · Video editing · Recording), a **frosted-glass** surface, and an
+**inline screenshot editor** — no pop-up windows. Still portable, offline, and on
+the existing ffmpeg engine; no new paid dependencies. Self-test stays **13/13, exit 0**.
+
+**Added**
+- **Frosted-glass surface.** The main window samples the desktop behind it and renders
+  a blurred, tinted backdrop (`GlassBackdrop`), with **tunable blur (0–4)** and
+  **transparency (0–90%)** sliders in a new **Frosted glass** section of Settings, a
+  **live preview** while dragging, and an **Enabled** toggle to switch it off entirely
+  (reversible solid surface). Settings: `TranslucentWindow` / `GlassBlur` / `GlassOpacity`.
+- **Settings gear in the title bar.** The old bottom "Settings" text button is gone;
+  Settings now opens from a gear (⚙) icon in the title bar, between the Recording tab
+  and the theme button.
+- **Inline Recording tab.** The recording setup is no longer a pop-up — it is a tab in
+  the main window: source (Full desktop / Single display / Window / Region), frame rate
+  (15/30/60), resolution (Native/1080p/720p/540p), microphone audio (+ "save audio
+  separately" → video-only MP4 + lossless .wav), cursor toggle, and a **webcam
+  picture-in-picture** block with an always-visible **Choose webcam** picker, S/M/L size,
+  and mirror. A PiP box can be dragged to position the camera overlay.
+- **Inline screenshot editor (replaces the pop-up `EditorWindow`).** The Screenshot tab
+  now hosts the editor in place: a **single-line toolbar** (New snip · Pen · Highlighter ·
+  Eraser · Line · Crop · color/thickness · rotate L/R · resize · undo/redo · zoom −/%/+/fit ·
+  OCR · Copy · Save) over the shared `ImageCanvas`, plus a status line (file · dimensions ·
+  zoom · status). Capturing — or choosing a snip from history — now loads it into the tab
+  instead of opening a window.
+
+**Changed**
+- `AppHost.OpenEditor` now routes to `MainWindow.LoadInlineEditor` (the inline pane)
+  rather than constructing an `EditorWindow`; `OpenLatestEditor` prefers the inline
+  editor when it already has an image; the capture toast's action now focuses the main
+  window. The legacy `EditorWindow` still compiles but is no longer opened in the flow.
+- New `Editor\EditorPane` (UserControl) re-hosts the editor logic (tools, palette,
+  thickness, zoom, rotate/resize, undo/redo, save/copy, OCR, keyboard shortcuts) on the
+  shared `ImageCanvas`.
+
+**Verified**
+- Self-test **13/13, exit 0** after each increment; single-file publish **73.3 MB**, WPF
+  GUI smoke test alive.
+- Live: 3-tab shell + gear Settings + glass sliders render; Recording tab with the
+  "Choose webcam" picker renders (correctly "No webcam found" on a kiosk with no camera).
+- Inline editor: captured a full-desktop snip → the Screenshot tab switched to the editor
+  with the single-line toolbar + canvas (2560×1440 at 36%); drew a pen stroke (rendered),
+  the status flipped to "Edited" with the dirty dot, and **Ctrl+Z** removed the stroke —
+  confirming canvas input, dirty tracking, and undo all work inline.
+
+**Kept for Phase C**
+- **Video editing tab** is a placeholder ("Shutio Cut" — timeline editor with trim/cut,
+  V1 + A1/A2/A3 tracks, export MP4) to be built next on the ffmpeg engine.
+
+---
+
 ## 2026-11-09 — v1.1.1: recording-stop fix, 60 fps, Esc stop shortcut
 
 A small patch release fixing a recording bug found in live use, plus two recording

@@ -9,6 +9,7 @@ public static class AppPaths
     public static string Logs { get; } = Path.Combine(Data, "Logs");
     public static string Screenshots { get; } = Path.Combine(Data, "Screenshots");
     public static string Recordings { get; } = Path.Combine(Data, "Recordings");
+    public static string Exports { get; } = Path.Combine(Data, "Exports");
     public static string Thumbnails { get; } = Path.Combine(Data, "Thumbnails");
     public static string Tests { get; } = Path.Combine(Data, "Tests");
     public static string SettingsFile { get; } = Path.Combine(Data, "settings.json");
@@ -17,7 +18,7 @@ public static class AppPaths
 
     public static void EnsureDirectories()
     {
-        foreach (var dir in new[] { Data, Logs, Screenshots, Recordings, Thumbnails, Tests })
+        foreach (var dir in new[] { Data, Logs, Screenshots, Recordings, Exports, Thumbnails, Tests })
         {
             try { Directory.CreateDirectory(dir); }
             catch (Exception ex) { Logger.Error($"Unable to create directory {dir}", ex); }

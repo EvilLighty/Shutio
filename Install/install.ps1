@@ -15,7 +15,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $AppName  = 'Shutio'
-$Version  = '1.1.1'
+$Version  = '2.0.0'
 $Publisher= 'SalsaNOW Edition'
 $Source   = Split-Path -Parent $PSScriptRoot   # the app folder that contains Install\
 

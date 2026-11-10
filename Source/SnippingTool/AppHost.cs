@@ -417,9 +417,9 @@ public sealed class AppHost : IDisposable
         if (Settings.AutoSave)
             entry = CaptureStorage.SaveNew(snip, mode, Settings, History);
 
-        EditorWindow? editor = null;
+        bool editorOpen = false;
         if (Settings.OpenEditorAfterCapture)
-            editor = OpenEditor(snip, mode, entry);
+            editorOpen = OpenEditor(snip, mode, entry);
 
         if (Settings.ShowNotifications)
         {
@@ -434,10 +434,9 @@ public sealed class AppHost : IDisposable
             else
                 message = $"Snip captured · {dimensions}";
 
-            if (editor != null)
+            if (editorOpen)
             {
-                var target = editor;
-                ToastWindow.Show(message, "Open editor", () => ActivateWindow(target), snip);
+                ToastWindow.Show(message, "View", ShowMain, snip);
             }
             else
             {
@@ -462,22 +461,20 @@ public sealed class AppHost : IDisposable
         catch { }
     }
 
-    public EditorWindow? OpenEditor(Bitmap image, CaptureMode mode, SnipEntry? entry)
+    public bool OpenEditor(Bitmap image, CaptureMode mode, SnipEntry? entry)
     {
         try
         {
-            var editor = new EditorWindow(image, mode, entry, Settings, History);
-            _editors.Add(editor);
-            editor.Closed += (_, _) => _editors.Remove(editor);
-            editor.Show();
-            editor.Activate();
-            return editor;
+            if (MainWindow == null) return false;
+            if (!MainWindow.LoadInlineEditor(image, mode, entry)) return false;
+            ShowMain();
+            return true;
         }
         catch (Exception ex)
         {
             Logger.Error("Could not open the editor", ex);
             MessageDialog.Error(VisibleOwner(), "Could not open the editor", ex.Message);
-            return null;
+            return false;
         }
     }
 
@@ -504,10 +501,10 @@ public sealed class AppHost : IDisposable
 
     public void OpenLatestEditor()
     {
-        var open = _editors.LastOrDefault(w => w.IsVisible);
-        if (open != null)
+        if (MainWindow != null && MainWindow.HasInlineImage)
         {
-            ActivateWindow(open);
+            MainWindow.SwitchToScreenshotTab();
+            ShowMain();
             return;
         }
         var recent = History.Recent(1).FirstOrDefault();
@@ -625,10 +622,9 @@ public sealed class AppHost : IDisposable
     {
         if (_recorder is { IsRecording: true })
         {
-            if (_recordingIndicator?.IsVisible == true)
-                _recordingIndicator.Activate();
-            else
-                Notify("A recording is already in progress. Use the recording indicator to stop it.");
+            ShowMain();
+            MainWindow?.SwitchToRecordingTab();
+            Notify("A recording is already in progress. Use the Stop button to finish it.");
             return;
         }
         if (!RecordingController.IsAvailable)
@@ -643,25 +639,13 @@ public sealed class AppHost : IDisposable
             return;
         }
 
-        try
-        {
-            var setup = new RecordingSetupWindow(Settings);
-            if (MainWindow?.IsVisible == true)
-            {
-                setup.Owner = MainWindow;
-                setup.WindowStartupLocation = WindowStartupLocation.CenterOwner;
-            }
-            if (setup.ShowDialog() != true) return;
-            _ = StartRecordingAsync(setup);
-        }
-        catch (Exception ex)
-        {
-            Logger.Error("Recording setup failed", ex);
-            MessageDialog.Error(VisibleOwner(), "Could not start recording", ex.Message);
-        }
+        // No more pop-up setup window: bring the Recording tab into view and start from its controls.
+        ShowMain();
+        MainWindow?.SwitchToRecordingTab();
+        MainWindow?.StartRecording();
     }
 
-    private async Task StartRecordingAsync(RecordingSetupWindow setup)
+    public async Task StartRecording(RecordingConfig cfg)
     {
         var hidden = HideAppWindows();
         try
@@ -669,14 +653,14 @@ public sealed class AppHost : IDisposable
             await Task.Delay(170);
             Rectangle region = CaptureService.VirtualScreen;
 
-            if (setup.Source == RecordingSource.Monitor)
+            if (cfg.Source == RecordingSource.Monitor)
             {
                 // "Single display" = the primary monitor.
                 region = CaptureService.MonitorAt(new System.Drawing.Point(0, 0)).Bounds;
             }
-            else if (setup.Source != RecordingSource.Fullscreen)
+            else if (cfg.Source != RecordingSource.Fullscreen)
             {
-                var mode = setup.Source == RecordingSource.Window ? CaptureMode.Window : CaptureMode.Rectangle;
+                var mode = cfg.Source == RecordingSource.Window ? CaptureMode.Window : CaptureMode.Rectangle;
                 using var frozen = CaptureService.CaptureVirtualScreen();
                 var overlay = new CaptureOverlayWindow(frozen, CaptureService.VirtualScreen, mode, regionOnly: true);
                 overlay.ShowDialog();
@@ -698,11 +682,19 @@ public sealed class AppHost : IDisposable
             _recorder.Start(new RecordingOptions
             {
                 Region = region,
-                Fps = setup.Fps,
-                IncludeCursor = setup.IncludeCursor,
-                IncludeAudio = setup.IncludeAudio,
-                Microphone = setup.Microphone,
-                OutputPath = output
+                Fps = cfg.Fps,
+                IncludeCursor = cfg.IncludeCursor,
+                IncludeAudio = cfg.IncludeAudio,
+                Microphone = cfg.Microphone,
+                OutputPath = output,
+                TargetHeight = cfg.TargetHeight,
+                SeparateAudio = cfg.SeparateAudio,
+                WebcamEnabled = cfg.WebcamEnabled,
+                WebcamDevice = cfg.WebcamDevice,
+                WebcamSize = cfg.WebcamSize,
+                WebcamX = cfg.WebcamX,
+                WebcamY = cfg.WebcamY,
+                WebcamMirror = cfg.WebcamMirror
             });
             _recordingHiddenWindows = hidden;
 
@@ -714,6 +706,7 @@ public sealed class AppHost : IDisposable
                 if (ReferenceEquals(_recordingIndicator, indicator)) _recordingIndicator = null;
             };
             indicator.Show();
+            RecordingState?.Invoke(this, EventArgs.Empty);
             string stopGesture = Settings.Hotkeys.TryGetValue(HotkeyDefaults.StopRecording, out var g) ? g : "";
             bool stopHotkeyArmed = Hotkeys.RegisterStopRecording(stopGesture);
             Notify(stopHotkeyArmed
@@ -739,12 +732,21 @@ public sealed class AppHost : IDisposable
             {
                 var duration = result.Duration;
                 string label = $"{(int)duration.TotalMinutes:00}:{duration.Seconds:00}";
-                ToastWindow.Show($"Recording saved · {label} · {Path.GetFileName(result.OutputPath)}",
-                    "Open folder", OpenRecordingsFolder);
-                Logger.Info($"Recording finished: {result.OutputPath} ({label}, {result.Frames} frames)");
+                string message = $"Recording saved · {label} · {Path.GetFileName(result.OutputPath)}";
+                if (!string.IsNullOrEmpty(result.AudioOutputPath) && File.Exists(result.AudioOutputPath))
+                    message += $" · + {Path.GetFileName(result.AudioOutputPath)}";
+                ToastWindow.Show(message, "Open folder", OpenRecordingsFolder);
+                Logger.Info($"Recording finished: {result.OutputPath} ({label}, {result.Frames} frames){(result.AudioOutputPath.Length > 0 ? "; audio " + result.AudioOutputPath : "")}");
             }
             else
             {
+                // Separate-audio mode can leave a partial .wav behind when the video fails — remove it.
+                try
+                {
+                    if (!string.IsNullOrEmpty(result.AudioOutputPath) && File.Exists(result.AudioOutputPath))
+                        File.Delete(result.AudioOutputPath);
+                }
+                catch { }
                 MessageDialog.Error(VisibleOwner(), "Recording failed",
                     result.Error ?? "The encoder did not produce a usable video file.");
             }
@@ -758,6 +760,7 @@ public sealed class AppHost : IDisposable
             var hidden = _recordingHiddenWindows;
             _recordingHiddenWindows = new List<Window>();
             RestoreWindows(hidden);
+            RecordingState?.Invoke(this, EventArgs.Empty);
         }
     }
 
@@ -776,6 +779,26 @@ public sealed class AppHost : IDisposable
 
     private RecordingController? _recorder;
     private RecordingIndicatorWindow? _recordingIndicator;
+
+    /// <summary>The live recorder, if any (lets the Recording tab mirror the state and drive Stop).</summary>
+    public RecordingController? Recorder => _recorder;
+    public bool IsRecording => _recorder is { IsRecording: true };
+    public event EventHandler? RecordingState;
+
+    /// <summary>Stops the active recording (driven from the Recording tab's Stop button).</summary>
+    public void StopRecording()
+    {
+        if (_recordingIndicator is { IsVisible: true } ind)
+        {
+            _ = ind.StopAsync();
+            return;
+        }
+        if (_recorder is { IsRecording: true } r)
+        {
+            _ = r.StopAsync().ContinueWith(t =>
+                Application.Current?.Dispatcher.BeginInvoke(() => OnRecordingFinished(r, t.Result)));
+        }
+    }
 
     // ------------------------------------------------------------------ lifecycle
 

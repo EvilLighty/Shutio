@@ -71,6 +71,43 @@ public static class ThemeManager
         }
     }
 
+    /// <summary>
+    /// Builds the translucent "glass" background brush for a window. The opacity value is the
+    /// fraction of transparency (0 = opaque, 0.9 = very see-through). The desktop shows through
+    /// whatever is not painted by the opaque inner cards, giving the frosted-glass look.
+    /// </summary>
+    public static Brush GlassBrush(double transparency, bool isDark)
+    {
+        double o = Math.Clamp(transparency, 0.0, 0.95);
+        byte alpha = (byte)Math.Round((1.0 - o) * 255);
+        return isDark
+            ? new SolidColorBrush(Color.FromArgb(alpha, 21, 24, 30))
+            : new SolidColorBrush(Color.FromArgb(alpha, 236, 240, 247));
+    }
+
+    /// <summary>
+    /// The opaque surface color used to tint the frosted-glass background (matches the theme).
+    /// Exposed as a System.Drawing color so it can be painted with GDI in <see cref="GlassBackdrop"/>.
+    /// </summary>
+    public static System.Drawing.Color SurfaceDrawColor(bool isDark) =>
+        isDark ? System.Drawing.Color.FromArgb(21, 24, 30) : System.Drawing.Color.FromArgb(236, 240, 247);
+
+    /// <summary>Applies (or clears) the translucent glass background on a window from the current settings.</summary>
+    public static void ApplyGlass(Window window, bool translucent, double transparency)
+    {
+        try
+        {
+            window.Background = translucent
+                ? GlassBrush(transparency, IsDark)
+                : window.TryFindResource("AppBackgroundBrush") as Brush
+                    ?? (IsDark ? GlassBrush(0.0, true) : GlassBrush(0.0, false));
+        }
+        catch (Exception ex)
+        {
+            Logger.Debug("Apply glass failed: " + ex.Message);
+        }
+    }
+
     public static void ApplyWindowChrome(Window window)
     {
         try
