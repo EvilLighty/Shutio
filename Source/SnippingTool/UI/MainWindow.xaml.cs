@@ -26,6 +26,10 @@ public partial class MainWindow : Window
     private bool _loading = true;
     private bool _glassBusy;
     private DateTime _lastGlassAt = DateTime.MinValue;
+    // True while our own Hide->Show sampling is in flight, so the events that Show()
+    // raises (Activated / SizeChanged / LocationChanged) can't schedule the next refresh
+    // and turn one glass update into a Hide/Show feedback loop.
+    private bool _glassSuppressed;
 
     // Recording tab state (kept in the window so it mirrors the controls live).
     private int _recSource;
@@ -57,7 +61,7 @@ public partial class MainWindow : Window
 
         // Frosted-glass refresh: re-sample the desktop behind the window when it moves, resizes, or
         // comes back to the foreground. Debounced + throttled so it can't thrash or loop.
-        _glassDebounce.Tick += (_, _) => { _glassDebounce.Stop(); RefreshGlass(); };
+        _glassDebounce.Tick += (_, _) => { _glassDebounce.Stop(); if (_glassSuppressed) return; RefreshGlass(); };
         LocationChanged += (_, _) => ScheduleGlassRefresh();
         SizeChanged += (_, _) => ScheduleGlassRefresh();
         Activated += (_, _) => ScheduleGlassRefresh();
@@ -477,14 +481,14 @@ public partial class MainWindow : Window
 
     private void ScheduleGlassRefresh()
     {
-        if (_loading) return;
+        if (_loading || _glassSuppressed) return;
         _glassDebounce.Start();
     }
 
     public void RefreshGlass(double? opacityOverride = null, int? blurOverride = null, bool? enabledOverride = null)
     {
         if (GlassRoot == null || _glassBusy) return;
-        // Throttle: also breaks the Hide->Show->Activate->refresh loop (a self-trigger can't catch up).
+        // Belt-and-braces throttle on top of the _glassSuppressed loop guard.
         if ((DateTime.UtcNow - _lastGlassAt).TotalMilliseconds < 250) return;
         _glassBusy = true;
         _lastGlassAt = DateTime.UtcNow;
@@ -508,6 +512,8 @@ public partial class MainWindow : Window
             if (rect.Width < 16 || rect.Height < 16) return;
 
             bool wasVisible = IsVisible;
+            var wasMaximized = WindowState;
+            _glassSuppressed = true;
             try
             {
                 // Hide for the few ms it takes to sample so we capture the desktop BEHIND the window.
@@ -519,7 +525,19 @@ public partial class MainWindow : Window
             }
             finally
             {
-                if (wasVisible && !IsVisible) Show();
+                if (wasVisible && !IsVisible)
+                {
+                    Show();
+                    // WPF's Show() after Hide() drops a maximized window back to Normal, and
+                    // that state change is exactly what fed the old Hide/Show feedback loop.
+                    // Put the state back so the window ends where the user left it.
+                    if (wasMaximized == WindowState.Maximized && WindowState != WindowState.Maximized)
+                        WindowState = WindowState.Maximized;
+                }
+                // Keep the suppression active until the dispatcher has drained the events our
+                // own Hide/Show just raised, then lift it so genuine user actions
+                // (move / resize / foreground) still trigger a fresh sample.
+                Dispatcher.BeginInvoke(() => _glassSuppressed = false, System.Windows.Threading.DispatcherPriority.ContextIdle);
             }
         }
         catch (Exception ex)

@@ -27,6 +27,18 @@ ffmpeg, no new paid dependencies.
   from the buffer via `FrameAt`. Verified headless (`--previewtest`): frames at
   every sampled time, exit 0.
 
+**Fixed**
+- **Maximize flicker/loop (frosted glass).** Refreshing the glass backdrop
+  briefly hides the window to sample the desktop behind it, then shows it again;
+  WPF's `Show()` after `Hide()` drops a maximized window, and the state change
+  that raise rescheduled the very next refresh — so a maximized window kept
+  flashing hide/show forever. Refreshes triggered by the app's own Hide/Show
+  are now suppressed (flag held until the dispatcher drains the events our own
+  re-show raises), and the maximized state is explicitly restored afterwards.
+  Verified by A/B: the pre-fix build visibly flickered on maximize (visibility
+  toggling every ~500 ms); the fixed build holds MAXIMIZED with zero state
+  transitions over 8 s.
+
 **Release artifacts**
 - `I:\Apps\SnippingTool\Shutio.exe` — deployed app, **2.0.0.0**, self-test 13/13.
 - `I:\Apps\Shutio-Share\Shutio-setup.exe` — true-offline installer (whole app inside).
