@@ -1,7 +1,6 @@
 # Shutio for Windows 11 (portable)
 
-A self-contained, no-admin screenshot and screen-recording app for the restricted
-SalsaNOW kiosk. It is a native WPF application styled like the Windows 11 Snipping
+A self-contained, no-admin screenshot and screen-recording app. It is a native WPF application styled like the Windows 11 Snipping
 Tool and stores everything inside this folder.
 
 - **App location:** `I:\Apps\SnippingTool\Shutio.exe`
