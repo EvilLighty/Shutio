@@ -185,7 +185,7 @@ I:\Apps\SnippingTool\          (≈288 MB — the runnable app)
   Install\                  installers: install.ps1 / uninstall.ps1 / .cmd + offline-installer source
   README.md                 this file
   FEATURES.md               implemented / unavailable matrix
-  AGENTS.md / HANDOFF.md / TODO.md / CHANGELOG.md   AI handover docs
+  CHANGELOG.md              change history
   Assets\                   icons and logo
   Tools\ffmpeg.exe          recording engine
   Source\SnippingTool\      full C# source
