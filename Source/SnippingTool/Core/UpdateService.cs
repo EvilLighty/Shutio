@@ -8,17 +8,23 @@ using System.Text.Json;
 namespace SnippingTool.Core;
 
 /// <summary>
-/// Update checking + downloading against the GitHub releases of the Shutio repo
-/// (private repo → an optional token from Settings or the SHUTIO_GITHUB_TOKEN
-/// environment variable). The "update" itself is performed by the release's
-/// Shutio-Updater.exe asset (it replaces the app files in place and keeps Data\).
+/// Update checking + downloading against the GitHub releases of the Shutio repo.
+/// The repo is public (a token is still accepted, for a private mirror, from
+/// Settings or the SHUTIO_GITHUB_TOKEN environment variable). The "update" itself
+/// is performed by the release's installable asset: current releases ship
+/// Shutio-setup.exe (the offline installer, run in place over the existing
+/// install — Data\ is not part of the payload and is kept); older releases also
+/// had Shutio-Updater.exe, which is preferred when present.
 /// Everything here is best-effort and must never take the app down.
 /// </summary>
 public static class UpdateService
 {
-    public sealed record ReleaseInfo(string Version, string Name, string? UpdaterUrl, string Body)
+    public enum UpdateAssetKind { Setup, Updater }
+
+    public sealed record ReleaseInfo(string Version, string Name, string? AssetUrl, string Body)
     {
-        public bool HasUpdater => !string.IsNullOrWhiteSpace(UpdaterUrl);
+        public UpdateAssetKind AssetKind { get; init; } = UpdateAssetKind.Setup;
+        public bool HasAsset => !string.IsNullOrWhiteSpace(AssetUrl);
     }
 
     public sealed record FetchResult(ReleaseInfo? Info, string? Error);
@@ -29,6 +35,7 @@ public static class UpdateService
     private const string ApiBase = "https://api.github.com";
     private const string Repo = "EvilLighty/Shutio";
     private const string UpdaterAssetName = "Shutio-Updater.exe";
+    private const string SetupAssetName   = "Shutio-setup.exe";
 
     public static string? ResolveToken(string? fromSettings)
     {
@@ -55,7 +62,7 @@ public static class UpdateService
         using var response = await http.SendAsync(request).ConfigureAwait(false);
         if (response.StatusCode == HttpStatusCode.NotFound)
             return new FetchResult(null, string.IsNullOrWhiteSpace(token)
-                ? $"GitHub reports no latest release for {Repo} (404). The repo is private — add a token in Settings → Update, or check the connection."
+                ? $"GitHub reports no latest release for {Repo} (404). If the repo is private, add a token in Settings → Update; otherwise check the connection."
                 : $"GitHub returned 404 for the latest release of {Repo}.");
         if (!response.IsSuccessStatusCode)
             return new FetchResult(null, $"GitHub returned {(int)response.StatusCode} ({response.StatusCode}) while checking for updates.");
@@ -70,22 +77,31 @@ public static class UpdateService
         if (tag.Length == 0)
             return new FetchResult(null, "The release response had no tag name.");
 
-        string? updaterUrl = null;
+        // Releases ship the offline installer (Shutio-setup.exe); older releases also had
+        // Shutio-Updater.exe. Prefer the updater when present, else the installer.
+        string? assetUrl = null, setupUrl = null;
+        UpdateAssetKind kind = UpdateAssetKind.Setup;
         if (root.TryGetProperty("assets", out var assets) && assets.ValueKind == JsonValueKind.Array)
         {
             foreach (var asset in assets.EnumerateArray())
             {
-                if (!string.Equals(GetString(asset, "name") ?? "", UpdaterAssetName, StringComparison.OrdinalIgnoreCase))
-                    continue;
-                updaterUrl = GetString(asset, "browser_download_url");
-                break;
+                string assetName = GetString(asset, "name") ?? "";
+                if (string.Equals(assetName, UpdaterAssetName, StringComparison.OrdinalIgnoreCase))
+                {
+                    assetUrl = GetString(asset, "browser_download_url");
+                    kind = UpdateAssetKind.Updater;
+                    break;
+                }
+                if (string.Equals(assetName, SetupAssetName, StringComparison.OrdinalIgnoreCase))
+                    setupUrl = GetString(asset, "browser_download_url");
             }
         }
+        assetUrl ??= setupUrl;
 
         string version = tag.Trim().TrimStart('v', 'V');
         if (!TryParseVersion(version, out _))
             version = tag;
-        return new FetchResult(new ReleaseInfo(version, name, updaterUrl, body), null);
+        return new FetchResult(new ReleaseInfo(version, name, assetUrl, body) { AssetKind = kind }, null);
     }
 
     public static async Task DownloadFileAsync(string url, string? token, string destPath,
@@ -114,7 +130,7 @@ public static class UpdateService
             if (total is > 0 && (DateTime.UtcNow - lastStatus).TotalMilliseconds >= 250)
             {
                 lastStatus = DateTime.UtcNow;
-                status?.Invoke($"Downloading the updater… {read * 100.0 / total.Value:0}% ({read / 1048576:N1} MB)");
+                status?.Invoke($"Downloading the update… {read * 100.0 / total.Value:0}% ({read / 1048576:N1} MB)");
             }
         }
         File.Move(tmp, destPath, true);

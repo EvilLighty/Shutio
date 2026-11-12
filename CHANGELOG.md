@@ -30,6 +30,11 @@ A quick follow-up to 2.1.0, fixing a false failure report seen on a real webcam 
   failure was a false report.
 
 **Changed**
+- **In-app updates now install from `Shutio-setup.exe`.** Releases ship the offline
+  installer only (lean releases) — the update flow downloads it and runs it in place
+  (`<install> --skip-prompts --launch`); `Data\` is not part of the installer payload
+  and is preserved. Older releases' `Shutio-Updater.exe` is still preferred when
+  present.
 - Version 2.1.1 across the app, installer, updater, and uninstaller.
 
 **Verified**

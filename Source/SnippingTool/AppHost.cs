@@ -935,9 +935,9 @@ public sealed class AppHost : IDisposable
             prompt.SetUpToDate(info.Version);
             return;
         }
-        if (!info.HasUpdater)
+        if (!info.HasAsset)
         {
-            prompt.SetFailed($"Release {info.Version} exists, but it has no Shutio-Updater.exe attachment to install with.");
+            prompt.SetFailed($"Release {info.Version} exists, but it has no installable attachment (Shutio-setup.exe or Shutio-Updater.exe).");
             return;
         }
         _pendingUpdate = info;
@@ -959,7 +959,7 @@ public sealed class AppHost : IDisposable
     private async Task RunUpdateAsync(UI.UpdatePromptWindow prompt)
     {
         var info = _pendingUpdate;
-        if (info == null || string.IsNullOrWhiteSpace(info.UpdaterUrl))
+        if (info == null || string.IsNullOrWhiteSpace(info.AssetUrl))
         {
             prompt.SetFailed("There is no update to install right now.");
             return;
@@ -969,16 +969,24 @@ public sealed class AppHost : IDisposable
             prompt.SetBusy("Preparing…");
             string dir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Shutio", "Updates");
             Directory.CreateDirectory(dir);
-            string exe = Path.Combine(dir, "Shutio-Updater.exe");
-            await UpdateService.DownloadFileAsync(info.UpdaterUrl!, UpdateToken, exe, m => prompt.SetBusy(m));
+            bool isUpdater = info.AssetKind == UpdateService.UpdateAssetKind.Updater;
+            string exe = Path.Combine(dir, isUpdater ? "Shutio-Updater.exe" : "Shutio-setup.exe");
+            await UpdateService.DownloadFileAsync(info.AssetUrl!, UpdateToken, exe, m => prompt.SetBusy(m));
 
-            // The updater closes any running Shutio, replaces the app files (Data\ is kept),
-            // runs the built-in self-test, and relaunches. --silent = no extra dialogs.
+            // Two possible attachments:
+            //  - Shutio-Updater.exe (older releases): in-place updater, Data\ preserved.
+            //  - Shutio-setup.exe (current releases): the offline installer run in place —
+            //    it overwrites the app files (Data\ is not part of the payload), re-creates
+            //    shortcuts + the Apps-&-features entry. --skip-prompts = no dialogs,
+            //    --launch = relaunch afterwards.
             prompt.SetBusy("Starting the update — Shutio will restart…");
             Logger.Info($"Update: running {exe} against {AppPaths.Root}");
-            Process.Start(new ProcessStartInfo(exe, $"\"{AppPaths.Root}\" --silent --launch") { UseShellExecute = true });
+            string args = isUpdater
+                ? $"\"{AppPaths.Root}\" --silent --launch"
+                : $"\"{AppPaths.Root}\" --skip-prompts --launch";
+            Process.Start(new ProcessStartInfo(exe, args) { UseShellExecute = true });
             await Task.Delay(400);
-            RequestExit();   // the updater takes over (it also force-closes us if we linger)
+            RequestExit();   // the installer/updater takes over
         }
         catch (Exception ex)
         {
