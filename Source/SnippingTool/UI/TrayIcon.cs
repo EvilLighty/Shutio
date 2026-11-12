@@ -15,6 +15,7 @@ public sealed class TrayIcon : IDisposable
     public event EventHandler? HistoryRequested;
     public event EventHandler? SettingsRequested;
     public event EventHandler? RecordingRequested;
+    public event EventHandler? UpdateRequested;
     public event EventHandler? ExitRequested;
 
     public TrayIcon()
@@ -56,6 +57,7 @@ public sealed class TrayIcon : IDisposable
         Add(menu, "Record screen…", () => RecordingRequested?.Invoke(this, EventArgs.Empty));
         Add(menu, "Snip history", () => HistoryRequested?.Invoke(this, EventArgs.Empty));
         Add(menu, "Settings", () => SettingsRequested?.Invoke(this, EventArgs.Empty));
+        Add(menu, "Check for updates", () => UpdateRequested?.Invoke(this, EventArgs.Empty));
         menu.Items.Add(new ToolStripSeparator());
         Add(menu, "Show Shutio", () => ShowRequested?.Invoke(this, EventArgs.Empty));
         Add(menu, "Exit", () => ExitRequested?.Invoke(this, EventArgs.Empty));

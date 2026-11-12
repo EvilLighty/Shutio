@@ -83,6 +83,9 @@ public partial class SettingsWindow : Window
         AudioToggle.Checked += (_, _) => { _working.AudioEnabled = true; MicPickerRow.Visibility = Visibility.Visible; };
         AudioToggle.Unchecked += (_, _) => { _working.AudioEnabled = false; MicPickerRow.Visibility = Visibility.Collapsed; };
         MicBox.SelectionChanged += (_, _) => _working.Microphone = MicBox.SelectedItem as string ?? "";
+        UpdateAutoToggle.Checked += (_, _) => _working.CheckForUpdatesAtStartup = true;
+        UpdateAutoToggle.Unchecked += (_, _) => _working.CheckForUpdatesAtStartup = false;
+        UpdateCheckButton.Click += (_, _) => _host.PromptForUpdate(this);
 
         PatternBox.TextChanged += (_, _) => UpdatePatternPreview();
         BrowseButton.Click += (_, _) => BrowseForFolder();
@@ -122,6 +125,8 @@ public partial class SettingsWindow : Window
         AudioToggle.IsChecked = _working.AudioEnabled;
         MicPickerRow.Visibility = _working.AudioEnabled ? Visibility.Visible : Visibility.Collapsed;
         LoadMicBox(_working.Microphone);
+        UpdateAutoToggle.IsChecked = _working.CheckForUpdatesAtStartup;
+        TokenBox.Text = _working.GitHubToken;
         SaveDirectoryBox.Text = _working.SaveDirectory;
         PatternBox.Text = _working.FileNamePattern;
         DataPathText.Text = AppPaths.Data;
@@ -407,6 +412,7 @@ public partial class SettingsWindow : Window
 
         _working.SaveDirectory = directory;
         _working.FileNamePattern = PatternBox.Text.Trim();
+        _working.GitHubToken = (TokenBox.Text ?? "").Trim();
         foreach (var pair in _hotkeyBoxes)
             _working.Hotkeys[pair.Key] = pair.Value.Gesture;
         _working.Sanitize();

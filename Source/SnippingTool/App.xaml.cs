@@ -44,6 +44,36 @@ public partial class App : System.Windows.Application
             return;
         }
 
+        if (HasFlag(args, "--guardian"))
+        {
+            // Guardian mode: a hidden helper (a second copy of this same executable) that
+            // outlives nothing but protects the encoder. It waits on OUR process object;
+            // the moment we die — normal exit, crash, or a hard kill from Task Manager — it
+            // kills the encoder, releasing the webcam. It never shows any UI.
+            // Usage: --guardian <appPid> <encoderPid>
+            Logger.Info("Guardian mode requested.");
+            int appPid = -1, encoderPid = -1;
+            for (int i = 0; i + 2 < args.Length; i++)
+            {
+                if (string.Equals(args[i], "--guardian", StringComparison.OrdinalIgnoreCase))
+                {
+                    int.TryParse(args[i + 1], out appPid);
+                    int.TryParse(args[i + 2], out encoderPid);
+                    break;
+                }
+            }
+            if (appPid < 0 || encoderPid < 0)
+            {
+                Logger.Error("Guardian mode: expected --guardian <appPid> <encoderPid>.");
+                Shutdown(1);
+                return;
+            }
+            int code = ProcessGuard.RunGuardianLoop(appPid, encoderPid);
+            Logger.Info($"Guardian loop finished (code {code}).");
+            Shutdown(code);
+            return;
+        }
+
         if (HasFlag(args, "--cutexport"))
         {
             // Headless, no-GUI end-to-end check of the Shutio Cut engine (model + ffmpeg runner
@@ -176,6 +206,24 @@ public partial class App : System.Windows.Application
                                HasFlag(args, "--video");
         bool showMain = !hideRequested && !settings.StartMinimizedInTray && !actionRequested;
         Host.Start(showMain);
+
+        // Optional update prompt at startup (quiet unless a newer release actually exists).
+        if (!hideRequested && settings.CheckForUpdatesAtStartup)
+        {
+            Dispatcher.InvokeAsync(async () =>
+            {
+                try
+                {
+                    // Let the startup UI settle first — don't compete with it.
+                    await Task.Delay(3000);
+                    if (!Host.IsExiting) Host.MaybePromptStartupUpdate();
+                }
+                catch
+                {
+                    // Update checking is best-effort and must never affect the app.
+                }
+            }, DispatcherPriority.ApplicationIdle);
+        }
 
         // Run requested actions after the message loop is flowing.
         Dispatcher.BeginInvoke(DispatcherPriority.ApplicationIdle, new Action(() =>

@@ -38,10 +38,17 @@ Get-Content (Join-Path $app 'Data\Tests\selftest-report.txt') | Where-Object { $
 
 Write-Host ''
 Write-Host '=== GUI SMOKE TEST (app folder) ==='
-Stop-Process -Name Shutio -Force -ErrorAction SilentlyContinue
-Start-Sleep -Milliseconds 600
-$proc = Start-Process -FilePath (Join-Path $app 'Shutio.exe') -WorkingDirectory $app -PassThru
-Start-Sleep -Seconds 6
-if ($proc.HasExited) { Write-Host ('APP EXITED early (exit ' + $proc.ExitCode + ')') } else { Write-Host 'APP alive 6s -> WPF OK' }
-Stop-Process -Name Shutio -Force -ErrorAction SilentlyContinue
-Write-Host 'done'
+# NEVER blanket-kill by process name: a user's running instance must never be touched.
+# If Shutio is already running, skip the smoke test entirely; otherwise kill ONLY the
+# exact PID this script started.
+$running = @(Get-Process -Name Shutio -ErrorAction SilentlyContinue)
+if ($running.Count -gt 0) {
+    Write-Host ('SKIPPED: Shutio is already running (pid(s) ' + (($running.Id -join ', ')) + ') — leaving it alone.')
+}
+else {
+    $proc = Start-Process -FilePath (Join-Path $app 'Shutio.exe') -WorkingDirectory $app -PassThru
+    Start-Sleep -Seconds 6
+    if ($proc.HasExited) { Write-Host ('APP EXITED early (exit ' + $proc.ExitCode + ')') } else { Write-Host 'APP alive 6s -> WPF OK' }
+    Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
+    Write-Host 'done'
+}

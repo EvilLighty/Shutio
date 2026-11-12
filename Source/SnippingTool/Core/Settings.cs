@@ -52,6 +52,11 @@ public sealed class Settings
     public string WebcamDevice { get; set; } = "";
     public bool WebcamMirror { get; set; } = true;
 
+    // Updates (GitHub releases of EvilLighty/Shutio)
+    public bool CheckForUpdatesAtStartup { get; set; } = true;
+    public string GitHubToken { get; set; } = "";      // optional; only needed because the repo is private
+    public string UpdateDismissedVersion { get; set; } = "";   // the release the user chose "Later" for (no re-prompt)
+
     public Settings Clone()
     {
         var json = JsonSerializer.Serialize(this, SettingsService.JsonOptions);
@@ -72,6 +77,12 @@ public sealed class Settings
         if (Microphone == null) Microphone = "";
         Microphone = Microphone.Trim();
         if (Microphone.Length > 160) Microphone = Microphone[..160];
+        if (GitHubToken == null) GitHubToken = "";
+        GitHubToken = GitHubToken.Trim();
+        if (GitHubToken.Length > 200) GitHubToken = GitHubToken[..200];
+        if (UpdateDismissedVersion == null) UpdateDismissedVersion = "";
+        UpdateDismissedVersion = UpdateDismissedVersion.Trim();
+        if (UpdateDismissedVersion.Length > 40) UpdateDismissedVersion = "";
         if (string.IsNullOrWhiteSpace(SaveDirectory)) SaveDirectory = AppPaths.Screenshots;
         if (string.IsNullOrWhiteSpace(FileNamePattern)) FileNamePattern = "Snip_{yyyy}-{MM}-{dd}_{HH}-{mm}-{ss}";
         FileNamePattern = SanitizeFileNamePattern(FileNamePattern);

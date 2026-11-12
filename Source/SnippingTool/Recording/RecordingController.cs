@@ -46,6 +46,11 @@ public sealed class RecordingOptions
     // saved as a separate lossless .wav file, so the editor can treat them independently.
     public bool SeparateAudio { get; init; }
 
+    // Live on-screen webcam preview (a second output stream of the webcam feed, shown in a
+    // small topmost window while recording). Uses the SAME ffmpeg process / same capture,
+    // so the camera is opened exactly once and the preview mirrors the recorded PiP.
+    public bool LivePreview { get; init; }
+
     // Webcam picture-in-picture overlay.
     public bool WebcamEnabled { get; init; }
     public string WebcamDevice { get; init; } = "";
@@ -75,6 +80,10 @@ public sealed class RecordingController : IDisposable
     private int _frames;
     private string? _error;
     private bool _disposed;
+    private CancellationTokenSource? _previewCts;
+    private Task? _previewReader;
+    private readonly object _previewGate = new();
+    private byte[]? _previewFrame;
 
     public bool IsRecording { get; private set; }
     public string OutputPath { get; private set; } = "";
@@ -82,6 +91,34 @@ public sealed class RecordingController : IDisposable
     public TimeSpan Elapsed => _elapsed.Elapsed;
     public int Frames => _frames;
     public string? LastError => _error;
+
+    // Live webcam preview stream (raw BGRA frames), when LivePreview was requested.
+    public static readonly (int Width, int Height) PreviewSize = (320, 180);
+    public int PreviewWidth { get; private set; }
+    public int PreviewHeight { get; private set; }
+    public bool HasPreview => PreviewWidth > 0 && PreviewHeight > 0;
+
+    /// <summary>
+    /// Returns the most recent webcam preview frame (BGRA, row-major, width*height*4 bytes)
+    /// when the live preview is running; false until the first frame arrives.
+    /// </summary>
+    public bool TryGetLatestPreviewFrame(out byte[] frame, out int width, out int height)
+    {
+        lock (_previewGate)
+        {
+            if (_previewFrame != null && PreviewWidth > 0)
+            {
+                frame = _previewFrame;
+                width = PreviewWidth;
+                height = PreviewHeight;
+                return true;
+            }
+        }
+        frame = Array.Empty<byte>();
+        width = 0;
+        height = 0;
+        return false;
+    }
 
     public static string? FfmpegPath
     {
@@ -159,6 +196,13 @@ public sealed class RecordingController : IDisposable
         // Input layout: 0 = screen (pipe), 1 = webcam (if any), last = microphone (if any).
         int micIndex = webcam ? 2 : 1;
 
+        // Fail fast with a clear, actionable message. Handing ffmpeg a device name it can't
+        // open (e.g. the "No webcam found" placeholder) makes it die a second after start and
+        // the stop then fails with the cryptic "the pipe is being closed" — far better to
+        // refuse the start with the real reason.
+        if (options.WebcamEnabled) ValidateWebcam(options.WebcamDevice);
+        if (options.IncludeAudio) ValidateMicrophone(options.Microphone);
+
         // Webcam overlay geometry, computed in OUTPUT pixels so it stays proportional at any resolution.
         int camW = 0, camH = 0, camX = 0, camY = 0;
         if (webcam)
@@ -206,15 +250,29 @@ public sealed class RecordingController : IDisposable
         }
 
         bool audioInVideo = wantAudio && !separate;
+        bool livePreview = webcam && options.LivePreview;
+        int prevW = PreviewSize.Width, prevH = PreviewSize.Height;
         if (webcam)
         {
             // Compose screen + webcam overlay, optionally scale, then map the result.
-            string cam = $"scale={camW}:{camH}{(options.WebcamMirror ? ",hflip" : "")}";
-            string overlay = $"overlay={camX}:{camY}";
+            // eof_action=endall is the stop fix: with the default (repeat) the infinite webcam
+            // feed keeps the composite alive after the finite screen pipe ends, so "Stop"
+            // hangs until the timeout kills ffmpeg mid-flush (corrupt MP4 + false failure).
+            // With endall the overlay ends with the screen and the whole graph goes finite.
+            string overlay = $"overlay={camX}:{camY}:eof_action=endall";
+            string mirror = options.WebcamMirror ? ",hflip" : "";
             string baseChain = scaled ? $"[0:v]scale={outW}:{outH}[base];" : "[0:v]null[base];";
+            // Live preview: derived from the COMPOSITED output ([vout]) as a crop of the exact
+            // PiP region — NOT from the infinite cam feed. That keeps the preview identical to
+            // what is recorded (same scale, same mirror, same position) AND makes every branch
+            // of the graph finite, so the moment the screen input ends ffmpeg finalizes and
+            // exits on its own (no timeout kill, no held-open camera).
+            string graph = livePreview
+                ? $"{baseChain}[1:v]scale={camW}:{camH}{mirror}[cam];[base][cam]{overlay}[vout];[vout]split=2[vmp4][vcrop];[vcrop]crop={camW}:{camH}:{camX}:{camY},scale={prevW}:{prevH}[prev]"
+                : $"{baseChain}[1:v]scale={camW}:{camH}{mirror}[cam];[base][cam]{overlay}[vout]";
             a.Add("-filter_complex");
-            a.Add($"{baseChain}[1:v]{cam}[cam];[base][cam]{overlay}[vout]");
-            a.Add("-map"); a.Add("[vout]");
+            a.Add(graph);
+            a.Add("-map"); a.Add(livePreview ? "[vmp4]" : "[vout]");
             if (audioInVideo) { a.Add("-map"); a.Add($"{micIndex}:a:0"); a.Add("-c:a"); a.Add("aac"); a.Add("-b:a"); a.Add("160k"); }
             else a.Add("-an");
         }
@@ -247,6 +305,20 @@ public sealed class RecordingController : IDisposable
             a.Add("-y"); a.Add(audioOutput!);
         }
 
+        // Output 3 (live preview): a crop of the composited PiP region as raw BGRA frames on
+        // stdout, at a fixed 320x180. The reader thread drains it continuously so the encoder
+        // never blocks on a full pipe; the preview window shows exactly what is composited into
+        // the MP4 (same capture, same mirror, same position — no second grab of the camera, no
+        // busy-device races). Because it is derived from [vout] (finite), it ends with the
+        // recording and never keeps the encoder alive.
+        if (livePreview)
+        {
+            a.Add("-map"); a.Add("[prev]");
+            a.Add("-f"); a.Add("rawvideo");
+            a.Add("-pix_fmt"); a.Add("bgra");
+            a.Add("-");
+        }
+
         _stderr.Clear();
         _error = null;
         _frames = 0;
@@ -267,7 +339,26 @@ public sealed class RecordingController : IDisposable
         _cts = new CancellationTokenSource();
         if (!_ffmpeg.Start()) throw new InvalidOperationException("ffmpeg could not be started.");
         _ffmpeg.BeginErrorReadLine();
-        _ffmpeg.BeginOutputReadLine();
+        if (livePreview)
+        {
+            // stdout carries the raw preview frames — read it as a binary stream (line-based
+            // reading would destroy the byte framing). The reader drains it continuously so
+            // the encoder never blocks on a full pipe.
+            PreviewWidth = PreviewSize.Width;
+            PreviewHeight = PreviewSize.Height;
+            var previewCts = new CancellationTokenSource();
+            _previewCts = previewCts;
+            int frameSize = PreviewWidth * PreviewHeight * 4;
+            _previewReader = Task.Run(() => PreviewReaderLoop(frameSize, previewCts.Token));
+        }
+        else
+        {
+            _ffmpeg.BeginOutputReadLine();
+        }
+        // Keep the encoder (and thus the webcam/mic it holds) tied to OUR lifetime: if the app
+        // exits or is hard-killed, the guardian helper (plus the kill-on-exit job object, where
+        // the OS allows it) kills ffmpeg, releasing the camera instead of leaving it grabbed.
+        ProcessGuard.Protect(_ffmpeg);
         IsRecording = true;
         _elapsed.Restart();
         _loop = Task.Run(() => RecordLoop(region, fps, options.IncludeCursor, _cts.Token));
@@ -340,7 +431,12 @@ public sealed class RecordingController : IDisposable
         {
             if (!token.IsCancellationRequested)
             {
-                _error = "The recording stream stopped unexpectedly: " + ex.Message;
+                // If the encoder is already gone, the pipe error is a SYMPTOM, not the cause —
+                // say so plainly (StopAsync appends the real ffmpeg error line, if there is one).
+                bool engineGone = _ffmpeg is { HasExited: true };
+                _error = engineGone
+                    ? "The recording engine exited before the recording finished."
+                    : "The recording stream stopped unexpectedly: " + ex.Message;
                 Logger.Error("Recording frame loop failed", ex);
             }
         }
@@ -378,7 +474,9 @@ public sealed class RecordingController : IDisposable
             }
             catch
             {
-                try { if (!_ffmpeg.HasExited) _ffmpeg.Kill(true); } catch { }
+                // Plain Kill (not tree): the encoder is already in our kill-on-exit job object,
+                // and .NET's tree-kill re-assignment would fail on a process in a job.
+                try { if (!_ffmpeg.HasExited) _ffmpeg.Kill(); } catch { }
                 _error ??= "Recording encoder did not finish in time.";
             }
         }
@@ -387,13 +485,20 @@ public sealed class RecordingController : IDisposable
         lock (_stderr) stderr = _stderr.ToString();
         int exitCode = -1;
         try { exitCode = _ffmpeg?.ExitCode ?? -1; } catch { }
-        bool exists = File.Exists(OutputPath) && new FileInfo(OutputPath).Length > 1024;
-        bool success = exists && exitCode == 0 && _error == null;
         if (!string.IsNullOrWhiteSpace(stderr))
         {
-            if (_error == null) _error = stderr.Trim();
             Logger.Warn("ffmpeg: " + stderr.Trim());
+            // Surface the real ffmpeg error (e.g. "device not found") instead of the generic
+            // pipe message the write loop saw.
+            string useful = ExtractUsefulError(stderr);
+            if (!string.IsNullOrWhiteSpace(useful))
+            {
+                if (string.IsNullOrWhiteSpace(_error)) _error = useful;
+                else if (!_error.Contains(useful)) _error += " — " + useful;
+            }
         }
+        bool exists = File.Exists(OutputPath) && new FileInfo(OutputPath).Length > 1024;
+        bool success = exists && exitCode == 0 && _error == null;
         if (!exists && _error == null) _error = "The encoder did not produce a video file.";
         var result = new RecordingStoppedEventArgs
         {
@@ -407,9 +512,23 @@ public sealed class RecordingController : IDisposable
         Logger.Info($"Recording stopped: success={success}, frames={_frames}, duration={_elapsed.Elapsed}, file={OutputPath}");
         try { _ffmpeg?.Dispose(); } catch { }
         _ffmpeg = null;
+        ProcessGuard.ReleaseGuardian();
         _loop = null;
         _cts?.Dispose();
         _cts = null;
+        try { _previewCts?.Cancel(); } catch { }
+        try
+        {
+            if (_previewReader != null)
+            {
+                try { _previewReader.Wait(500); } catch { }
+            }
+        }
+        catch { }
+        _previewCts?.Dispose();
+        _previewCts = null;
+        _previewReader = null;
+        lock (_previewGate) _previewFrame = null;
         Stopped?.Invoke(this, result);
         return result;
     }
@@ -425,11 +544,106 @@ public sealed class RecordingController : IDisposable
                 IsRecording = false;
                 _cts?.Cancel();
                 try { _ffmpeg?.StandardInput.Close(); } catch { }
-                if (_ffmpeg != null && !_ffmpeg.WaitForExit(3000)) _ffmpeg.Kill(true);
+                if (_ffmpeg != null && !_ffmpeg.WaitForExit(3000)) _ffmpeg.Kill();
             }
         }
         catch { }
+        try { _previewCts?.Cancel(); } catch { }
         _ffmpeg?.Dispose();
         _cts?.Dispose();
+        _previewCts?.Dispose();
+        ProcessGuard.ReleaseGuardian();
+    }
+
+    // ===================== live webcam preview (stdout raw frames) =====================
+
+    private void PreviewReaderLoop(int frameSize, CancellationToken ct)
+    {
+        var stream = _ffmpeg?.StandardOutput.BaseStream;
+        if (stream == null) return;
+        var frame = new byte[frameSize];
+        try
+        {
+            while (!ct.IsCancellationRequested)
+            {
+                int got = ReadExact(stream, frame, frameSize);
+                if (got != frameSize) break;   // preview stream ended (Stop / encoder exit)
+                // Keep only the newest frame — the window pulls at ~15 fps and older frames
+                // are never worth queueing (backpressure would stall the encoder).
+                var copy = new byte[frameSize];
+                Buffer.BlockCopy(frame, 0, copy, 0, frameSize);
+                lock (_previewGate) _previewFrame = copy;
+            }
+        }
+        catch (Exception ex)
+        {
+            if (!ct.IsCancellationRequested) Logger.Warn("Webcam preview reader stopped", ex);
+        }
+    }
+
+    private static int ReadExact(Stream stream, byte[] buffer, int count)
+    {
+        int offset = 0;
+        while (offset < count)
+        {
+            int n = stream.Read(buffer, offset, count - offset);
+            if (n <= 0) return offset;
+            offset += n;
+        }
+        return offset;
+    }
+
+    // ===================== fail-fast device validation =====================
+
+    private static void ValidateWebcam(string? device)
+    {
+        var cams = VideoDevices.Enumerate();
+        if (cams.Count == 0)
+            throw new InvalidOperationException(
+                "The webcam is turned on, but no camera was found on this machine.\nConnect a camera — or turn the webcam off on the Recording tab.");
+        if (string.IsNullOrWhiteSpace(device))
+            throw new InvalidOperationException(
+                "The webcam is turned on, but no camera is selected.\nPick one on the Recording tab — or turn the webcam off.");
+        if (!cams.Contains(device))
+            throw new InvalidOperationException(
+                $"The webcam \"{device}\" is no longer available.\nPick a camera on the Recording tab, or turn the webcam off.");
+    }
+
+    private static void ValidateMicrophone(string? device)
+    {
+        var mics = AudioDevices.Enumerate();
+        if (mics.Count == 0)
+            throw new InvalidOperationException(
+                "Microphone audio is turned on, but no microphone was found on this machine.\nConnect a microphone — or turn audio off on the Recording tab.");
+        if (string.IsNullOrWhiteSpace(device))
+            throw new InvalidOperationException(
+                "Microphone audio is turned on, but no microphone is selected.\nPick one on the Recording tab — or turn audio off.");
+        if (!mics.Contains(device))
+            throw new InvalidOperationException(
+                $"The microphone \"{device}\" is no longer available.\nPick one on the Recording tab, or turn audio off.");
+    }
+
+    // ===================== error extraction =====================
+
+    /// <summary>Picks the most useful line from ffmpeg's stderr for a user-facing message.</summary>
+    private static string ExtractUsefulError(string stderr)
+    {
+        var lines = stderr.Split('\n')
+            .Select(l => l.Trim())
+            .Where(l => l.Length > 0)
+            .ToList();
+        if (lines.Count == 0) return "";
+        var keywords = new[] { "error", "invalid", "not found", "denied", "failed", "unable", "no such", "busy", "does not exist" };
+        for (int i = lines.Count - 1; i >= 0; i--)
+        {
+            string lower = lines[i]!.ToLowerInvariant();
+            if (keywords.Any(k => lower.Contains(k)))
+            {
+                string line = lines[i]!;
+                return line.Length > 300 ? line[..300] + "…" : line;
+            }
+        }
+        string last = lines[^1]!;
+        return last.Length > 300 ? last[..300] + "…" : last;
     }
 }

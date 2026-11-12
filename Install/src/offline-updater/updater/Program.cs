@@ -38,7 +38,7 @@ internal static class Program
 {
     private const string AppName      = "Shutio";
     private const string ExeName      = "Shutio.exe";
-    private const string Version      = "2.0.0";
+    private const string Version      = "2.1.0";
     private const string AppResource  = "AppPayload.zip";
     private const string RegPath      = @"Software\Microsoft\Windows\CurrentVersion\Uninstall\Shutio";
 

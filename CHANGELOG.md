@@ -7,6 +7,84 @@ Format: `## [date]` sections with **Added / Changed / Fixed / Verified / Docs**.
 
 ---
 
+## 2026-11-12 — 2.1.0 "Shutio 2.1" — webcam fixes, live preview, in-app updates
+
+A release focused on **making webcam recording actually work**: three reported
+webcam bugs fixed (stop-fail, no-camera fail, camera left open after the app is
+killed), a **live picture-in-picture preview** on your real screen while recording,
+and **in-app update checking**. Self-test stays **13/13, exit 0**; offline; no new
+paid dependencies.
+
+**Fixed**
+- **Recording with the webcam on → "Stop" fails with "recording failed".** The
+  webcam is a live, never-ending input. With the default `overlay` behaviour
+  (`eof_action=repeat`) the composite kept living after the finite screen pipe
+  ended, so "Stop" hung until the timeout killed ffmpeg mid-flush (corrupt MP4,
+  false failure). The filtergraph now uses **`overlay=…:eof_action=endall`** —
+  the overlay ends with the screen and ffmpeg finalizes and exits on its own.
+  Proven by A/B: the old graph hung and was killed at 20 s (107 MB written, the
+  reported bug); the new graph exited by itself in ~3 s with a valid MP4
+  (Duration exactly 00:00:03.00, clean decode).
+- **Webcam on with no camera present → start "works" then stop fails with
+  "The pipe is being closed".** `RecordingController.Start` now validates the
+  webcam (and microphone) device **before** ffmpeg starts — a clear, actionable
+  error at start instead of a delayed engine crash — and the UI never hands the
+  "No webcam found" placeholder to the engine.
+- **The webcam stayed grabbed after the app was closed or killed.** New
+  `Core\ProcessGuard` ties the encoder to the app's lifetime with two layers:
+  (1) a Windows job object with `KILL_ON_JOB_CLOSE` (the OS kills the encoder
+  when the app's job handle closes); (2) a **guardian helper** — a hidden copy
+  of `Shutio.exe` run in `--guardian <appPid> <encoderPid>` mode that blocks on
+  the app's process object and kills the encoder the moment it is destroyed.
+  Layer 2 only uses the most basic Win32 calls (open/wait/terminate), so it
+  also covers locked-down machines where job-object configuration is policy-
+  blocked (verified on this kiosk, where `SetInformationJobObject` is refused
+  and the job layer is a no-op). Proven: hard-killing the "app" harness killed
+  the stand-in encoder within seconds, zero orphans left.
+- **Error attribution.** When the encoder exits early, the stop result now says
+  "The recording engine exited before the recording finished." plus the useful
+  line extracted from ffmpeg's stderr, instead of the generic pipe message.
+
+**Added**
+- **Live webcam preview on your actual screen while recording.** A small always-
+  on-top window (`Recording\WebcamPreviewWindow`) mirrors the PiP exactly as
+  composited into the MP4 — same scale, same mirror, same position — by cropping
+  the composited `[vout]` stream (`[vout]split → crop → scale 320×180`, raw BGRA
+  frames on stdout, drained by a reader thread). Because it derives from the
+  (finite) composited output, it ends with the recording and never keeps the
+  encoder alive. No second camera grab — one device, one stream.
+- **In-app updates.** Settings → **Update** card with a **Check for updates**
+  button (also in the tray menu), an optional **startup prompt** (Update /
+  Later), and a **GitHub token** field for private repos. Checks the latest
+  release of `EvilLighty/Shutio` (version compare), downloads the release's
+  `Shutio-Updater.exe` into `%LocalAppData%\Shutio\Updates`, runs it
+  (`<install> --silent --launch`), then exits. "Later" remembers the dismissed
+  version so the prompt doesn't nag.
+- **Version 2.1.0** everywhere: app (file/assembly 2.1.0.0), installer,
+  uninstaller, updater.
+
+**Verified**
+- A/B synthetic cam-graph proof (finite screen feed + infinite cam feed, the
+  exact filtergraph shape): new design (endall + `[vout]`-derived preview)
+  exits by itself after the 3 s input ends — valid 00:00:03.00 MP4 plus exactly
+  45 preview frames (10,368,000 B); the old 2.0.0 graph hung until killed at
+  20 s (107 MB written) — the reported stop-fail bug, reproduced.
+- Guardian hard-kill test (shipped `ProcessGuard.cs` compiled into a harness):
+  harness + infinite stand-in encoder protected → harness hard-killed →
+  **encoder dead, zero guardian orphans** (the webcam-release guarantee).
+- Self-test **13/13, exit 0** on the rebuild and on the installed copy; GUI
+  smoke OK; single-file app 73.3 MB.
+- Installed copy `I:\Shutio` refreshed in place to **2.1.0.0** via
+  `Shutio-Updater.exe` (Data\ preserved, self-test 13/13).
+
+**Release artifacts**
+- `I:\Apps\SnippingTool\Shutio.exe` — deployed app, **2.1.0.0**, self-test 13/13.
+- `I:\Apps\Shutio-Share\Shutio-setup.exe` — true-offline installer (2.1.0 payload).
+- `I:\Apps\Shutio-Share\Shutio-Updater.exe` — offline in-place updater (2.1.0).
+- `I:\Apps\Shutio-Share\UninstallShutio.exe` — standalone uninstaller.
+
+---
+
 ## 2026-11-10 — 2.0.0 "Shutio 2.0" — MAJOR RELEASE
 
 Major release (from **1.1.1**) bundling a full generation jump: the redesigned

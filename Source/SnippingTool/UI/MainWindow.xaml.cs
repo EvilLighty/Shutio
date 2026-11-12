@@ -38,6 +38,8 @@ public partial class MainWindow : Window
     private int _recCamSize = 1;
     private double _camXFrac = 0.76, _camYFrac = 0.62;
     private bool _pipDragging;
+    private bool _camFound;
+    private bool _micFound;
 
     public MainWindow(AppHost host)
     {
@@ -641,11 +643,14 @@ public partial class MainWindow : Window
             Fps = _recFps,
             IncludeCursor = RecCursorToggle.IsChecked == true,
             IncludeAudio = RecAudioToggle.IsChecked == true,
-            Microphone = RecMicCombo.SelectedItem as string ?? s.Microphone,
+            // The combo's placeholder ("No microphone found" / "No webcam found") is UI text,
+            // not a device — never hand it to ffmpeg. An empty device + the toggle on is
+            // validated up-front by the recorder with a clear, actionable message.
+            Microphone = _micFound ? (RecMicCombo.SelectedItem as string ?? s.Microphone) : "",
             TargetHeight = _recRes,
             SeparateAudio = RecSeparateToggle.IsChecked == true,
             WebcamEnabled = RecWebcamToggle.IsChecked == true,
-            WebcamDevice = RecCamCombo.SelectedItem as string ?? s.WebcamDevice,
+            WebcamDevice = _camFound ? (RecCamCombo.SelectedItem as string ?? s.WebcamDevice) : "",
             WebcamSize = _recCamSize,
             WebcamX = _camXFrac,
             WebcamY = _camYFrac,
@@ -707,6 +712,7 @@ public partial class MainWindow : Window
     {
         RecMicCombo.Items.Clear();
         var mics = AudioDevices.Enumerate();
+        _micFound = mics.Count > 0;
         if (mics.Count == 0)
         {
             RecMicCombo.Items.Add("No microphone found");
@@ -723,6 +729,7 @@ public partial class MainWindow : Window
     {
         RecCamCombo.Items.Clear();
         var cams = VideoDevices.Enumerate();
+        _camFound = cams.Count > 0;
         if (cams.Count == 0)
         {
             RecCamCombo.Items.Add("No webcam found");

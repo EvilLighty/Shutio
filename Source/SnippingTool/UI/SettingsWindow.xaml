@@ -257,6 +257,29 @@
                     </StackPanel>
                 </Border>
 
+                <!-- Update -->
+                <Border Style="{StaticResource SectionCard}" Margin="0,0,0,12" Padding="18,15">
+                    <StackPanel>
+                        <Grid>
+                            <StackPanel VerticalAlignment="Center">
+                                <TextBlock Text="Update" Style="{StaticResource H3}" />
+                                <TextBlock Text="Check GitHub for a newer version and update in place. Your snips, recordings and settings in Data\ are always kept."
+                                           Style="{StaticResource Caption}" Margin="0,3,0,0" TextWrapping="Wrap" MaxWidth="520" />
+                            </StackPanel>
+                            <Button x:Name="UpdateCheckButton" Style="{StaticResource SecondaryButton}" Content="Check for updates"
+                                    HorizontalAlignment="Right" VerticalAlignment="Center" Padding="14,7" />
+                        </Grid>
+                        <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                            <CheckBox x:Name="UpdateAutoToggle" Style="{StaticResource ToggleSwitch}" VerticalAlignment="Center" />
+                            <TextBlock Text="Check for an update when the app starts" FontSize="12.5" Margin="9,0,0,0" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <TextBlock Text="GitHub token (optional — needed because the repo is private)" Style="{StaticResource Tiny}" Margin="0,14,0,6" />
+                        <TextBox x:Name="TokenBox" Style="{StaticResource ModernTextBox}" />
+                        <TextBlock Style="{StaticResource Tiny}" Margin="1,5,0,0" TextWrapping="Wrap"
+                                   Text="A token with read access to the EvilLighty/Shutio repo. Stored only in the local Data\settings.json. You can also set the SHUTIO_GITHUB_TOKEN environment variable instead." />
+                    </StackPanel>
+                </Border>
+
                 <!-- Data -->
                 <Border Style="{StaticResource SectionCard}" Padding="18,15">
                     <Grid>

@@ -53,6 +53,7 @@ public sealed class AppHost : IDisposable
             Tray.SettingsRequested += (_, _) => ShowSettings();
             Tray.RecordingRequested += (_, _) => BeginRecordingFromUi();
             Tray.ExitRequested += (_, _) => RequestExit();
+            Tray.UpdateRequested += (_, _) => CheckForUpdates();
             Tray.UpdateTooltip(trayTooltip);
         }
         catch (Exception ex)
@@ -694,7 +695,8 @@ public sealed class AppHost : IDisposable
                 WebcamSize = cfg.WebcamSize,
                 WebcamX = cfg.WebcamX,
                 WebcamY = cfg.WebcamY,
-                WebcamMirror = cfg.WebcamMirror
+                WebcamMirror = cfg.WebcamMirror,
+                LivePreview = cfg.WebcamEnabled
             });
             _recordingHiddenWindows = hidden;
 
@@ -706,6 +708,26 @@ public sealed class AppHost : IDisposable
                 if (ReferenceEquals(_recordingIndicator, indicator)) _recordingIndicator = null;
             };
             indicator.Show();
+
+            // Live webcam PiP on the actual screen: a small topmost window fed by the SAME
+            // ffmpeg that records (the cam feed is emitted as raw frames on its stdout), so
+            // the camera is opened exactly once and the preview shows exactly what goes
+            // into the MP4. Shown only when the webcam is part of the recording.
+            if (cfg.WebcamEnabled)
+            {
+                try
+                {
+                    _webcamPreview?.Close();
+                    var preview = new WebcamPreviewWindow(_recorder);
+                    _webcamPreview = preview;
+                    preview.Closed += (_, _) => { if (ReferenceEquals(_webcamPreview, preview)) _webcamPreview = null; };
+                    preview.Show();
+                }
+                catch (Exception ex)
+                {
+                    Logger.Warn("Could not show the live webcam preview", ex);
+                }
+            }
             RecordingState?.Invoke(this, EventArgs.Empty);
             string stopGesture = Settings.Hotkeys.TryGetValue(HotkeyDefaults.StopRecording, out var g) ? g : "";
             bool stopHotkeyArmed = Hotkeys.RegisterStopRecording(stopGesture);
@@ -757,6 +779,8 @@ public sealed class AppHost : IDisposable
             _recorder?.Dispose();
             _recorder = null;
             _recordingIndicator = null;
+            try { _webcamPreview?.Close(); } catch { }
+            _webcamPreview = null;
             var hidden = _recordingHiddenWindows;
             _recordingHiddenWindows = new List<Window>();
             RestoreWindows(hidden);
@@ -779,6 +803,7 @@ public sealed class AppHost : IDisposable
 
     private RecordingController? _recorder;
     private RecordingIndicatorWindow? _recordingIndicator;
+    private WebcamPreviewWindow? _webcamPreview;
 
     /// <summary>The live recorder, if any (lets the Recording tab mirror the state and drive Stop).</summary>
     public RecordingController? Recorder => _recorder;
@@ -797,6 +822,168 @@ public sealed class AppHost : IDisposable
         {
             _ = r.StopAsync().ContinueWith(t =>
                 Application.Current?.Dispatcher.BeginInvoke(() => OnRecordingFinished(r, t.Result)));
+        }
+    }
+
+    // ------------------------------------------------------------------ updates
+
+    private UpdateService.ReleaseInfo? _pendingUpdate;
+    private UI.UpdatePromptWindow? _updatePrompt;
+
+    private string? UpdateToken => UpdateService.ResolveToken(Settings.GitHubToken);
+
+    /// <summary>Explicit check (Settings button / tray item).</summary>
+    public void CheckForUpdates()
+    {
+        ShowMain();
+        PromptForUpdate(VisibleOwner());
+    }
+
+    /// <summary>
+    /// Quiet startup check: only prompts when a NEWER release exists and the user hasn't
+    /// already chosen "Later" for it. Offline / no-token / private-repo cases stay silent.
+    /// </summary>
+    public void MaybePromptStartupUpdate()
+    {
+        if (IsExiting || IsRecording || !Settings.CheckForUpdatesAtStartup) return;
+        _ = StartupUpdateCheckAsync();
+    }
+
+    private async Task StartupUpdateCheckAsync()
+    {
+        try
+        {
+            var result = await UpdateService.FetchLatestReleaseAsync(UpdateToken);
+            if (result.Error != null || result.Info == null) return;
+            if (!UpdateService.IsNewer(result.Info.Version, UpdateService.CurrentVersion)) return;
+            if (string.Equals(result.Info.Version, Settings.UpdateDismissedVersion, StringComparison.OrdinalIgnoreCase)) return;
+            Application.Current?.Dispatcher.BeginInvoke(() =>
+            {
+                if (!IsExiting && !IsRecording) PromptForUpdate(VisibleOwner(), result.Info);
+            });
+        }
+        catch (Exception ex)
+        {
+            Logger.Warn("Startup update check failed", ex);
+        }
+    }
+
+    public void PromptForUpdate(Window? owner, UpdateService.ReleaseInfo? known = null)
+    {
+        if (_updatePrompt is { IsLoaded: true } existing)
+        {
+            existing.Activate();
+            return;
+        }
+        var prompt = new UI.UpdatePromptWindow(UpdateService.CurrentVersion);
+        _updatePrompt = prompt;
+        prompt.Closed += (_, _) => { if (ReferenceEquals(_updatePrompt, prompt)) _updatePrompt = null; };
+        if (owner != null && owner.IsVisible)
+        {
+            prompt.Owner = owner;
+            prompt.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+        }
+        else
+        {
+            prompt.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            prompt.Topmost = true;
+        }
+        prompt.AcceptClicked += async (_, _) => await RunUpdateAsync(prompt);
+        prompt.LaterClicked += (_, _) =>
+        {
+            DismissPendingUpdate();
+            prompt.Close();
+        };
+        prompt.SettingsClicked += (_, _) =>
+        {
+            prompt.Close();
+            ShowSettings();
+        };
+        prompt.Show();
+        _ = DoCheckAsync(prompt, known);
+    }
+
+    private async Task DoCheckAsync(UI.UpdatePromptWindow prompt, UpdateService.ReleaseInfo? known)
+    {
+        prompt.SetChecking();
+        UpdateService.FetchResult result;
+        try
+        {
+            result = known != null
+                ? new UpdateService.FetchResult(known, null)
+                : await UpdateService.FetchLatestReleaseAsync(UpdateToken);
+        }
+        catch (Exception ex)
+        {
+            Logger.Warn("Update check failed", ex);
+            prompt.SetFailed("The update check failed:\n" + ex.Message);
+            return;
+        }
+        if (result.Error != null)
+        {
+            prompt.SetFailed(result.Error);
+            return;
+        }
+        var info = result.Info;
+        if (info == null)
+        {
+            prompt.SetFailed("No release was found.");
+            return;
+        }
+        if (!UpdateService.IsNewer(info.Version, UpdateService.CurrentVersion))
+        {
+            prompt.SetUpToDate(info.Version);
+            return;
+        }
+        if (!info.HasUpdater)
+        {
+            prompt.SetFailed($"Release {info.Version} exists, but it has no Shutio-Updater.exe attachment to install with.");
+            return;
+        }
+        _pendingUpdate = info;
+        prompt.SetReady(info.Version, info.Name);
+    }
+
+    private void DismissPendingUpdate()
+    {
+        var info = _pendingUpdate;
+        if (info == null) return;
+        if (!string.Equals(info.Version, Settings.UpdateDismissedVersion, StringComparison.OrdinalIgnoreCase))
+        {
+            Settings.UpdateDismissedVersion = info.Version;
+            SettingsService.Save(Settings);
+        }
+        _pendingUpdate = null;
+    }
+
+    private async Task RunUpdateAsync(UI.UpdatePromptWindow prompt)
+    {
+        var info = _pendingUpdate;
+        if (info == null || string.IsNullOrWhiteSpace(info.UpdaterUrl))
+        {
+            prompt.SetFailed("There is no update to install right now.");
+            return;
+        }
+        try
+        {
+            prompt.SetBusy("Preparing…");
+            string dir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Shutio", "Updates");
+            Directory.CreateDirectory(dir);
+            string exe = Path.Combine(dir, "Shutio-Updater.exe");
+            await UpdateService.DownloadFileAsync(info.UpdaterUrl!, UpdateToken, exe, m => prompt.SetBusy(m));
+
+            // The updater closes any running Shutio, replaces the app files (Data\ is kept),
+            // runs the built-in self-test, and relaunches. --silent = no extra dialogs.
+            prompt.SetBusy("Starting the update — Shutio will restart…");
+            Logger.Info($"Update: running {exe} against {AppPaths.Root}");
+            Process.Start(new ProcessStartInfo(exe, $"\"{AppPaths.Root}\" --silent --launch") { UseShellExecute = true });
+            await Task.Delay(400);
+            RequestExit();   // the updater takes over (it also force-closes us if we linger)
+        }
+        catch (Exception ex)
+        {
+            Logger.Error("Update failed", ex);
+            prompt.SetFailed("The update could not be completed:\n" + ex.Message);
         }
     }
 
