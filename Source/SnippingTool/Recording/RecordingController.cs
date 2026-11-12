@@ -485,19 +485,26 @@ public sealed class RecordingController : IDisposable
         lock (_stderr) stderr = _stderr.ToString();
         int exitCode = -1;
         try { exitCode = _ffmpeg?.ExitCode ?? -1; } catch { }
+        bool exists = File.Exists(OutputPath) && new FileInfo(OutputPath).Length > 1024;
+        // Surface a real ffmpeg error (e.g. "device not found") ONLY when the recording
+        // genuinely failed (missing file, non-zero exit, or a forced kill). ffmpeg's stderr
+        // is chatty even on success — device status chatter like dshow's "real-time buffer
+        // ... frame dropped" must never turn a good recording into a reported failure.
+        bool failed = !exists || exitCode != 0 || _error != null;
         if (!string.IsNullOrWhiteSpace(stderr))
         {
-            Logger.Warn("ffmpeg: " + stderr.Trim());
-            // Surface the real ffmpeg error (e.g. "device not found") instead of the generic
-            // pipe message the write loop saw.
-            string useful = ExtractUsefulError(stderr);
-            if (!string.IsNullOrWhiteSpace(useful))
+            if (failed) Logger.Warn("ffmpeg: " + stderr.Trim());
+            else Logger.Info("ffmpeg (recording succeeded; stderr kept for the log): " + stderr.Trim());
+            if (failed)
             {
-                if (string.IsNullOrWhiteSpace(_error)) _error = useful;
-                else if (!_error.Contains(useful)) _error += " — " + useful;
+                string useful = ExtractFatalError(stderr);
+                if (!string.IsNullOrWhiteSpace(useful))
+                {
+                    if (string.IsNullOrWhiteSpace(_error)) _error = useful;
+                    else if (!_error.Contains(useful)) _error += " — " + useful;
+                }
             }
         }
-        bool exists = File.Exists(OutputPath) && new FileInfo(OutputPath).Length > 1024;
         bool success = exists && exitCode == 0 && _error == null;
         if (!exists && _error == null) _error = "The encoder did not produce a video file.";
         var result = new RecordingStoppedEventArgs
@@ -625,25 +632,38 @@ public sealed class RecordingController : IDisposable
 
     // ===================== error extraction =====================
 
-    /// <summary>Picks the most useful line from ffmpeg's stderr for a user-facing message.</summary>
-    private static string ExtractUsefulError(string stderr)
+    /// <summary>
+    /// Picks the most likely FATAL line from ffmpeg's stderr for a user-facing failure
+    /// message. Deliberately strict: ffmpeg's stderr is chatty even when a recording is
+    /// healthy, and device status chatter (e.g. dshow "real-time buffer ... frame dropped")
+    /// must never be mistaken for the cause of a failure. Returns "" when no fatal line is
+    /// found — the caller keeps its own (accurate) message instead of quoting a warning.
+    /// </summary>
+    private static string ExtractFatalError(string stderr)
     {
+        // Health/status chatter that looks alarming but is not a failure.
+        static bool IsChatter(string lower) =>
+            lower.Contains("frame dropped") ||
+            lower.Contains("real-time buffer") ||
+            lower.Contains("too full or near too full") ||
+            lower.Contains("dropped frames");
+
         var lines = stderr.Split('\n')
             .Select(l => l.Trim())
             .Where(l => l.Length > 0)
             .ToList();
-        if (lines.Count == 0) return "";
+
         var keywords = new[] { "error", "invalid", "not found", "denied", "failed", "unable", "no such", "busy", "does not exist" };
         for (int i = lines.Count - 1; i >= 0; i--)
         {
             string lower = lines[i]!.ToLowerInvariant();
+            if (IsChatter(lower)) continue;
             if (keywords.Any(k => lower.Contains(k)))
             {
                 string line = lines[i]!;
                 return line.Length > 300 ? line[..300] + "…" : line;
             }
         }
-        string last = lines[^1]!;
-        return last.Length > 300 ? last[..300] + "…" : last;
+        return "";   // nothing fatal — do NOT fall back to an arbitrary last line
     }
 }

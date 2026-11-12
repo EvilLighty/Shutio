@@ -7,6 +7,36 @@ Format: `## [date]` sections with **Added / Changed / Fixed / Verified / Docs**.
 
 ---
 
+## 2026-11-12 — 2.1.1 "Shutio 2.1.1" — false "Recording failed" fix
+
+A quick follow-up to 2.1.0, fixing a false failure report seen on a real webcam PC.
+
+**Fixed**
+- **A good recording was reported as "Recording failed."** On a USB webcam the stop
+  dialog quoted ffmpeg's dshow warning — `real-time buffer [USB2.0 HD UVC WebCam]
+  (video input) too full or near too full (101% of size: 3041280 [rtbufsize
+  parameter]). frame dropped!` — even though the encoder had exited 0 and the MP4 had
+  been written. Root cause: the 2.1.0 error-attribution step scanned ffmpeg's stderr
+  for a message to attach to a failed stop, and its fallback picked up **the last
+  stderr line** — chatty health chatter included. Now:
+  - stderr is only treated as an error source when the recording actually failed
+    (missing file, non-zero exit, or a forced kill); on success it is logged but
+    never fails the result;
+  - device status chatter (dshow "real-time buffer" / "frame dropped" lines) is
+    explicitly excluded from error candidates;
+  - if no fatal line exists the app keeps its own accurate message instead of
+    quoting a warning.
+  The video produced by such a 2.1.0 run is normally intact and playable — the
+  failure was a false report.
+
+**Changed**
+- Version 2.1.1 across the app, installer, updater, and uninstaller.
+
+**Verified**
+- Self-test **13/13, exit 0** on the rebuilt single-file app and the installed copy.
+
+---
+
 ## 2026-11-12 — 2.1.0 "Shutio 2.1" — webcam fixes, live preview, in-app updates
 
 A release focused on **making webcam recording actually work**: three reported
